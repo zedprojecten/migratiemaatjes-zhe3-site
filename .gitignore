@@ -5,3 +5,12 @@ dist
 .vite
 .env
 .env.local
+
+# Pipeline build-artifacts (niet committen)
+.architect-status
+.build-status
+BUILDPLAN.md
+COMPONENT_CATALOG.md
+CONTENT_BIBLE.md
+LAST_BUILD_ERROR.md
+.qa/
