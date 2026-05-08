@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { StickyMobileCTA } from "@/components/sections/StickyMobileCTA";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useLocalizedHref } from "@/lib/language";
 
 type Complexity = "Quick" | "Standard" | "Complex";
 
@@ -187,7 +188,7 @@ export default function UseCases() {
                       {c.pakketRegel}
                     </p>
                     <Link
-                      to="/tarieven"
+                      to={useLocalizedHref("/tarieven")}
                       viewTransition
                       className="mt-3 inline-flex items-center gap-1 text-sm text-primary hover:text-primary/80 hover:gap-2 transition-all"
                     >

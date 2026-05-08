@@ -1,8 +1,9 @@
-import { Check } from "lucide-react";
+import { Check as CheckIcon } from "lucide-react";
 import { PricingTableCinematic } from "@/components/sections/PricingTableCinematic";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { StickyMobileCTA } from "@/components/sections/StickyMobileCTA";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const PRICING_PLANS = [
   {
@@ -64,7 +65,7 @@ const PRICING_PLANS = [
 
 const TRUST_BULLETS = [
   "Vaste prijs vooraf, geen verborgen uurtarieven",
-  "Dry-run op je sample vóór de hoofdrun",
+  "Dry-run op je sample voor de hoofdrun",
   "Mappingscript eigendom van de klant",
 ];
 
@@ -142,33 +143,37 @@ export default function Tarieven() {
       />
 
       {/* Trust-bullets-strip */}
-      <section className="border-b border-border/60 py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {TRUST_BULLETS.map((b) => (
-              <div key={b} className="flex items-start gap-3 font-mono text-sm">
-                <Check className="w-4 h-4 text-primary mt-0.5 flex-none" />
-                <span className="text-muted-foreground">{b}</span>
-              </div>
-            ))}
+      <ScrollReveal>
+        <section className="border-b border-border/60 py-12 md:py-16">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {TRUST_BULLETS.map((b) => (
+                <div key={b} className="flex items-start gap-3 font-mono text-sm">
+                  <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
+                  <span className="text-muted-foreground">{b}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* FAQ */}
-      <section className="border-b border-border/60 pt-16 md:pt-20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="font-mono text-xs uppercase tracking-wider text-primary">
-              // veelgestelde vragen
-            </span>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
-              Wat klanten meestal eerst vragen
-            </h2>
+      <ScrollReveal>
+        <section className="border-b border-border/60 pt-16 md:pt-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <span className="font-mono text-xs uppercase tracking-wider text-primary">
+                // veelgestelde vragen
+              </span>
+              <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+                Wat klanten meestal eerst vragen
+              </h2>
+            </div>
           </div>
-        </div>
-        <FAQAccordion items={FAQ_ITEMS} withPadding={false} className="mt-10 pb-16 md:pb-20" />
-      </section>
+          <FAQAccordion items={FAQ_ITEMS} withPadding={false} className="mt-10 pb-16 md:pb-20" />
+        </section>
+      </ScrollReveal>
 
       {/* Final CTA */}
       <CTABanner

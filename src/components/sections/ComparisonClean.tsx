@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, Minus } from "lucide-react";
+import { Check as CheckIcon, Minus as MinusIcon } from "lucide-react";
 import MagneticButton from "../interactive/MagneticButton";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
@@ -183,12 +183,12 @@ export function ComparisonClean({
                           className="p-4 border-l first:border-l-0 flex items-center justify-center"
                         >
                           {feature?.included ? (
-                            <Check
+                            <CheckIcon
                               className="h-5 w-5 text-green-600"
                               aria-label="Inbegrepen"
                             />
                           ) : (
-                            <Minus
+                            <MinusIcon
                               className="h-5 w-5 text-muted-foreground/50"
                               aria-label="Niet inbegrepen"
                             />

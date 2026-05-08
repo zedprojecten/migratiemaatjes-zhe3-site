@@ -12,14 +12,7 @@
  * optimalisatie-context (conversion, performance, SEO, etc).
  */
 import { useEffect, useRef, useState, type ComponentType } from "react";
-import {
-  Check,
-  Lock,
-  TrendingUp,
-  Lightbulb,
-  Wrench,
-  ChevronRight,
-} from "lucide-react";
+import { Check as CheckIcon, Lock, TrendingUp, Lightbulb, Wrench, ChevronRight } from "lucide-react";
 
 interface ReportItem {
   label: string;
@@ -345,7 +338,7 @@ export default function AnimatedReportCard({
                     }}
                   >
                     <div className="flex items-center gap-2 flex-1 min-w-0">
-                      <Check
+                      <CheckIcon
                         className="h-4 w-4 shrink-0"
                         style={{ color: group.color }}
                       />

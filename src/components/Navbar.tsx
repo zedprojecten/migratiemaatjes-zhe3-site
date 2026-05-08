@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu as MenuIcon, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLocalizedHref } from "@/lib/language";
 
 const links = [
   { to: "/", label: "Home" },
@@ -37,7 +38,7 @@ export default function Navbar() {
     >
       <nav className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6">
         <Link
-          to="/"
+          to={useLocalizedHref("/")}
           viewTransition
           className="flex items-center gap-2 text-base sm:text-xl font-display font-semibold tracking-tight text-foreground whitespace-nowrap"
         >
@@ -72,7 +73,7 @@ export default function Navbar() {
           })}
           <li className="ml-2">
             <Link
-              to="/contact"
+              to={useLocalizedHref("/contact")}
               viewTransition
               className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
@@ -88,7 +89,7 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-border/70 text-foreground hover:bg-secondary"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
         </button>
       </nav>
 
@@ -114,7 +115,7 @@ export default function Navbar() {
             })}
             <li className="py-2">
               <Link
-                to="/contact"
+                to={useLocalizedHref("/contact")}
                 viewTransition
                 className="block text-center px-4 py-3 text-sm font-medium rounded-md bg-primary text-primary-foreground"
               >

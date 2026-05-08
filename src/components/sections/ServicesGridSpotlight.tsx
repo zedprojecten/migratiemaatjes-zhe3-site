@@ -1,15 +1,7 @@
 import { useRef, useState } from "react";
 import type { ComponentType, CSSProperties } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-  Compass,
-  Layout,
-  TrendingUp,
-  Search,
-  Camera,
-  Sparkles,
-  ArrowUpRight,
-} from "lucide-react";
+import { Compass, Layout, TrendingUp, Search as SearchIcon, Camera, Sparkles, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SpotlightCard } from "../interactive/SpotlightCard";
 
@@ -61,7 +53,7 @@ const DEFAULT_SERVICES: ServiceItem[] = [
     accent: "orange",
   },
   {
-    icon: Search,
+    icon: SearchIcon,
     title: "SEO & Content",
     description:
       "Organisch groeien zonder ads-budget. Technisch fundament plus copy die mensen daadwerkelijk uitlezen.",

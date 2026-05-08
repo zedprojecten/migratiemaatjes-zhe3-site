@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SiteCredit } from "@/components/SiteCredit";
 import { Mail } from "lucide-react";
+import { useLocalizedHref } from "@/lib/language";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,7 +10,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Link to="/" viewTransition className="inline-flex items-center gap-2 text-lg font-display font-semibold tracking-tight">
+            <Link to={useLocalizedHref("/")} viewTransition className="inline-flex items-center gap-2 text-lg font-display font-semibold tracking-tight">
               <span aria-hidden className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary/15 border border-primary/30 text-primary font-mono text-xs">
                 {"{ }"}
               </span>
@@ -30,18 +31,18 @@ export default function Footer() {
           <div>
             <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-3">Site</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/" viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link to="/hoe-het-werkt" viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Hoe het werkt</Link></li>
-              <li><Link to="/use-cases" viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Use cases</Link></li>
-              <li><Link to="/tarieven" viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Tarieven</Link></li>
-              <li><Link to="/contact" viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
+              <li><Link to={useLocalizedHref("/")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
+              <li><Link to={useLocalizedHref("/hoe-het-werkt")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Hoe het werkt</Link></li>
+              <li><Link to={useLocalizedHref("/use-cases")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Use cases</Link></li>
+              <li><Link to={useLocalizedHref("/tarieven")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Tarieven</Link></li>
+              <li><Link to={useLocalizedHref("/contact")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-3">Legal</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacybeleid</Link></li>
+              <li><Link to={useLocalizedHref("/privacy")} className="text-muted-foreground hover:text-foreground transition-colors">Privacybeleid</Link></li>
             </ul>
           </div>
         </div>

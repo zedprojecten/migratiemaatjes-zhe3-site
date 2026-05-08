@@ -11,15 +11,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import {
-  Compass,
-  Layout,
-  TrendingUp,
-  Search,
-  Camera,
-  Sparkles,
-  ArrowRight,
-} from "lucide-react";
+import { Compass, Layout, TrendingUp, Search as SearchIcon, Camera, Sparkles, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface ServiceItem {
@@ -69,7 +61,7 @@ const DEFAULT_SERVICES: ServiceItem[] = [
     metric: { value: 38, suffix: "%", label: "gem. conversie-lift" },
   },
   {
-    icon: Search,
+    icon: SearchIcon,
     title: "SEO & Content",
     description:
       "Organisch groeien zonder ads-budget. Technisch fundament, content-strategie en copy die mensen daadwerkelijk uitlezen.",

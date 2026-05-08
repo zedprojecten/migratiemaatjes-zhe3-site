@@ -7,7 +7,7 @@
  */
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check as CheckIcon } from "lucide-react";
 import MagneticButton from "../interactive/MagneticButton";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
@@ -253,7 +253,7 @@ export function PricingTableMinimal({
                           key={j}
                           className="flex items-start gap-2.5 text-sm"
                         >
-                          <Check
+                          <CheckIcon
                             className="h-4 w-4 text-green-600 shrink-0 mt-0.5"
                             aria-hidden="true"
                           />

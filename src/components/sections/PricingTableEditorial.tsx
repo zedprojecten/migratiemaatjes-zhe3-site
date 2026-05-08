@@ -9,7 +9,7 @@
  */
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check as CheckIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface PricingFeature {
@@ -214,7 +214,7 @@ function PlanCard({
           .filter((f) => f.included)
           .map((feature, j) => (
             <li key={j} className="flex items-start gap-3">
-              <Check
+              <CheckIcon
                 className={cn(
                   "shrink-0 mt-1 text-foreground/70",
                   large ? "h-4 w-4" : "h-3.5 w-3.5",

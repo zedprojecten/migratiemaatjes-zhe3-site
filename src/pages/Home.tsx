@@ -1,13 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  Database,
-  GitBranch,
-  Layers,
-  FileCode,
-  Workflow,
-  FileSpreadsheet,
-  ArrowRight,
-} from "lucide-react";
+import { Database, GitBranch, Layers, FileCode, Workflow, FileSpreadsheet, ArrowRight } from "lucide-react";
 import { HeroAurora } from "@/components/heroes/HeroAurora";
 import { LogoCloudStrip } from "@/components/sections/LogoCloudStrip";
 import { BentoGrid } from "@/components/sections/BentoGrid";
@@ -15,6 +7,7 @@ import StepsVisualCinematic from "@/components/sections/StepsVisualCinematic";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { StickyMobileCTA } from "@/components/sections/StickyMobileCTA";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useLocalizedHref } from "@/lib/language";
 
 // ───────────────────────────────────────────────────────────────────────────
 // Logo wordmarks voor de logo-strip. Geen kleur, monochrome wordmark in
@@ -218,7 +211,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
-                to="/contact"
+                to={useLocalizedHref("/contact")}
                 viewTransition
                 className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-7 text-sm font-semibold text-primary-foreground transition hover:brightness-110"
               >
@@ -226,7 +219,7 @@ export default function Home() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
               <Link
-                to="/hoe-het-werkt"
+                to={useLocalizedHref("/hoe-het-werkt")}
                 viewTransition
                 className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-border bg-secondary/40 px-6 text-sm font-medium text-foreground/85 backdrop-blur-sm transition hover:border-primary/40 hover:text-foreground"
               >
@@ -316,7 +309,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 mt-10">
           <ScrollReveal>
             <Link
-              to="/use-cases"
+              to={useLocalizedHref("/use-cases")}
               viewTransition
               className="group inline-flex items-center gap-2 font-mono text-sm text-primary hover:text-primary/80"
             >

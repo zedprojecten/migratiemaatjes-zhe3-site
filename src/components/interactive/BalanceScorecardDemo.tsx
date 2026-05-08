@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback } from "react";
 import type { ComponentType, ReactNode, MouseEvent, CSSProperties } from "react";
 import { useInView } from "framer-motion";
-import { TrendingUp, Users, Settings, GraduationCap } from "lucide-react";
+import { TrendingUp, Users, Settings as SettingsIcon, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface BalanceScorecardMetric {
@@ -51,7 +51,7 @@ export const DEFAULT_BALANCE_SCORECARD_CATEGORIES: BalanceScorecardCategory[] = 
     ],
   },
   {
-    icon: Settings,
+    icon: SettingsIcon,
     title: "Interne processen",
     description: "Doorlooptijd, kwaliteit en innovatie",
     score: 54,

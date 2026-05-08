@@ -6,20 +6,8 @@
  * Code overgenomen onder de open-source registry-licentie van 21st.dev.
  */
 import React from "react";
-import { 
-  ArrowRight, 
-  Play, 
-  Target, 
-  Crown, 
-  Star,
-  // Brand Icons
-  Hexagon,
-  Triangle,
-  Command,
-  Ghost,
-  Gem,
-  Cpu
-} from "lucide-react";
+import { ArrowRight, Play as PlayIcon, Target, Crown, Star as StarIcon, // Brand Icons
+  Hexagon, Triangle, Command, Ghost, Gem, Cpu } from "lucide-react";
 
 // --- MOCK BRANDS ---
 // Replaced PNGs with Lucide icons to simulate tech logos
@@ -90,7 +78,7 @@ export default function HeroGlassmorphismTrust() {
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-md transition-colors hover:bg-white/10">
                 <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-300 flex items-center gap-2">
                   Award-Winning Design
-                  <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
+                  <StarIcon className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
                 </span>
               </div>
             </div>
@@ -124,7 +112,7 @@ export default function HeroGlassmorphismTrust() {
               </button>
               
               <button className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20">
-                <Play className="w-4 h-4 fill-current" />
+                <PlayIcon className="w-4 h-4 fill-current" />
                 Watch Showreel
               </button>
             </div>

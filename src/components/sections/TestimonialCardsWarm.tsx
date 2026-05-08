@@ -9,14 +9,14 @@
  *    gevoel, whileHover snapt naar 0deg
  *  - Per card: large round avatar bovenaan (80px), serif quote, naam +
  *    company met thin underline-deco
- *  - Heart-icon accent en serif headings (Georgia/Cormorant)
+ *  - HeartIcon-icon accent en serif headings (Georgia/Cormorant)
  *  - Cascade fade-in (90ms stagger) on inView
  *
  * Tone: warm, ambachtelijk, persoonlijk, vertrouwd, elegant.
  */
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Heart } from "lucide-react";
+import { Heart as HeartIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Testimonial {
@@ -133,7 +133,7 @@ export function TestimonialCardsWarm({
           className="mx-auto max-w-2xl text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-stone-300/70 bg-white/60 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-stone-700 shadow-sm">
-            <Heart
+            <HeartIcon
               className="h-3 w-3 text-amber-700"
               fill="currentColor"
               strokeWidth={1.5}
@@ -186,7 +186,7 @@ export function TestimonialCardsWarm({
                     {t.author.charAt(0)}
                   </div>
                 )}
-                <Heart
+                <HeartIcon
                   className="mt-2 h-4 w-4 text-amber-700/60"
                   fill="currentColor"
                   strokeWidth={1.25}

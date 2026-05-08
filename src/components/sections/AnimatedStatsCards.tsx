@@ -11,7 +11,7 @@
  * voor elke business-context werkt; alle data is via props override-baar.
  */
 import { useEffect, useRef, useState } from "react";
-import { Search, Loader2 } from "lucide-react";
+import { Search as SearchIcon, Loader2 } from "lucide-react";
 
 interface CategoryItem {
   label: string;
@@ -262,7 +262,7 @@ function AnimatedSearchBar({
           transition: "border-color 300ms, box-shadow 300ms",
         }}
       >
-        <Search className="h-4 w-4 text-muted-foreground shrink-0" />
+        <SearchIcon className="h-4 w-4 text-muted-foreground shrink-0" />
         <span className="text-sm flex-1">
           {searchText}
           {searchText.length < searchTerm.length && (

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, X } from "lucide-react";
+import { Check as CheckIcon, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface VsRow {
@@ -150,7 +150,7 @@ export function ComparisonVsCompetitor({
                 </div>
                 <div className="p-4 border-l flex items-center justify-center">
                   {row.us ? (
-                    <Check
+                    <CheckIcon
                       className="h-5 w-5 text-green-600"
                       aria-label="Wel bij ons"
                     />
@@ -163,7 +163,7 @@ export function ComparisonVsCompetitor({
                 </div>
                 <div className="p-4 border-l flex items-center justify-center">
                   {row.them ? (
-                    <Check
+                    <CheckIcon
                       className="h-5 w-5 text-green-600"
                       aria-label="Wel bij andere bureaus"
                     />

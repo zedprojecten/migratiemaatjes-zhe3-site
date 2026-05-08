@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, Minus, Sparkles } from "lucide-react";
+import { Check as CheckIcon, Minus as MinusIcon, Sparkles } from "lucide-react";
 import MagneticButton from "../interactive/MagneticButton";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -226,9 +226,9 @@ export function ComparisonHighlighted({
                         className="flex items-start gap-2.5 text-sm"
                       >
                         {feature.included ? (
-                          <Check className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                          <CheckIcon className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
                         ) : (
-                          <Minus className="h-4 w-4 text-muted-foreground/50 shrink-0 mt-0.5" />
+                          <MinusIcon className="h-4 w-4 text-muted-foreground/50 shrink-0 mt-0.5" />
                         )}
                         <span
                           className={

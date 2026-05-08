@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check as CheckIcon } from "lucide-react";
 import { ScrollReveal } from "../ScrollReveal";
 
 interface PricingPlan {
@@ -153,7 +153,7 @@ export function PricingToggle({
                   <ul className="space-y-3 flex-1 mb-6">
                     {plan.features.map((feature, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm">
-                        <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <CheckIcon className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}

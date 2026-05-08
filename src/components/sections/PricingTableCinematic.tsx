@@ -8,7 +8,7 @@
  */
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, Zap } from "lucide-react";
+import { Check as CheckIcon, Zap } from "lucide-react";
 import MagneticButton from "../interactive/MagneticButton";
 import { cn } from "@/lib/utils";
 
@@ -314,7 +314,7 @@ function CinematicCard({
             .filter((f) => f.included)
             .map((feature, j) => (
               <li key={j} className="flex items-start gap-2.5 text-sm">
-                <Check
+                <CheckIcon
                   className={cn("h-4 w-4 shrink-0 mt-0.5", accent.text)}
                   aria-hidden="true"
                 />

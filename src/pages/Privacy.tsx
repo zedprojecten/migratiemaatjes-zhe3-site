@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useLocalizedHref } from "@/lib/language";
 
 export default function Privacy() {
   return (
@@ -19,7 +20,7 @@ export default function Privacy() {
         Vragen over je privacy? Mail naar het contactadres in de footer.
       </p>
       <p className="mt-8">
-        <Link to="/" viewTransition className="text-primary hover:text-primary/80 hover:underline">
+        <Link to={useLocalizedHref("/")} viewTransition className="text-primary hover:text-primary/80 hover:underline">
           ← Terug naar de homepage
         </Link>
       </p>

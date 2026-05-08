@@ -13,7 +13,7 @@
  * het origineel.
  */
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Check, MapPin, Loader2 } from "lucide-react";
+import { ArrowRight, Check as CheckIcon, MapPin, Loader2 } from "lucide-react";
 
 const TYPER_ADDRESSES = [
   "Keizersgracht 274, Amsterdam",
@@ -165,7 +165,7 @@ export default function AnimatedAddressInput({
           </div>
           {confirmed ? (
             <span className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-green-500/15 text-green-600">
-              <Check className="h-3.5 w-3.5" /> Geverifieerd
+              <CheckIcon className="h-3.5 w-3.5" /> Geverifieerd
             </span>
           ) : (
             <button

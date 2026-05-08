@@ -9,7 +9,7 @@
  * char-by-char typing, ref-badge afterglow, typing-bubble) is identiek.
  */
 import { useState, useEffect, useRef } from "react";
-import { Bot, User } from "lucide-react";
+import { Bot, User as UserIcon } from "lucide-react";
 
 const CHAT_HEIGHT = 520;
 
@@ -239,7 +239,7 @@ export default function AnimatedChatDemo({
                 {msg.role === "ai" ? (
                   <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} />
                 ) : (
-                  <User className="h-4 w-4" style={{ color: "hsl(var(--foreground))" }} />
+                  <UserIcon className="h-4 w-4" style={{ color: "hsl(var(--foreground))" }} />
                 )}
               </div>
               <div

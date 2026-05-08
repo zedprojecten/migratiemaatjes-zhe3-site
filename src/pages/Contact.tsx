@@ -210,21 +210,37 @@ function IntakeForm() {
           </div>
         </div>
 
-        {/* Row 3: geschat-aantal-records (full-width, optional) */}
-        <div>
-          <label htmlFor="geschat-aantal-records" className={labelClass}>
-            geschat-aantal-records
-          </label>
-          <input
-            id="geschat-aantal-records"
-            name="geschat-aantal-records"
-            type="text"
-            inputMode="numeric"
-            value={form.records}
-            onChange={(e) => update("records", e.target.value)}
-            placeholder="bv. 25000"
-            className={inputClass}
-          />
+        {/* Row 3: geschat-aantal-records + deadline */}
+        <div className="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label htmlFor="geschat-aantal-records" className={labelClass}>
+              geschat-aantal-records
+            </label>
+            <input
+              id="geschat-aantal-records"
+              name="geschat-aantal-records"
+              type="text"
+              inputMode="numeric"
+              value={form.records}
+              onChange={(e) => update("records", e.target.value)}
+              placeholder="bv. 25000"
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label htmlFor="deadline" className={labelClass}>
+              deadline
+            </label>
+            <input
+              id="deadline"
+              name="deadline"
+              type="text"
+              value={form.deadline}
+              onChange={(e) => update("deadline", e.target.value)}
+              placeholder="bv. 1 juni of 'flexibel'"
+              className={inputClass}
+            />
+          </div>
         </div>
 
         {/* Row 4: scenario-omschrijving (full-width, required) */}
@@ -241,22 +257,6 @@ function IntakeForm() {
             onChange={(e) => update("scenario", e.target.value)}
             placeholder="Korte beschrijving: wat moet er mee, wat is de deadline, eventuele bijzonderheden"
             className={inputClass + " resize-y"}
-          />
-        </div>
-
-        {/* Row 5: deadline (full-width) */}
-        <div>
-          <label htmlFor="deadline" className={labelClass}>
-            deadline
-          </label>
-          <input
-            id="deadline"
-            name="deadline"
-            type="text"
-            value={form.deadline}
-            onChange={(e) => update("deadline", e.target.value)}
-            placeholder="bv. 1 juni of 'flexibel'"
-            className={inputClass}
           />
         </div>
 
@@ -318,7 +318,7 @@ function IntakeForm() {
             )}
           </button>
           <p className="mt-4 font-mono text-xs text-muted-foreground leading-relaxed">
-            {"// Sample-bestand kun je na verzending via e-mail doorsturen — geen upload nodig in dit formulier."}
+            {"// Sample-bestand kun je na verzending via e-mail doorsturen, geen upload nodig in dit formulier."}
           </p>
         </div>
       </form>

@@ -18,7 +18,7 @@ function CodeSnippetCard({ caption, children }: CodeSnippetCardProps) {
           <span className="h-2 w-2 rounded-full bg-foreground/15" />
           <span className="h-2 w-2 rounded-full bg-primary/40" />
         </span>
-        <span className="ml-2">{caption}</span>
+        <span className="ml-2 uppercase tracking-wider">{caption}</span>
       </div>
       <pre className="px-4 py-4 font-mono text-xs leading-relaxed overflow-x-auto">
         {children}
@@ -289,39 +289,41 @@ export default function HoeHetWerkt() {
       </ScrollReveal>
 
       {/* USP block — Het mappingscript is van jou */}
-      <section className="py-12 sm:py-20 md:py-28 border-b border-border/60 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dot-grid opacity-30 pointer-events-none" />
-        <div className="container mx-auto px-4 sm:px-6 relative">
-          <div className="rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/5 to-transparent p-8 sm:p-10 md:p-14 max-w-4xl mx-auto">
-            <span className="font-mono text-xs uppercase tracking-wider text-primary">
-              // no vendor lock-in
-            </span>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
-              Het mappingscript is van jou
-            </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
-              Geen vendor lock-in, geen onboarding-fee als de migratie ooit moet worden
-              herhaald. Je interne team kan het script aanpassen, opnieuw draaien, of
-              doorgeven aan een nieuwe leverancier. Wij zijn een leverancier voor één
-              project, niet een afhankelijkheid voor altijd.
-            </p>
-            <div className="mt-8 grid sm:grid-cols-3 gap-4 font-mono text-xs">
-              <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
-                <div className="text-primary">100%</div>
-                <div className="mt-1 text-muted-foreground">eigendom klant</div>
-              </div>
-              <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
-                <div className="text-primary">0 EUR</div>
-                <div className="mt-1 text-muted-foreground">recurring license</div>
-              </div>
-              <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
-                <div className="text-primary">README + schema.md</div>
-                <div className="mt-1 text-muted-foreground">meegeleverd</div>
+      <ScrollReveal>
+        <section className="py-12 sm:py-20 md:py-28 border-b border-border/60 relative overflow-hidden">
+          <div className="absolute inset-0 bg-dot-grid opacity-30 pointer-events-none" />
+          <div className="container mx-auto px-4 sm:px-6 relative">
+            <div className="rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/5 to-transparent p-8 sm:p-10 md:p-14 max-w-4xl mx-auto">
+              <span className="font-mono text-xs uppercase tracking-wider text-primary">
+                // no vendor lock-in
+              </span>
+              <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+                Het mappingscript is van jou
+              </h2>
+              <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
+                Geen vendor lock-in, geen onboarding-fee als de migratie ooit moet worden
+                herhaald. Je interne team kan het script aanpassen, opnieuw draaien, of
+                doorgeven aan een nieuwe leverancier. Wij zijn een leverancier voor één
+                project, niet een afhankelijkheid voor altijd.
+              </p>
+              <div className="mt-8 grid sm:grid-cols-3 gap-4 font-mono text-xs">
+                <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
+                  <div className="text-primary">100%</div>
+                  <div className="mt-1 text-muted-foreground">eigendom klant</div>
+                </div>
+                <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
+                  <div className="text-primary">0 EUR</div>
+                  <div className="mt-1 text-muted-foreground">recurring license</div>
+                </div>
+                <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
+                  <div className="text-primary">README + schema.md</div>
+                  <div className="mt-1 text-muted-foreground">meegeleverd</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Final CTA */}
       <CTABanner

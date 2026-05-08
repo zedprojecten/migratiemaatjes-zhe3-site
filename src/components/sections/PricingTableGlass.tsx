@@ -7,7 +7,7 @@
  */
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, Sparkles } from "lucide-react";
+import { Check as CheckIcon, Sparkles } from "lucide-react";
 import MagneticButton from "../interactive/MagneticButton";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -272,7 +272,7 @@ function GlassCard({
               .filter((f) => f.included)
               .map((feature, j) => (
                 <li key={j} className="flex items-start gap-2.5 text-sm">
-                  <Check
+                  <CheckIcon
                     className="h-4 w-4 text-primary shrink-0 mt-0.5"
                     aria-hidden="true"
                   />

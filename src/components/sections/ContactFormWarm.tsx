@@ -19,7 +19,7 @@ import {
   type ReactNode,
 } from "react";
 import { motion, useInView } from "framer-motion";
-import { Heart } from "lucide-react";
+import { Heart as HeartIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ContactFormProps {
@@ -225,7 +225,7 @@ export function ContactFormWarm({
           className="text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-stone-300/60 bg-white/60 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-stone-700 shadow-sm">
-            <Heart
+            <HeartIcon
               className="h-3 w-3 text-amber-700"
               fill="currentColor"
               strokeWidth={1.5}
@@ -267,7 +267,7 @@ export function ContactFormWarm({
           {state === "success" ? (
             <div className="py-8 text-center">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-700/10 text-amber-800">
-                <Heart className="h-5 w-5" fill="currentColor" />
+                <HeartIcon className="h-5 w-5" fill="currentColor" />
               </div>
               <p
                 className="mt-4 text-2xl text-stone-900"

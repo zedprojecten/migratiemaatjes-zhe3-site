@@ -12,7 +12,7 @@
  */
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Star } from "lucide-react";
+import { Star as StarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Testimonial {
@@ -141,7 +141,7 @@ export function TestimonialCardsMinimal({
               {t.rating && (
                 <div className="flex items-center gap-1">
                   {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star
+                    <StarIcon
                       key={j}
                       className="h-4 w-4 fill-primary text-primary"
                       strokeWidth={1}

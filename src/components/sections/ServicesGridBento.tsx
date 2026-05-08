@@ -13,14 +13,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import {
-  Compass,
-  Layout,
-  TrendingUp,
-  Search,
-  Camera,
-  Sparkles,
-} from "lucide-react";
+import { Compass, Layout, TrendingUp, Search as SearchIcon, Camera, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface ServiceItem {
@@ -67,7 +60,7 @@ const DEFAULT_SERVICES: ServiceItem[] = [
       "Consistente toon over alle kanalen, van homepage tot LinkedIn.",
   },
   {
-    icon: Search,
+    icon: SearchIcon,
     title: "SEO & Content",
     description:
       "Organisch groeien zonder ads. Technisch fundament plus content die mensen daadwerkelijk uitlezen.",

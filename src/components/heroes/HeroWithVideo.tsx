@@ -6,7 +6,7 @@
  * Code overgenomen onder de open-source registry-licentie van 21st.dev.
  */
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Mail, ArrowRight, Menu, ChevronDown, Sun, Moon } from 'lucide-react';
+import { Play as PlayIcon, Pause as PauseIcon, Mail, ArrowRight, Menu as MenuIcon, ChevronDown, Sun, Moon } from "lucide-react";
 
 /**
  * Lokale aanpassing: 21st.dev origineel gebruikt next-themes (Next.js).
@@ -158,7 +158,7 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
             <ThemeToggleButton />
             <div className="lg:hidden relative">
               <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="bg-transparent hover:bg-muted border-none p-2 rounded-xl transition-colors">
-                <Menu className="h-6 w-6" />
+                <MenuIcon className="h-6 w-6" />
               </button>
               {isMobileMenuOpen && (
                 <ul className="absolute top-full right-0 mt-2 p-2 shadow-lg bg-card border border-border rounded-xl w-56 z-30">
@@ -214,11 +214,11 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
           <div className="absolute bottom-5 right-5 z-10">
             {!isVideoPlaying ? (
               <button onClick={handlePlayVideo} className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-200 shadow-lg">
-                <Play className="h-7 w-7 text-white fill-white ml-1" />
+                <PlayIcon className="h-7 w-7 text-white fill-white ml-1" />
               </button>
             ) : (
               <button onClick={isVideoPaused ? handleResumeVideo : handlePauseVideo} className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-200 shadow-lg">
-                {isVideoPaused ? <Play className="h-7 w-7 text-white fill-white ml-1" /> : <Pause className="h-7 w-7 text-white fill-white" />}
+                {isVideoPaused ? <PlayIcon className="h-7 w-7 text-white fill-white ml-1" /> : <PauseIcon className="h-7 w-7 text-white fill-white" />}
               </button>
             )}
           </div>

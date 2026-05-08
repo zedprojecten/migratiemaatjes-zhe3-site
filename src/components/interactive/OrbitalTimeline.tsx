@@ -10,7 +10,7 @@
  */
 
 import { useEffect, useRef, useState, type ElementType } from "react";
-import { ArrowRight, Calendar, Link2, Zap } from "lucide-react";
+import { ArrowRight, Calendar as CalendarIcon, Link2, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type OrbitalStatus = "completed" | "in-progress" | "pending" | "active";
@@ -63,7 +63,7 @@ export default function OrbitalTimeline({
     description: item.description ?? "",
     date: item.date ?? "",
     category: item.category ?? "",
-    icon: item.icon ?? Calendar,
+    icon: item.icon ?? CalendarIcon,
     relatedIds: item.relatedIds ?? [],
     status: item.status ?? "pending",
     energy: item.energy ?? 70,

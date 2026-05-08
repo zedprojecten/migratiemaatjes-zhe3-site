@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Star as StarIcon, Quote } from "lucide-react";
 import { ScrollReveal } from "../ScrollReveal";
 
 interface Testimonial {
@@ -61,7 +61,7 @@ export function TestimonialCards({
                     {item.rating && (
                       <div className="flex gap-0.5 mt-1">
                         {Array.from({ length: item.rating }).map((_, j) => (
-                          <Star
+                          <StarIcon
                             key={j}
                             className="h-3 w-3 fill-primary text-primary"
                           />
