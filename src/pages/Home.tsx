@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import TextRotateCinematic from "@/components/interactive/TextRotateCinematic";
 import { SpotlightCard } from "@/components/interactive/SpotlightCard";
+import AnimatedChatDemo from "@/components/interactive/AnimatedChatDemo";
 
 const APP_URL = "https://migratie-maatjes.vercel.app";
 
@@ -143,16 +144,19 @@ const problemCards = [
     icon: <Wrench className="h-5 w-5" />,
     title: "Custom dev = duur en traag",
     body: "Een ontwikkelaar inhuren voor een eenmalige migratie kost al snel 2.000 tot 5.000 euro en duurt één tot twee weken. Voor projecten die elke maand terugkomen is dat onhoudbaar.",
+    accent: "red" as const,
   },
   {
     icon: <Lock className="h-5 w-5" />,
     title: "ETL-tools = lock-in",
     body: "Talend, Zapier of Fivetran vereisen abonnementen, specialistische kennis, en hosten je data op hun infrastructuur. Stop je het abonnement, dan stop je ook je migratiescripts.",
+    accent: "orange" as const,
   },
   {
     icon: <Database className="h-5 w-5" />,
     title: "Excel = breekt op edge cases",
     body: "VLOOKUPs en formules werken voor simpele 1-op-1 mappings, maar zodra je lookups tussen tabellen, conditionele filters of telefoon-normalisatie nodig hebt, loop je vast.",
+    accent: "purple" as const,
   },
 ];
 
@@ -176,20 +180,24 @@ function ProblemSection() {
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {problemCards.map((c) => (
-            <div
+            <SpotlightCard
               key={c.title}
-              className="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-7 transition hover:border-primary/30"
+              customSize
+              glowColor={c.accent}
+              className="!aspect-auto !p-7"
             >
-              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-foreground/85">
-                {c.icon}
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
+                  {c.icon}
+                </div>
+                <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                  {c.title}
+                </h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  {c.body}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
-                {c.title}
-              </h3>
-              <p className="mt-2 text-sm text-foreground/65 leading-relaxed">
-                {c.body}
-              </p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>
@@ -274,6 +282,39 @@ const steps = [
   },
 ];
 
+const agentChatScript = [
+  {
+    role: "user" as const,
+    text: "Procurios export naar Dynamics 365. Skip personen zonder e-mail én zonder financiële binding. Account-ID is unique key voor lookup. Telefoonnummers naar +31-formaat.",
+  },
+  {
+    role: "ai" as const,
+    text:
+      "Plan opgesteld op je 50-rijen sample:\n\n1. Read source\n   • procurios_persons.csv (32 rows)\n   • procurios_accounts.csv (18 rows)\n\n2. Filter\n   • skip person WHERE email IS NULL AND donations_count = 0\n\n3. Transform\n   • phone naar E.164 (+31...)\n   • account_id → relation key in Dynamics\n\n4. Write\n   • dynamics_persons.csv\n   • dynamics_accounts.csv\n\nKlaar om te bouwen?",
+    refs: ["mapping-rules.md", "dynamics-schema.json"],
+  },
+  {
+    role: "user" as const,
+    text: "Wacht, ook personen met telefoon-binding behouden, ook zonder e-mail.",
+  },
+  {
+    role: "ai" as const,
+    text:
+      "Filter aangepast:\n\n• skip WHERE email IS NULL AND phone IS NULL AND donations_count = 0\n\nDus iemand met alleen een telefoonnummer blijft erin. Bouwen?",
+    refs: ["mapping-rules.md (v2)"],
+  },
+  {
+    role: "user" as const,
+    text: "Ja, ga maar.",
+  },
+  {
+    role: "ai" as const,
+    text:
+      "Script gebouwd en getest op je sample:\n\n✓ 47 rows mapped\n✓ 3 rows geskipt (geen email, geen phone, geen donaties)\n✓ Phone normalisatie 47/47 succesvol\n✓ sample_output.xlsx klaar\n\nDownload-pakket beschikbaar.",
+    refs: ["script.py", "handleiding.docx", "sample_output.xlsx"],
+  },
+];
+
 function StepsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.15 });
@@ -333,22 +374,34 @@ function StepsSection() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-xl border border-primary/30 bg-gradient-to-b from-primary/[0.08] to-transparent p-6 md:p-8">
-          <div className="flex items-start gap-4">
-            <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary">
-              <Wand2 className="h-5 w-5" />
-            </div>
-            <div>
-              <h3 className="text-base md:text-lg font-semibold tracking-tight text-foreground">
+        <div className="mt-12 rounded-xl border border-primary/30 bg-gradient-to-b from-primary/[0.08] to-transparent p-6 md:p-10">
+          <div className="grid gap-10 lg:grid-cols-12 items-start">
+            <div className="lg:col-span-5 lg:sticky lg:top-24">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                <Wand2 className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
                 En dan, de agent doet zijn werk
               </h3>
-              <p className="mt-2 text-sm md:text-base text-foreground/70 leading-relaxed">
+              <p className="mt-4 text-sm md:text-base text-foreground/70 leading-relaxed">
                 De agent leest je sample, stelt een migratie-plan op in
-                leesbare markdown, en toont het aan jou. Je kunt chatten met de
-                agent (nee deze regel moet anders, skip ook X) of klikken op
-                Goedkeuren. Na akkoord bouwt en test de agent het script op je
-                50 rijen, en lever je het pakket op.
+                leesbare markdown, en toont het aan jou. Stuur 'm bij in een
+                chat-gesprek (nee deze regel moet anders, skip ook X) of klik
+                op Goedkeuren. Na akkoord bouwt en test de agent het script op
+                je 50 rijen.
               </p>
+              <ul className="mt-5 space-y-2 font-mono text-xs text-muted-foreground">
+                <li>· plan in markdown, leesbaar voor mensen</li>
+                <li>· chat om bij te sturen tot het klopt</li>
+                <li>· script test eerst op je sample, niet op productie</li>
+              </ul>
+            </div>
+            <div className="lg:col-span-7">
+              <AnimatedChatDemo
+                windowTitle="MigratieMaatjes Agent"
+                onlineLabel="aan het werk"
+                script={agentChatScript}
+              />
             </div>
           </div>
         </div>
