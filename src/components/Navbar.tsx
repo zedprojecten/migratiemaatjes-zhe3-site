@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { Menu as MenuIcon, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLocalizedHref } from "@/lib/language";
+
+const APP_URL = "https://migratie-maatjes.vercel.app";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/hoe-het-werkt", label: "Hoe het werkt" },
-  { to: "/use-cases", label: "Use cases" },
-  { to: "/tarieven", label: "Tarieven" },
-  { to: "/contact", label: "Contact" },
+  { href: "#stappen", label: "Hoe het werkt" },
+  { href: "#voor-wie", label: "Voor wie" },
+  { href: "#privacy", label: "Privacy" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -24,23 +22,20 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [location.pathname]);
-
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
-        "bg-background/85 backdrop-blur-md",
-        scrolled ? "border-b border-border/60 shadow-sm" : "border-b border-transparent"
+        "bg-background/80 backdrop-blur-md",
+        scrolled
+          ? "border-b border-white/10 shadow-sm"
+          : "border-b border-transparent",
       )}
     >
       <nav className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6">
-        <Link
-          to={useLocalizedHref("/")}
-          viewTransition
-          className="flex items-center gap-2 text-base sm:text-xl font-display font-semibold tracking-tight text-foreground whitespace-nowrap"
+        <a
+          href="#top"
+          className="flex items-center gap-2 text-base sm:text-lg font-display font-semibold tracking-tight text-foreground whitespace-nowrap"
         >
           <span
             aria-hidden
@@ -48,37 +43,29 @@ export default function Navbar() {
           >
             {"{ }"}
           </span>
-          <span>Migratiemaatjes</span>
-        </Link>
+          <span>MigratieMaatjes</span>
+        </a>
 
         <ul className="hidden md:flex items-center gap-1">
-          {links.map((l) => {
-            const active = location.pathname === l.to;
-            return (
-              <li key={l.to}>
-                <Link
-                  to={l.to}
-                  viewTransition
-                  className={cn(
-                    "px-3 py-2 text-sm rounded-md transition-colors",
-                    active
-                      ? "text-foreground bg-secondary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/60"
-                  )}
-                >
-                  {l.label}
-                </Link>
-              </li>
-            );
-          })}
+          {links.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                className="px-3 py-2 text-sm rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-white/[0.04]"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
           <li className="ml-2">
-            <Link
-              to={useLocalizedHref("/contact")}
-              viewTransition
-              className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            <a
+              href={APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:brightness-110 transition"
             >
-              Stuur je intake op
-            </Link>
+              Naar de app
+            </a>
           </li>
         </ul>
 
@@ -87,40 +74,35 @@ export default function Navbar() {
           aria-label={open ? "Sluit menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-border/70 text-foreground hover:bg-secondary"
+          className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-white/15 text-foreground hover:bg-white/[0.04]"
         >
           {open ? <X className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
         </button>
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-border/60 bg-background">
+        <div className="md:hidden border-t border-white/10 bg-background">
           <ul className="container mx-auto flex flex-col py-2 px-4">
-            {links.map((l) => {
-              const active = location.pathname === l.to;
-              return (
-                <li key={l.to}>
-                  <Link
-                    to={l.to}
-                    viewTransition
-                    className={cn(
-                      "block px-3 py-3 text-sm rounded-md",
-                      active ? "text-foreground bg-secondary" : "text-muted-foreground hover:text-foreground"
-                    )}
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              );
-            })}
+            {links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="block px-3 py-3 text-sm rounded-md text-muted-foreground hover:text-foreground"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
             <li className="py-2">
-              <Link
-                to={useLocalizedHref("/contact")}
-                viewTransition
+              <a
+                href={APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-center px-4 py-3 text-sm font-medium rounded-md bg-primary text-primary-foreground"
               >
-                Stuur je intake op
-              </Link>
+                Naar de app
+              </a>
             </li>
           </ul>
         </div>

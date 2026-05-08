@@ -1,55 +1,68 @@
-import { Link } from "react-router-dom";
 import { SiteCredit } from "@/components/SiteCredit";
 import { Mail } from "lucide-react";
-import { useLocalizedHref } from "@/lib/language";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-border/60 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 py-14">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div className="md:col-span-2">
-            <Link to={useLocalizedHref("/")} viewTransition className="inline-flex items-center gap-2 text-lg font-display font-semibold tracking-tight">
-              <span aria-hidden className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary/15 border border-primary/30 text-primary font-mono text-xs">
+    <footer className="border-t border-white/10 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 py-12">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-md">
+            <a
+              href="#top"
+              className="inline-flex items-center gap-2 text-lg font-display font-semibold tracking-tight"
+            >
+              <span
+                aria-hidden
+                className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary/15 border border-primary/30 text-primary font-mono text-xs"
+              >
                 {"{ }"}
               </span>
-              <span>Migratiemaatjes</span>
-            </Link>
-            <p className="mt-4 max-w-md text-sm text-muted-foreground leading-relaxed">
-              Eenmalige dataset-migraties tussen platformen en formaten. Vaste prijs vooraf, dry-run op je sample, levering binnen 3 tot 5 werkdagen.
+              <span>MigratieMaatjes</span>
+            </a>
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+              Een product van MVD Management. AI-gegenereerde Python-scripts
+              voor datamigraties, met je data lokaal en zonder vendor
+              lock-in.
             </p>
             <a
-              href="mailto:hello@migratiemaatjes.nl"
-              className="mt-4 inline-flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
+              href="mailto:hello@mvdmanagement.nl"
+              className="mt-5 inline-flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-4 w-4" />
-              hello@migratiemaatjes.nl
+              hello@mvdmanagement.nl
             </a>
           </div>
 
-          <div>
-            <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-3">Site</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to={useLocalizedHref("/")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link to={useLocalizedHref("/hoe-het-werkt")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Hoe het werkt</Link></li>
-              <li><Link to={useLocalizedHref("/use-cases")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Use cases</Link></li>
-              <li><Link to={useLocalizedHref("/tarieven")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Tarieven</Link></li>
-              <li><Link to={useLocalizedHref("/contact")} viewTransition className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-3">Legal</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to={useLocalizedHref("/privacy")} className="text-muted-foreground hover:text-foreground transition-colors">Privacybeleid</Link></li>
-            </ul>
+          <div className="flex flex-col gap-3 md:items-end">
+            <div className="flex flex-wrap items-center gap-5 font-mono text-xs">
+              <a
+                href="#privacy"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Privacy
+              </a>
+              <a
+                href="#faq"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                FAQ
+              </a>
+              <a
+                href="https://migratie-maatjes.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Naar de app
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-border/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground font-mono">
-            © {year} Migratiemaatjes — alle rechten voorbehouden
+            © {year} MVD Management — MigratieMaatjes
           </p>
           <SiteCredit />
         </div>
