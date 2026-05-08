@@ -38,7 +38,7 @@ const charVariants: Variants = {
 
 export function CTAMinimal({
   heading = "Klaar om te beginnen",
-  subtext = "Plan een vrijblijvend gesprek en ontdek wat we voor je kunnen betekenen.",
+  subtext = "Plan een vrijblijvend gesprek over je project.",
   primaryLabel = "Plan kennismaking",
   primaryHref = "#contact",
   secondaryLabel = "Bekijk werk",

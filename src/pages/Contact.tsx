@@ -397,7 +397,7 @@ export default function Contact() {
             <h1 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
               Stuur je sample mee en we kijken samen wat er nodig is.
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
               Reactie binnen 24 uur op werkdagen. Geen sales-call, direct ter zake.
             </p>
           </div>

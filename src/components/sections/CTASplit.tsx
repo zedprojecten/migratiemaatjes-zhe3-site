@@ -47,7 +47,7 @@ const cascadeVariants: Variants = {
 
 export function CTASplit({
   heading = "Een site die werkt voor jouw bedrijf",
-  subtext = "We bouwen niet zomaar een mooie site. We bouwen een conversiemachine die past bij jouw merk en doelgroep. Plan een gesprek en ontdek wat er mogelijk is.",
+  subtext = "We bouwen niet zomaar een mooie site. We bouwen een conversiemachine die past bij jouw merk en doelgroep. Plan een gesprek en we kijken samen wat er kan.",
   primaryLabel = "Plan kennismaking",
   primaryHref = "#contact",
   secondaryLabel = "Bekijk werk",

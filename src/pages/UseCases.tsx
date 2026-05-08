@@ -158,7 +158,7 @@ export default function UseCases() {
             <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold tracking-tight">
               Niet elke migratie is hetzelfde. Wel elke aanpak.
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-foreground/80">
               Zes scenario&apos;s waarvoor we vaker mappingscripts schrijven dan ons lief is. Klik door of stuur direct je eigen scenario.
             </p>
           </div>
@@ -168,9 +168,10 @@ export default function UseCases() {
       {/* Six case sections */}
       {cases.map((c, idx) => {
         const snippetLeft = idx % 2 === 1; // cases 2, 4, 6 (idx 1,3,5) -> snippet links
+        const altBg = idx % 2 === 1 ? "bg-card/20" : "";
         return (
           <ScrollReveal key={c.monoHeader}>
-            <section className="border-b border-border/60 py-16 md:py-20">
+            <section className={`border-b border-border/60 py-16 md:py-20 ${altBg}`}>
               <div className="container mx-auto px-4 sm:px-6">
                 <div className="grid lg:grid-cols-2 gap-10 items-start">
                   {/* Body block */}
@@ -181,7 +182,7 @@ export default function UseCases() {
                       </span>
                       <ComplexityBadge complexity={c.complexity} />
                     </div>
-                    <p className="mt-6 text-muted-foreground leading-relaxed">
+                    <p className="mt-6 text-foreground/80 leading-relaxed">
                       {c.body}
                     </p>
                     <p className="mt-4 font-mono text-sm text-muted-foreground">

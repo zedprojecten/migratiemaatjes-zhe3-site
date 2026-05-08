@@ -83,7 +83,7 @@ const DEFAULT_POSTS: BlogPost[] = [
 
 export function BlogGridMasonry({
   heading = "Studio journal",
-  subheading = "Visuele notities, lange essays en alles wat we onderweg ontdekken.",
+  subheading = "Visuele notities, lange essays en alles wat we onderweg leren.",
   posts = DEFAULT_POSTS,
   className,
 }: BlogGridMasonryProps) {

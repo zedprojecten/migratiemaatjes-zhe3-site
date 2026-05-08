@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Database, GitBranch, Layers, FileCode, Workflow, FileSpreadsheet, ArrowRight } from "lucide-react";
 import { HeroAurora } from "@/components/heroes/HeroAurora";
 import { LogoCloudStrip } from "@/components/sections/LogoCloudStrip";
-import { BentoGrid } from "@/components/sections/BentoGrid";
 import StepsVisualCinematic from "@/components/sections/StepsVisualCinematic";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { StickyMobileCTA } from "@/components/sections/StickyMobileCTA";
@@ -42,123 +41,114 @@ const PLATFORM_LOGOS = [
 ];
 
 // ───────────────────────────────────────────────────────────────────────────
-// Bento items met monospace bron->doel header en complexity-badge.
+// Bento cases met monospace bron->doel header en complexity-badge.
 // ───────────────────────────────────────────────────────────────────────────
 
 type Complexity = "Quick" | "Standard" | "Complex";
 
 const complexityStyles: Record<Complexity, string> = {
-  Quick:
-    "border-emerald-400/30 bg-emerald-400/5 text-emerald-300",
-  Standard:
-    "border-primary/40 bg-primary/10 text-primary",
-  Complex:
-    "border-amber-400/30 bg-amber-400/5 text-amber-300",
+  Quick: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
+  Standard: "border-primary/40 bg-primary/10 text-primary",
+  Complex: "border-amber-400/30 bg-amber-400/10 text-amber-300",
 };
 
-function CardHeader({
-  source,
-  target,
-  complexity,
-}: {
+interface BentoCase {
+  icon: React.ReactNode;
+  title: string;
   source: string;
   target: string;
   complexity: Complexity;
-}) {
-  return (
-    <div className="mb-3 flex flex-wrap items-center gap-2">
-      <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-        {source} <span className="text-primary/80">-&gt;</span> {target}
-      </span>
-      <span
-        className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border ${complexityStyles[complexity]}`}
-      >
-        {complexity}
-      </span>
-    </div>
-  );
+  body: string;
 }
 
-const bentoItems = [
+const bentoCases: BentoCase[] = [
   {
     icon: <Database className="h-6 w-6 text-primary" />,
     title: "Magento 2 -> Shopify",
-    description: (
-      <>
-        <CardHeader source="magento-2" target="shopify" complexity="Standard" />
-        Custom attributes naar metafields, complete order-history mee, klant-tags
-        behouden. Standaard pakket voor stores onder de 50.000 producten.
-      </>
-    ) as unknown as string,
+    source: "magento-2",
+    target: "shopify",
+    complexity: "Standard",
+    body: "Custom attributes naar metafields, complete order-history mee, klant-tags behouden. Standaard pakket voor stores onder de 50.000 producten.",
   },
   {
     icon: <GitBranch className="h-6 w-6 text-primary" />,
     title: "Pipedrive -> HubSpot",
-    description: (
-      <>
-        <CardHeader source="pipedrive" target="hubspot" complexity="Standard" />
-        Pipeline-stages mappen 1-op-1, custom properties blijven typed,
-        owner-toewijzing per deal. Inclusief activity-log en notes.
-      </>
-    ) as unknown as string,
+    source: "pipedrive",
+    target: "hubspot",
+    complexity: "Standard",
+    body: "Pipeline-stages mappen 1-op-1, custom properties blijven typed, owner-toewijzing per deal. Inclusief activity-log en notes.",
   },
   {
     icon: <Layers className="h-6 w-6 text-primary" />,
     title: "Mailchimp -> Klaviyo",
-    description: (
-      <>
-        <CardHeader source="mailchimp" target="klaviyo" complexity="Quick" />
-        Groepen worden Klaviyo-segmenten, engagement-history (opens, clicks)
-        blijft per profiel zichtbaar. Levering binnen 3 werkdagen.
-      </>
-    ) as unknown as string,
+    source: "mailchimp",
+    target: "klaviyo",
+    complexity: "Quick",
+    body: "Groepen worden Klaviyo-segmenten, engagement-history (opens, clicks) blijft per profiel zichtbaar. Levering binnen 3 werkdagen.",
   },
   {
     icon: <FileCode className="h-6 w-6 text-primary" />,
     title: "WooCommerce SQL -> Shopify CSV",
-    description: (
-      <>
-        <CardHeader
-          source="woocommerce-sql"
-          target="shopify-csv"
-          complexity="Complex"
-        />
-        wp_postmeta EAV-tabel uitvouwen naar één rij per variant, attribute_terms
-        mappen, image-paths herschrijven. Werkt ook bij 200k+ rijen.
-      </>
-    ) as unknown as string,
+    source: "woocommerce-sql",
+    target: "shopify-csv",
+    complexity: "Complex",
+    body: "wp_postmeta EAV-tabel uitvouwen naar één rij per variant, attribute_terms mappen, image-paths herschrijven. Werkt ook bij 200k+ rijen.",
   },
   {
     icon: <Workflow className="h-6 w-6 text-primary" />,
     title: "Legacy MySQL ERP -> Airtable + Pipedrive",
-    description: (
-      <>
-        <CardHeader
-          source="mysql-erp"
-          target="airtable + pipedrive"
-          complexity="Complex"
-        />
-        Split: master-data naar Airtable, sales-pipeline naar Pipedrive.
-        Genormaliseerde relaties, custom velden zonder docs reverse-engineered.
-      </>
-    ) as unknown as string,
+    source: "mysql-erp",
+    target: "airtable + pipedrive",
+    complexity: "Complex",
+    body: "Split: master-data naar Airtable, sales-pipeline naar Pipedrive. Genormaliseerde relaties, custom velden zonder docs reverse-engineered.",
   },
   {
     icon: <FileSpreadsheet className="h-6 w-6 text-primary" />,
     title: "CSV -> platform-import-templates",
-    description: (
-      <>
-        <CardHeader
-          source="csv"
-          target="hubspot | klaviyo | brevo | airtable"
-          complexity="Quick"
-        />
-        Eigen exports naar HubSpot-, Klaviyo-, Brevo- of Airtable-import-formaat.
-        Field-mapping en validatie meegeleverd.
-      </>
-    ) as unknown as string,
+    source: "csv",
+    target: "hubspot | klaviyo | brevo | airtable",
+    complexity: "Quick",
+    body: "Eigen exports naar HubSpot-, Klaviyo-, Brevo- of Airtable-import-formaat. Field-mapping en validatie meegeleverd.",
   },
 ];
+
+function BentoCaseCard({ item }: { item: BentoCase }) {
+  return (
+    <div className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 md:p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_18px_48px_-18px_hsl(var(--primary)/0.35)]">
+      {/* hover spotlight */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 0%, hsl(var(--primary) / 0.10), transparent 60%)",
+        }}
+      />
+
+      {/* header: source -> target + complexity */}
+      <div className="relative mb-4 flex flex-wrap items-center gap-2">
+        <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+          {item.source} <span className="text-primary/80">-&gt;</span>{" "}
+          {item.target}
+        </span>
+        <span
+          className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border ${complexityStyles[item.complexity]}`}
+        >
+          {item.complexity}
+        </span>
+      </div>
+
+      <div className="relative mb-4">{item.icon}</div>
+
+      <h3 className="relative mb-2 text-lg font-semibold tracking-tight text-foreground">
+        {item.title}
+      </h3>
+      <p className="relative text-sm leading-relaxed text-foreground/75">
+        {item.body}
+      </p>
+    </div>
+  );
+}
 
 // ───────────────────────────────────────────────────────────────────────────
 // Steps voor StepsVisualCinematic
@@ -201,7 +191,7 @@ export default function Home() {
             </span>
 
             <h1 className="mt-5 font-display text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.05]">
-              Custom datasets, foutloos van A naar B
+              Datasets, foutloos van A naar B.
             </h1>
 
             <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -277,8 +267,6 @@ export default function Home() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.08) 1px, transparent 0)",
               backgroundSize: "28px 28px",
               maskImage:
                 "radial-gradient(ellipse at center, black 35%, transparent 75%)",
@@ -295,27 +283,33 @@ export default function Home() {
               <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight text-foreground">
                 Zes scenario's die we vaker zien dan ons lief is
               </h2>
-              <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-base md:text-lg text-foreground/75 leading-relaxed">
                 Niet elke migratie is hetzelfde, maar de meeste zijn een variant
                 op één van deze zes. Klik door voor de volledige scenario-uitleg
                 of stuur direct je intake.
               </p>
             </div>
           </ScrollReveal>
-        </div>
 
-        <BentoGrid items={bentoItems} withPadding={false} className="mt-12 md:mt-14" />
+          <div className="mt-12 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {bentoCases.map((c, i) => (
+              <ScrollReveal key={c.title} delay={i * 0.08}>
+                <BentoCaseCard item={c} />
+              </ScrollReveal>
+            ))}
+          </div>
 
-        <div className="mx-auto max-w-6xl px-4 mt-10">
           <ScrollReveal>
-            <Link
-              to={useLocalizedHref("/use-cases")}
-              viewTransition
-              className="group inline-flex items-center gap-2 font-mono text-sm text-primary hover:text-primary/80"
-            >
-              Bekijk alle scenario's
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </Link>
+            <div className="mt-10">
+              <Link
+                to={useLocalizedHref("/use-cases")}
+                viewTransition
+                className="group inline-flex items-center gap-2 font-mono text-sm text-primary hover:text-primary/80"
+              >
+                Bekijk alle scenario's
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

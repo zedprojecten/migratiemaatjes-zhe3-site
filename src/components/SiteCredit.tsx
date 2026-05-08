@@ -6,7 +6,7 @@
  * webdesign.bykick.nl/via/:slug zodat de bezoeker de referral-banner krijgt.
  */
 
-const CLIENT_SLUG = "migratiemaatjes-zhe3";
+const CLIENT_SLUG = "__CLIENT_SLUG__";
 
 export function SiteCredit() {
   return (

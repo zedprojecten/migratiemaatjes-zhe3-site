@@ -73,7 +73,7 @@ const FAQ_ITEMS = [
   {
     question: "Wat is precies een 'dry-run'?",
     answer:
-      "We draaien het mappingscript op een subset van je data, meestal 50-200 records, en sturen je de output zodat je per veld kunt valideren of het correct landt. Pas na jouw akkoord draait de hoofdrun. Zo voorkom je dat je 25.000 producten importeert en daarna ontdekt dat de variant-mapping ergens scheef zit.",
+      "We draaien het mappingscript op een subset van je data, meestal 50-200 records, en sturen je de output zodat je per veld kunt valideren of het correct landt. Pas na jouw akkoord draait de hoofdrun. Zo voorkom je dat je 25.000 producten importeert en pas achteraf merkt dat de variant-mapping ergens scheef zit.",
   },
   {
     question: "Krijg ik echt het mappingscript zelf?",
@@ -127,7 +127,7 @@ export default function Tarieven() {
             <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold tracking-tight">
               Vaste prijs vooraf.
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
               Geen verborgen uurtarieven. Geen recurring kosten. Geen verrassingen na de cutover.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function Tarieven() {
               {TRUST_BULLETS.map((b) => (
                 <div key={b} className="flex items-start gap-3 font-mono text-sm">
                   <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
-                  <span className="text-muted-foreground">{b}</span>
+                  <span className="text-foreground/80">{b}</span>
                 </div>
               ))}
             </div>

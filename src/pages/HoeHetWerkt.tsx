@@ -98,8 +98,6 @@ export default function HoeHetWerkt() {
     <main className="bg-background text-foreground">
       {/* Page hero */}
       <section className="relative overflow-hidden border-b border-border/60">
-        <div className="absolute inset-0 bg-cyan-spotlight pointer-events-none" />
-        <div className="absolute inset-0 bg-dot-grid opacity-40 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28 relative">
           <div className="max-w-3xl">
             <span className="font-mono text-xs uppercase tracking-wider text-primary">
@@ -108,7 +106,7 @@ export default function HoeHetWerkt() {
             <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight">
               Geen fire-and-forget. Geen scope-discussies.
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
+            <p className="mt-4 text-lg text-foreground/80 max-w-2xl">
               Gewoon data van A naar B.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 font-mono text-xs text-muted-foreground">
@@ -138,19 +136,19 @@ export default function HoeHetWerkt() {
 
       {/* Step 1 — Intake (snippet rechts) */}
       <ScrollReveal>
-        <section className="border-b border-border/60 py-12 sm:py-20 md:py-28">
+        <section className="border-b border-border/60 py-12 sm:py-20 md:py-28 bg-card/20">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div>
               <span className="font-mono text-sm text-primary">01 — Intake</span>
               <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
                 Klant levert sample-data en doel-platform aan
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed">
                 Via het intake-formulier geef je door: bron-formaat (CSV, JSON, XML, XLSX,
                 SQL of anders), bron-platform (vrij veld), doel-platform en geschat aantal
                 records. Een sample-bestand mail je daarna door.
               </p>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed">
                 Binnen 24 uur op werkdagen bevestigen we het pakket en de planning. Geen
                 sales-call, geen scope-document van twintig pagina's; een korte mail met
                 de afspraak en een offerte.
@@ -172,13 +170,13 @@ export default function HoeHetWerkt() {
               <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
                 Wij bouwen een custom mapping-script
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed">
                 We analyseren het bron-schema en schrijven een mapping-script in
                 TypeScript of Python. Per veld leggen we vast hoe de transformatie werkt:
                 directe map, type-conversie, lookup, of derivatie uit meerdere
                 bron-velden.
               </p>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed">
                 Het mappingscript is een first-class deliverable. Je krijgt de broncode,
                 een schema-document met alle field-mappings, en een README waarmee een
                 interne developer het kan herdraaien.
@@ -195,20 +193,20 @@ export default function HoeHetWerkt() {
 
       {/* Step 3 — Dry-run (snippet rechts) */}
       <ScrollReveal>
-        <section className="border-b border-border/60 py-12 sm:py-20 md:py-28">
+        <section className="border-b border-border/60 py-12 sm:py-20 md:py-28 bg-card/20">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div>
               <span className="font-mono text-sm text-primary">03 — Dry-run</span>
               <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
                 Subset-run met diff-style preview
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed">
                 Voordat we de hoofdrun draaien, runnen we het script op een subset
                 (typisch 50 tot 200 records) en sturen je een preview. Per veld zie je de
                 bron-waarde naast de doel-waarde. Als een import gaat falen, zie je het
                 hier, niet in productie.
               </p>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed">
                 Dit lost het pijnpunt op van 'nieuwe tool weigert de import zonder
                 duidelijke error'. Je geeft akkoord per object-type (producten, klanten,
                 orders), of je geeft punten aan die we eerst moeten fixen.
@@ -266,13 +264,13 @@ export default function HoeHetWerkt() {
               <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
                 Volledige conversie plus herbruikbaar script
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed">
                 Na akkoord op de dry-run draaien we de hoofdrun. Je krijgt het volledige
                 geconverteerde bestand (CSV, JSONL of direct API-import, afhankelijk van
                 het scenario) plus het mappingscript, het schema-document en een
                 handover-mail met run-logs.
               </p>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed">
                 Bij Standard en Complex blijven we vijf werkdagen na cutover bereikbaar
                 voor field-fixes. Daarna is het script van jou. Geen recurring license,
                 geen onboarding-fee als je de migratie ooit moet herhalen of voor een
@@ -291,7 +289,6 @@ export default function HoeHetWerkt() {
       {/* USP block — Het mappingscript is van jou */}
       <ScrollReveal>
         <section className="py-12 sm:py-20 md:py-28 border-b border-border/60 relative overflow-hidden">
-          <div className="absolute inset-0 bg-dot-grid opacity-30 pointer-events-none" />
           <div className="container mx-auto px-4 sm:px-6 relative">
             <div className="rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/5 to-transparent p-8 sm:p-10 md:p-14 max-w-4xl mx-auto">
               <span className="font-mono text-xs uppercase tracking-wider text-primary">
@@ -300,7 +297,7 @@ export default function HoeHetWerkt() {
               <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
                 Het mappingscript is van jou
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="mt-4 text-foreground/80 leading-relaxed max-w-2xl">
                 Geen vendor lock-in, geen onboarding-fee als de migratie ooit moet worden
                 herhaald. Je interne team kan het script aanpassen, opnieuw draaien, of
                 doorgeven aan een nieuwe leverancier. Wij zijn een leverancier voor één
