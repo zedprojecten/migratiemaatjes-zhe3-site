@@ -29,6 +29,13 @@ export interface PricingPlan {
   recommended?: boolean;
   /** "purple" | "blue" | "orange" of een vrije Tailwind kleur-prefix. */
   accentColor?: "purple" | "blue" | "orange";
+  /**
+   * Wanneer ingevuld vervangt deze label de hele prijs-rij (€-prefix +
+   * AnimatedPrice + period). Gebruik voor "Op offerte" / "Op aanvraag" plannen.
+   */
+  customLabel?: string;
+  /** Override de "Populair"-badge tekst voor recommended-plannen. */
+  badge?: string;
 }
 
 export interface PricingTableProps {
@@ -253,7 +260,7 @@ function CinematicCard({
                 accent.gradient,
               )}
             >
-              Populair
+              {plan.badge ?? "Populair"}
             </span>
           )}
         </div>
@@ -263,26 +270,44 @@ function CinematicCard({
           </p>
         )}
 
-        <div className="flex items-baseline gap-1 mb-8">
-          <span className={cn("text-2xl font-medium", accent.text)}>
-            {"€"}
-          </span>
-          <span
-            className={cn(
-              "text-6xl font-bold tracking-tight tabular-nums",
-              accent.text,
+        {plan.customLabel ? (
+          <div className="mb-8">
+            <span
+              className={cn(
+                "block text-3xl md:text-4xl font-bold tracking-tight",
+                accent.text,
+              )}
+            >
+              {plan.customLabel}
+            </span>
+            {plan.period && (
+              <span className="mt-1 block text-sm text-white/60">
+                {plan.period}
+              </span>
             )}
-          >
-            <AnimatedPrice
-              price={plan.price}
-              isInView={isInView}
-              delay={index * 120 + 200}
-            />
-          </span>
-          {plan.period && (
-            <span className="text-sm text-white/60 ml-1">{plan.period}</span>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="flex items-baseline gap-1 mb-8">
+            <span className={cn("text-2xl font-medium", accent.text)}>
+              {"€"}
+            </span>
+            <span
+              className={cn(
+                "text-6xl font-bold tracking-tight tabular-nums",
+                accent.text,
+              )}
+            >
+              <AnimatedPrice
+                price={plan.price}
+                isInView={isInView}
+                delay={index * 120 + 200}
+              />
+            </span>
+            {plan.period && (
+              <span className="text-sm text-white/60 ml-1">{plan.period}</span>
+            )}
+          </div>
+        )}
 
         <ul className="space-y-3 flex-1 mb-8">
           {plan.features

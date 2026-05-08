@@ -122,8 +122,8 @@ const BgParticleWave: React.FC<ParticleWaveProps> = ({ className = '' }) => {
       vertexShader: particleVertex,
       fragmentShader: particleFragment,
       uniforms: {
-        uTime: { type: 'f', value: 0 },
-        uColor: { type: 'v3', value: getParticleColor(getCurrentTheme()) }
+        uTime: { value: 0 },
+        uColor: { value: getParticleColor(getCurrentTheme()) }
       }
     });
 

@@ -1,8 +1,8 @@
-// apps/server/templates/site-template/src/pages/Privacy.tsx
+import { Link } from "react-router-dom";
 
 export default function Privacy() {
   return (
-    <main className="max-w-2xl mx-auto px-6 py-16 prose prose-neutral">
+    <main className="max-w-2xl mx-auto px-6 py-16 prose prose-neutral prose-invert">
       <h1 className="text-3xl font-semibold mb-6">Privacyverklaring</h1>
       <p className="mb-4">
         Op deze website gebruiken we Google Analytics 4 om bij te houden hoe bezoekers de site
@@ -19,7 +19,9 @@ export default function Privacy() {
         Vragen over je privacy? Mail naar het contactadres in de footer.
       </p>
       <p className="mt-8">
-        <a href="/" className="text-orange-500 hover:underline">← Terug naar de homepage</a>
+        <Link to="/" viewTransition className="text-primary hover:text-primary/80 hover:underline">
+          ← Terug naar de homepage
+        </Link>
       </p>
     </main>
   );
