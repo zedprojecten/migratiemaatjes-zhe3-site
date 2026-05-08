@@ -1,17 +1,23 @@
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Database, GitBranch, Layers, FileCode, Workflow, FileSpreadsheet, ArrowRight } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import {
+  Database,
+  GitBranch,
+  Layers,
+  FileCode,
+  Workflow,
+  FileSpreadsheet,
+  ArrowRight,
+} from "lucide-react";
 import { HeroAurora } from "@/components/heroes/HeroAurora";
 import { LogoCloudStrip } from "@/components/sections/LogoCloudStrip";
 import StepsVisualCinematic from "@/components/sections/StepsVisualCinematic";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { StickyMobileCTA } from "@/components/sections/StickyMobileCTA";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SpotlightCard } from "@/components/interactive/SpotlightCard";
 import { useLocalizedHref } from "@/lib/language";
-
-// ───────────────────────────────────────────────────────────────────────────
-// Logo wordmarks voor de logo-strip. Geen kleur, monochrome wordmark in
-// foreground/90 — scrollstrip dempt opacity verder via LogoCloudStrip.
-// ───────────────────────────────────────────────────────────────────────────
 
 const Wordmark = ({
   children,
@@ -35,16 +41,20 @@ const PLATFORM_LOGOS = [
   { name: "Pipedrive", svg: <Wordmark>Pipedrive</Wordmark> },
   { name: "Salesforce", svg: <Wordmark>Salesforce</Wordmark> },
   { name: "Mailchimp", svg: <Wordmark>Mailchimp</Wordmark> },
-  { name: "Klaviyo", svg: <Wordmark className="uppercase tracking-[0.18em] text-sm">Klaviyo</Wordmark> },
+  {
+    name: "Klaviyo",
+    svg: (
+      <Wordmark className="uppercase tracking-[0.18em] text-sm">
+        Klaviyo
+      </Wordmark>
+    ),
+  },
   { name: "Brevo", svg: <Wordmark>Brevo</Wordmark> },
   { name: "Airtable", svg: <Wordmark>Airtable</Wordmark> },
 ];
 
-// ───────────────────────────────────────────────────────────────────────────
-// Bento cases met monospace bron->doel header en complexity-badge.
-// ───────────────────────────────────────────────────────────────────────────
-
 type Complexity = "Quick" | "Standard" | "Complex";
+type GlowColor = "blue" | "purple" | "green" | "red" | "orange";
 
 const complexityStyles: Record<Complexity, string> = {
   Quick: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
@@ -59,100 +69,129 @@ interface BentoCase {
   target: string;
   complexity: Complexity;
   body: string;
+  accent: GlowColor;
 }
 
 const bentoCases: BentoCase[] = [
   {
-    icon: <Database className="h-6 w-6 text-primary" />,
+    icon: <Database className="h-6 w-6 text-foreground/85" />,
     title: "Magento 2 -> Shopify",
     source: "magento-2",
     target: "shopify",
     complexity: "Standard",
     body: "Custom attributes naar metafields, complete order-history mee, klant-tags behouden. Standaard pakket voor stores onder de 50.000 producten.",
+    accent: "blue",
   },
   {
-    icon: <GitBranch className="h-6 w-6 text-primary" />,
+    icon: <GitBranch className="h-6 w-6 text-foreground/85" />,
     title: "Pipedrive -> HubSpot",
     source: "pipedrive",
     target: "hubspot",
     complexity: "Standard",
     body: "Pipeline-stages mappen 1-op-1, custom properties blijven typed, owner-toewijzing per deal. Inclusief activity-log en notes.",
+    accent: "purple",
   },
   {
-    icon: <Layers className="h-6 w-6 text-primary" />,
+    icon: <Layers className="h-6 w-6 text-foreground/85" />,
     title: "Mailchimp -> Klaviyo",
     source: "mailchimp",
     target: "klaviyo",
     complexity: "Quick",
     body: "Groepen worden Klaviyo-segmenten, engagement-history (opens, clicks) blijft per profiel zichtbaar. Levering binnen 3 werkdagen.",
+    accent: "green",
   },
   {
-    icon: <FileCode className="h-6 w-6 text-primary" />,
+    icon: <FileCode className="h-6 w-6 text-foreground/85" />,
     title: "WooCommerce SQL -> Shopify CSV",
     source: "woocommerce-sql",
     target: "shopify-csv",
     complexity: "Complex",
     body: "wp_postmeta EAV-tabel uitvouwen naar één rij per variant, attribute_terms mappen, image-paths herschrijven. Werkt ook bij 200k+ rijen.",
+    accent: "orange",
   },
   {
-    icon: <Workflow className="h-6 w-6 text-primary" />,
+    icon: <Workflow className="h-6 w-6 text-foreground/85" />,
     title: "Legacy MySQL ERP -> Airtable + Pipedrive",
     source: "mysql-erp",
     target: "airtable + pipedrive",
     complexity: "Complex",
     body: "Split: master-data naar Airtable, sales-pipeline naar Pipedrive. Genormaliseerde relaties, custom velden zonder docs reverse-engineered.",
+    accent: "red",
   },
   {
-    icon: <FileSpreadsheet className="h-6 w-6 text-primary" />,
+    icon: <FileSpreadsheet className="h-6 w-6 text-foreground/85" />,
     title: "CSV -> platform-import-templates",
     source: "csv",
     target: "hubspot | klaviyo | brevo | airtable",
     complexity: "Quick",
     body: "Eigen exports naar HubSpot-, Klaviyo-, Brevo- of Airtable-import-formaat. Field-mapping en validatie meegeleverd.",
+    accent: "blue",
   },
 ];
 
-function BentoCaseCard({ item }: { item: BentoCase }) {
+function BentoGrid({ items }: { items: BentoCase[] }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.15 });
+  const [hovered, setHovered] = useState<number | null>(null);
   return (
-    <div className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 md:p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_18px_48px_-18px_hsl(var(--primary)/0.35)]">
-      {/* hover spotlight */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-        style={{
-          background:
-            "radial-gradient(circle at 30% 0%, hsl(var(--primary) / 0.10), transparent 60%)",
-        }}
-      />
+    <div
+      ref={ref}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+      onMouseLeave={() => setHovered(null)}
+    >
+      {items.map((item, i) => {
+        const dim = hovered !== null && hovered !== i;
+        return (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+            transition={{
+              duration: 0.55,
+              delay: i * 0.08,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            onMouseEnter={() => setHovered(i)}
+            style={{
+              opacity: dim ? 0.55 : 1,
+              transition: "opacity 280ms ease",
+            }}
+            className="h-full"
+          >
+            <SpotlightCard
+              customSize
+              glowColor={item.accent}
+              className="h-full !aspect-auto !p-7"
+            >
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="mb-4 flex flex-wrap items-center gap-2">
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+                    {item.source}{" "}
+                    <span className="text-primary/80">-&gt;</span> {item.target}
+                  </span>
+                  <span
+                    className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border ${complexityStyles[item.complexity]}`}
+                  >
+                    {item.complexity}
+                  </span>
+                </div>
 
-      {/* header: source -> target + complexity */}
-      <div className="relative mb-4 flex flex-wrap items-center gap-2">
-        <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-          {item.source} <span className="text-primary/80">-&gt;</span>{" "}
-          {item.target}
-        </span>
-        <span
-          className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border ${complexityStyles[item.complexity]}`}
-        >
-          {item.complexity}
-        </span>
-      </div>
+                <div className="mb-4">{item.icon}</div>
 
-      <div className="relative mb-4">{item.icon}</div>
-
-      <h3 className="relative mb-2 text-lg font-semibold tracking-tight text-foreground">
-        {item.title}
-      </h3>
-      <p className="relative text-sm leading-relaxed text-foreground/75">
-        {item.body}
-      </p>
+                <h3 className="mb-2 text-lg font-semibold tracking-tight text-foreground">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-foreground/75">
+                  {item.body}
+                </p>
+              </div>
+            </SpotlightCard>
+          </motion.div>
+        );
+      })}
     </div>
   );
 }
-
-// ───────────────────────────────────────────────────────────────────────────
-// Steps voor StepsVisualCinematic
-// ───────────────────────────────────────────────────────────────────────────
 
 const steps = [
   {
@@ -180,9 +219,6 @@ const steps = [
 export default function Home() {
   return (
     <div className="bg-background">
-      {/* ─────────────────────────────────────────────────────────────────
-          1. HERO
-         ───────────────────────────────────────────────────────────────── */}
       <HeroAurora>
         <div className="w-full max-w-5xl mx-auto py-20 md:py-24">
           <div className="text-center max-w-4xl mx-auto">
@@ -222,7 +258,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Code-snippet card — buiten text-center, max-w-3xl */}
           <div className="mt-12 md:mt-14 mx-auto max-w-3xl text-left">
             <div className="rounded-xl border border-border bg-secondary/60 backdrop-blur-md overflow-hidden shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)]">
               <div className="px-4 py-2 border-b border-border bg-background/40 font-mono text-xs text-muted-foreground">
@@ -248,9 +283,6 @@ export default function Home() {
         </div>
       </HeroAurora>
 
-      {/* ─────────────────────────────────────────────────────────────────
-          2. LOGO-STRIP
-         ───────────────────────────────────────────────────────────────── */}
       <ScrollReveal>
         <LogoCloudStrip
           heading="Migraties tussen onder andere"
@@ -259,21 +291,7 @@ export default function Home() {
         />
       </ScrollReveal>
 
-      {/* ─────────────────────────────────────────────────────────────────
-          3. BENTO-GRID — use cases
-         ───────────────────────────────────────────────────────────────── */}
       <section className="relative py-16 md:py-24 border-b border-border/40">
-        <div className="pointer-events-none absolute inset-0 -z-10 opacity-40">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundSize: "28px 28px",
-              maskImage:
-                "radial-gradient(ellipse at center, black 35%, transparent 75%)",
-            }}
-          />
-        </div>
-
         <div className="mx-auto max-w-6xl px-4">
           <ScrollReveal>
             <div className="max-w-3xl">
@@ -291,12 +309,8 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="mt-12 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {bentoCases.map((c, i) => (
-              <ScrollReveal key={c.title} delay={i * 0.08}>
-                <BentoCaseCard item={c} />
-              </ScrollReveal>
-            ))}
+          <div className="mt-12 md:mt-14">
+            <BentoGrid items={bentoCases} />
           </div>
 
           <ScrollReveal>
@@ -314,9 +328,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────────────────────────
-          4. STEPS — proces
-         ───────────────────────────────────────────────────────────────── */}
       <ScrollReveal>
         <section className="border-b border-border/40">
           <StepsVisualCinematic
@@ -328,9 +339,6 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-      {/* ─────────────────────────────────────────────────────────────────
-          5. FINAL CTA-BANNER
-         ───────────────────────────────────────────────────────────────── */}
       <CTABanner
         heading="Klaar om te starten?"
         subtext="Stuur je sample mee en we kijken samen wat er nodig is."
@@ -338,9 +346,6 @@ export default function Home() {
         primaryHref="/contact"
       />
 
-      {/* ─────────────────────────────────────────────────────────────────
-          6. STICKY MOBILE CTA
-         ───────────────────────────────────────────────────────────────── */}
       <StickyMobileCTA text="Stuur je intake op" href="/contact" />
     </div>
   );
