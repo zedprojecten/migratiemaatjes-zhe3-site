@@ -249,24 +249,28 @@ const steps = [
     icon: <FileSearch className="h-5 w-5" />,
     title: "Welkom & uitleg",
     body: "Korte intro van wat je gaat doen, wat je nodig hebt aan input, en de privacy-belofte: maximaal 50 rijen verlaten je computer.",
+    accent: "blue" as const,
   },
   {
     n: "02",
     icon: <Upload className="h-5 w-5" />,
     title: "Bron-data uploaden",
     body: "Sleep CSV- of XLSX-bestanden in de drop-zone. Markeer per file of het de hoofdtabel of een lookup-tabel is. Je browser knipt elke file af tot 50 rijen vóór de upload.",
+    accent: "purple" as const,
   },
   {
     n: "03",
     icon: <PencilLine className="h-5 w-5" />,
     title: "Doel-structuur beschrijven",
     body: "Upload een leeg target-template met kolomheaders, of beschrijf de doelstructuur in tekst. Bijvoorbeeld: vijf kolommen, naam, e-mail, telefoon, account-id, bron.",
+    accent: "green" as const,
   },
   {
     n: "04",
     icon: <Wand2 className="h-5 w-5" />,
     title: "Intent + speciale regels",
     body: "Vrij tekstveld waar je beschrijft wat je wilt. Skip personen zonder e-mail. Account-ID is de unique key voor lookup. Telefoonnummer naar +31-formaat. Hoe specifieker, hoe beter het script.",
+    accent: "orange" as const,
   },
 ];
 
@@ -301,22 +305,30 @@ function StepsSection() {
                 delay: i * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6"
+              className="h-full"
             >
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xs text-primary tracking-wider">
-                  {s.n}
-                </span>
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-foreground/85">
-                  {s.icon}
-                </span>
-              </div>
-              <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
-                {s.title}
-              </h3>
-              <p className="mt-2 text-sm text-foreground/65 leading-relaxed">
-                {s.body}
-              </p>
+              <SpotlightCard
+                customSize
+                glowColor={s.accent}
+                className="h-full !aspect-auto !p-7"
+              >
+                <div className="relative z-10 flex h-full flex-col">
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-xs text-primary tracking-wider">
+                      {s.n}
+                    </span>
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
+                      {s.icon}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                    {s.body}
+                  </p>
+                </div>
+              </SpotlightCard>
             </motion.div>
           ))}
         </div>
