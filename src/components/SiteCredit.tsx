@@ -1,0 +1,22 @@
+/**
+ * SiteCredit, discrete "Site door Web Design by Kick" link.
+ *
+ * De CLIENT_SLUG wordt in de architect-stap vervangen door de actuele slug
+ * (zie architect.ts). Link opent in nieuwe tab en navigeert naar
+ * webdesign.bykick.nl/via/:slug zodat de bezoeker de referral-banner krijgt.
+ */
+
+const CLIENT_SLUG = "migratiemaatjes-zhe3";
+
+export function SiteCredit() {
+  return (
+    <a
+      href={`https://webdesign.bykick.nl/via/${CLIENT_SLUG}`}
+      target="_blank"
+      rel="noopener"
+      className="text-xs text-muted-foreground hover:text-orange-500 transition-colors"
+    >
+      website door webdesign.bykick.nl
+    </a>
+  );
+}
