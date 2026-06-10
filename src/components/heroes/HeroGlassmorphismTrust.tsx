@@ -76,7 +76,7 @@ export default function HeroGlassmorphismTrust() {
             {/* Badge */}
             <div className="animate-fade-in delay-100">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-md transition-colors hover:bg-white/10">
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-300 flex items-center gap-2">
+                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-300 flex items-center gap-2" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.span.0:fd7983a5">
                   Award-Winning Design
                   <StarIcon className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
                 </span>
@@ -89,29 +89,29 @@ export default function HeroGlassmorphismTrust() {
               style={{
                 maskImage: "linear-gradient(180deg, black 0%, black 80%, transparent 100%)",
                 WebkitMaskImage: "linear-gradient(180deg, black 0%, black 80%, transparent 100%)"
-              }}
+              }} data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.h1.0:8f45e419"
             >
               Crafting Digital<br />
-              <span className="bg-gradient-to-br from-white via-white to-[#ffcd75] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-br from-white via-white to-[#ffcd75] bg-clip-text text-transparent" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.span.1:7bbfe2b5">
                 Experiences
               </span><br />
               That Matter
             </h1>
 
             {/* Description */}
-            <p className="animate-fade-in delay-300 max-w-xl text-lg text-zinc-400 leading-relaxed">
+            <p className="animate-fade-in delay-300 max-w-xl text-lg text-zinc-400 leading-relaxed" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.p.0:86594b22">
               We design interfaces that combine beauty with functionality,
               creating seamless experiences that users love and businesses thrive on.
             </p>
 
             {/* CTA Buttons */}
             <div className="animate-fade-in delay-400 flex flex-col sm:flex-row gap-4">
-              <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-zinc-950 transition-all hover:scale-[1.02] hover:bg-zinc-200 active:scale-[0.98]">
+              <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-zinc-950 transition-all hover:scale-[1.02] hover:bg-zinc-200 active:scale-[0.98]" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.button.0:f4c1cbbb">
                 View Portfolio
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
               
-              <button className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20">
+              <button className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.button.1:ae249972">
                 <PlayIcon className="w-4 h-4 fill-current" />
                 Watch Showreel
               </button>
@@ -132,16 +132,16 @@ export default function HeroGlassmorphismTrust() {
                     <Target className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold tracking-tight text-white">150+</div>
-                    <div className="text-sm text-zinc-400">Projects Delivered</div>
+                    <div className="text-3xl font-bold tracking-tight text-white" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.div.0:0ca4e093">150+</div>
+                    <div className="text-sm text-zinc-400" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.div.1:666ef2d5">Projects Delivered</div>
                   </div>
                 </div>
 
                 {/* Progress Bar Section */}
                 <div className="space-y-3 mb-8">
                   <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">Client Satisfaction</span>
-                    <span className="text-white font-medium">98%</span>
+                    <span className="text-zinc-400" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.span.2:6ab52a3e">Client Satisfaction</span>
+                    <span className="text-white font-medium" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.span.3:caea6c32">98%</span>
                   </div>
                   <div className="h-2 w-full overflow-hidden rounded-full bg-zinc-800/50">
                     <div className="h-full w-[98%] rounded-full bg-gradient-to-r from-white to-zinc-400" />
@@ -161,14 +161,14 @@ export default function HeroGlassmorphismTrust() {
 
                 {/* Tag Pills */}
                 <div className="mt-8 flex flex-wrap gap-2">
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300">
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.div.2:630c2f1c">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                     </span>
                     ACTIVE
                   </div>
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300">
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.div.3:0afea7d7">
                     <Crown className="w-3 h-3 text-yellow-500" />
                     PREMIUM
                   </div>
@@ -178,7 +178,7 @@ export default function HeroGlassmorphismTrust() {
 
             {/* Marquee Card */}
             <div className="animate-fade-in delay-500 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 py-8 backdrop-blur-xl">
-              <h3 className="mb-6 px-8 text-sm font-medium text-zinc-400">Trusted by Industry Leaders</h3>
+              <h3 className="mb-6 px-8 text-sm font-medium text-zinc-400" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.h3.0:db8a358c">Trusted by Industry Leaders</h3>
               
               <div 
                 className="relative flex overflow-hidden"

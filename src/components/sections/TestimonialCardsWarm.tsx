@@ -132,7 +132,7 @@ export function TestimonialCardsWarm({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-stone-300/70 bg-white/60 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-stone-700 shadow-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-stone-300/70 bg-white/60 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-stone-700 shadow-sm" data-bk-node="testimonial-cards-warm:TestimonialCardsWarm.span.0:a7938c43">
             <HeartIcon
               className="h-3 w-3 text-amber-700"
               fill="currentColor"
@@ -198,7 +198,7 @@ export function TestimonialCardsWarm({
                 style={{
                   fontFamily: "Georgia, 'Cormorant Garamond', serif",
                   fontStyle: "italic",
-                }}
+                }} data-bk-node="testimonial-cards-warm:TestimonialCardsWarm.p.0:0d3e7558"
               >
                 &ldquo;{t.quote}&rdquo;
               </p>

@@ -238,10 +238,10 @@ export function ContactFormEditorial({
           className="flex items-baseline justify-between border-b border-foreground/80 pb-4"
           style={{ fontFamily: "system-ui, sans-serif" }}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-foreground">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-foreground" data-bk-node="contact-form-editorial:ContactFormEditorial.span.0:c2d3892a">
             Editie 01, Contact
           </span>
-          <span className="hidden text-xs uppercase tracking-[0.2em] text-muted-foreground sm:block">
+          <span className="hidden text-xs uppercase tracking-[0.2em] text-muted-foreground sm:block" data-bk-node="contact-form-editorial:ContactFormEditorial.span.1:569aa5d4">
             Sectie A, pagina 01
           </span>
         </motion.div>
@@ -258,18 +258,18 @@ export function ContactFormEditorial({
             >
               <span
                 className="text-7xl font-bold leading-none text-foreground/90 md:text-9xl"
-                style={{ fontFeatureSettings: '"lnum"' }}
+                style={{ fontFeatureSettings: '"lnum"' }} data-bk-node="contact-form-editorial:ContactFormEditorial.span.2:938db8c9"
               >
                 01
               </span>
               <div className="pt-2 md:pt-4">
                 <p
                   className="text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground"
-                  style={{ fontFamily: "system-ui, sans-serif" }}
+                  style={{ fontFamily: "system-ui, sans-serif" }} data-bk-node="contact-form-editorial:ContactFormEditorial.p.0:146c1041"
                 >
                   Hoofdstuk
                 </p>
-                <p className="mt-2 text-sm italic text-muted-foreground">
+                <p className="mt-2 text-sm italic text-muted-foreground" data-bk-node="contact-form-editorial:ContactFormEditorial.p.1:f9e7dc3d">
                   Een uitnodiging
                 </p>
               </div>
@@ -323,7 +323,7 @@ export function ContactFormEditorial({
               className="mt-10 flex flex-col gap-1 text-sm text-muted-foreground"
               style={{ fontFamily: "system-ui, sans-serif" }}
             >
-              <span className="font-medium uppercase tracking-wider text-foreground">
+              <span className="font-medium uppercase tracking-wider text-foreground" data-bk-node="contact-form-editorial:ContactFormEditorial.span.3:9aa984a6">
                 Direct contact
               </span>
               <a
@@ -348,10 +348,10 @@ export function ContactFormEditorial({
               className="flex items-baseline justify-between border-b border-foreground/30 pb-2"
               style={{ fontFamily: "system-ui, sans-serif" }}
             >
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-foreground">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-foreground" data-bk-node="contact-form-editorial:ContactFormEditorial.span.4:2d858757">
                 02, Schrijf ons
               </span>
-              <span className="hidden text-xs uppercase tracking-[0.2em] text-muted-foreground sm:block">
+              <span className="hidden text-xs uppercase tracking-[0.2em] text-muted-foreground sm:block" data-bk-node="contact-form-editorial:ContactFormEditorial.span.5:7689af2e">
                 Sectie B, pagina 02
               </span>
             </div>
@@ -360,13 +360,13 @@ export function ContactFormEditorial({
               <div className="mt-10 border-l-2 border-foreground pl-6">
                 <p
                   className="text-3xl leading-tight text-foreground"
-                  style={{ fontFamily: "Georgia, serif" }}
+                  style={{ fontFamily: "Georgia, serif" }} data-bk-node="contact-form-editorial:ContactFormEditorial.p.2:01896709"
                 >
                   Bericht ontvangen.
                 </p>
                 <p
                   className="mt-3 text-sm leading-relaxed text-muted-foreground"
-                  style={{ fontFamily: "system-ui, sans-serif" }}
+                  style={{ fontFamily: "system-ui, sans-serif" }} data-bk-node="contact-form-editorial:ContactFormEditorial.p.3:c3ef2148"
                 >
                   Verwacht binnen een werkdag een persoonlijke reactie.
                 </p>
@@ -470,7 +470,7 @@ export function ContactFormEditorial({
                 })}
 
                 {state === "error" && (
-                  <p className="text-sm text-destructive">
+                  <p className="text-sm text-destructive" data-bk-node="contact-form-editorial:ContactFormEditorial.p.4:c6c1631d">
                     Versturen lukte niet. Probeer het opnieuw.
                   </p>
                 )}
@@ -483,7 +483,7 @@ export function ContactFormEditorial({
                 >
                   <span
                     className="hidden self-center text-xs uppercase tracking-[0.25em] text-muted-foreground sm:block"
-                    style={{ fontFamily: "system-ui, sans-serif" }}
+                    style={{ fontFamily: "system-ui, sans-serif" }} data-bk-node="contact-form-editorial:ContactFormEditorial.span.6:bd07733c"
                   >
                     03, Versturen
                   </span>

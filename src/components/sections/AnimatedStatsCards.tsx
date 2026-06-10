@@ -296,7 +296,7 @@ function AnimatedSearchBar({
           className="rounded-xl p-1"
           style={{ background: "var(--glass-bg)", border: "1px solid var(--glass-border)" }}
         >
-          <p className="text-[10px] text-muted-foreground px-3 py-1.5">
+          <p className="text-[10px] text-muted-foreground px-3 py-1.5" data-bk-node="animated-stats-cards:AnimatedStatsCards.p.0:9d7d6acc">
             3.842 {resultsLabel}
           </p>
           {results.map((r, i) => (
@@ -373,7 +373,7 @@ function LiveFeed({ items }: { items: LiveFeedItem[] }) {
           <span className="text-xs text-muted-foreground w-[70px] shrink-0">
             {item.datum}
           </span>
-          <span className="text-xs flex-1">
+          <span className="text-xs flex-1" data-bk-node="animated-stats-cards:AnimatedStatsCards.span.0:a137f17a">
             {item.cat} · {item.plaats}
           </span>
           <span
@@ -484,7 +484,7 @@ export default function AnimatedStatsCards(props: AnimatedStatsCardsProps = {}) 
                   key={i}
                   className="flex-1 flex flex-col items-center justify-end h-full gap-1"
                 >
-                  <span className="text-[10px] text-muted-foreground font-medium">
+                  <span className="text-[10px] text-muted-foreground font-medium" data-bk-node="animated-stats-cards:AnimatedStatsCards.span.1:86be9a55">
                     {(item.count / 1000).toFixed(1)}K
                   </span>
                   <div

@@ -89,7 +89,7 @@ export function CTAMinimal({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground"
+          className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="ctaminimal:CTAMinimal.span.0:59180688"
         >
           Volgende stap
         </motion.span>

@@ -69,7 +69,7 @@ export function PullquoteEditorial({
           initial={{ opacity: 0, y: -8 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.25em] text-foreground/60"
+          className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.25em] text-foreground/60" data-bk-node="pullquote-editorial:PullquoteEditorial.p.0:5fdfff12"
         >
           In gesprek met
         </motion.p>

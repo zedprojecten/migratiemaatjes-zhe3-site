@@ -37,7 +37,7 @@ const ACME_LOGO = (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
       <path d="M12 3 22 21 H2 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
-    <span className="font-serif text-sm font-medium tracking-[0.18em]">ACME</span>
+    <span className="font-serif text-sm font-medium tracking-[0.18em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.0:a8308e8e">ACME</span>
   </span>
 );
 
@@ -47,7 +47,7 @@ const GLOBEX_LOGO = (
       <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
       <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" strokeWidth="1.1" />
     </svg>
-    <span className="font-serif text-sm font-medium tracking-[0.18em]">GLOBEX</span>
+    <span className="font-serif text-sm font-medium tracking-[0.18em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.1:2e394332">GLOBEX</span>
   </span>
 );
 
@@ -57,7 +57,7 @@ const LUMEN_LOGO = (
       <circle cx="12" cy="12" r="3.5" stroke="currentColor" strokeWidth="1.5" />
       <path d="M12 4v3M12 17v3M4 12h3M17 12h3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
     </svg>
-    <span className="font-serif text-sm font-light tracking-[0.22em]">LUMEN</span>
+    <span className="font-serif text-sm font-light tracking-[0.22em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.2:457805d6">LUMEN</span>
   </span>
 );
 
@@ -66,7 +66,7 @@ const VERTEX_LOGO = (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
       <path d="M3 20 12 4l9 16Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
-    <span className="font-serif text-sm font-medium tracking-[0.18em]">VERTEX</span>
+    <span className="font-serif text-sm font-medium tracking-[0.18em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.3:3da26fbf">VERTEX</span>
   </span>
 );
 
@@ -76,7 +76,7 @@ const SOLACE_LOGO = (
       <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
       <path d="M7 14a5 5 0 0 0 10 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
-    <span className="font-serif text-sm font-medium italic tracking-[0.16em]">solace</span>
+    <span className="font-serif text-sm font-medium italic tracking-[0.16em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.4:2d140b32">solace</span>
   </span>
 );
 
@@ -86,7 +86,7 @@ const HYPERION_LOGO = (
       <path d="M4 12c4-7 12-7 16 0-4 7-12 7-16 0Z" stroke="currentColor" strokeWidth="1.5" />
       <circle cx="12" cy="12" r="2" fill="currentColor" />
     </svg>
-    <span className="font-serif text-sm font-medium tracking-[0.18em]">HYPERION</span>
+    <span className="font-serif text-sm font-medium tracking-[0.18em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.5:a21bff7d">HYPERION</span>
   </span>
 );
 
@@ -97,7 +97,7 @@ const NEXUS_LOGO = (
       <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
       <path d="M11 11l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
-    <span className="font-serif text-sm font-medium tracking-[0.18em]">NEXUS</span>
+    <span className="font-serif text-sm font-medium tracking-[0.18em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.6:52b797a2">NEXUS</span>
   </span>
 );
 
@@ -106,7 +106,7 @@ const INITECH_LOGO = (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
       <path d="M4 19h16L12 5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
-    <span className="font-serif text-sm font-medium tracking-[0.18em]">INITECH</span>
+    <span className="font-serif text-sm font-medium tracking-[0.18em]" data-bk-node="logo-cloud-with-divider:LogoCloudWithDivider.span.7:7b0a9a45">INITECH</span>
   </span>
 );
 

@@ -133,7 +133,7 @@ export function ProductGridMasonry({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-14 max-w-2xl"
         >
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="product-grid-masonry:ProductGridMasonry.span.0:48fd8313">
             Collectie
           </span>
           <h2 className="mt-3 text-4xl font-medium leading-tight tracking-tight text-foreground md:text-5xl">

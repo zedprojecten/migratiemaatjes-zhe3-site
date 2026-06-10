@@ -160,7 +160,7 @@ export function NewsletterMinimalFooter({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 />
               </svg>
-              <span className="text-sm font-medium text-foreground">
+              <span className="text-sm font-medium text-foreground" data-bk-node="newsletter-minimal-footer:NewsletterMinimalFooter.span.0:d0f606af">
                 Bedankt, je staat op de lijst.
               </span>
             </motion.div>
@@ -223,7 +223,7 @@ export function NewsletterMinimalFooter({
         <motion.p
           initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-3 text-xs text-destructive"
+          className="mt-3 text-xs text-destructive" data-bk-node="newsletter-minimal-footer:NewsletterMinimalFooter.p.0:58270e9d"
         >
           Aanmelden lukte niet. Probeer het opnieuw.
         </motion.p>

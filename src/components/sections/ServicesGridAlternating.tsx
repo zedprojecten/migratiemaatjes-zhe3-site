@@ -229,7 +229,7 @@ function AlternatingRow({
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="inline-block text-[11px] uppercase tracking-[0.28em] text-muted-foreground"
+            className="inline-block text-[11px] uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="services-grid-alternating:ServicesGridAlternating.span.0:f99ff990"
           >
             {String(index + 1).padStart(2, "0")} · Dienst
           </motion.span>

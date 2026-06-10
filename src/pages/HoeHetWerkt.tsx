@@ -1,3 +1,5 @@
+import { bkSectionVisible } from "@/lib/bk-sections";
+import { bkNode } from "@/lib/bk-node";
 import { ClipboardList, GitBranch, FlaskConical, PackageCheck } from "lucide-react";
 import StepsVisualCinematic from "@/components/sections/StepsVisualCinematic";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -100,23 +102,23 @@ export default function HoeHetWerkt() {
       <section className="relative overflow-hidden border-b border-border/60">
         <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28 relative">
           <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-wider text-primary">
+            <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.0:11d7c1b9">
               // hoe het werkt
             </span>
-            <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight">
+            <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight" data-bk-node="hoe-het-werkt:HoeHetWerkt.h1.0:4aad243e">
               Geen fire-and-forget. Geen scope-discussies.
             </h1>
-            <p className="mt-4 text-lg text-foreground/80 max-w-2xl">
+            <p className="mt-4 text-lg text-foreground/80 max-w-2xl" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.0:1e58631b">
               Gewoon data van A naar B.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 font-mono text-xs text-muted-foreground">
-              <span className="rounded-full border border-border bg-secondary/40 px-3 py-1">
+              <span className="rounded-full border border-border bg-secondary/40 px-3 py-1" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.1:51c975cc">
                 3-5 werkdagen
               </span>
-              <span className="rounded-full border border-border bg-secondary/40 px-3 py-1">
+              <span className="rounded-full border border-border bg-secondary/40 px-3 py-1" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.2:e2bbf8f1">
                 vaste prijs vooraf
               </span>
-              <span className="rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-primary">
+              <span className="rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.3:bab19acb">
                 mappingscript = jouw eigendom
               </span>
             </div>
@@ -135,20 +137,20 @@ export default function HoeHetWerkt() {
       </section>
 
       {/* Step 1 — Intake (snippet rechts) */}
-      <ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.0"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28 bg-card/20">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div>
-              <span className="font-mono text-sm text-primary">01 — Intake</span>
-              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+              <span className="font-mono text-sm text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.4:7ae5c4c8">01 — Intake</span>
+              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight" data-bk-node="hoe-het-werkt:HoeHetWerkt.h2.0:815dab49">
                 Klant levert sample-data en doel-platform aan
               </h2>
-              <p className="mt-4 text-foreground/80 leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.1:a99bad4b">
                 Via het intake-formulier geef je door: bron-formaat (CSV, JSON, XML, XLSX,
                 SQL of anders), bron-platform (vrij veld), doel-platform en geschat aantal
                 records. Een sample-bestand mail je daarna door.
               </p>
-              <p className="mt-3 text-foreground/75 leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.2:85d1a753">
                 Binnen 24 uur op werkdagen bevestigen we het pakket en de planning. Geen
                 sales-call, geen scope-document van twintig pagina's; een korte mail met
                 de afspraak en een offerte.
@@ -159,24 +161,24 @@ export default function HoeHetWerkt() {
             </CodeSnippetCard>
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal></div>)}
 
       {/* Step 2 — Mapping bouwen (snippet links) */}
-      <ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.1") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.1"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div className="lg:order-2">
-              <span className="font-mono text-sm text-primary">02 — Mapping bouwen</span>
-              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+              <span className="font-mono text-sm text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.5:906bee6a">02 — Mapping bouwen</span>
+              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight" data-bk-node="hoe-het-werkt:HoeHetWerkt.h2.1:d79728dc">
                 Wij bouwen een custom mapping-script
               </h2>
-              <p className="mt-4 text-foreground/80 leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.3:c3a28bfd">
                 We analyseren het bron-schema en schrijven een mapping-script in
                 TypeScript of Python. Per veld leggen we vast hoe de transformatie werkt:
                 directe map, type-conversie, lookup, of derivatie uit meerdere
                 bron-velden.
               </p>
-              <p className="mt-3 text-foreground/75 leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.4:389a2551">
                 Het mappingscript is een first-class deliverable. Je krijgt de broncode,
                 een schema-document met alle field-mappings, en een README waarmee een
                 interne developer het kan herdraaien.
@@ -189,24 +191,24 @@ export default function HoeHetWerkt() {
             </div>
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal></div>)}
 
       {/* Step 3 — Dry-run (snippet rechts) */}
-      <ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.2") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.2"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28 bg-card/20">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div>
-              <span className="font-mono text-sm text-primary">03 — Dry-run</span>
-              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+              <span className="font-mono text-sm text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.6:66bc4ae0">03 — Dry-run</span>
+              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight" data-bk-node="hoe-het-werkt:HoeHetWerkt.h2.2:59a88f0e">
                 Subset-run met diff-style preview
               </h2>
-              <p className="mt-4 text-foreground/80 leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.5:da4a2a0f">
                 Voordat we de hoofdrun draaien, runnen we het script op een subset
                 (typisch 50 tot 200 records) en sturen je een preview. Per veld zie je de
                 bron-waarde naast de doel-waarde. Als een import gaat falen, zie je het
                 hier, niet in productie.
               </p>
-              <p className="mt-3 text-foreground/75 leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.6:6ce75506">
                 Dit lost het pijnpunt op van 'nieuwe tool weigert de import zonder
                 duidelijke error'. Je geeft akkoord per object-type (producten, klanten,
                 orders), of je geeft punten aan die we eerst moeten fixen.
@@ -253,24 +255,24 @@ export default function HoeHetWerkt() {
             </CodeSnippetCard>
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal></div>)}
 
       {/* Step 4 — Handover (snippet links) */}
-      <ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.3") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.3"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div className="lg:order-2">
-              <span className="font-mono text-sm text-primary">04 — Handover</span>
-              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+              <span className="font-mono text-sm text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.7:c82303fb">04 — Handover</span>
+              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight" data-bk-node="hoe-het-werkt:HoeHetWerkt.h2.3:289d5ae3">
                 Volledige conversie plus herbruikbaar script
               </h2>
-              <p className="mt-4 text-foreground/80 leading-relaxed">
+              <p className="mt-4 text-foreground/80 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.7:8c545ad6">
                 Na akkoord op de dry-run draaien we de hoofdrun. Je krijgt het volledige
                 geconverteerde bestand (CSV, JSONL of direct API-import, afhankelijk van
                 het scenario) plus het mappingscript, het schema-document en een
                 handover-mail met run-logs.
               </p>
-              <p className="mt-3 text-foreground/75 leading-relaxed">
+              <p className="mt-3 text-foreground/75 leading-relaxed" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.8:e91d94a9">
                 Bij Standard en Complex blijven we vijf werkdagen na cutover bereikbaar
                 voor field-fixes. Daarna is het script van jou. Geen recurring license,
                 geen onboarding-fee als je de migratie ooit moet herhalen of voor een
@@ -284,20 +286,20 @@ export default function HoeHetWerkt() {
             </div>
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal></div>)}
 
       {/* USP block — Het mappingscript is van jou */}
-      <ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.4") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.4"><ScrollReveal>
         <section className="py-12 sm:py-20 md:py-28 border-b border-border/60 relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 relative">
             <div className="rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/5 to-transparent p-8 sm:p-10 md:p-14 max-w-4xl mx-auto">
-              <span className="font-mono text-xs uppercase tracking-wider text-primary">
+              <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.8:d0f85209">
                 // no vendor lock-in
               </span>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+              <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight" data-bk-node="hoe-het-werkt:HoeHetWerkt.h2.4:12847044">
                 Het mappingscript is van jou
               </h2>
-              <p className="mt-4 text-foreground/80 leading-relaxed max-w-2xl">
+              <p className="mt-4 text-foreground/80 leading-relaxed max-w-2xl" data-bk-node="hoe-het-werkt:HoeHetWerkt.p.9:b2b290ef">
                 Geen vendor lock-in, geen onboarding-fee als de migratie ooit moet worden
                 herhaald. Je interne team kan het script aanpassen, opnieuw draaien, of
                 doorgeven aan een nieuwe leverancier. Wij zijn een leverancier voor één
@@ -305,34 +307,34 @@ export default function HoeHetWerkt() {
               </p>
               <div className="mt-8 grid sm:grid-cols-3 gap-4 font-mono text-xs">
                 <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
-                  <div className="text-primary">100%</div>
-                  <div className="mt-1 text-muted-foreground">eigendom klant</div>
+                  <div className="text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.div.0:32e48995">100%</div>
+                  <div className="mt-1 text-muted-foreground" data-bk-node="hoe-het-werkt:HoeHetWerkt.div.1:663e2e97">eigendom klant</div>
                 </div>
                 <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
-                  <div className="text-primary">0 EUR</div>
-                  <div className="mt-1 text-muted-foreground">recurring license</div>
+                  <div className="text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.div.2:b7d4c267">0 EUR</div>
+                  <div className="mt-1 text-muted-foreground" data-bk-node="hoe-het-werkt:HoeHetWerkt.div.3:5cc969cc">recurring license</div>
                 </div>
                 <div className="rounded-lg border border-border bg-background/40 px-4 py-3">
-                  <div className="text-primary">README + schema.md</div>
-                  <div className="mt-1 text-muted-foreground">meegeleverd</div>
+                  <div className="text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.div.4:344a44c5">README + schema.md</div>
+                  <div className="mt-1 text-muted-foreground" data-bk-node="hoe-het-werkt:HoeHetWerkt.div.5:dcc0fd22">meegeleverd</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal></div>)}
 
       {/* Final CTA */}
-      <CTABanner
+      {bkSectionVisible("hoe-het-werkt:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:CTABanner.section.0"><CTABanner
         heading="Klaar voor je migratie?"
         subtext="Stuur je intake op of bekijk eerst de tarieven."
         primaryLabel="Stuur je intake op"
         primaryHref="/contact"
         secondaryLabel="Bekijk tarieven"
         secondaryHref="/tarieven"
-      />
+      /></div>)}
 
-      <StickyMobileCTA text="Stuur je intake op" href="/contact" />
+      {bkSectionVisible("hoe-het-werkt:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("hoe-het-werkt:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "hoe-het-werkt:StickyMobileCTA.text" }} /></div>)}
     </main>
   );
 }

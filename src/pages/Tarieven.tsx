@@ -1,3 +1,5 @@
+import { bkSectionVisible } from "@/lib/bk-sections";
+import { bkNode } from "@/lib/bk-node";
 import { Check as CheckIcon } from "lucide-react";
 import { PricingTableCinematic } from "@/components/sections/PricingTableCinematic";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
@@ -121,13 +123,13 @@ export default function Tarieven() {
         <div className="absolute inset-0 bg-dot-grid opacity-40 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 py-20 md:py-28 relative">
           <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-wider text-primary">
+            <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="tarieven:Tarieven.span.0:7ab4c5d5">
               // tarieven
             </span>
-            <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold tracking-tight">
+            <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold tracking-tight" data-bk-node="tarieven:Tarieven.h1.0:1080b1a7">
               Vaste prijs vooraf.
             </h1>
-            <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
+            <p className="mt-4 text-lg text-foreground/80 leading-relaxed" data-bk-node="tarieven:Tarieven.p.0:d3240317">
               Geen verborgen uurtarieven. Geen recurring kosten. Geen verrassingen na de cutover.
             </p>
           </div>
@@ -135,15 +137,15 @@ export default function Tarieven() {
       </section>
 
       {/* Pricing */}
-      <PricingTableCinematic
+      {bkSectionVisible("tarieven:PricingTableCinematic.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:PricingTableCinematic.section.0"><PricingTableCinematic
         heading="Drie pakketten, vaste prijs"
         subheading="Quick voor harde deadlines, Standard voor migraties met behoud van relaties, Complex voor legacy ERPs en multi-platform splits."
         plans={PRICING_PLANS}
         showDiscountBadge={false}
-      />
+      /></div>)}
 
       {/* Trust-bullets-strip */}
-      <ScrollReveal>
+      {bkSectionVisible("tarieven:ScrollReveal.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:ScrollReveal.section.0"><ScrollReveal>
         <section className="border-b border-border/60 py-12 md:py-16">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -156,34 +158,34 @@ export default function Tarieven() {
             </div>
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal></div>)}
 
       {/* FAQ */}
-      <ScrollReveal>
+      {bkSectionVisible("tarieven:ScrollReveal.section.1") && (<div style={{ display: "contents" }} data-bk-section="tarieven:ScrollReveal.section.1"><ScrollReveal>
         <section className="border-b border-border/60 pt-16 md:pt-20">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mx-auto text-center">
-              <span className="font-mono text-xs uppercase tracking-wider text-primary">
+              <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="tarieven:Tarieven.span.1:8430a48e">
                 // veelgestelde vragen
               </span>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight">
+              <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold tracking-tight" data-bk-node="tarieven:Tarieven.h2.0:41edcc87">
                 Wat klanten meestal eerst vragen
               </h2>
             </div>
           </div>
           <FAQAccordion items={FAQ_ITEMS} withPadding={false} className="mt-10 pb-16 md:pb-20" />
         </section>
-      </ScrollReveal>
+      </ScrollReveal></div>)}
 
       {/* Final CTA */}
-      <CTABanner
+      {bkSectionVisible("tarieven:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:CTABanner.section.0"><CTABanner
         heading="Klaar voor je migratie?"
         subtext="Stuur je sample en het doel-platform. Binnen 24 uur weet je het pakket en de planning."
         primaryLabel="Stuur je intake op"
         primaryHref="/contact"
-      />
+      /></div>)}
 
-      <StickyMobileCTA text="Stuur je intake op" href="/contact" />
+      {bkSectionVisible("tarieven:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("tarieven:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "tarieven:StickyMobileCTA.text" }} /></div>)}
     </>
   );
 }

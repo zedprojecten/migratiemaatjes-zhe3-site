@@ -196,7 +196,7 @@ export function ProductGridFilterable({
           aria-label="Filter producten"
           className="mb-8 flex flex-wrap items-center gap-2"
         >
-          <span className="mr-1 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+          <span className="mr-1 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground" data-bk-node="product-grid-filterable:ProductGridFilterable.span.0:638e249f">
             <SlidersHorizontal className="h-3.5 w-3.5" />
             Filter
           </span>
@@ -320,7 +320,7 @@ export function ProductGridFilterable({
             transition={{ duration: 0.4 }}
             className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center"
           >
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground" data-bk-node="product-grid-filterable:ProductGridFilterable.p.0:d95b0140">
               Geen producten gevonden in deze categorie. Probeer een ander
               filter.
             </p>

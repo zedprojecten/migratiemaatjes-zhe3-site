@@ -203,7 +203,7 @@ export function ServicesGridLuxury({
                 headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }
               }
               transition={{ duration: 0.6 }}
-              className="inline-block text-[11px] uppercase tracking-[0.32em] text-muted-foreground"
+              className="inline-block text-[11px] uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="services-grid-luxury:ServicesGridLuxury.span.0:d5967157"
             >
               In dienst van uw merk
             </motion.span>

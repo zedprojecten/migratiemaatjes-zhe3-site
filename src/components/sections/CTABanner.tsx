@@ -86,7 +86,7 @@ export function CTABanner({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 rounded-full border border-background/15 bg-background/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-background/80 backdrop-blur"
+          className="inline-flex items-center gap-2 rounded-full border border-background/15 bg-background/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-background/80 backdrop-blur" data-bk-node="ctabanner:CTABanner.span.0:9bcbb9ea"
         >
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inset-0 animate-ping rounded-full bg-background/60" />

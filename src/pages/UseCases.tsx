@@ -1,3 +1,5 @@
+import { bkSectionVisible } from "@/lib/bk-sections";
+import { bkNode } from "@/lib/bk-node";
 import { Link } from "react-router-dom";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { StickyMobileCTA } from "@/components/sections/StickyMobileCTA";
@@ -152,13 +154,13 @@ export default function UseCases() {
         <div className="absolute inset-0 bg-dot-grid opacity-40 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 py-20 md:py-28 relative">
           <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-wider text-primary">
+            <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="use-cases:UseCases.span.0:4a44f131">
               // use cases
             </span>
-            <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold tracking-tight">
+            <h1 className="mt-3 font-display text-4xl md:text-6xl font-semibold tracking-tight" data-bk-node="use-cases:UseCases.h1.0:40e5c860">
               Niet elke migratie is hetzelfde. Wel elke aanpak.
             </h1>
-            <p className="mt-4 text-lg text-foreground/80">
+            <p className="mt-4 text-lg text-foreground/80" data-bk-node="use-cases:UseCases.p.0:b55ca6d1">
               Zes scenario&apos;s waarvoor we vaker mappingscripts schrijven dan ons lief is. Klik door of stuur direct je eigen scenario.
             </p>
           </div>
@@ -191,9 +193,9 @@ export default function UseCases() {
                     <Link
                       to={useLocalizedHref("/tarieven")}
                       viewTransition
-                      className="mt-3 inline-flex items-center gap-1 text-sm text-primary hover:text-primary/80 hover:gap-2 transition-all"
+                      className="mt-3 inline-flex items-center gap-1 text-sm text-primary hover:text-primary/80 hover:gap-2 transition-all" data-bk-node="use-cases:UseCases.link.0:c50a4522"
                     >
-                      Bekijk tarieven <span aria-hidden>→</span>
+                      Bekijk tarieven <span aria-hidden data-bk-node="use-cases:UseCases.span.1:16166003">→</span>
                     </Link>
                   </div>
 
@@ -209,17 +211,17 @@ export default function UseCases() {
       })}
 
       {/* Final CTA */}
-      <CTABanner
+      {bkSectionVisible("use-cases:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:CTABanner.section.0"><CTABanner
         heading="Staat jouw scenario er niet bij?"
         subtext="We bouwen mapping-scripts ook voor exotische combinaties. Stuur je sample en we kijken wat er nodig is."
         primaryLabel="Stuur je intake op"
         primaryHref="/contact"
         secondaryLabel="Bekijk tarieven"
         secondaryHref="/tarieven"
-      />
+      /></div>)}
 
       {/* Sticky mobile CTA */}
-      <StickyMobileCTA text="Stuur je intake op" href="/contact" />
+      {bkSectionVisible("use-cases:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("use-cases:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "use-cases:StickyMobileCTA.text" }} /></div>)}
     </>
   );
 }

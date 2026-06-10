@@ -93,13 +93,13 @@ function IntakeForm() {
   if (success) {
     return (
       <div className="rounded-xl border border-primary/40 bg-gradient-to-b from-primary/10 to-transparent p-8 md:p-10">
-        <span className="font-mono text-xs uppercase tracking-wider text-primary">
+        <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="contact:Contact.span.0:e95fe979">
           // intake ontvangen
         </span>
-        <h2 className="mt-3 font-display text-2xl md:text-3xl font-semibold">
+        <h2 className="mt-3 font-display text-2xl md:text-3xl font-semibold" data-bk-node="contact:Contact.h2.0:e40ab960">
           Bedankt — we mailen binnen 24 uur.
         </h2>
-        <p className="mt-4 text-muted-foreground leading-relaxed">
+        <p className="mt-4 text-muted-foreground leading-relaxed" data-bk-node="contact:Contact.p.0:147ee9b0">
           Stuur in de tussentijd je sample-bestand naar{" "}
           <a
             href={`mailto:${OWNER_EMAIL}`}
@@ -116,14 +116,14 @@ function IntakeForm() {
 
   return (
     <div className="rounded-xl border border-border bg-secondary/30 p-6 md:p-8">
-      <h2 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6">
+      <h2 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6" data-bk-node="contact:Contact.h2.1:f46eff67">
         // intake-formulier
       </h2>
 
       <form onSubmit={onSubmit} noValidate className="space-y-5">
         {/* Honeypot */}
         <div className="hidden" aria-hidden="true">
-          <label>
+          <label data-bk-node="contact:Contact.label.0:980d4e38">
             Laat dit veld leeg
             <input
               type="text"
@@ -139,7 +139,7 @@ function IntakeForm() {
         {/* Row 1: bron-formaat + bron-platform */}
         <div className="grid sm:grid-cols-2 gap-5">
           <div>
-            <label htmlFor="bron-formaat" className={labelClass}>
+            <label htmlFor="bron-formaat" className={labelClass} data-bk-node="contact:Contact.label.1:448bf3a7">
               bron-formaat
             </label>
             <select
@@ -158,7 +158,7 @@ function IntakeForm() {
             </select>
           </div>
           <div>
-            <label htmlFor="bron-platform" className={labelClass}>
+            <label htmlFor="bron-platform" className={labelClass} data-bk-node="contact:Contact.label.2:30f77b47">
               bron-platform
             </label>
             <input
@@ -176,7 +176,7 @@ function IntakeForm() {
         {/* Row 2: doel-formaat + doel-platform */}
         <div className="grid sm:grid-cols-2 gap-5">
           <div>
-            <label htmlFor="doel-formaat" className={labelClass}>
+            <label htmlFor="doel-formaat" className={labelClass} data-bk-node="contact:Contact.label.3:5689900f">
               doel-formaat
             </label>
             <select
@@ -195,7 +195,7 @@ function IntakeForm() {
             </select>
           </div>
           <div>
-            <label htmlFor="doel-platform" className={labelClass}>
+            <label htmlFor="doel-platform" className={labelClass} data-bk-node="contact:Contact.label.4:55123f8e">
               doel-platform
             </label>
             <input
@@ -213,7 +213,7 @@ function IntakeForm() {
         {/* Row 3: geschat-aantal-records + deadline */}
         <div className="grid sm:grid-cols-2 gap-5">
           <div>
-            <label htmlFor="geschat-aantal-records" className={labelClass}>
+            <label htmlFor="geschat-aantal-records" className={labelClass} data-bk-node="contact:Contact.label.5:6055cf7d">
               geschat-aantal-records
             </label>
             <input
@@ -228,7 +228,7 @@ function IntakeForm() {
             />
           </div>
           <div>
-            <label htmlFor="deadline" className={labelClass}>
+            <label htmlFor="deadline" className={labelClass} data-bk-node="contact:Contact.label.6:dfc8aeb3">
               deadline
             </label>
             <input
@@ -245,8 +245,8 @@ function IntakeForm() {
 
         {/* Row 4: scenario-omschrijving (full-width, required) */}
         <div>
-          <label htmlFor="scenario-omschrijving" className={labelClass}>
-            scenario-omschrijving <span className="text-primary">*</span>
+          <label htmlFor="scenario-omschrijving" className={labelClass} data-bk-node="contact:Contact.label.7:6340bbd9">
+            scenario-omschrijving <span className="text-primary" data-bk-node="contact:Contact.span.1:684888c0">*</span>
           </label>
           <textarea
             id="scenario-omschrijving"
@@ -263,8 +263,8 @@ function IntakeForm() {
         {/* Row 6: naam + email (required) */}
         <div className="grid sm:grid-cols-2 gap-5">
           <div>
-            <label htmlFor="naam" className={labelClass}>
-              naam <span className="text-primary">*</span>
+            <label htmlFor="naam" className={labelClass} data-bk-node="contact:Contact.label.8:805363c9">
+              naam <span className="text-primary" data-bk-node="contact:Contact.span.2:684888c0">*</span>
             </label>
             <input
               id="naam"
@@ -279,8 +279,8 @@ function IntakeForm() {
             />
           </div>
           <div>
-            <label htmlFor="email" className={labelClass}>
-              email <span className="text-primary">*</span>
+            <label htmlFor="email" className={labelClass} data-bk-node="contact:Contact.label.9:82244417">
+              email <span className="text-primary" data-bk-node="contact:Contact.span.3:684888c0">*</span>
             </label>
             <input
               id="email"
@@ -329,7 +329,7 @@ function IntakeForm() {
 function InfoCard() {
   return (
     <div className="rounded-xl border border-border bg-secondary/40 p-6 lg:sticky lg:top-24">
-      <h2 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-5">
+      <h2 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-5" data-bk-node="contact:Contact.h2.2:03e3136b">
         // goed om te weten
       </h2>
       <ul className="space-y-5">
@@ -338,10 +338,10 @@ function InfoCard() {
             <Clock className="w-4 h-4 text-primary" aria-hidden="true" />
           </span>
           <div>
-            <h3 className="font-display text-sm font-semibold text-foreground">
+            <h3 className="font-display text-sm font-semibold text-foreground" data-bk-node="contact:Contact.h3.0:1e665de2">
               Reactietijd
             </h3>
-            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+            <p className="mt-1 text-sm text-muted-foreground leading-relaxed" data-bk-node="contact:Contact.p.1:b6c8ab78">
               Binnen 24 uur op werkdagen.
             </p>
           </div>
@@ -351,7 +351,7 @@ function InfoCard() {
             <Mail className="w-4 h-4 text-primary" aria-hidden="true" />
           </span>
           <div>
-            <h3 className="font-display text-sm font-semibold text-foreground">
+            <h3 className="font-display text-sm font-semibold text-foreground" data-bk-node="contact:Contact.h3.1:969ccbd3">
               Email
             </h3>
             <p className="mt-1 text-sm">
@@ -369,10 +369,10 @@ function InfoCard() {
             <Code className="w-4 h-4 text-primary" aria-hidden="true" />
           </span>
           <div>
-            <h3 className="font-display text-sm font-semibold text-foreground">
+            <h3 className="font-display text-sm font-semibold text-foreground" data-bk-node="contact:Contact.h3.2:464e4f16">
               Geen sales-call
             </h3>
-            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+            <p className="mt-1 text-sm text-muted-foreground leading-relaxed" data-bk-node="contact:Contact.p.2:b2a92db8">
               Direct ter zake. We mailen je een offerte op basis van je sample.
             </p>
           </div>
@@ -391,13 +391,13 @@ export default function Contact() {
         <div className="absolute inset-0 bg-dot-grid opacity-40 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20 relative">
           <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-wider text-primary">
+            <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="contact:Contact.span.4:192ad2d3">
               // contact
             </span>
-            <h1 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+            <h1 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="contact:Contact.h1.0:21c8506f">
               Stuur je sample mee en we kijken samen wat er nodig is.
             </h1>
-            <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
+            <p className="mt-4 text-lg text-foreground/80 leading-relaxed" data-bk-node="contact:Contact.p.3:cf77affd">
               Reactie binnen 24 uur op werkdagen. Geen sales-call, direct ter zake.
             </p>
           </div>

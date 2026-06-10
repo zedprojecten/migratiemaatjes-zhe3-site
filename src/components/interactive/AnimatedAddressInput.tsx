@@ -164,7 +164,7 @@ export default function AnimatedAddressInput({
             />
           </div>
           {confirmed ? (
-            <span className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-green-500/15 text-green-600">
+            <span className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-green-500/15 text-green-600" data-bk-node="animated-address-input:AnimatedAddressInput.span.0:709a23b1">
               <CheckIcon className="h-3.5 w-3.5" /> Geverifieerd
             </span>
           ) : (
@@ -192,7 +192,7 @@ export default function AnimatedAddressInput({
             }}
           >
             {loading && (
-              <div className="flex items-center gap-2 px-4 py-3 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 px-4 py-3 text-sm text-muted-foreground" data-bk-node="animated-address-input:AnimatedAddressInput.div.0:aff64dd9">
                 <Loader2 className="h-4 w-4 animate-spin" />
                 Adressen zoeken...
               </div>
@@ -216,7 +216,7 @@ export default function AnimatedAddressInput({
         )}
       </div>
 
-      <p className="mt-3 text-center text-xs text-muted-foreground">
+      <p className="mt-3 text-center text-xs text-muted-foreground" data-bk-node="animated-address-input:AnimatedAddressInput.p.0:22f6d543">
         Probeer "amsterdam", "utrecht" of "rotterdam" voor live suggesties.
       </p>
     </div>

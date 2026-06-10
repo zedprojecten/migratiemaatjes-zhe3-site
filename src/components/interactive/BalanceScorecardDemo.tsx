@@ -132,7 +132,7 @@ function CircularProgress({
         >
           {score}
         </span>
-        <span className="text-[9px] text-muted-foreground leading-none mt-0.5">/ 100</span>
+        <span className="text-[9px] text-muted-foreground leading-none mt-0.5" data-bk-node="balance-scorecard-demo:BalanceScorecardDemo.span.0:5c3651ff">/ 100</span>
       </div>
     </div>
   );
@@ -233,9 +233,9 @@ export function BalanceScorecardDemo({
             {renderedBadge}
           </span>
         </div>
-        <div className="text-sm text-muted-foreground">
+        <div className="text-sm text-muted-foreground" data-bk-node="balance-scorecard-demo:BalanceScorecardDemo.div.0:bdb1fedb">
           Gemiddelde score:{" "}
-          <span className="font-semibold text-foreground">{avgScore}/100</span>
+          <span className="font-semibold text-foreground" data-bk-node="balance-scorecard-demo:BalanceScorecardDemo.span.1:2f07766f">{avgScore}/100</span>
         </div>
       </div>
 
@@ -297,7 +297,7 @@ export function BalanceScorecardDemo({
                         <span className="text-[11px] text-muted-foreground">
                           {metric.label}
                         </span>
-                        <span className="text-[11px] font-medium text-foreground tabular-nums">
+                        <span className="text-[11px] font-medium text-foreground tabular-nums" data-bk-node="balance-scorecard-demo:BalanceScorecardDemo.span.2:bbf3f11c">
                           {metric.score}%
                         </span>
                       </div>

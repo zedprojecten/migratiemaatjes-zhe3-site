@@ -83,7 +83,7 @@ export function BookingFlowSplit({
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl"
         >
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="booking-flow-split:BookingFlowSplit.p.0:1175a4c9">
             Boeken
           </p>
           <h2 className="mt-3 text-3xl md:text-5xl font-semibold tracking-tight text-foreground">
@@ -187,10 +187,10 @@ export function BookingFlowSplit({
                 />
               ) : (
                 <div className="flex min-h-[640px] flex-col items-center justify-center gap-3 p-12 text-center">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="booking-flow-split:BookingFlowSplit.p.1:f7785051">
                     Online agenda
                   </p>
-                  <p className="text-base text-muted-foreground">
+                  <p className="text-base text-muted-foreground" data-bk-node="booking-flow-split:BookingFlowSplit.p.2:caadfcc1">
                     Configureer een booking-URL via de iframeUrl-prop.
                   </p>
                 </div>
@@ -198,13 +198,13 @@ export function BookingFlowSplit({
             </motion.div>
 
             {iframeUrl && (
-              <p className="mt-5 text-sm text-muted-foreground text-center md:text-left">
+              <p className="mt-5 text-sm text-muted-foreground text-center md:text-left" data-bk-node="booking-flow-split:BookingFlowSplit.p.3:cdb4ee2a">
                 {fallbackLabel}{" "}
                 <a
                   href={iframeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground underline underline-offset-4 hover:no-underline"
+                  className="text-foreground underline underline-offset-4 hover:no-underline" data-bk-node="booking-flow-split:BookingFlowSplit.a.0:0e7e234d"
                 >
                   Open in nieuw tabblad
                 </a>

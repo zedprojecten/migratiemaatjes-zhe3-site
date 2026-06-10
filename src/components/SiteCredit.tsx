@@ -14,7 +14,7 @@ export function SiteCredit() {
       href={`https://webdesign.bykick.nl/via/${CLIENT_SLUG}`}
       target="_blank"
       rel="noopener"
-      className="text-xs text-muted-foreground hover:text-orange-500 transition-colors"
+      className="text-xs text-muted-foreground hover:text-orange-500 transition-colors" data-bk-node="site-credit:SiteCredit.a.0:0431ed49"
     >
       website door webdesign.bykick.nl
     </a>

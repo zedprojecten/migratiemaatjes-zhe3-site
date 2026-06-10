@@ -115,32 +115,32 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
         {/* --- Navbar --- */}
         <div className="py-2 relative z-20 flex items-center justify-between gap-4">
           <div className="flex items-center gap-6">
-            <a href="#" className="font-bold text-2xl pb-1 text-foreground cursor-pointer flex-shrink-0">
+            <a href="#" className="font-bold text-2xl pb-1 text-foreground cursor-pointer flex-shrink-0" data-bk-href="hero-with-video:HeroWithVideo.a.href.0@href:334359b9">
               {brandName}
             </a>
             <nav className="hidden lg:flex text-muted-foreground font-medium">
               <ul className="flex items-center space-x-2">
-                <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">About</a></li>
+                <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.0:4efca0d1" data-bk-href="hero-with-video:HeroWithVideo.a.0@href:334359b9">About</a></li>
                 <li className="relative">
-                  <button onClick={() => toggleDropdown('desktop-resources')} className="flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">
+                  <button onClick={() => toggleDropdown('desktop-resources')} className="flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.0:e89b30aa">
                     Resources<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-resources' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'desktop-resources' && (
                     <ul className="absolute top-full left-0 mt-2 p-2 bg-card border border-border shadow-lg rounded-xl z-20 w-48">
-                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg">Submenu 1</a></li>
-                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg">Submenu 2</a></li>
+                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.1:5f39fa9e" data-bk-href="hero-with-video:HeroWithVideo.a.1@href:334359b9">Submenu 1</a></li>
+                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.2:0663ffd0" data-bk-href="hero-with-video:HeroWithVideo.a.2@href:334359b9">Submenu 2</a></li>
                     </ul>
                   )}
                 </li>
-                <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">Blog</a></li>
+                <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.3:8c6bc099" data-bk-href="hero-with-video:HeroWithVideo.a.3@href:334359b9">Blog</a></li>
                 <li className="relative">
-                  <button onClick={() => toggleDropdown('desktop-pricing')} className="flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">
+                  <button onClick={() => toggleDropdown('desktop-pricing')} className="flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.1:76fce029">
                     Plans & Pricing<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-pricing' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'desktop-pricing' && (
                     <ul className="absolute top-full left-0 mt-2 p-2 bg-card border border-border shadow-lg rounded-xl z-20 w-48">
-                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg">Plan A</a></li>
-                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg">Plan B</a></li>
+                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.4:ed5327f5" data-bk-href="hero-with-video:HeroWithVideo.a.4@href:334359b9">Plan A</a></li>
+                      <li><a href="#" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.5:915c4962" data-bk-href="hero-with-video:HeroWithVideo.a.5@href:334359b9">Plan B</a></li>
                     </ul>
                   )}
                 </li>
@@ -150,8 +150,8 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
 
           <div className="flex items-center gap-3">
             <div className="hidden lg:flex items-center gap-3">
-              <a href="#" className="text-foreground hover:text-muted-foreground cursor-pointer py-2 px-4 text-sm capitalize font-medium transition-colors rounded-xl">Login</a>
-              <button className="bg-foreground hover:bg-muted-foreground text-background py-2.5 px-5 text-sm rounded-xl capitalize font-medium transition-colors flex items-center gap-2">
+              <a href="#" className="text-foreground hover:text-muted-foreground cursor-pointer py-2 px-4 text-sm capitalize font-medium transition-colors rounded-xl" data-bk-node="hero-with-video:HeroWithVideo.a.6:9d6322c1" data-bk-href="hero-with-video:HeroWithVideo.a.6@href:334359b9">Login</a>
+              <button className="bg-foreground hover:bg-muted-foreground text-background py-2.5 px-5 text-sm rounded-xl capitalize font-medium transition-colors flex items-center gap-2" data-bk-node="hero-with-video:HeroWithVideo.button.2:983f3110">
                 Get Started<ArrowRight className="h-4 w-4" />
               </button>
             </div>
@@ -162,25 +162,25 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
               </button>
               {isMobileMenuOpen && (
                 <ul className="absolute top-full right-0 mt-2 p-2 shadow-lg bg-card border border-border rounded-xl w-56 z-30">
-                  <li><a href="#" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">About</a></li>
-                  <li><button onClick={() => toggleDropdown('mobile-resources')} className="w-full flex items-center justify-between px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">
+                  <li><a href="#" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.7:4efca0d1" data-bk-href="hero-with-video:HeroWithVideo.a.7@href:334359b9">About</a></li>
+                  <li><button onClick={() => toggleDropdown('mobile-resources')} className="w-full flex items-center justify-between px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.3:e89b30aa">
                       Resources<ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'mobile-resources' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'mobile-resources' && (<ul className="ml-4 mt-1 border-l border-border pl-3">
-                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg">Submenu 1</a></li>
-                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg">Submenu 2</a></li>
+                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.8:5f39fa9e" data-bk-href="hero-with-video:HeroWithVideo.a.8@href:334359b9">Submenu 1</a></li>
+                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.9:0663ffd0" data-bk-href="hero-with-video:HeroWithVideo.a.9@href:334359b9">Submenu 2</a></li>
                   </ul>)}</li>
-                  <li><a href="#" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">Blog</a></li>
-                  <li><button onClick={() => toggleDropdown('mobile-pricing')} className="w-full flex items-center justify-between px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">
+                  <li><a href="#" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.10:8c6bc099" data-bk-href="hero-with-video:HeroWithVideo.a.10@href:334359b9">Blog</a></li>
+                  <li><button onClick={() => toggleDropdown('mobile-pricing')} className="w-full flex items-center justify-between px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.4:76fce029">
                       Plans & Pricing<ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'mobile-pricing' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'mobile-pricing' && (<ul className="ml-4 mt-1 border-l border-border pl-3">
-                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg">Plan A</a></li>
-                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg">Plan B</a></li>
+                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.11:ed5327f5" data-bk-href="hero-with-video:HeroWithVideo.a.11@href:334359b9">Plan A</a></li>
+                      <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.12:915c4962" data-bk-href="hero-with-video:HeroWithVideo.a.12@href:334359b9">Plan B</a></li>
                   </ul>)}</li>
                   <li className="border-t border-border mt-2 pt-2 space-y-2">
-                    <a href="#" className="block w-full text-center px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">Login</a>
-                    <button className="w-full bg-foreground text-background hover:bg-muted-foreground px-3 py-2.5 text-sm rounded-lg flex items-center justify-center gap-2 font-medium">
+                    <a href="#" className="block w-full text-center px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.13:9d6322c1" data-bk-href="hero-with-video:HeroWithVideo.a.13@href:334359b9">Login</a>
+                    <button className="w-full bg-foreground text-background hover:bg-muted-foreground px-3 py-2.5 text-sm rounded-lg flex items-center justify-center gap-2 font-medium" data-bk-node="hero-with-video:HeroWithVideo.button.5:983f3110">
                       Get Started<ArrowRight className="h-4 w-4" />
                     </button>
                   </li>
@@ -200,7 +200,7 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
                 <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" />
                 <input type="email" placeholder={emailPlaceholder} value={email} onChange={(e) => setEmail(e.target.value)} className="w-full max-w-xs bg-muted border-border text-foreground placeholder-muted-foreground font-medium pl-10 pr-4 py-2 text-sm sm:pl-11 sm:py-3 sm:text-base rounded-full focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
-              <button onClick={handleEmailSubmit} className="bg-foreground hover:bg-muted-foreground text-background px-5 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded-full normal-case font-medium transition-colors flex items-center gap-2">
+              <button onClick={handleEmailSubmit} className="bg-foreground hover:bg-muted-foreground text-background px-5 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded-full normal-case font-medium transition-colors flex items-center gap-2" data-bk-node="hero-with-video:HeroWithVideo.button.6:f377380f">
                 Join Now<ArrowRight className="h-4 w-4" />
               </button>
             </div>

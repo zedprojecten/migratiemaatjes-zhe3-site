@@ -224,7 +224,7 @@ export function ContactFormWarm({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-stone-300/60 bg-white/60 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-stone-700 shadow-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-stone-300/60 bg-white/60 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-stone-700 shadow-sm" data-bk-node="contact-form-warm:ContactFormWarm.span.0:e6df5531">
             <HeartIcon
               className="h-3 w-3 text-amber-700"
               fill="currentColor"
@@ -271,11 +271,11 @@ export function ContactFormWarm({
               </div>
               <p
                 className="mt-4 text-2xl text-stone-900"
-                style={{ fontFamily: "Georgia, 'Cormorant Garamond', serif" }}
+                style={{ fontFamily: "Georgia, 'Cormorant Garamond', serif" }} data-bk-node="contact-form-warm:ContactFormWarm.p.0:d04f00e6"
               >
                 Hartelijk dank.
               </p>
-              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-stone-700">
+              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-stone-700" data-bk-node="contact-form-warm:ContactFormWarm.p.1:42e1920f">
                 Je bericht is bij ons aangekomen. We schrijven je binnenkort
                 persoonlijk terug, beloofd.
               </p>
@@ -358,7 +358,7 @@ export function ContactFormWarm({
               ))}
 
               {state === "error" && (
-                <p className="text-sm text-rose-700">
+                <p className="text-sm text-rose-700" data-bk-node="contact-form-warm:ContactFormWarm.p.2:39dcaa9a">
                   Er ging iets mis. Probeer het zo opnieuw.
                 </p>
               )}
@@ -374,7 +374,7 @@ export function ContactFormWarm({
                     ? "Bezig met versturen"
                     : submitLabel}
                 </HandDrawnSubmit>
-                <p className="mt-4 text-xs text-stone-500">
+                <p className="mt-4 text-xs text-stone-500" data-bk-node="contact-form-warm:ContactFormWarm.p.3:4251d3fb">
                   We bewaren je gegevens met zorg en delen ze met niemand.
                 </p>
               </motion.div>

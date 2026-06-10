@@ -258,7 +258,7 @@ export function ContactFormSplit({
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl"
         >
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="contact-form-split:ContactFormSplit.p.0:2b5c3d26">
             Contact
           </p>
           <h2 className="mt-3 text-3xl md:text-5xl font-bold tracking-tight text-foreground">
@@ -324,7 +324,7 @@ export function ContactFormSplit({
                   <Clock className="h-4 w-4" strokeWidth={2} />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground" data-bk-node="contact-form-split:ContactFormSplit.p.1:a9b59303">
                     Openingstijden
                   </p>
                   <dl className="mt-2 space-y-1.5">
@@ -383,10 +383,10 @@ export function ContactFormSplit({
             >
               {state === "success" ? (
                 <div className="border-l-2 border-primary py-4 pl-6">
-                  <p className="text-lg font-semibold text-foreground">
+                  <p className="text-lg font-semibold text-foreground" data-bk-node="contact-form-split:ContactFormSplit.p.2:01896709">
                     Bericht ontvangen.
                   </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
+                  <p className="mt-2 text-sm text-muted-foreground" data-bk-node="contact-form-split:ContactFormSplit.p.3:79261318">
                     Een collega neemt binnenkort contact op.
                   </p>
                 </div>
@@ -466,7 +466,7 @@ export function ContactFormSplit({
                   >
                     <label
                       htmlFor="cfs-message"
-                      className="block text-sm font-medium text-foreground"
+                      className="block text-sm font-medium text-foreground" data-bk-node="contact-form-split:ContactFormSplit.label.0:7632057b"
                     >
                       Bericht
                     </label>
@@ -485,7 +485,7 @@ export function ContactFormSplit({
                   </motion.div>
 
                   {state === "error" && (
-                    <p className="text-sm text-destructive">
+                    <p className="text-sm text-destructive" data-bk-node="contact-form-split:ContactFormSplit.p.4:7906e751">
                       Versturen lukte niet. Probeer het opnieuw of mail direct.
                     </p>
                   )}
@@ -500,7 +500,7 @@ export function ContactFormSplit({
                     }}
                     className="flex items-center justify-between gap-4 pt-1"
                   >
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-muted-foreground" data-bk-node="contact-form-split:ContactFormSplit.p.5:d258405f">
                       We reageren doorgaans binnen een werkdag.
                     </p>
                     <MagneticWrap>

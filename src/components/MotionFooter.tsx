@@ -218,11 +218,11 @@ MagneticButton.displayName = "MagneticButton";
 // -------------------------------------------------------------------------
 const MarqueeItem = () => (
   <div className="flex items-center space-x-12 px-6">
-    <span>Accountability Redefined</span> <span className="text-primary/60">✦</span>
-    <span>Transparent Tracking</span> <span className="text-secondary/60">✦</span>
-    <span>12-Step Progress</span> <span className="text-primary/60">✦</span>
-    <span>Sponsor Connection</span> <span className="text-secondary/60">✦</span>
-    <span>Absolute Privacy</span> <span className="text-primary/60">✦</span>
+    <span data-bk-node="motion-footer:MotionFooter.span.0:f4f74ecc">Accountability Redefined</span> <span className="text-primary/60" data-bk-node="motion-footer:MotionFooter.span.1:3191b526">✦</span>
+    <span data-bk-node="motion-footer:MotionFooter.span.2:3c242223">Transparent Tracking</span> <span className="text-secondary/60" data-bk-node="motion-footer:MotionFooter.span.3:3191b526">✦</span>
+    <span data-bk-node="motion-footer:MotionFooter.span.4:f51d8872">12-Step Progress</span> <span className="text-primary/60" data-bk-node="motion-footer:MotionFooter.span.5:3191b526">✦</span>
+    <span data-bk-node="motion-footer:MotionFooter.span.6:1fb49748">Sponsor Connection</span> <span className="text-secondary/60" data-bk-node="motion-footer:MotionFooter.span.7:3191b526">✦</span>
+    <span data-bk-node="motion-footer:MotionFooter.span.8:29644f4e">Absolute Privacy</span> <span className="text-primary/60" data-bk-node="motion-footer:MotionFooter.span.9:3191b526">✦</span>
   </div>
 );
 
@@ -306,7 +306,7 @@ export function MotionFooter() {
           {/* Giant background text */}
           <div
             ref={giantTextRef}
-            className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none"
+            className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none" data-bk-node="motion-footer:MotionFooter.div.0:24bf02fd"
           >
             SOBERS
           </div>
@@ -323,7 +323,7 @@ export function MotionFooter() {
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 w-full max-w-5xl mx-auto">
             <h2
               ref={headingRef}
-              className="text-5xl md:text-8xl font-black footer-text-glow tracking-tighter mb-12 text-center"
+              className="text-5xl md:text-8xl font-black footer-text-glow tracking-tighter mb-12 text-center" data-bk-node="motion-footer:MotionFooter.h2.0:691bf632"
             >
               Ready to begin?
             </h2>
@@ -366,16 +366,16 @@ export function MotionFooter() {
           <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
             
             {/* Copyright */}
-            <div className="text-muted-foreground text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1">
+            <div className="text-muted-foreground text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1" data-bk-node="motion-footer:MotionFooter.div.1:50c1d0e6">
               © 2026 Volvox. All rights reserved.
             </div>
 
             {/* "Made with Love" Badge */}
             <div className="footer-glass-pill px-6 py-3 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-default border-border/50">
-              <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest">Crafted with</span>
-              <span className="animate-footer-heartbeat text-sm md:text-base text-destructive">❤</span>
-              <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest">by</span>
-              <span className="text-foreground font-black text-xs md:text-sm tracking-normal ml-1">Volvox</span>
+              <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest" data-bk-node="motion-footer:MotionFooter.span.10:98a9cdf6">Crafted with</span>
+              <span className="animate-footer-heartbeat text-sm md:text-base text-destructive" data-bk-node="motion-footer:MotionFooter.span.11:cc13ee6f">❤</span>
+              <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest" data-bk-node="motion-footer:MotionFooter.span.12:a7e2d26e">by</span>
+              <span className="text-foreground font-black text-xs md:text-sm tracking-normal ml-1" data-bk-node="motion-footer:MotionFooter.span.13:1fc08717">Volvox</span>
             </div>
 
             {/* Back to top */}

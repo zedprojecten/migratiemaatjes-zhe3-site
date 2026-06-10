@@ -160,7 +160,7 @@ export function BlogGridCards({
           className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
         >
           <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="blog-grid-cards:BlogGridCards.span.0:e89b30aa">
               Resources
             </span>
             <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
@@ -174,7 +174,7 @@ export function BlogGridCards({
           </div>
           <a
             href="#"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-transform hover:translate-x-1"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-transform hover:translate-x-1" data-bk-node="blog-grid-cards:BlogGridCards.a.0:e2e4f468" data-bk-href="blog-grid-cards:BlogGridCards.a.0@href:334359b9"
           >
             Alle artikelen
             <ArrowRight className="h-4 w-4" />
@@ -234,7 +234,7 @@ export function BlogGridCards({
                   )}
                   <div className="mt-2 flex items-center justify-between border-t border-border/60 pt-4 text-xs text-muted-foreground">
                     <span>{post.author ?? "Redactie"}</span>
-                    <span className="inline-flex items-center gap-1 font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1">
+                    <span className="inline-flex items-center gap-1 font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1" data-bk-node="blog-grid-cards:BlogGridCards.span.1:07dd1353">
                       Lees verder
                       <ArrowRight className="h-3.5 w-3.5" />
                     </span>

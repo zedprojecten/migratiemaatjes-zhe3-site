@@ -84,7 +84,7 @@ export function PricingToggle({
             >
               {yearlyLabel}
               <span
-                className={`absolute left-full top-1/2 -translate-y-1/2 ml-1.5 text-xs text-primary font-semibold whitespace-nowrap transition-opacity ${isYearly ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                className={`absolute left-full top-1/2 -translate-y-1/2 ml-1.5 text-xs text-primary font-semibold whitespace-nowrap transition-opacity ${isYearly ? "opacity-100" : "opacity-0 pointer-events-none"}`} data-bk-node="pricing-toggle:PricingToggle.span.0:fd8a0f2f"
               >
                 Bespaar 10%
               </span>
@@ -109,7 +109,7 @@ export function PricingToggle({
                   }`}
                 >
                   {plan.highlighted && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold bg-primary text-primary-foreground px-3 py-1 rounded-full">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold bg-primary text-primary-foreground px-3 py-1 rounded-full" data-bk-node="pricing-toggle:PricingToggle.span.1:20112a88">
                       Populair
                     </span>
                   )}
@@ -144,7 +144,7 @@ export function PricingToggle({
                       </span>
                     )}
                     {hasPrice && (
-                      <span className="text-sm text-muted-foreground ml-1">
+                      <span className="text-sm text-muted-foreground ml-1" data-bk-node="pricing-toggle:PricingToggle.span.2:639cf889">
                         /maand
                       </span>
                     )}

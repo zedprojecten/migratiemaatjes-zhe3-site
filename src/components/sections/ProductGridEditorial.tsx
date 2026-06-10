@@ -116,7 +116,7 @@ export function ProductGridEditorial({
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="mb-14 max-w-2xl"
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground" data-bk-node="product-grid-editorial:ProductGridEditorial.span.0:67904942">
               Editie 06
             </span>
             {heading && (
@@ -199,7 +199,7 @@ export function ProductGridEditorial({
               style={{ transformOrigin: "left" }}
               className="mb-6 h-px w-full bg-foreground/30"
             />
-            <span className="mb-5 inline-block text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+            <span className="mb-5 inline-block text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground" data-bk-node="product-grid-editorial:ProductGridEditorial.span.1:020aebf5">
               In dezelfde editie
             </span>
             <div className="grid grid-cols-2 gap-5">

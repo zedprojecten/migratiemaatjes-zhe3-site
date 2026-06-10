@@ -159,10 +159,10 @@ export function TeamShowcaseEditorial({
           className="flex items-baseline justify-between border-b-2 border-foreground pb-4"
           style={{ fontFamily: "system-ui, sans-serif" }}
         >
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground">
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground" data-bk-node="team-showcase-editorial:TeamShowcaseEditorial.span.0:3a1894f9">
             Editie 01, Het team
           </span>
-          <span className="hidden text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:block">
+          <span className="hidden text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:block" data-bk-node="team-showcase-editorial:TeamShowcaseEditorial.span.1:6e92dbed">
             Pagina 03
           </span>
         </motion.div>
@@ -177,7 +177,7 @@ export function TeamShowcaseEditorial({
           <div className="md:col-span-7">
             <p
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground"
-              style={{ fontFamily: "system-ui, sans-serif" }}
+              style={{ fontFamily: "system-ui, sans-serif" }} data-bk-node="team-showcase-editorial:TeamShowcaseEditorial.p.0:95f6292f"
             >
               Hoofdstuk 03
             </p>

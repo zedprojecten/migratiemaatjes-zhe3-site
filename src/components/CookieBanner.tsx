@@ -28,20 +28,20 @@ export function CookieBanner() {
       aria-label="Cookie-toestemming"
       className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-white border border-neutral-200 shadow-lg rounded-lg p-4 z-50"
     >
-      <p className="text-sm text-neutral-800 mb-3">
+      <p className="text-sm text-neutral-800 mb-3" data-bk-node="cookie-banner:CookieBanner.p.0:f6113ba0">
         We gebruiken anonieme analytics om de site te verbeteren. Geen advertenties, geen tracking buiten deze site.
-        Lees meer in onze <a href="/privacy" className="underline">privacyverklaring</a>.
+        Lees meer in onze <a href="/privacy" className="underline" data-bk-node="cookie-banner:CookieBanner.a.0:a2950200" data-bk-href="cookie-banner:CookieBanner.a.0@href:0ece7f7c">privacyverklaring</a>.
       </p>
       <div className="flex gap-2">
         <button
           onClick={() => { grantAnalyticsConsent(); setVisible(false); }}
-          className="flex-1 px-3 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded text-sm font-medium"
+          className="flex-1 px-3 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded text-sm font-medium" data-bk-node="cookie-banner:CookieBanner.button.0:0cc6655e"
         >
           Akkoord
         </button>
         <button
           onClick={() => { denyAnalyticsConsent(); setVisible(false); }}
-          className="flex-1 px-3 py-2 border border-neutral-300 hover:bg-neutral-100 rounded text-sm"
+          className="flex-1 px-3 py-2 border border-neutral-300 hover:bg-neutral-100 rounded text-sm" data-bk-node="cookie-banner:CookieBanner.button.1:c63d1385"
         >
           Weiger
         </button>

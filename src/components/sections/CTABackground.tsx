@@ -150,7 +150,7 @@ export function CTABackground({
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-white/95 backdrop-blur-md"
-          style={{ textShadow: "0 1px 12px rgba(0,0,0,0.4)" }}
+          style={{ textShadow: "0 1px 12px rgba(0,0,0,0.4)" }} data-bk-node="ctabackground:CTABackground.span.0:5e7d2a68"
         >
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inset-0 animate-ping rounded-full bg-white/60" />

@@ -207,7 +207,7 @@ export function PricingTableMinimal({
               >
                 {plan.recommended && (
                   <div className="absolute -top-2.5 left-1/2 -translate-x-1/2">
-                    <span className="text-[11px] font-semibold uppercase tracking-wide bg-foreground text-background px-2.5 py-1 rounded-full">
+                    <span className="text-[11px] font-semibold uppercase tracking-wide bg-foreground text-background px-2.5 py-1 rounded-full" data-bk-node="pricing-table-minimal:PricingTableMinimal.span.0:20112a88">
                       Populair
                     </span>
                   </div>
