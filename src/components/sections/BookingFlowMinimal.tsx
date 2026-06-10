@@ -204,7 +204,7 @@ export function BookingFlowMinimal({
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground">
+          <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.p.0:1175a4c9">
             Boeken
           </p>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
@@ -224,10 +224,10 @@ export function BookingFlowMinimal({
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="mt-12 border-l-2 border-foreground py-2 pl-6"
           >
-            <p className="text-base font-medium text-foreground">
+            <p className="text-base font-medium text-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.p.1:950c38cd">
               Aanvraag ontvangen.
             </p>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="mt-2 text-sm text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.p.2:bff68de6">
               Je hoort zo snel mogelijk van ons om de afspraak te bevestigen.
             </p>
           </motion.div>
@@ -236,7 +236,7 @@ export function BookingFlowMinimal({
             <MinimalField index={0} inView={inView}>
               <label
                 htmlFor="bfm-name"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.label.0:eca46fca"
               >
                 Naam
               </label>
@@ -260,7 +260,7 @@ export function BookingFlowMinimal({
             <MinimalField index={1} inView={inView}>
               <label
                 htmlFor="bfm-email"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.label.1:969ccbd3"
               >
                 Email
               </label>
@@ -285,7 +285,7 @@ export function BookingFlowMinimal({
             <MinimalField index={2} inView={inView}>
               <label
                 htmlFor="bfm-phone"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.label.2:5d54efb5"
               >
                 Telefoon
               </label>
@@ -309,7 +309,7 @@ export function BookingFlowMinimal({
             <MinimalField index={3} inView={inView}>
               <label
                 htmlFor="bfm-service"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.label.3:e81e7689"
               >
                 Behandeling
               </label>
@@ -348,7 +348,7 @@ export function BookingFlowMinimal({
             <MinimalField index={4} inView={inView}>
               <label
                 htmlFor="bfm-date"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.label.4:f85e6a0f"
               >
                 Voorkeursdatum
               </label>
@@ -370,7 +370,7 @@ export function BookingFlowMinimal({
             <MinimalField index={5} inView={inView}>
               <label
                 htmlFor="bfm-note"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-minimal:BookingFlowMinimal.label.5:dd7070c3"
               >
                 Notitie (optioneel)
               </label>
@@ -390,7 +390,7 @@ export function BookingFlowMinimal({
             </MinimalField>
 
             {state === "error" && (
-              <p className="text-sm text-destructive">
+              <p className="text-sm text-destructive" data-bk-node="booking-flow-minimal:BookingFlowMinimal.p.3:c6c1631d">
                 Versturen lukte niet. Probeer het opnieuw.
               </p>
             )}

@@ -115,10 +115,10 @@ export function TestimonialCardsEditorial({
           className="flex items-baseline justify-between border-b-2 border-foreground pb-4"
           style={{ fontFamily: "system-ui, sans-serif" }}
         >
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground">
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground" data-bk-node="testimonial-cards-editorial:TestimonialCardsEditorial.span.0:f24c7a67">
             Editie 01, Klantverhalen
           </span>
-          <span className="hidden text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:block">
+          <span className="hidden text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:block" data-bk-node="testimonial-cards-editorial:TestimonialCardsEditorial.span.1:b13d5269">
             Pagina 02
           </span>
         </motion.div>
@@ -133,7 +133,7 @@ export function TestimonialCardsEditorial({
           <div className="md:col-span-7">
             <p
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground"
-              style={{ fontFamily: "system-ui, sans-serif" }}
+              style={{ fontFamily: "system-ui, sans-serif" }} data-bk-node="testimonial-cards-editorial:TestimonialCardsEditorial.p.0:757719cc"
             >
               Hoofdstuk 02
             </p>
@@ -184,7 +184,7 @@ export function TestimonialCardsEditorial({
             <span
               aria-hidden
               className="absolute -left-2 -top-10 select-none text-[180px] font-normal leading-none text-foreground/15 md:-left-6 md:-top-16 md:text-[260px]"
-              style={{ fontFamily: "Georgia, serif" }}
+              style={{ fontFamily: "Georgia, serif" }} data-bk-node="testimonial-cards-editorial:TestimonialCardsEditorial.span.2:c2dcdc8d"
             >
               &ldquo;
             </span>
@@ -258,7 +258,7 @@ export function TestimonialCardsEditorial({
               >
                 <p
                   className="flex-1 text-[15px] italic leading-[1.45] text-foreground/90"
-                  style={{ fontFamily: "Georgia, serif" }}
+                  style={{ fontFamily: "Georgia, serif" }} data-bk-node="testimonial-cards-editorial:TestimonialCardsEditorial.p.1:0d3e7558"
                 >
                   &ldquo;{t.quote}&rdquo;
                 </p>

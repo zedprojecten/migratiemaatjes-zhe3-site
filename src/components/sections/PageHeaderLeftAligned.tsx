@@ -131,7 +131,7 @@ export function PageHeaderLeftAligned({
                 <span>{link.label}</span>
                 <span
                   aria-hidden
-                  className="ml-3 text-xs uppercase tracking-[0.22em] text-muted-foreground transition-transform group-hover:translate-x-0.5"
+                  className="ml-3 text-xs uppercase tracking-[0.22em] text-muted-foreground transition-transform group-hover:translate-x-0.5" data-bk-node="page-header-left-aligned:PageHeaderLeftAligned.span.0:0590e557"
                 >
                   Lees
                 </span>

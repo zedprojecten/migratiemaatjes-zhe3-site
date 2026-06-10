@@ -196,7 +196,7 @@ export function StoryIntroDropCap({
                 </div>
                 <p
                   className="mt-4 text-xs italic text-muted-foreground"
-                  style={{ fontFamily: "Georgia, serif" }}
+                  style={{ fontFamily: "Georgia, serif" }} data-bk-node="story-intro-drop-cap:StoryIntroDropCap.p.0:e79314cb"
                 >
                   De studio in De Pijp, herfst 2024.
                 </p>

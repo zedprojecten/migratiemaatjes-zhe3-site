@@ -205,7 +205,7 @@ export function ContactFormMinimal({
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground">
+          <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="contact-form-minimal:ContactFormMinimal.p.0:2b5c3d26">
             Contact
           </p>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
@@ -225,10 +225,10 @@ export function ContactFormMinimal({
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="mt-12 border-l-2 border-foreground py-2 pl-6"
           >
-            <p className="text-base font-medium text-foreground">
+            <p className="text-base font-medium text-foreground" data-bk-node="contact-form-minimal:ContactFormMinimal.p.1:84c87aa3">
               Bedankt voor je bericht.
             </p>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="mt-2 text-sm text-muted-foreground" data-bk-node="contact-form-minimal:ContactFormMinimal.p.2:551316cd">
               We nemen zo spoedig mogelijk contact op.
             </p>
           </motion.div>
@@ -237,7 +237,7 @@ export function ContactFormMinimal({
             <MinimalField index={0} inView={inView}>
               <label
                 htmlFor="cfm-name"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="contact-form-minimal:ContactFormMinimal.label.0:eca46fca"
               >
                 Naam
               </label>
@@ -261,7 +261,7 @@ export function ContactFormMinimal({
             <MinimalField index={1} inView={inView}>
               <label
                 htmlFor="cfm-email"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="contact-form-minimal:ContactFormMinimal.label.1:969ccbd3"
               >
                 Email
               </label>
@@ -286,7 +286,7 @@ export function ContactFormMinimal({
             <MinimalField index={2} inView={inView}>
               <label
                 htmlFor="cfm-message"
-                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="contact-form-minimal:ContactFormMinimal.label.2:7632057b"
               >
                 Bericht
               </label>
@@ -307,7 +307,7 @@ export function ContactFormMinimal({
             </MinimalField>
 
             {state === "error" && (
-              <p className="text-sm text-destructive">
+              <p className="text-sm text-destructive" data-bk-node="contact-form-minimal:ContactFormMinimal.p.3:c6c1631d">
                 Versturen lukte niet. Probeer het opnieuw.
               </p>
             )}

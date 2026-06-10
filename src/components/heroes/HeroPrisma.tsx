@@ -61,7 +61,7 @@ export const WordsPullUp = ({
           >
             {word}
             {showAsterisk && isLast && (
-              <span className="absolute top-[0.65em] -right-[0.3em] text-[0.31em]">
+              <span className="absolute top-[0.65em] -right-[0.3em] text-[0.31em]" data-bk-node="hero-prisma:HeroPrisma.span.0:684888c0">
                 *
               </span>
             )}
@@ -184,7 +184,7 @@ export default function HeroPrisma({
                 }
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.color = "rgba(225, 224, 204, 0.8)")
-                }
+                } data-bk-href="hero-prisma:HeroPrisma.a.href.0@href:334359b9"
               >
                 {item}
               </a>

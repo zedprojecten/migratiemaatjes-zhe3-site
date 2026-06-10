@@ -72,7 +72,7 @@ export function CTAEditorial({
           transition={{ duration: 0.6 }}
           className="mb-14 flex items-center gap-5 md:mb-20"
         >
-          <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground">
+          <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="ctaeditorial:CTAEditorial.span.0:5ad6a405">
             Editorial
           </span>
           <svg
@@ -193,7 +193,7 @@ export function CTAEditorial({
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             />
           </svg>
-          <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground">
+          <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="ctaeditorial:CTAEditorial.span.1:ed491f21">
             No. 04
           </span>
         </motion.div>

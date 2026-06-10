@@ -52,7 +52,7 @@ export function PullquoteLarge({
       <div ref={ref} className="relative mx-auto max-w-4xl px-6 md:px-8">
         <span
           aria-hidden
-          className="pointer-events-none absolute -left-2 -top-10 select-none font-serif text-[12rem] leading-none text-primary/10 md:-left-6 md:-top-16 md:text-[16rem]"
+          className="pointer-events-none absolute -left-2 -top-10 select-none font-serif text-[12rem] leading-none text-primary/10 md:-left-6 md:-top-16 md:text-[16rem]" data-bk-node="pullquote-large:PullquoteLarge.span.0:c2dcdc8d"
         >
           &ldquo;
         </span>

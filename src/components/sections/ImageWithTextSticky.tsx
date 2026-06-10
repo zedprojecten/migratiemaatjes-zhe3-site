@@ -208,7 +208,7 @@ export function ImageWithTextSticky({
                 </div>
               </div>
               <div className="mt-5 flex items-center gap-3">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="image-with-text-sticky:ImageWithTextSticky.span.0:7ad73dab">
                   Nu in beeld
                 </span>
                 <span className="text-sm font-medium text-foreground">

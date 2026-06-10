@@ -160,7 +160,7 @@ export function TeamShowcaseGlass({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mb-14 max-w-2xl text-center md:mb-20"
         >
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/50">
+          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/50" data-bk-node="team-showcase-glass:TeamShowcaseGlass.p.0:5d285367">
             Crew
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">

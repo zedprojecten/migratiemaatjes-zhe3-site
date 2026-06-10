@@ -116,7 +116,7 @@ const DialogContent = React.forwardRef<
       {children}
       <DialogPrimitive.Close className="absolute right-4 top-4 z-10 rounded-full bg-[#2E3033]/80 p-2 hover:bg-[#2E3033] transition-all">
         <X className="h-5 w-5 text-gray-200 hover:text-white" />
-        <span className="sr-only">Close</span>
+        <span className="sr-only" data-bk-node="aiprompt-box:AIPromptBox.span.0:7d9eb7ac">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
@@ -694,7 +694,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                       animate={{ width: "auto", opacity: 1 }}
                       exit={{ width: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-xs overflow-hidden whitespace-nowrap text-[#1EAEDB] flex-shrink-0"
+                      className="text-xs overflow-hidden whitespace-nowrap text-[#1EAEDB] flex-shrink-0" data-bk-node="aiprompt-box:AIPromptBox.span.1:49c266ba"
                     >
                       Search
                     </motion.span>
@@ -730,7 +730,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                       animate={{ width: "auto", opacity: 1 }}
                       exit={{ width: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-xs overflow-hidden whitespace-nowrap text-[#8B5CF6] flex-shrink-0"
+                      className="text-xs overflow-hidden whitespace-nowrap text-[#8B5CF6] flex-shrink-0" data-bk-node="aiprompt-box:AIPromptBox.span.2:7ed41c12"
                     >
                       Think
                     </motion.span>
@@ -766,7 +766,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                       animate={{ width: "auto", opacity: 1 }}
                       exit={{ width: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-xs overflow-hidden whitespace-nowrap text-[#F97316] flex-shrink-0"
+                      className="text-xs overflow-hidden whitespace-nowrap text-[#F97316] flex-shrink-0" data-bk-node="aiprompt-box:AIPromptBox.span.3:3824a9f4"
                     >
                       Canvas
                     </motion.span>

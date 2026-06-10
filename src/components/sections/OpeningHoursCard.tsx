@@ -152,7 +152,7 @@ export function OpeningHoursCard({
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 max-w-2xl text-center mx-auto"
         >
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.0:60d0692b">
             Bezoek de studio
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
@@ -183,10 +183,10 @@ export function OpeningHoursCard({
                     <Clock className="h-4 w-4" strokeWidth={2} />
                   </div>
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.1:a9b59303">
                       Openingstijden
                     </p>
-                    <p className="mt-1 text-sm font-medium text-foreground">
+                    <p className="mt-1 text-sm font-medium text-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.2:bb7004ba">
                       Iedere week dezelfde tijden
                     </p>
                   </div>
@@ -247,7 +247,7 @@ export function OpeningHoursCard({
                       >
                         {row.day}
                         {isToday && (
-                          <span className="rounded-full bg-primary/15 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.2em] text-primary">
+                          <span className="rounded-full bg-primary/15 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.2em] text-primary" data-bk-node="opening-hours-card:OpeningHoursCard.span.0:45b2178c">
                             Vandaag
                           </span>
                         )}
@@ -315,7 +315,7 @@ export function OpeningHoursCard({
             >
               <Phone className="h-4 w-4 text-primary" strokeWidth={2} />
               <div className="min-w-0">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.3:835424da">
                   Bel ons
                 </p>
                 <p className="truncate text-sm font-medium text-foreground group-hover:text-primary transition-colors">
@@ -329,7 +329,7 @@ export function OpeningHoursCard({
             >
               <Mail className="h-4 w-4 text-primary" strokeWidth={2} />
               <div className="min-w-0">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.4:a9236ec5">
                   Mail ons
                 </p>
                 <p className="truncate text-sm font-medium text-foreground group-hover:text-primary transition-colors">

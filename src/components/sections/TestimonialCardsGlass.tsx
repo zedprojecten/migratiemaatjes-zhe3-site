@@ -158,7 +158,7 @@ function GlassCard({
             style={{
               fontFamily: "Georgia, 'Cormorant Garamond', serif",
               fontStyle: "italic",
-            }}
+            }} data-bk-node="testimonial-cards-glass:TestimonialCardsGlass.p.0:0d3e7558"
           >
             &ldquo;{testimonial.quote}&rdquo;
           </p>
@@ -226,7 +226,7 @@ export function TestimonialCardsGlass({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/30 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-foreground backdrop-blur dark:border-white/10 dark:bg-white/5">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/30 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-foreground backdrop-blur dark:border-white/10 dark:bg-white/5" data-bk-node="testimonial-cards-glass:TestimonialCardsGlass.span.0:c26d2319">
             Wat klanten zeggen
           </span>
           <h2 className="mt-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">

@@ -1,3 +1,4 @@
+import { bkSectionVisible } from "@/lib/bk-sections";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
@@ -47,12 +48,12 @@ function Hero() {
 
       <div className="container mx-auto px-4 sm:px-6 pt-20 pb-24 md:pt-28 md:pb-32">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block font-mono text-xs uppercase tracking-[0.22em] text-primary">
+          <span className="inline-block font-mono text-xs uppercase tracking-[0.22em] text-primary" data-bk-node="home:Home.span.0:89ddcb95">
             // ai-gegenereerde migratiescripts
           </span>
 
           <h1 className="mt-6 font-display text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] text-foreground">
-            <span className="block">Migraties die</span>
+            <span className="block" data-bk-node="home:Home.span.1:c54c69b6">Migraties die</span>
             <span className="block mt-2 text-primary">
               <TextRotateCinematic
                 words={[
@@ -64,12 +65,12 @@ function Hero() {
                 ]}
               />
             </span>
-            <span className="block mt-3 text-foreground/85 text-2xl sm:text-3xl md:text-4xl font-medium">
+            <span className="block mt-3 text-foreground/85 text-2xl sm:text-3xl md:text-4xl font-medium" data-bk-node="home:Home.span.2:d916847d">
               MigratieMaatjes fixt het voor je.
             </span>
           </h1>
 
-          <p className="mt-7 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-7 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed" data-bk-node="home:Home.p.0:04edcaec">
             Een AI-agent bouwt op verzoek een Python-script dat jouw data van
             het ene formaat naar het andere migreert. Geen ETL-tool, geen
             abonnement, geen vendor lock-in. Jij draait het script lokaal op je
@@ -81,20 +82,20 @@ function Hero() {
               href={APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.6)] transition hover:brightness-110"
+              className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.6)] transition hover:brightness-110" data-bk-node="home:Home.a.0:edf49fc0"
             >
               Naar de app
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </a>
             <a
               href="#stappen"
-              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-white/15 bg-white/[0.04] backdrop-blur-md px-6 text-sm font-medium text-foreground/85 transition hover:border-primary/40 hover:text-foreground"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-white/15 bg-white/[0.04] backdrop-blur-md px-6 text-sm font-medium text-foreground/85 transition hover:border-primary/40 hover:text-foreground" data-bk-node="home:Home.a.1:278c3ca2" data-bk-href="home:Home.a.1@href:05b7e2d5"
             >
               Bekijk hoe het werkt
             </a>
           </div>
 
-          <p className="mt-6 font-mono text-xs text-muted-foreground/80">
+          <p className="mt-6 font-mono text-xs text-muted-foreground/80" data-bk-node="home:Home.p.1:02c198c2">
             login via magic link · max 50 sample-rijen verlaten je computer ·
             originele data blijft lokaal
           </p>
@@ -108,7 +109,7 @@ function Hero() {
                 <span className="h-2 w-2 rounded-full bg-foreground/15" />
                 <span className="h-2 w-2 rounded-full bg-primary/40" />
               </span>
-              <span className="ml-2 uppercase tracking-wider">
+              <span className="ml-2 uppercase tracking-wider" data-bk-node="home:Home.span.3:9f008e9d">
                 // procurios -&gt; dynamics 365 — sample (50 rijen)
               </span>
             </div>
@@ -165,13 +166,13 @@ function ProblemSection() {
     <section className="relative py-20 md:py-28 border-t border-white/5">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary" data-bk-node="home:Home.span.4:e379040f">
             // het probleem
           </span>
-          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.0:9112d14c">
             Datamigratie is structureel pijnlijk
           </h2>
-          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
+          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.2:6b781387">
             Tussen-systeem-migraties, of het nu Procurios naar Dynamics is of
             Salesforce naar HubSpot, vragen elke keer dezelfde inspanning.
             Drie bestaande oplossingen, alle drie met hun eigen pijn.
@@ -215,28 +216,28 @@ function SolutionSection() {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid gap-12 md:grid-cols-12 items-start">
           <div className="md:col-span-5">
-            <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary">
+            <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary" data-bk-node="home:Home.span.5:d29d2a3d">
               // de oplossing
             </span>
-            <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+            <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.1:9212baee">
               Een AI-agent als senior data-engineer
             </h2>
           </div>
           <div className="md:col-span-7 space-y-5 text-base md:text-lg text-foreground/75 leading-relaxed">
-            <p>
+            <p data-bk-node="home:Home.p.3:7b3dc567">
               Je upload een sample van je bron-data, beschrijft de gewenste
               doelstructuur, en legt in normaal Nederlands uit wat er moet
               gebeuren. De AI-agent stelt een migratie-plan op, jij keurt het
               goed of stuurt bij in een chat-gesprek.
             </p>
-            <p>
+            <p data-bk-node="home:Home.p.4:8ac2d07d">
               Daarna bouwt en test de agent een Python-script op je
               50-rijen sample. Je krijgt het script, een handleiding in
               Nederlands, en een voorbeeld-output. Vervolgens draai je het
               script lokaal op je volledige dataset. Onze servers zien die
               dataset nooit.
             </p>
-            <p className="text-foreground">
+            <p className="text-foreground" data-bk-node="home:Home.p.5:a3ac7e59">
               Custom development snelheid en kwaliteit, voor een fractie van de
               kosten en zonder vendor lock-in.
             </p>
@@ -322,13 +323,13 @@ function StepsSection() {
     <section id="stappen" className="relative py-20 md:py-28 border-t border-white/5">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary" data-bk-node="home:Home.span.6:15bdd4e2">
             // zo werkt het
           </span>
-          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.2:100a932e">
             Vier stappen, dan doet de agent zijn werk
           </h2>
-          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
+          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.6:45887d6e">
             De wizard in de app neemt je in vier korte stappen door alles wat
             de agent nodig heeft. Inclusief privacy-veilige sample-upload uit
             je browser.
@@ -380,10 +381,10 @@ function StepsSection() {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary">
                 <Wand2 className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+              <h3 className="mt-5 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.0:20466bcb">
                 En dan, de agent doet zijn werk
               </h3>
-              <p className="mt-4 text-sm md:text-base text-foreground/70 leading-relaxed">
+              <p className="mt-4 text-sm md:text-base text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.7:0a31ba4a">
                 De agent leest je sample, stelt een migratie-plan op in
                 leesbare markdown, en toont het aan jou. Stuur 'm bij in een
                 chat-gesprek (nee deze regel moet anders, skip ook X) of klik
@@ -391,9 +392,9 @@ function StepsSection() {
                 je 50 rijen.
               </p>
               <ul className="mt-5 space-y-2 font-mono text-xs text-muted-foreground">
-                <li>· plan in markdown, leesbaar voor mensen</li>
-                <li>· chat om bij te sturen tot het klopt</li>
-                <li>· script test eerst op je sample, niet op productie</li>
+                <li data-bk-node="home:Home.li.0:ca7d95eb">· plan in markdown, leesbaar voor mensen</li>
+                <li data-bk-node="home:Home.li.1:da4bad04">· chat om bij te sturen tot het klopt</li>
+                <li data-bk-node="home:Home.li.2:ae26ded0">· script test eerst op je sample, niet op productie</li>
               </ul>
             </div>
             <div className="lg:col-span-7">
@@ -443,13 +444,13 @@ function DeliverablesSection() {
     <section className="relative py-20 md:py-28 border-t border-white/5">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary" data-bk-node="home:Home.span.7:7d19bf80">
             // wat je krijgt
           </span>
-          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.3:0dae888d">
             Drie bestanden, klaar om te draaien
           </h2>
-          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
+          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.8:b40a55f7">
             Geen black-box, geen hosted-runner. Je krijgt het script, de
             handleiding en een voorbeeld van wat het oplevert. De rest doe je
             zelf op jouw machine.
@@ -537,10 +538,10 @@ function PrivacySection() {
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary">
               <Shield className="h-5 w-5" />
             </div>
-            <h2 className="mt-5 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+            <h2 className="mt-5 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.4:5591e233">
               Privacy is een feature, geen kleine letters
             </h2>
-            <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
+            <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.9:cd70a49b">
               Datamigraties bevatten vaak persoonsgegevens of bedrijfsgevoelige
               data. Onze architectuur is zo opgezet dat je die nooit aan ons
               hoeft te overhandigen.
@@ -603,13 +604,13 @@ function AudienceSection() {
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary" data-bk-node="home:Home.span.8:ee1786e8">
             // voor wie
           </span>
-          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.5:e74b2179">
             Teams die structureel migreren
           </h2>
-          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
+          <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.10:5f9fc0e1">
             Geschikt voor mensen die comfortabel zijn met Python lokaal draaien
             en hun eigen data-structuur kunnen benoemen. Niet bedoeld voor
             niet-technische eindgebruikers die nog nooit een terminal hebben
@@ -707,10 +708,10 @@ function FAQSection() {
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-primary" data-bk-node="home:Home.span.9:a832c017">
             // faq
           </span>
-          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.6:571ce3e2">
             Veelgestelde vragen
           </h2>
         </div>
@@ -738,10 +739,10 @@ function FinalCTA() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent" />
             </div>
             <div className="relative max-w-3xl">
-              <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight">
+              <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.7:1dd1e57a">
                 Klaar om je migratie te starten?
               </h2>
-              <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
+              <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.11:871a5b58">
                 Login via magic link, geen wachtwoord nodig. De wizard begeleidt
                 je door de vier stappen, de agent levert het script.
               </p>
@@ -750,12 +751,12 @@ function FinalCTA() {
                   href={APP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.6)] transition hover:brightness-110"
+                  className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.6)] transition hover:brightness-110" data-bk-node="home:Home.a.2:edf49fc0"
                 >
                   Naar de app
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
-                <span className="font-mono text-xs text-muted-foreground/85">
+                <span className="font-mono text-xs text-muted-foreground/85" data-bk-node="home:Home.span.10:4f7ead8f">
                   geen creditcard · klant op uitnodiging · login via magic link
                 </span>
               </div>
@@ -774,15 +775,15 @@ function FinalCTA() {
 export default function Home() {
   return (
     <div className="bg-background text-foreground">
-      <Hero />
-      <ProblemSection />
-      <SolutionSection />
-      <StepsSection />
-      <DeliverablesSection />
-      <PrivacySection />
-      <AudienceSection />
-      <FAQSection />
-      <FinalCTA />
+      {bkSectionVisible("home:Hero.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:Hero.section.0"><Hero /></div>)}
+      {bkSectionVisible("home:ProblemSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:ProblemSection.section.0"><ProblemSection /></div>)}
+      {bkSectionVisible("home:SolutionSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:SolutionSection.section.0"><SolutionSection /></div>)}
+      {bkSectionVisible("home:StepsSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:StepsSection.section.0"><StepsSection /></div>)}
+      {bkSectionVisible("home:DeliverablesSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:DeliverablesSection.section.0"><DeliverablesSection /></div>)}
+      {bkSectionVisible("home:PrivacySection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:PrivacySection.section.0"><PrivacySection /></div>)}
+      {bkSectionVisible("home:AudienceSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:AudienceSection.section.0"><AudienceSection /></div>)}
+      {bkSectionVisible("home:FAQSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:FAQSection.section.0"><FAQSection /></div>)}
+      {bkSectionVisible("home:FinalCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:FinalCTA.section.0"><FinalCTA /></div>)}
     </div>
   );
 }

@@ -100,7 +100,7 @@ export function IframeWidget({
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="flex flex-col items-center gap-3 text-muted-foreground">
                 <div className="h-8 w-8 animate-spin rounded-full border-2 border-border border-t-foreground/60" />
-                <p className="text-xs font-medium uppercase tracking-[0.24em]">
+                <p className="text-xs font-medium uppercase tracking-[0.24em]" data-bk-node="iframe-widget:IframeWidget.p.0:629a92a9">
                   Widget laden
                 </p>
               </div>
@@ -129,7 +129,7 @@ export function IframeWidget({
             href={iframeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-foreground underline underline-offset-4 transition-colors hover:text-primary hover:no-underline"
+            className="inline-flex items-center gap-1 text-foreground underline underline-offset-4 transition-colors hover:text-primary hover:no-underline" data-bk-node="iframe-widget:IframeWidget.a.0:0e7e234d"
           >
             Open in nieuw tabblad
             <ExternalLink className="h-3.5 w-3.5" strokeWidth={2} />

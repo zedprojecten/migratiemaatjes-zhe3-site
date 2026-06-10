@@ -161,7 +161,7 @@ export function NewsletterBanner({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 rounded-full border border-background/15 bg-background/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-background/80 backdrop-blur"
+          className="inline-flex items-center gap-2 rounded-full border border-background/15 bg-background/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-background/80 backdrop-blur" data-bk-node="newsletter-banner:NewsletterBanner.span.0:3cf07a96"
         >
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inset-0 animate-ping rounded-full bg-background/60" />
@@ -232,7 +232,7 @@ export function NewsletterBanner({
                   />
                 </svg>
               </span>
-              <span className="text-sm font-semibold text-background">
+              <span className="text-sm font-semibold text-background" data-bk-node="newsletter-banner:NewsletterBanner.span.1:bd1562d9">
                 Bedankt, je inschrijving is bevestigd.
               </span>
             </motion.div>
@@ -309,12 +309,12 @@ export function NewsletterBanner({
             duration: 0.6,
             delay: headingLines.length * 0.12 + 0.32,
           }}
-          className="mt-4 text-xs tracking-wide text-background/55"
+          className="mt-4 text-xs tracking-wide text-background/55" data-bk-node="newsletter-banner:NewsletterBanner.p.0:3bff7fbf"
         >
           Geen spam. Uitschrijven kan altijd met een klik.
         </motion.p>
         {state === "error" && (
-          <p className="mt-3 text-sm text-destructive-foreground">
+          <p className="mt-3 text-sm text-destructive-foreground" data-bk-node="newsletter-banner:NewsletterBanner.p.1:58270e9d">
             Aanmelden lukte niet. Probeer het opnieuw.
           </p>
         )}

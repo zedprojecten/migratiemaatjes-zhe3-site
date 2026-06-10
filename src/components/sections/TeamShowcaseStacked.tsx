@@ -176,7 +176,7 @@ function MemberRow({
             )}
 
             {/* Index marker */}
-            <div className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+            <div className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md" data-bk-node="team-showcase-stacked:TeamShowcaseStacked.div.0:5feceb66">
               0{index + 1}
             </div>
           </motion.div>
@@ -296,7 +296,7 @@ export function TeamShowcaseStacked({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mb-12 max-w-2xl text-center md:mb-20"
         >
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="team-showcase-stacked:TeamShowcaseStacked.p.0:f92d66b9">
             Het team
           </p>
           <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">

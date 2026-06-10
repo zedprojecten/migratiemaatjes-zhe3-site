@@ -155,7 +155,7 @@ export function ImageWithTextOverlap({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5 }}
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
+              className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="image-with-text-overlap:ImageWithTextOverlap.span.0:5ad6a405"
             >
               Editorial
             </motion.span>

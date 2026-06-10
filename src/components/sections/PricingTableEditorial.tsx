@@ -160,7 +160,7 @@ function PlanCard({
           {number}
         </span>
         <div className="flex flex-col">
-          <span className="text-[11px] uppercase tracking-[0.18em] text-foreground/60 font-medium">
+          <span className="text-[11px] uppercase tracking-[0.18em] text-foreground/60 font-medium" data-bk-node="pricing-table-editorial:PricingTableEditorial.span.0:9eb917a2">
             Pakket
           </span>
           <h3
@@ -186,7 +186,7 @@ function PlanCard({
       )}
 
       <div className="flex items-baseline gap-2 mb-8 pb-8 border-b border-foreground/10">
-        <span className="text-sm text-foreground/60">vanaf</span>
+        <span className="text-sm text-foreground/60" data-bk-node="pricing-table-editorial:PricingTableEditorial.span.1:fd5b04ba">vanaf</span>
         <span
           className={cn(
             "font-serif font-semibold tracking-tight",
@@ -288,7 +288,7 @@ export function PricingTableEditorial({
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-[11px] uppercase tracking-[0.22em] text-foreground/60 font-medium mb-4"
+                className="text-[11px] uppercase tracking-[0.22em] text-foreground/60 font-medium mb-4" data-bk-node="pricing-table-editorial:PricingTableEditorial.div.0:9fb98944"
               >
                 Tarieven
               </motion.div>

@@ -121,7 +121,7 @@ export function BookingFlowEmbed({
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="booking-flow-embed:BookingFlowEmbed.p.0:487d3418">
               Boeken, Booking
             </p>
             <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
@@ -176,10 +176,10 @@ export function BookingFlowEmbed({
             transition={{ duration: 0.65, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-10 md:mb-14"
           >
-            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-muted-foreground mb-4" data-bk-node="booking-flow-embed:BookingFlowEmbed.p.1:f7785051">
               Online agenda
             </p>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground" data-bk-node="booking-flow-embed:BookingFlowEmbed.h3.0:80d29f9d">
               Plan je afspraak
             </h3>
           </motion.div>
@@ -198,13 +198,13 @@ export function BookingFlowEmbed({
             />
           </motion.div>
 
-          <p className="mt-6 text-sm text-muted-foreground text-center">
+          <p className="mt-6 text-sm text-muted-foreground text-center" data-bk-node="booking-flow-embed:BookingFlowEmbed.p.2:cdb4ee2a">
             {fallbackLabel}{" "}
             <a
               href={iframeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground underline underline-offset-4 hover:no-underline"
+              className="text-foreground underline underline-offset-4 hover:no-underline" data-bk-node="booking-flow-embed:BookingFlowEmbed.a.0:0e7e234d"
             >
               Open in nieuw tabblad
             </a>

@@ -111,7 +111,7 @@ export function TestimonialCardsMinimal({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="testimonial-cards-minimal:TestimonialCardsMinimal.span.0:84cb7871">
             Reviews
           </span>
           <h2 className="mt-6 font-heading text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
@@ -150,7 +150,7 @@ export function TestimonialCardsMinimal({
                 </div>
               )}
 
-              <p className="mt-5 flex-1 text-[15px] leading-relaxed text-foreground/90">
+              <p className="mt-5 flex-1 text-[15px] leading-relaxed text-foreground/90" data-bk-node="testimonial-cards-minimal:TestimonialCardsMinimal.p.0:0d3e7558">
                 &ldquo;{t.quote}&rdquo;
               </p>
 

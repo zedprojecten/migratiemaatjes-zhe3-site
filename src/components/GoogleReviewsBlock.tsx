@@ -110,7 +110,7 @@ function Star({ filled }: { filled: boolean }) {
 function GoogleAttributionFooter() {
   return (
     <div className="flex items-center justify-center gap-2 mt-12 text-sm text-muted-foreground">
-      <span>Reviews via</span>
+      <span data-bk-node="google-reviews-block:GoogleReviewsBlock.span.0:b84283bf">Reviews via</span>
       <GoogleLogo />
     </div>
   );

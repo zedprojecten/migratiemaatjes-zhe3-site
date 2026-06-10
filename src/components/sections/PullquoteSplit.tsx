@@ -65,7 +65,7 @@ export function PullquoteSplit({
         <blockquote className="order-2 md:order-1">
           <span
             aria-hidden
-            className="mb-4 block font-serif text-6xl leading-none text-primary/30 md:text-7xl"
+            className="mb-4 block font-serif text-6xl leading-none text-primary/30 md:text-7xl" data-bk-node="pullquote-split:PullquoteSplit.span.0:c2dcdc8d"
           >
             &ldquo;
           </span>

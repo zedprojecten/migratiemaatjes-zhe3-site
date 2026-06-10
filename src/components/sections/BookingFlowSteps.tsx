@@ -225,7 +225,7 @@ export function BookingFlowSteps({
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.p.0:1175a4c9">
             Boeken
           </p>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
@@ -402,7 +402,7 @@ export function BookingFlowSteps({
                   <div>
                     <label
                       htmlFor="bfs-date"
-                      className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                      className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.label.0:9135882d"
                     >
                       Datum
                     </label>
@@ -417,7 +417,7 @@ export function BookingFlowSteps({
                   </div>
 
                   <div>
-                    <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                    <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.p.1:b4b7ed2d">
                       Tijdstip
                     </p>
                     <div className="mt-3 grid grid-cols-3 sm:grid-cols-4 gap-2">
@@ -446,7 +446,7 @@ export function BookingFlowSteps({
                     <div>
                       <label
                         htmlFor="bfs-name"
-                        className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                        className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.label.1:eca46fca"
                       >
                         Naam
                       </label>
@@ -463,7 +463,7 @@ export function BookingFlowSteps({
                     <div>
                       <label
                         htmlFor="bfs-email"
-                        className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
+                        className="block text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.label.2:969ccbd3"
                       >
                         Email
                       </label>
@@ -483,26 +483,26 @@ export function BookingFlowSteps({
                   {/* Overzicht */}
                   {service && provider && (
                     <div className="rounded-xl border border-border bg-muted/30 p-4">
-                      <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-muted-foreground mb-3">
+                      <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-muted-foreground mb-3" data-bk-node="booking-flow-steps:BookingFlowSteps.p.2:6c20ea44">
                         Overzicht
                       </p>
                       <dl className="space-y-1.5 text-sm">
                         <div className="flex justify-between">
-                          <dt className="text-muted-foreground">Behandeling</dt>
+                          <dt className="text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.dt.0:e81e7689">Behandeling</dt>
                           <dd className="font-medium text-foreground">
                             {service.name} {service.price ? `(${service.price})` : ""}
                           </dd>
                         </div>
                         <div className="flex justify-between">
-                          <dt className="text-muted-foreground">Kapper</dt>
+                          <dt className="text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.dt.1:fe27f766">Kapper</dt>
                           <dd className="font-medium text-foreground">
                             {provider.name}
                           </dd>
                         </div>
                         {date && slot && (
                           <div className="flex justify-between">
-                            <dt className="text-muted-foreground">Wanneer</dt>
-                            <dd className="font-medium text-foreground">
+                            <dt className="text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.dt.2:a85d5819">Wanneer</dt>
+                            <dd className="font-medium text-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.dd.0:2e23f8b8">
                               {date} om {slot}
                             </dd>
                           </div>
@@ -513,16 +513,16 @@ export function BookingFlowSteps({
 
                   {state === "success" && (
                     <div className="border-l-2 border-primary py-3 pl-5">
-                      <p className="text-base font-semibold text-foreground">
+                      <p className="text-base font-semibold text-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.p.3:12e22988">
                         Boeking ontvangen.
                       </p>
-                      <p className="mt-1 text-sm text-muted-foreground">
+                      <p className="mt-1 text-sm text-muted-foreground" data-bk-node="booking-flow-steps:BookingFlowSteps.p.4:df127d9c">
                         Je krijgt een bevestiging in je inbox.
                       </p>
                     </div>
                   )}
                   {state === "error" && (
-                    <p className="text-sm text-destructive">
+                    <p className="text-sm text-destructive" data-bk-node="booking-flow-steps:BookingFlowSteps.p.5:35262bde">
                       Versturen lukte niet. Probeer het opnieuw of bel ons direct.
                     </p>
                   )}
@@ -538,7 +538,7 @@ export function BookingFlowSteps({
             type="button"
             onClick={() => setStep((s) => Math.max(0, s - 1))}
             disabled={step === 0}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-foreground/40 disabled:opacity-40 disabled:cursor-not-allowed"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-foreground/40 disabled:opacity-40 disabled:cursor-not-allowed" data-bk-node="booking-flow-steps:BookingFlowSteps.button.0:ebf6cf71"
           >
             <ArrowLeft className="h-4 w-4" />
             Terug
@@ -552,7 +552,7 @@ export function BookingFlowSteps({
                 (step === 0 && !canNextFromStep0) ||
                 (step === 1 && !canNextFromStep1)
               }
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:shadow-lg disabled:opacity-40"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:shadow-lg disabled:opacity-40" data-bk-node="booking-flow-steps:BookingFlowSteps.button.1:b2a8da6b"
             >
               Volgende
               <ArrowRight className="h-4 w-4" />

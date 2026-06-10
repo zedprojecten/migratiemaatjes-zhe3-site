@@ -275,11 +275,11 @@ export default function OrbitalTimeline({
 
                   <div className="mt-3 border-t border-white/10 pt-3">
                     <div className="mb-1 flex items-center justify-between text-xs text-white/80">
-                      <span className="flex items-center gap-1">
+                      <span className="flex items-center gap-1" data-bk-node="orbital-timeline:OrbitalTimeline.span.0:4e3bd99c">
                         <Zap size={10} />
                         Voortgang
                       </span>
-                      <span className="font-mono">{item.energy}%</span>
+                      <span className="font-mono" data-bk-node="orbital-timeline:OrbitalTimeline.span.1:bbf3f11c">{item.energy}%</span>
                     </div>
                     <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
                       <div
@@ -291,7 +291,7 @@ export default function OrbitalTimeline({
 
                   {item.relatedIds.length > 0 && (
                     <div className="mt-3 border-t border-white/10 pt-3">
-                      <div className="mb-2 flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-white/70">
+                      <div className="mb-2 flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-white/70" data-bk-node="orbital-timeline:OrbitalTimeline.div.0:d92709a1">
                         <Link2 size={10} />
                         Verbonden met
                       </div>

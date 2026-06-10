@@ -120,7 +120,7 @@ export function NewsletterInline({
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.4 }}
-                className="text-sm font-medium text-foreground"
+                className="text-sm font-medium text-foreground" data-bk-node="newsletter-inline:NewsletterInline.p.0:d0f606af"
               >
                 Bedankt, je staat op de lijst.
               </motion.p>
@@ -193,7 +193,7 @@ export function NewsletterInline({
         <motion.p
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-3 text-sm text-destructive"
+          className="mt-3 text-sm text-destructive" data-bk-node="newsletter-inline:NewsletterInline.p.1:58270e9d"
         >
           Aanmelden lukte niet. Probeer het opnieuw.
         </motion.p>

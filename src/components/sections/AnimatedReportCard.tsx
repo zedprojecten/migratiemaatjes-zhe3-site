@@ -231,7 +231,7 @@ export default function AnimatedReportCard({
                   {beforeLabel}{" "}
                   <span className="font-semibold text-foreground">{beforeSegment}</span>
                 </span>
-                <span className="font-semibold" style={{ color: "hsl(214, 67%, 56%)" }}>
+                <span className="font-semibold" style={{ color: "hsl(214, 67%, 56%)" }} data-bk-node="animated-report-card:AnimatedReportCard.span.0:16166003">
                   → {afterLabel}{" "}
                   <span style={{ color: "hsl(217, 61%, 26%)" }}>{afterSegment}</span>
                 </span>
@@ -386,7 +386,7 @@ export default function AnimatedReportCard({
                     }}
                   >
                     <Lock className="h-3.5 w-3.5" />
-                    <span>
+                    <span data-bk-node="animated-report-card:AnimatedReportCard.span.1:c1da569b">
                       +{group.lockedItems}{" "}
                       {group.lockedItems > 1 ? suggestionsLabel : suggestionLabel} ·{" "}
                       {loginCta}

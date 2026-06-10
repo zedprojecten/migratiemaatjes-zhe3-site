@@ -138,7 +138,7 @@ export function EventListEditorial({
           className="mb-14 flex flex-col items-start justify-between gap-3 border-b border-border pb-6 md:mb-20 md:flex-row md:items-end"
         >
           <div>
-            <span className="font-serif text-[10px] font-medium uppercase tracking-[0.32em] text-muted-foreground">
+            <span className="font-serif text-[10px] font-medium uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="event-list-editorial:EventListEditorial.span.0:6f6383db">
               Editorial agenda
             </span>
             <h2 className="mt-2 font-serif text-4xl font-medium leading-[0.95] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
@@ -260,7 +260,7 @@ export function EventListEditorial({
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="block font-serif text-[10px] font-medium uppercase tracking-[0.32em] text-muted-foreground"
+              className="block font-serif text-[10px] font-medium uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="event-list-editorial:EventListEditorial.span.1:b91f0d01"
             >
               Verder in de agenda
             </motion.span>

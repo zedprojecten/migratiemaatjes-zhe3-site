@@ -102,7 +102,7 @@ export function BlogGridMasonry({
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-14 max-w-2xl"
         >
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="blog-grid-masonry:BlogGridMasonry.span.0:12321a95">
             Notities
           </span>
           <h2 className="mt-3 text-4xl font-medium leading-tight tracking-tight text-foreground md:text-5xl">
@@ -177,7 +177,7 @@ export function BlogGridMasonry({
                             {post.excerpt}
                           </p>
                         )}
-                        <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1">
+                        <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1" data-bk-node="blog-grid-masonry:BlogGridMasonry.span.1:07dd1353">
                           Lees verder
                           <ArrowUpRight className="h-3.5 w-3.5" />
                         </span>

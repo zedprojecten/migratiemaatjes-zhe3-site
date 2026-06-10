@@ -213,7 +213,7 @@ export function ContactFormGlass({
                 initial={{ opacity: 0, y: 8 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/40 px-3 py-1 text-xs font-medium text-foreground backdrop-blur dark:border-white/10 dark:bg-white/5"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/40 px-3 py-1 text-xs font-medium text-foreground backdrop-blur dark:border-white/10 dark:bg-white/5" data-bk-node="contact-form-glass:ContactFormGlass.div.0:9aa984a6"
               >
                 <Sparkles className="h-3 w-3" />
                 Direct contact
@@ -247,10 +247,10 @@ export function ContactFormGlass({
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 text-white shadow-lg shadow-fuchsia-500/30">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <p className="mt-4 text-base font-medium text-foreground">
+                  <p className="mt-4 text-base font-medium text-foreground" data-bk-node="contact-form-glass:ContactFormGlass.p.0:35491bf3">
                     Je bericht is binnen.
                   </p>
-                  <p className="mt-2 text-sm text-foreground/70">
+                  <p className="mt-2 text-sm text-foreground/70" data-bk-node="contact-form-glass:ContactFormGlass.p.1:ca2dd727">
                     We nemen zo snel mogelijk contact op.
                   </p>
                 </motion.div>
@@ -324,7 +324,7 @@ export function ContactFormGlass({
                   ))}
 
                   {state === "error" && (
-                    <p className="text-sm text-destructive">
+                    <p className="text-sm text-destructive" data-bk-node="contact-form-glass:ContactFormGlass.p.2:c6c1631d">
                       Versturen lukte niet. Probeer het opnieuw.
                     </p>
                   )}

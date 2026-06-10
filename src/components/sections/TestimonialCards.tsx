@@ -44,7 +44,7 @@ export function TestimonialCards({
             <ScrollReveal key={i} delay={i * 0.12}>
               <div className="glass-card p-7 h-full flex flex-col">
                 <Quote className="h-6 w-6 text-primary/40 mb-4 shrink-0" />
-                <p className="text-sm leading-relaxed text-foreground/80 flex-1 italic">
+                <p className="text-sm leading-relaxed text-foreground/80 flex-1 italic" data-bk-node="testimonial-cards:TestimonialCards.p.0:0d3e7558">
                   &ldquo;{item.quote}&rdquo;
                 </p>
                 <div className="mt-5 flex items-center gap-3">

@@ -46,7 +46,7 @@ export function AnimatedCounter({
   }, [spring, prefix, suffix]);
 
   return (
-    <motion.span ref={ref} className={cn(className)}>
+    <motion.span ref={ref} className={cn(className)} data-bk-node="animated-counter:AnimatedCounter.span.0:5feceb66">
       {prefix}0{suffix}
     </motion.span>
   );

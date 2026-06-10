@@ -251,7 +251,7 @@ function CinematicCard({
               className={cn(
                 "text-[11px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full bg-gradient-to-r text-white",
                 accent.gradient,
-              )}
+              )} data-bk-node="pricing-table-cinematic:PricingTableCinematic.span.0:20112a88"
             >
               Populair
             </span>

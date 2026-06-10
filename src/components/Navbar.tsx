@@ -35,7 +35,7 @@ export default function Navbar() {
       <nav className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6">
         <a
           href="#top"
-          className="flex items-center gap-2 text-base sm:text-lg font-display font-semibold tracking-tight text-foreground whitespace-nowrap"
+          className="flex items-center gap-2 text-base sm:text-lg font-display font-semibold tracking-tight text-foreground whitespace-nowrap" data-bk-href="navbar:Navbar.a.href.0@href:916ce0de"
         >
           <span
             aria-hidden
@@ -43,7 +43,7 @@ export default function Navbar() {
           >
             {"{ }"}
           </span>
-          <span>MigratieMaatjes</span>
+          <span data-bk-node="navbar:Navbar.span.0:ae824f54">MigratieMaatjes</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-1">
@@ -62,7 +62,7 @@ export default function Navbar() {
               href={APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:brightness-110 transition"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:brightness-110 transition" data-bk-node="navbar:Navbar.a.0:edf49fc0"
             >
               Naar de app
             </a>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 href={APP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center px-4 py-3 text-sm font-medium rounded-md bg-primary text-primary-foreground"
+                className="block text-center px-4 py-3 text-sm font-medium rounded-md bg-primary text-primary-foreground" data-bk-node="navbar:Navbar.a.1:edf49fc0"
               >
                 Naar de app
               </a>

@@ -139,7 +139,7 @@ export function BlogGridMagazine({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.5 }}
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="blog-grid-magazine:BlogGridMagazine.span.0:43b7c75d"
           >
             Journal
           </motion.span>
@@ -226,7 +226,7 @@ export function BlogGridMagazine({
                 <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
                   {featured.excerpt}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1">
+                <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1" data-bk-node="blog-grid-magazine:BlogGridMagazine.span.1:07dd1353">
                   Lees verder
                   <ArrowUpRight className="h-4 w-4" />
                 </span>

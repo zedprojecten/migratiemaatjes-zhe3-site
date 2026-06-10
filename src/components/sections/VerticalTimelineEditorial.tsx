@@ -223,7 +223,7 @@ export function VerticalTimelineEditorial({
                 headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }
               }
               transition={{ duration: 0.6 }}
-              className="inline-block text-[11px] uppercase tracking-[0.32em] text-muted-foreground"
+              className="inline-block text-[11px] uppercase tracking-[0.32em] text-muted-foreground" data-bk-node="vertical-timeline-editorial:VerticalTimelineEditorial.span.0:0b54c339"
             >
               In vijf bewegingen
             </motion.span>

@@ -124,7 +124,7 @@ export function OpeningHoursMinimal({
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl"
         >
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground" data-bk-node="opening-hours-minimal:OpeningHoursMinimal.p.0:2921f717">
             Bezoek
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
@@ -234,7 +234,7 @@ export function OpeningHoursMinimal({
               className="flex items-center gap-3 border-b border-border pb-3"
             >
               <Clock className="h-4 w-4 text-primary" strokeWidth={2} />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground" data-bk-node="opening-hours-minimal:OpeningHoursMinimal.span.0:a9b59303">
                 Openingstijden
               </span>
             </motion.div>
@@ -268,7 +268,7 @@ export function OpeningHoursMinimal({
                     >
                       {row.day}
                       {isToday && (
-                        <span className="rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.2em] text-primary">
+                        <span className="rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.2em] text-primary" data-bk-node="opening-hours-minimal:OpeningHoursMinimal.span.1:45b2178c">
                           Vandaag
                         </span>
                       )}

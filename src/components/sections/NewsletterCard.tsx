@@ -182,10 +182,10 @@ export function NewsletterCard({
                     </svg>
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">
+                    <p className="text-sm font-semibold text-foreground" data-bk-node="newsletter-card:NewsletterCard.p.0:d962b98d">
                       Top, je bent ingeschreven.
                     </p>
-                    <p className="mt-0.5 text-sm text-muted-foreground">
+                    <p className="mt-0.5 text-sm text-muted-foreground" data-bk-node="newsletter-card:NewsletterCard.p.1:8b58500d">
                       Check je inbox voor een bevestigingsmail.
                     </p>
                   </div>
@@ -228,7 +228,7 @@ export function NewsletterCard({
               <motion.p
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-3 text-sm text-destructive"
+                className="mt-3 text-sm text-destructive" data-bk-node="newsletter-card:NewsletterCard.p.2:58270e9d"
               >
                 Aanmelden lukte niet. Probeer het opnieuw.
               </motion.p>
