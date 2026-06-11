@@ -3,6 +3,8 @@ import Lenis from "lenis";
 import App from "./App.tsx";
 import { initAnalytics } from "./lib/analytics.ts";
 import "./index.css";
+import { initPageviewBeacon } from "./lib/pageview-beacon.ts";
+initPageviewBeacon();
 
 // GA4 met Consent Mode v2 — laadt alleen als VITE_GA_MEASUREMENT_ID is gezet,
 // en zet geen cookies vóór bezoeker accepteert via cookie-banner.

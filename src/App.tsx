@@ -9,6 +9,7 @@ import UseCases from "./pages/UseCases";
 import Tarieven from "./pages/Tarieven";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
+import { MaintenanceOverlay } from "./components/MaintenanceOverlay";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       </main>
       <Footer />
       <CookieBanner />
+      <MaintenanceOverlay />
     </BrowserRouter>
   );
 };

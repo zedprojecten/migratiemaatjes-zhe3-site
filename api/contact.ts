@@ -191,9 +191,36 @@ export default async function handler(
       return;
     }
 
+        void forwardToJarvis({ name, email, phone: phone, company: company, message });
     res.status(200).json({ success: true });
   } catch (err) {
     console.error("[contact] unexpected error", err);
     res.status(500).json({ error: "internal_error" });
+  }
+}
+
+async function forwardToJarvis(data: {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+}): Promise<void> {
+  const secret = process.env.FORM_FORWARD_SECRET;
+  const slug = process.env.PROJECT_SLUG;
+  const base = process.env.JARVIS_INGEST_URL || "https://jarvis.bykick.nl";
+  if (!secret || !slug) return;
+  try {
+    const { createHmac } = await import("node:crypto");
+    const body = JSON.stringify({ slug, ...data });
+    const signature = createHmac("sha256", secret).update(body).digest("hex");
+    await fetch(`${base}/api/public/form-submission`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-form-signature": signature },
+      body,
+      signal: AbortSignal.timeout(3_000),
+    });
+  } catch (err) {
+    console.warn("[contact] forward naar jarvis faalde (niet-fataal)", err);
   }
 }
