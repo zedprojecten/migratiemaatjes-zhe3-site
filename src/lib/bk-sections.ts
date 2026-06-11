@@ -29,6 +29,7 @@ export const bkSections: Record<string, boolean> = {
   "tarieven:StickyMobileCTA.section.0": true,
   "use-cases:CTABanner.section.0": true,
   "use-cases:StickyMobileCTA.section.0": true,
+  "use-cases:UseCaseRows.section.0": true,
 };
 
 export function bkSectionVisible(id: string): boolean {

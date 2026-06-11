@@ -49,22 +49,22 @@ export default function Navbar() {
 
         <ul className="hidden md:flex items-center gap-1">
           <li>
-            <a href="#stappen" className={desktopLinkClass}>
+            <a href="#stappen" className={desktopLinkClass} data-bk-node="navbar:Navbar.a.0:7ebd9aeb" data-bk-href="navbar:Navbar.a.0@href:05b7e2d5">
               Hoe het werkt
             </a>
           </li>
           <li>
-            <a href="#voor-wie" className={desktopLinkClass}>
+            <a href="#voor-wie" className={desktopLinkClass} data-bk-node="navbar:Navbar.a.1:ed5d63b2" data-bk-href="navbar:Navbar.a.1@href:2a7432be">
               Voor wie
             </a>
           </li>
           <li>
-            <a href="#privacy" className={desktopLinkClass}>
+            <a href="#privacy" className={desktopLinkClass} data-bk-node="navbar:Navbar.a.2:54a57c31" data-bk-href="navbar:Navbar.a.2@href:69fd6087">
               Privacy
             </a>
           </li>
           <li>
-            <a href="#faq" className={desktopLinkClass}>
+            <a href="#faq" className={desktopLinkClass} data-bk-node="navbar:Navbar.a.3:dbc468a1" data-bk-href="navbar:Navbar.a.3@href:5231e18c">
               FAQ
             </a>
           </li>
@@ -95,22 +95,22 @@ export default function Navbar() {
         <div className="md:hidden border-t border-white/10 bg-background">
           <ul className="container mx-auto flex flex-col py-2 px-4">
             <li>
-              <a href="#stappen" onClick={() => setOpen(false)} className={mobileLinkClass}>
+              <a href="#stappen" onClick={() => setOpen(false)} className={mobileLinkClass} data-bk-node="navbar:Navbar.a.5:7ebd9aeb" data-bk-href="navbar:Navbar.a.5@href:05b7e2d5">
                 Hoe het werkt
               </a>
             </li>
             <li>
-              <a href="#voor-wie" onClick={() => setOpen(false)} className={mobileLinkClass}>
+              <a href="#voor-wie" onClick={() => setOpen(false)} className={mobileLinkClass} data-bk-node="navbar:Navbar.a.6:ed5d63b2" data-bk-href="navbar:Navbar.a.6@href:2a7432be">
                 Voor wie
               </a>
             </li>
             <li>
-              <a href="#privacy" onClick={() => setOpen(false)} className={mobileLinkClass}>
+              <a href="#privacy" onClick={() => setOpen(false)} className={mobileLinkClass} data-bk-node="navbar:Navbar.a.7:54a57c31" data-bk-href="navbar:Navbar.a.7@href:69fd6087">
                 Privacy
               </a>
             </li>
             <li>
-              <a href="#faq" onClick={() => setOpen(false)} className={mobileLinkClass}>
+              <a href="#faq" onClick={() => setOpen(false)} className={mobileLinkClass} data-bk-node="navbar:Navbar.a.8:dbc468a1" data-bk-href="navbar:Navbar.a.8@href:5231e18c">
                 FAQ
               </a>
             </li>

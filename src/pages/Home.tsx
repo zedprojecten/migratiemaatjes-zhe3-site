@@ -1,3 +1,4 @@
+import { bkNode } from "@/lib/bk-node";
 import { bkSectionVisible } from "@/lib/bk-sections";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -57,12 +58,12 @@ function Hero() {
             <span className="block mt-2 text-primary">
               <TextRotateCinematic
                 words={[
-                  "vastlopen",
-                  "weken slepen",
-                  "kolommen kwijtmaken",
-                  "weekenden opslokken",
-                  "duizenden kosten",
-                ]}
+                  bkNode("home:TextRotateCinematic.words.0", "vastlopen"),
+                  bkNode("home:TextRotateCinematic.words.1", "weken slepen"),
+                  bkNode("home:TextRotateCinematic.words.2", "kolommen kwijtmaken"),
+                  bkNode("home:TextRotateCinematic.words.3", "weekenden opslokken"),
+                  bkNode("home:TextRotateCinematic.words.4", "duizenden kosten"),
+                ]} _bkWords={["home:TextRotateCinematic.words.0", "home:TextRotateCinematic.words.1", "home:TextRotateCinematic.words.2", "home:TextRotateCinematic.words.3", "home:TextRotateCinematic.words.4"]}
               />
             </span>
             <span className="block mt-3 text-foreground/85 text-2xl sm:text-3xl md:text-4xl font-medium" data-bk-node="home:Home.span.2:d916847d">
@@ -169,10 +170,10 @@ function ProblemSection() {
               <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
                 <Wrench className="h-5 w-5" />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.0:6ec19c5f">
                 Custom dev = duur en traag
               </h3>
-              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.3:3de2346c">
                 Een ontwikkelaar inhuren voor een eenmalige migratie kost al snel 2.000 tot 5.000 euro en duurt één tot twee weken. Voor projecten die elke maand terugkomen is dat onhoudbaar.
               </p>
             </div>
@@ -186,10 +187,10 @@ function ProblemSection() {
               <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
                 <Lock className="h-5 w-5" />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.1:3c9c436c">
                 ETL-tools = lock-in
               </h3>
-              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.4:49d8620f">
                 Talend, Zapier of Fivetran vereisen abonnementen, specialistische kennis, en hosten je data op hun infrastructuur. Stop je het abonnement, dan stop je ook je migratiescripts.
               </p>
             </div>
@@ -203,10 +204,10 @@ function ProblemSection() {
               <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
                 <Database className="h-5 w-5" />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.2:a6c71ffb">
                 Excel = breekt op edge cases
               </h3>
-              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.5:152ac327">
                 VLOOKUPs en formules werken voor simpele 1-op-1 mappings, maar zodra je lookups tussen tabellen, conditionele filters of telefoon-normalisatie nodig hebt, loop je vast.
               </p>
             </div>
@@ -336,17 +337,17 @@ function StepsSection() {
             >
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-primary tracking-wider">
+                  <span className="font-mono text-xs text-primary tracking-wider" data-bk-node="home:Home.span.7:938db8c9">
                     01
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
                     <FileSearch className="h-5 w-5" />
                   </span>
                 </div>
-                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.3:d5ed06e4">
                   Welkom & uitleg
                 </h3>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.10:afd57c36">
                   Korte intro van wat je gaat doen, wat je nodig hebt aan input, en de privacy-belofte: maximaal 50 rijen verlaten je computer.
                 </p>
               </div>
@@ -369,17 +370,17 @@ function StepsSection() {
             >
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-primary tracking-wider">
+                  <span className="font-mono text-xs text-primary tracking-wider" data-bk-node="home:Home.span.8:a953f09a">
                     02
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
                     <Upload className="h-5 w-5" />
                   </span>
                 </div>
-                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.4:63e26fdc">
                   Bron-data uploaden
                 </h3>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.11:13f8d33b">
                   Sleep CSV- of XLSX-bestanden in de drop-zone. Markeer per file of het de hoofdtabel of een lookup-tabel is. Je browser knipt elke file af tot 50 rijen vóór de upload.
                 </p>
               </div>
@@ -402,17 +403,17 @@ function StepsSection() {
             >
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-primary tracking-wider">
+                  <span className="font-mono text-xs text-primary tracking-wider" data-bk-node="home:Home.span.9:0b8efa5a">
                     03
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
                     <PencilLine className="h-5 w-5" />
                   </span>
                 </div>
-                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.5:b1772d03">
                   Doel-structuur beschrijven
                 </h3>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.12:50488cee">
                   Upload een leeg target-template met kolomheaders, of beschrijf de doelstructuur in tekst. Bijvoorbeeld: vijf kolommen, naam, e-mail, telefoon, account-id, bron.
                 </p>
               </div>
@@ -435,17 +436,17 @@ function StepsSection() {
             >
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-primary tracking-wider">
+                  <span className="font-mono text-xs text-primary tracking-wider" data-bk-node="home:Home.span.10:6cd5b6e5">
                     04
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
                     <Wand2 className="h-5 w-5" />
                   </span>
                 </div>
-                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.6:c10d53d6">
                   Intent + speciale regels
                 </h3>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.13:b1299c12">
                   Vrij tekstveld waar je beschrijft wat je wilt. Skip personen zonder e-mail. Account-ID is de unique key voor lookup. Telefoonnummer naar +31-formaat. Hoe specifieker, hoe beter het script.
                 </p>
               </div>
@@ -477,9 +478,9 @@ function StepsSection() {
             </div>
             <div className="lg:col-span-7">
               <AnimatedChatDemo
-                windowTitle="MigratieMaatjes Agent"
-                onlineLabel="aan het werk"
-                script={agentChatScript}
+                windowTitle={bkNode("home:AnimatedChatDemo.windowTitle", "MigratieMaatjes Agent")}
+                onlineLabel={bkNode("home:AnimatedChatDemo.onlineLabel", "aan het werk")}
+                script={agentChatScript} _bk={{ windowTitle: "home:AnimatedChatDemo.windowTitle", onlineLabel: "home:AnimatedChatDemo.onlineLabel" }}
               />
             </div>
           </div>
@@ -527,10 +528,10 @@ function DeliverablesSection() {
                   script.py
                 </code>
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.8:56691813">
                 Het Python-script
               </h3>
-              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.16:50f3edd3">
                 Gevalideerd op je 50-rijen sample. Idempotent en herbruikbaar. Draait lokaal op je volledige dataset zonder dat onze servers iets te zien krijgen.
               </p>
             </div>
@@ -549,10 +550,10 @@ function DeliverablesSection() {
                   handleiding.docx
                 </code>
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.9:a7519577">
                 Word-handleiding
               </h3>
-              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.17:75e2f268">
                 In het Nederlands. Hoe je Python installeert, dependencies binnenhaalt, het script draait, en de meest voorkomende edge cases oplost.
               </p>
             </div>
@@ -571,10 +572,10 @@ function DeliverablesSection() {
                   sample_output.xlsx
                 </code>
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.10:39f650e5">
                 Voorbeeld-output
               </h3>
-              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.18:e3d74215">
                 Wat het script produceert op je 50-rijen sample. Zo zie je vóór de full run hoe de eindoutput eruit gaat zien en kun je nog bijsturen.
               </p>
             </div>
@@ -618,10 +619,10 @@ function PrivacySection() {
                 <Upload className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.11:744fe2c2">
                   Maximaal 50 rijen verlaten je computer
                 </h3>
-                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed" data-bk-node="home:Home.p.20:dc51bde5">
                   De afknip-stap gebeurt in jouw browser, vóór de upload. Onze server ziet alleen de sample.
                 </p>
               </div>
@@ -631,10 +632,10 @@ function PrivacySection() {
                 <Lock className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.12:3190349e">
                   Originele dataset blijft lokaal
                 </h3>
-                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed" data-bk-node="home:Home.p.21:df978343">
                   Het uiteindelijke script draai je op je eigen machine. Onze servers zien je full data nooit.
                 </p>
               </div>
@@ -644,10 +645,10 @@ function PrivacySection() {
                 <Clock className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.13:57bbae49">
                   30 dagen retentie op samples
                 </h3>
-                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed" data-bk-node="home:Home.p.22:8d4731d4">
                   Sample-data wordt na 30 dagen automatisch verwijderd. Je kunt 'm ook eerder zelf wissen.
                 </p>
               </div>
@@ -657,10 +658,10 @@ function PrivacySection() {
                 <Shield className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.14:eb626f73">
                   Encryption at rest
                 </h3>
-                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed" data-bk-node="home:Home.p.23:23d66bff">
                   Sample-bestanden zijn versleuteld opgeslagen in Supabase storage met tenant-isolatie.
                 </p>
               </div>
@@ -670,10 +671,10 @@ function PrivacySection() {
                 <Building2 className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.15:8aede61b">
                   Tenant-isolatie
                 </h3>
-                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed" data-bk-node="home:Home.p.24:36453f07">
                   Jouw data is alleen zichtbaar binnen jouw organisatie. Strikt gescheiden via row-level security.
                 </p>
               </div>
@@ -683,10 +684,10 @@ function PrivacySection() {
                 <Wand2 className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.16:4e7750c9">
                   Wij draaien geen code op jouw data
                 </h3>
-                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed" data-bk-node="home:Home.p.25:ed2e2b7b">
                   De agent maakt scripts, geen migratie-uitvoering. Jij houdt de regie over de echte run.
                 </p>
               </div>
@@ -732,10 +733,10 @@ function AudienceSection() {
             className="!aspect-auto !p-7"
           >
             <div className="relative z-10 flex h-full flex-col">
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.17:ac958478">
                 Implementatiepartners
               </h3>
-              <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-3 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.27:d28623f2">
                 IT-bureaus die klanten begeleiden naar een nieuw CRM of ERP. Elke implementatie heeft zijn eigen migratie. MigratieMaatjes haalt het herhalend handwerk uit je projecten.
               </p>
             </div>
@@ -746,10 +747,10 @@ function AudienceSection() {
             className="!aspect-auto !p-7"
           >
             <div className="relative z-10 flex h-full flex-col">
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.18:7ceadbd2">
                 Data-engineers en consultants
               </h3>
-              <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-3 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.28:0860f671">
                 Voor ad-hoc transformaties tussen formaten waar de tijd ontbreekt om een echte ETL-pijplijn op te zetten. Levert je een netjes gevalideerd script in plaats van een spreadsheet-kabaal.
               </p>
             </div>
@@ -760,10 +761,10 @@ function AudienceSection() {
             className="!aspect-auto !p-7"
           >
             <div className="relative z-10 flex h-full flex-col">
-              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.19:7450ec0d">
                 Interne IT-teams
               </h3>
-              <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
+              <p className="mt-3 text-sm text-foreground/70 leading-relaxed" data-bk-node="home:Home.p.29:0dddd6fd">
                 Organisaties met meerdere data-bronnen die periodiek gesynchroniseerd of geconsolideerd moeten worden. Het mappingscript is van jou en kan elk kwartaal opnieuw draaien.
               </p>
             </div>
@@ -819,33 +820,33 @@ function FAQSection() {
         {/* FAQ uitgeschreven (geen map) zodat de codemod q/a als string-props wrapt */}
         <div className="mt-10 grid gap-3 max-w-3xl">
           <FaqItem
-            q="Hoeveel kost het?"
-            a="Op aanvraag. We werken op uitnodiging en stemmen prijs en scope af per organisatie. MigratieMaatjes is geen self-serve tool met tier-tabel; het is een dienst voor partners die structureel migraties uitvoeren."
-            defaultOpen
+            q={bkNode("home:FaqItem.q", "Hoeveel kost het?")}
+            a={bkNode("home:FaqItem.a", "Op aanvraag. We werken op uitnodiging en stemmen prijs en scope af per organisatie. MigratieMaatjes is geen self-serve tool met tier-tabel; het is een dienst voor partners die structureel migraties uitvoeren.")}
+            defaultOpen _bk={{ q: "home:FaqItem.q", a: "home:FaqItem.a" }}
           />
           <FaqItem
-            q="Is mijn data veilig?"
-            a="Ja. Alleen 50 rijen sample-data verlaten je computer (afgeknipt in je browser vóór upload), versleuteld opgeslagen, en na 30 dagen automatisch verwijderd. Je volledige dataset zien we nooit. Lees de privacy-sectie voor het volledige overzicht."
+            q={bkNode("home:FaqItem.q", "Is mijn data veilig?")}
+            a={bkNode("home:FaqItem.a", "Ja. Alleen 50 rijen sample-data verlaten je computer (afgeknipt in je browser vóór upload), versleuteld opgeslagen, en na 30 dagen automatisch verwijderd. Je volledige dataset zien we nooit. Lees de privacy-sectie voor het volledige overzicht.")} _bk={{ q: "home:FaqItem.q", a: "home:FaqItem.a" }}
           />
           <FaqItem
-            q="Werkt het ook voor SQL-databases of API-bronnen?"
-            a="In v1 is de input file-based: CSV en XLSX. Voor SQL-dumps werk je met een export naar CSV of XLSX. Native SQL- en API-koppelingen staan op de roadmap, maar zijn er nu nog niet."
+            q={bkNode("home:FaqItem.q", "Werkt het ook voor SQL-databases of API-bronnen?")}
+            a={bkNode("home:FaqItem.a", "In v1 is de input file-based: CSV en XLSX. Voor SQL-dumps werk je met een export naar CSV of XLSX. Native SQL- en API-koppelingen staan op de roadmap, maar zijn er nu nog niet.")} _bk={{ q: "home:FaqItem.q", a: "home:FaqItem.a" }}
           />
           <FaqItem
-            q="Wat als het script niet klopt op rij 5000?"
-            a="Dan start je een nieuwe run met een uitgebreidere intent of een sample die ook die edge case bevat. De agent past het script aan op basis van wat je teruggeeft. Een run kost je een paar minuten, geen weken."
+            q={bkNode("home:FaqItem.q", "Wat als het script niet klopt op rij 5000?")}
+            a={bkNode("home:FaqItem.a", "Dan start je een nieuwe run met een uitgebreidere intent of een sample die ook die edge case bevat. De agent past het script aan op basis van wat je teruggeeft. Een run kost je een paar minuten, geen weken.")} _bk={{ q: "home:FaqItem.q", a: "home:FaqItem.a" }}
           />
           <FaqItem
-            q="Heb ik developer-skills nodig?"
-            a="Voor het draaien van het script wel — Python lokaal installeren en een command in de terminal runnen. De handleiding in het Word-bestand begeleidt je daarbij. Het schrijven van scripts hoef je niet zelf te doen."
+            q={bkNode("home:FaqItem.q", "Heb ik developer-skills nodig?")}
+            a={bkNode("home:FaqItem.a", "Voor het draaien van het script wel — Python lokaal installeren en een command in de terminal runnen. De handleiding in het Word-bestand begeleidt je daarbij. Het schrijven van scripts hoef je niet zelf te doen.")} _bk={{ q: "home:FaqItem.q", a: "home:FaqItem.a" }}
           />
           <FaqItem
-            q="Kan ik meerdere migraties doen?"
-            a="Ja. Elke run levert één script voor één migratie-scenario. Heb je later een tweede migratie of een tweede dochteronderneming, dan start je een nieuwe run. Het script blijft van jou."
+            q={bkNode("home:FaqItem.q", "Kan ik meerdere migraties doen?")}
+            a={bkNode("home:FaqItem.a", "Ja. Elke run levert één script voor één migratie-scenario. Heb je later een tweede migratie of een tweede dochteronderneming, dan start je een nieuwe run. Het script blijft van jou.")} _bk={{ q: "home:FaqItem.q", a: "home:FaqItem.a" }}
           />
           <FaqItem
-            q="Wat gebeurt er met mijn 50 rijen na de run?"
-            a="Maximaal 30 dagen bewaard, daarna automatisch verwijderd. Je kunt 'm ook eerder via de app handmatig verwijderen."
+            q={bkNode("home:FaqItem.q", "Wat gebeurt er met mijn 50 rijen na de run?")}
+            a={bkNode("home:FaqItem.a", "Maximaal 30 dagen bewaard, daarna automatisch verwijderd. Je kunt 'm ook eerder via de app handmatig verwijderen.")} _bk={{ q: "home:FaqItem.q", a: "home:FaqItem.a" }}
           />
         </div>
       </div>

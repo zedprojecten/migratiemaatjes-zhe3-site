@@ -314,11 +314,11 @@ function IntakeForm() {
                 Versturen...
               </>
             ) : (
-              <span>Verstuur intake</span>
+              <span data-bk-node="contact:Contact.span.4:ee4e361f">Verstuur intake</span>
             )}
           </button>
-          <p className="mt-4 font-mono text-xs text-muted-foreground leading-relaxed">
-            {"// Sample-bestand kun je na verzending via e-mail doorsturen, geen upload nodig in dit formulier."}
+          <p className="mt-4 font-mono text-xs text-muted-foreground leading-relaxed" data-bk-node="contact:Contact.p.1:10c63c7c">
+            // Sample-bestand kun je na verzending via e-mail doorsturen, geen upload nodig in dit formulier.
           </p>
         </div>
       </form>
@@ -357,7 +357,7 @@ function InfoCard() {
             <p className="mt-1 text-sm">
               <a
                 href={`mailto:${OWNER_EMAIL}`}
-                className="font-mono text-primary hover:text-primary/80 underline-offset-4 hover:underline break-all"
+                className="font-mono text-primary hover:text-primary/80 underline-offset-4 hover:underline break-all" data-bk-node="contact:Contact.a.0:331a877d"
               >
                 hello@migratiemaatjes.nl
               </a>

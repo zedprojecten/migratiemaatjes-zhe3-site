@@ -60,29 +60,37 @@ const handoverTree = `/handover
 
 const stepsItems = [
   {
-    title: "Intake",
+    title: bkNode("hoe-het-werkt:StepsVisualCinematic.d041e5.title", "Intake"),
     description:
-      "Sample plus doel-platform via het formulier. Binnen 24 uur op werkdagen het pakket en de planning bevestigd.",
+      bkNode("hoe-het-werkt:StepsVisualCinematic.d041e5.description", "Sample plus doel-platform via het formulier. Binnen 24 uur op werkdagen het pakket en de planning bevestigd."),
     icon: <ClipboardList className="h-6 w-6" />,
-  },
+      _bk: { title: "hoe-het-werkt:StepsVisualCinematic.d041e5.title", description: "hoe-het-werkt:StepsVisualCinematic.d041e5.description" },
+      _bk_id: "d041e5"
+},
   {
-    title: "Mapping",
+    title: bkNode("hoe-het-werkt:StepsVisualCinematic.ed3805.title", "Mapping"),
     description:
-      "We analyseren het bron-schema en schrijven een custom mapping-script. Geen black-box; je krijgt het schema-document mee.",
+      bkNode("hoe-het-werkt:StepsVisualCinematic.ed3805.description", "We analyseren het bron-schema en schrijven een custom mapping-script. Geen black-box; je krijgt het schema-document mee."),
     icon: <GitBranch className="h-6 w-6" />,
-  },
+      _bk: { title: "hoe-het-werkt:StepsVisualCinematic.ed3805.title", description: "hoe-het-werkt:StepsVisualCinematic.ed3805.description" },
+      _bk_id: "ed3805"
+},
   {
-    title: "Dry-run",
+    title: bkNode("hoe-het-werkt:StepsVisualCinematic.d483d6.title", "Dry-run"),
     description:
-      "Subset-run met diff-style preview. Jij valideert per veld; pas na akkoord draait de hoofdrun.",
+      bkNode("hoe-het-werkt:StepsVisualCinematic.d483d6.description", "Subset-run met diff-style preview. Jij valideert per veld; pas na akkoord draait de hoofdrun."),
     icon: <FlaskConical className="h-6 w-6" />,
-  },
+      _bk: { title: "hoe-het-werkt:StepsVisualCinematic.d483d6.title", description: "hoe-het-werkt:StepsVisualCinematic.d483d6.description" },
+      _bk_id: "d483d6"
+},
   {
-    title: "Handover",
+    title: bkNode("hoe-het-werkt:StepsVisualCinematic.d45f4e.title", "Handover"),
     description:
-      "Volledige conversie plus het herbruikbare mappingscript en schema-document. Het script is van jou.",
+      bkNode("hoe-het-werkt:StepsVisualCinematic.d45f4e.description", "Volledige conversie plus het herbruikbare mappingscript en schema-document. Het script is van jou."),
     icon: <PackageCheck className="h-6 w-6" />,
-  },
+      _bk: { title: "hoe-het-werkt:StepsVisualCinematic.d45f4e.title", description: "hoe-het-werkt:StepsVisualCinematic.d45f4e.description" },
+      _bk_id: "d45f4e"
+},
 ];
 
 export default function HoeHetWerkt() {
@@ -119,10 +127,10 @@ export default function HoeHetWerkt() {
       {/* Steps overview */}
       <section className="border-b border-border/60">
         <StepsVisualCinematic
-          eyebrow="// proces"
-          heading="Vier stappen, geen verrassingen"
-          subheading="Van intake tot handover. Je weet bij elke stap wat er gebeurt en wat je terugkrijgt."
-          items={stepsItems}
+          eyebrow={bkNode("hoe-het-werkt:StepsVisualCinematic.eyebrow", "// proces")}
+          heading={bkNode("hoe-het-werkt:StepsVisualCinematic.heading", "Vier stappen, geen verrassingen")}
+          subheading={bkNode("hoe-het-werkt:StepsVisualCinematic.subheading", "Van intake tot handover. Je weet bij elke stap wat er gebeurt en wat je terugkrijgt.")}
+          items={stepsItems} _bk={{ eyebrow: "hoe-het-werkt:StepsVisualCinematic.eyebrow", heading: "hoe-het-werkt:StepsVisualCinematic.heading", subheading: "hoe-het-werkt:StepsVisualCinematic.subheading" }}
         />
       </section>
 
@@ -146,7 +154,7 @@ export default function HoeHetWerkt() {
                 de afspraak en een offerte.
               </p>
             </div>
-            <CodeSnippetCard caption="// intake-payload (json)">
+            <CodeSnippetCard caption={bkNode("hoe-het-werkt:CodeSnippetCard.caption", "// intake-payload (json)")} _bk={{ caption: "hoe-het-werkt:CodeSnippetCard.caption" }}>
               <code className="text-foreground/80">{intakeJson}</code>
             </CodeSnippetCard>
           </div>
@@ -175,7 +183,7 @@ export default function HoeHetWerkt() {
               </p>
             </div>
             <div className="lg:order-1">
-              <CodeSnippetCard caption="// mapping-rule — wp_postmeta -> shopify variant">
+              <CodeSnippetCard caption={bkNode("hoe-het-werkt:CodeSnippetCard.caption", "// mapping-rule — wp_postmeta -> shopify variant")} _bk={{ caption: "hoe-het-werkt:CodeSnippetCard.caption" }}>
                 <code className="text-foreground/80">{mappingRule}</code>
               </CodeSnippetCard>
             </div>
@@ -204,32 +212,32 @@ export default function HoeHetWerkt() {
                 orders), of je geeft punten aan die we eerst moeten fixen.
               </p>
             </div>
-            <CodeSnippetCard caption="// dry-run output (truncated)">
+            <CodeSnippetCard caption={bkNode("hoe-het-werkt:CodeSnippetCard.caption", "// dry-run output (truncated)")} _bk={{ caption: "hoe-het-werkt:CodeSnippetCard.caption" }}>
               {/* Dry-run-regels uitgeschreven (geen map) zodat de codemod ze
                   als tekst-expressies kan labelen; kleuren identiek */}
               <code>
-                <span className="block text-red-400/80">
-                  {"- { handle: \"shirt-blue\", price: \"29,95\", inventory: null }"}
+                <span className="block text-red-400/80" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.7:1de9e0e6">
+                  - &#123; handle: "shirt-blue", price: "29,95", inventory: null &#125;
                 </span>
-                <span className="block text-cyan-300">
-                  {"+ { handle: \"shirt-blue\", price: 29.95,  inventory: 12   }"}
-                </span>
-                <span className="block">{"\u00A0"}</span>
-                <span className="block text-red-400/80">
-                  {"- { customer_email: \"Anna@...\" , tags: \"vip, nl\"        }"}
-                </span>
-                <span className="block text-cyan-300">
-                  {"+ { customer_email: \"anna@...\" , tags: [\"vip\", \"nl\"]    }"}
+                <span className="block text-cyan-300" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.8:1387f447">
+                  + &#123; handle: "shirt-blue", price: 29.95,  inventory: 12   &#125;
                 </span>
                 <span className="block">{"\u00A0"}</span>
-                <span className="block text-emerald-400/80">
-                  {"OK    products: 2_412 / 2_412"}
+                <span className="block text-red-400/80" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.9:e35ff58c">
+                  - &#123; customer_email: "Anna@..." , tags: "vip, nl"        &#125;
                 </span>
-                <span className="block text-emerald-400/80">
-                  {"OK    customers: 8_104 / 8_104"}
+                <span className="block text-cyan-300" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.10:ca043917">
+                  + &#123; customer_email: "anna@..." , tags: ["vip", "nl"]    &#125;
                 </span>
-                <span className="block text-amber-300/90">
-                  {"WARN  orders:    expected 14_201, got 14_198 (3 missing source_id)"}
+                <span className="block">{"\u00A0"}</span>
+                <span className="block text-emerald-400/80" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.11:adabacab">
+                  OK    products: 2_412 / 2_412
+                </span>
+                <span className="block text-emerald-400/80" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.12:fc3a5924">
+                  OK    customers: 8_104 / 8_104
+                </span>
+                <span className="block text-amber-300/90" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.13:7b6b1e64">
+                  WARN  orders:    expected 14_201, got 14_198 (3 missing source_id)
                 </span>
               </code>
             </CodeSnippetCard>
@@ -260,7 +268,7 @@ export default function HoeHetWerkt() {
               </p>
             </div>
             <div className="lg:order-1">
-              <CodeSnippetCard caption="// handover-package">
+              <CodeSnippetCard caption={bkNode("hoe-het-werkt:CodeSnippetCard.caption", "// handover-package")} _bk={{ caption: "hoe-het-werkt:CodeSnippetCard.caption" }}>
                 <code className="text-foreground/80">{handoverTree}</code>
               </CodeSnippetCard>
             </div>
@@ -306,12 +314,12 @@ export default function HoeHetWerkt() {
 
       {/* Final CTA */}
       {bkSectionVisible("hoe-het-werkt:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:CTABanner.section.0"><CTABanner
-        heading="Klaar voor je migratie?"
-        subtext="Stuur je intake op of bekijk eerst de tarieven."
-        primaryLabel="Stuur je intake op"
+        heading={bkNode("hoe-het-werkt:CTABanner.heading", "Klaar voor je migratie?")}
+        subtext={bkNode("hoe-het-werkt:CTABanner.subtext", "Stuur je intake op of bekijk eerst de tarieven.")}
+        primaryLabel={bkNode("hoe-het-werkt:CTABanner.primaryLabel", "Stuur je intake op")}
         primaryHref="/contact"
-        secondaryLabel="Bekijk tarieven"
-        secondaryHref="/tarieven"
+        secondaryLabel={bkNode("hoe-het-werkt:CTABanner.secondaryLabel", "Bekijk tarieven")}
+        secondaryHref="/tarieven" _bk={{ heading: "hoe-het-werkt:CTABanner.heading", subtext: "hoe-het-werkt:CTABanner.subtext", primaryLabel: "hoe-het-werkt:CTABanner.primaryLabel", secondaryLabel: "hoe-het-werkt:CTABanner.secondaryLabel" }}
       /></div>)}
 
       {bkSectionVisible("hoe-het-werkt:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("hoe-het-werkt:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "hoe-het-werkt:StickyMobileCTA.text" }} /></div>)}
