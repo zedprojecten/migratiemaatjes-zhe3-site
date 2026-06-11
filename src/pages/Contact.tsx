@@ -314,7 +314,7 @@ function IntakeForm() {
                 Versturen...
               </>
             ) : (
-              "Verstuur intake"
+              <span>Verstuur intake</span>
             )}
           </button>
           <p className="mt-4 font-mono text-xs text-muted-foreground leading-relaxed">
@@ -359,7 +359,7 @@ function InfoCard() {
                 href={`mailto:${OWNER_EMAIL}`}
                 className="font-mono text-primary hover:text-primary/80 underline-offset-4 hover:underline break-all"
               >
-                {OWNER_EMAIL}
+                hello@migratiemaatjes.nl
               </a>
             </p>
           </div>

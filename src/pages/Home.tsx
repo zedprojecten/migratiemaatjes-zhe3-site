@@ -140,27 +140,6 @@ function Hero() {
 // PROBLEM CARDS
 // ─────────────────────────────────────────────────────────────────────────────
 
-const problemCards = [
-  {
-    icon: <Wrench className="h-5 w-5" />,
-    title: "Custom dev = duur en traag",
-    body: "Een ontwikkelaar inhuren voor een eenmalige migratie kost al snel 2.000 tot 5.000 euro en duurt één tot twee weken. Voor projecten die elke maand terugkomen is dat onhoudbaar.",
-    accent: "red" as const,
-  },
-  {
-    icon: <Lock className="h-5 w-5" />,
-    title: "ETL-tools = lock-in",
-    body: "Talend, Zapier of Fivetran vereisen abonnementen, specialistische kennis, en hosten je data op hun infrastructuur. Stop je het abonnement, dan stop je ook je migratiescripts.",
-    accent: "orange" as const,
-  },
-  {
-    icon: <Database className="h-5 w-5" />,
-    title: "Excel = breekt op edge cases",
-    body: "VLOOKUPs en formules werken voor simpele 1-op-1 mappings, maar zodra je lookups tussen tabellen, conditionele filters of telefoon-normalisatie nodig hebt, loop je vast.",
-    accent: "purple" as const,
-  },
-];
-
 function ProblemSection() {
   return (
     <section className="relative py-20 md:py-28 border-t border-white/5">
@@ -179,27 +158,59 @@ function ProblemSection() {
           </p>
         </div>
 
+        {/* Kaarten uitgeschreven (geen map) zodat de CMS-codemod ze inline labelt */}
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {problemCards.map((c) => (
-            <SpotlightCard
-              key={c.title}
-              customSize
-              glowColor={c.accent}
-              className="!aspect-auto !p-7"
-            >
-              <div className="relative z-10 flex h-full flex-col">
-                <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                  {c.icon}
-                </div>
-                <h3 className="text-lg font-semibold tracking-tight text-foreground">
-                  {c.title}
-                </h3>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  {c.body}
-                </p>
+          <SpotlightCard
+            customSize
+            glowColor="red"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
+                <Wrench className="h-5 w-5" />
               </div>
-            </SpotlightCard>
-          ))}
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Custom dev = duur en traag
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                Een ontwikkelaar inhuren voor een eenmalige migratie kost al snel 2.000 tot 5.000 euro en duurt één tot twee weken. Voor projecten die elke maand terugkomen is dat onhoudbaar.
+              </p>
+            </div>
+          </SpotlightCard>
+          <SpotlightCard
+            customSize
+            glowColor="orange"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
+                <Lock className="h-5 w-5" />
+              </div>
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                ETL-tools = lock-in
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                Talend, Zapier of Fivetran vereisen abonnementen, specialistische kennis, en hosten je data op hun infrastructuur. Stop je het abonnement, dan stop je ook je migratiescripts.
+              </p>
+            </div>
+          </SpotlightCard>
+          <SpotlightCard
+            customSize
+            glowColor="purple"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
+                <Database className="h-5 w-5" />
+              </div>
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Excel = breekt op edge cases
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                VLOOKUPs en formules werken voor simpele 1-op-1 mappings, maar zodra je lookups tussen tabellen, conditionele filters of telefoon-normalisatie nodig hebt, loop je vast.
+              </p>
+            </div>
+          </SpotlightCard>
         </div>
       </div>
     </section>
@@ -251,37 +262,6 @@ function SolutionSection() {
 // ─────────────────────────────────────────────────────────────────────────────
 // 4 + 1 STEPS
 // ─────────────────────────────────────────────────────────────────────────────
-
-const steps = [
-  {
-    n: "01",
-    icon: <FileSearch className="h-5 w-5" />,
-    title: "Welkom & uitleg",
-    body: "Korte intro van wat je gaat doen, wat je nodig hebt aan input, en de privacy-belofte: maximaal 50 rijen verlaten je computer.",
-    accent: "blue" as const,
-  },
-  {
-    n: "02",
-    icon: <Upload className="h-5 w-5" />,
-    title: "Bron-data uploaden",
-    body: "Sleep CSV- of XLSX-bestanden in de drop-zone. Markeer per file of het de hoofdtabel of een lookup-tabel is. Je browser knipt elke file af tot 50 rijen vóór de upload.",
-    accent: "purple" as const,
-  },
-  {
-    n: "03",
-    icon: <PencilLine className="h-5 w-5" />,
-    title: "Doel-structuur beschrijven",
-    body: "Upload een leeg target-template met kolomheaders, of beschrijf de doelstructuur in tekst. Bijvoorbeeld: vijf kolommen, naam, e-mail, telefoon, account-id, bron.",
-    accent: "green" as const,
-  },
-  {
-    n: "04",
-    icon: <Wand2 className="h-5 w-5" />,
-    title: "Intent + speciale regels",
-    body: "Vrij tekstveld waar je beschrijft wat je wilt. Skip personen zonder e-mail. Account-ID is de unique key voor lookup. Telefoonnummer naar +31-formaat. Hoe specifieker, hoe beter het script.",
-    accent: "orange" as const,
-  },
-];
 
 const agentChatScript = [
   {
@@ -336,43 +316,141 @@ function StepsSection() {
           </p>
         </div>
 
+        {/* Stappen uitgeschreven (geen map) zodat de CMS-codemod ze inline labelt;
+            de stagger-delays (0/0.08/0.16/0.24) zijn identiek aan i * 0.08 */}
         <div ref={ref} className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((s, i) => (
-            <motion.div
-              key={s.n}
-              initial={{ opacity: 0, y: 24 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-              transition={{
-                duration: 0.55,
-                delay: i * 0.08,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="h-full"
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+            transition={{
+              duration: 0.55,
+              delay: 0,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="h-full"
+          >
+            <SpotlightCard
+              customSize
+              glowColor="blue"
+              className="h-full !aspect-auto !p-7"
             >
-              <SpotlightCard
-                customSize
-                glowColor={s.accent}
-                className="h-full !aspect-auto !p-7"
-              >
-                <div className="relative z-10 flex h-full flex-col">
-                  <div className="flex items-center gap-3">
-                    <span className="font-mono text-xs text-primary tracking-wider">
-                      {s.n}
-                    </span>
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
-                      {s.icon}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                    {s.body}
-                  </p>
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-primary tracking-wider">
+                    01
+                  </span>
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
+                    <FileSearch className="h-5 w-5" />
+                  </span>
                 </div>
-              </SpotlightCard>
-            </motion.div>
-          ))}
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                  Welkom & uitleg
+                </h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Korte intro van wat je gaat doen, wat je nodig hebt aan input, en de privacy-belofte: maximaal 50 rijen verlaten je computer.
+                </p>
+              </div>
+            </SpotlightCard>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+            transition={{
+              duration: 0.55,
+              delay: 0.08,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="h-full"
+          >
+            <SpotlightCard
+              customSize
+              glowColor="purple"
+              className="h-full !aspect-auto !p-7"
+            >
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-primary tracking-wider">
+                    02
+                  </span>
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
+                    <Upload className="h-5 w-5" />
+                  </span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                  Bron-data uploaden
+                </h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Sleep CSV- of XLSX-bestanden in de drop-zone. Markeer per file of het de hoofdtabel of een lookup-tabel is. Je browser knipt elke file af tot 50 rijen vóór de upload.
+                </p>
+              </div>
+            </SpotlightCard>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+            transition={{
+              duration: 0.55,
+              delay: 0.16,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="h-full"
+          >
+            <SpotlightCard
+              customSize
+              glowColor="green"
+              className="h-full !aspect-auto !p-7"
+            >
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-primary tracking-wider">
+                    03
+                  </span>
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
+                    <PencilLine className="h-5 w-5" />
+                  </span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                  Doel-structuur beschrijven
+                </h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Upload een leeg target-template met kolomheaders, of beschrijf de doelstructuur in tekst. Bijvoorbeeld: vijf kolommen, naam, e-mail, telefoon, account-id, bron.
+                </p>
+              </div>
+            </SpotlightCard>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+            transition={{
+              duration: 0.55,
+              delay: 0.24,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="h-full"
+          >
+            <SpotlightCard
+              customSize
+              glowColor="orange"
+              className="h-full !aspect-auto !p-7"
+            >
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-primary tracking-wider">
+                    04
+                  </span>
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
+                    <Wand2 className="h-5 w-5" />
+                  </span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground">
+                  Intent + speciale regels
+                </h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Vrij tekstveld waar je beschrijft wat je wilt. Skip personen zonder e-mail. Account-ID is de unique key voor lookup. Telefoonnummer naar +31-formaat. Hoe specifieker, hoe beter het script.
+                </p>
+              </div>
+            </SpotlightCard>
+          </motion.div>
         </div>
 
         <div className="mt-12 rounded-xl border border-primary/30 bg-gradient-to-b from-primary/[0.08] to-transparent p-6 md:p-10">
@@ -415,30 +493,6 @@ function StepsSection() {
 // DELIVERABLES
 // ─────────────────────────────────────────────────────────────────────────────
 
-const deliverables = [
-  {
-    icon: <Code2 className="h-5 w-5" />,
-    name: "script.py",
-    title: "Het Python-script",
-    body: "Gevalideerd op je 50-rijen sample. Idempotent en herbruikbaar. Draait lokaal op je volledige dataset zonder dat onze servers iets te zien krijgen.",
-    accent: "purple" as const,
-  },
-  {
-    icon: <FileText className="h-5 w-5" />,
-    name: "handleiding.docx",
-    title: "Word-handleiding",
-    body: "In het Nederlands. Hoe je Python installeert, dependencies binnenhaalt, het script draait, en de meest voorkomende edge cases oplost.",
-    accent: "blue" as const,
-  },
-  {
-    icon: <FileSpreadsheet className="h-5 w-5" />,
-    name: "sample_output.xlsx",
-    title: "Voorbeeld-output",
-    body: "Wat het script produceert op je 50-rijen sample. Zo zie je vóór de full run hoe de eindoutput eruit gaat zien en kun je nog bijsturen.",
-    accent: "green" as const,
-  },
-];
-
 function DeliverablesSection() {
   return (
     <section className="relative py-20 md:py-28 border-t border-white/5">
@@ -457,32 +511,74 @@ function DeliverablesSection() {
           </p>
         </div>
 
+        {/* Deliverables uitgeschreven (geen map) zodat de CMS-codemod ze inline labelt */}
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {deliverables.map((d) => (
-            <SpotlightCard
-              key={d.name}
-              customSize
-              glowColor={d.accent}
-              className="!aspect-auto !p-7"
-            >
-              <div className="relative z-10 flex h-full flex-col">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                    {d.icon}
-                  </div>
-                  <code className="font-mono text-sm text-foreground/85">
-                    {d.name}
-                  </code>
+          <SpotlightCard
+            customSize
+            glowColor="purple"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
+                  <Code2 className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-semibold tracking-tight text-foreground">
-                  {d.title}
-                </h3>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  {d.body}
-                </p>
+                <code className="font-mono text-sm text-foreground/85">
+                  script.py
+                </code>
               </div>
-            </SpotlightCard>
-          ))}
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Het Python-script
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                Gevalideerd op je 50-rijen sample. Idempotent en herbruikbaar. Draait lokaal op je volledige dataset zonder dat onze servers iets te zien krijgen.
+              </p>
+            </div>
+          </SpotlightCard>
+          <SpotlightCard
+            customSize
+            glowColor="blue"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
+                  <FileText className="h-5 w-5" />
+                </div>
+                <code className="font-mono text-sm text-foreground/85">
+                  handleiding.docx
+                </code>
+              </div>
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Word-handleiding
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                In het Nederlands. Hoe je Python installeert, dependencies binnenhaalt, het script draait, en de meest voorkomende edge cases oplost.
+              </p>
+            </div>
+          </SpotlightCard>
+          <SpotlightCard
+            customSize
+            glowColor="green"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
+                  <FileSpreadsheet className="h-5 w-5" />
+                </div>
+                <code className="font-mono text-sm text-foreground/85">
+                  sample_output.xlsx
+                </code>
+              </div>
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Voorbeeld-output
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                Wat het script produceert op je 50-rijen sample. Zo zie je vóór de full run hoe de eindoutput eruit gaat zien en kun je nog bijsturen.
+              </p>
+            </div>
+          </SpotlightCard>
         </div>
       </div>
     </section>
@@ -492,39 +588,6 @@ function DeliverablesSection() {
 // ─────────────────────────────────────────────────────────────────────────────
 // PRIVACY
 // ─────────────────────────────────────────────────────────────────────────────
-
-const privacyPoints = [
-  {
-    icon: <Upload className="h-5 w-5" />,
-    title: "Maximaal 50 rijen verlaten je computer",
-    body: "De afknip-stap gebeurt in jouw browser, vóór de upload. Onze server ziet alleen de sample.",
-  },
-  {
-    icon: <Lock className="h-5 w-5" />,
-    title: "Originele dataset blijft lokaal",
-    body: "Het uiteindelijke script draai je op je eigen machine. Onze servers zien je full data nooit.",
-  },
-  {
-    icon: <Clock className="h-5 w-5" />,
-    title: "30 dagen retentie op samples",
-    body: "Sample-data wordt na 30 dagen automatisch verwijderd. Je kunt 'm ook eerder zelf wissen.",
-  },
-  {
-    icon: <Shield className="h-5 w-5" />,
-    title: "Encryption at rest",
-    body: "Sample-bestanden zijn versleuteld opgeslagen in Supabase storage met tenant-isolatie.",
-  },
-  {
-    icon: <Building2 className="h-5 w-5" />,
-    title: "Tenant-isolatie",
-    body: "Jouw data is alleen zichtbaar binnen jouw organisatie. Strikt gescheiden via row-level security.",
-  },
-  {
-    icon: <Wand2 className="h-5 w-5" />,
-    title: "Wij draaien geen code op jouw data",
-    body: "De agent maakt scripts, geen migratie-uitvoering. Jij houdt de regie over de echte run.",
-  },
-];
 
 function PrivacySection() {
   return (
@@ -548,25 +611,86 @@ function PrivacySection() {
             </p>
           </div>
 
+          {/* Privacy-punten uitgeschreven (geen map) zodat de CMS-codemod ze inline labelt */}
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {privacyPoints.map((p) => (
-              <div
-                key={p.title}
-                className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5"
-              >
-                <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
-                  {p.icon}
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold tracking-tight text-foreground">
-                    {p.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
-                    {p.body}
-                  </p>
-                </div>
+            <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
+              <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
+                <Upload className="h-5 w-5" />
               </div>
-            ))}
+              <div>
+                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                  Maximaal 50 rijen verlaten je computer
+                </h3>
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                  De afknip-stap gebeurt in jouw browser, vóór de upload. Onze server ziet alleen de sample.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
+              <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
+                <Lock className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                  Originele dataset blijft lokaal
+                </h3>
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                  Het uiteindelijke script draai je op je eigen machine. Onze servers zien je full data nooit.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
+              <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
+                <Clock className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                  30 dagen retentie op samples
+                </h3>
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                  Sample-data wordt na 30 dagen automatisch verwijderd. Je kunt 'm ook eerder zelf wissen.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
+              <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
+                <Shield className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                  Encryption at rest
+                </h3>
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                  Sample-bestanden zijn versleuteld opgeslagen in Supabase storage met tenant-isolatie.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
+              <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
+                <Building2 className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                  Tenant-isolatie
+                </h3>
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                  Jouw data is alleen zichtbaar binnen jouw organisatie. Strikt gescheiden via row-level security.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
+              <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
+                <Wand2 className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold tracking-tight text-foreground">
+                  Wij draaien geen code op jouw data
+                </h3>
+                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">
+                  De agent maakt scripts, geen migratie-uitvoering. Jij houdt de regie over de echte run.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -577,24 +701,6 @@ function PrivacySection() {
 // ─────────────────────────────────────────────────────────────────────────────
 // VOOR WIE
 // ─────────────────────────────────────────────────────────────────────────────
-
-const audiences = [
-  {
-    title: "Implementatiepartners",
-    body: "IT-bureaus die klanten begeleiden naar een nieuw CRM of ERP. Elke implementatie heeft zijn eigen migratie. MigratieMaatjes haalt het herhalend handwerk uit je projecten.",
-    accent: "purple" as const,
-  },
-  {
-    title: "Data-engineers en consultants",
-    body: "Voor ad-hoc transformaties tussen formaten waar de tijd ontbreekt om een echte ETL-pijplijn op te zetten. Levert je een netjes gevalideerd script in plaats van een spreadsheet-kabaal.",
-    accent: "blue" as const,
-  },
-  {
-    title: "Interne IT-teams",
-    body: "Organisaties met meerdere data-bronnen die periodiek gesynchroniseerd of geconsolideerd moeten worden. Het mappingscript is van jou en kan elk kwartaal opnieuw draaien.",
-    accent: "green" as const,
-  },
-];
 
 function AudienceSection() {
   return (
@@ -618,24 +724,50 @@ function AudienceSection() {
           </p>
         </div>
 
+        {/* Doelgroepen uitgeschreven (geen map) zodat de CMS-codemod ze inline labelt */}
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {audiences.map((a) => (
-            <SpotlightCard
-              key={a.title}
-              customSize
-              glowColor={a.accent}
-              className="!aspect-auto !p-7"
-            >
-              <div className="relative z-10 flex h-full flex-col">
-                <h3 className="text-lg font-semibold tracking-tight text-foreground">
-                  {a.title}
-                </h3>
-                <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
-                  {a.body}
-                </p>
-              </div>
-            </SpotlightCard>
-          ))}
+          <SpotlightCard
+            customSize
+            glowColor="purple"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Implementatiepartners
+              </h3>
+              <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
+                IT-bureaus die klanten begeleiden naar een nieuw CRM of ERP. Elke implementatie heeft zijn eigen migratie. MigratieMaatjes haalt het herhalend handwerk uit je projecten.
+              </p>
+            </div>
+          </SpotlightCard>
+          <SpotlightCard
+            customSize
+            glowColor="blue"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Data-engineers en consultants
+              </h3>
+              <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
+                Voor ad-hoc transformaties tussen formaten waar de tijd ontbreekt om een echte ETL-pijplijn op te zetten. Levert je een netjes gevalideerd script in plaats van een spreadsheet-kabaal.
+              </p>
+            </div>
+          </SpotlightCard>
+          <SpotlightCard
+            customSize
+            glowColor="green"
+            className="!aspect-auto !p-7"
+          >
+            <div className="relative z-10 flex h-full flex-col">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                Interne IT-teams
+              </h3>
+              <p className="mt-3 text-sm text-foreground/70 leading-relaxed">
+                Organisaties met meerdere data-bronnen die periodiek gesynchroniseerd of geconsolideerd moeten worden. Het mappingscript is van jou en kan elk kwartaal opnieuw draaien.
+              </p>
+            </div>
+          </SpotlightCard>
         </div>
       </div>
     </section>
@@ -646,38 +778,7 @@ function AudienceSection() {
 // FAQ
 // ─────────────────────────────────────────────────────────────────────────────
 
-const faq = [
-  {
-    q: "Hoeveel kost het?",
-    a: "Op aanvraag. We werken op uitnodiging en stemmen prijs en scope af per organisatie. MigratieMaatjes is geen self-serve tool met tier-tabel; het is een dienst voor partners die structureel migraties uitvoeren.",
-  },
-  {
-    q: "Is mijn data veilig?",
-    a: "Ja. Alleen 50 rijen sample-data verlaten je computer (afgeknipt in je browser vóór upload), versleuteld opgeslagen, en na 30 dagen automatisch verwijderd. Je volledige dataset zien we nooit. Lees de privacy-sectie voor het volledige overzicht.",
-  },
-  {
-    q: "Werkt het ook voor SQL-databases of API-bronnen?",
-    a: "In v1 is de input file-based: CSV en XLSX. Voor SQL-dumps werk je met een export naar CSV of XLSX. Native SQL- en API-koppelingen staan op de roadmap, maar zijn er nu nog niet.",
-  },
-  {
-    q: "Wat als het script niet klopt op rij 5000?",
-    a: "Dan start je een nieuwe run met een uitgebreidere intent of een sample die ook die edge case bevat. De agent past het script aan op basis van wat je teruggeeft. Een run kost je een paar minuten, geen weken.",
-  },
-  {
-    q: "Heb ik developer-skills nodig?",
-    a: "Voor het draaien van het script wel — Python lokaal installeren en een command in de terminal runnen. De handleiding in het Word-bestand begeleidt je daarbij. Het schrijven van scripts hoef je niet zelf te doen.",
-  },
-  {
-    q: "Kan ik meerdere migraties doen?",
-    a: "Ja. Elke run levert één script voor één migratie-scenario. Heb je later een tweede migratie of een tweede dochteronderneming, dan start je een nieuwe run. Het script blijft van jou.",
-  },
-  {
-    q: "Wat gebeurt er met mijn 50 rijen na de run?",
-    a: "Maximaal 30 dagen bewaard, daarna automatisch verwijderd. Je kunt 'm ook eerder via de app handmatig verwijderen.",
-  },
-];
-
-function FAQItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultOpen?: boolean }) {
+function FaqItem({ q, a, defaultOpen = false, _bk }: { q: string; a: string; defaultOpen?: boolean; _bk?: Record<string, string> }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-md">
@@ -686,13 +787,13 @@ function FAQItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultO
         onClick={() => setOpen((o) => !o)}
         className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className="text-base font-medium text-foreground">{q}</span>
+        <span className="text-base font-medium text-foreground" data-bk-node={_bk?.q}>{q}</span>
         <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-foreground/85">
           {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
         </span>
       </button>
       {open && (
-        <div className="px-5 pb-5 text-sm text-foreground/70 leading-relaxed">
+        <div className="px-5 pb-5 text-sm text-foreground/70 leading-relaxed" data-bk-node={_bk?.a}>
           {a}
         </div>
       )}
@@ -715,10 +816,37 @@ function FAQSection() {
             Veelgestelde vragen
           </h2>
         </div>
+        {/* FAQ uitgeschreven (geen map) zodat de codemod q/a als string-props wrapt */}
         <div className="mt-10 grid gap-3 max-w-3xl">
-          {faq.map((item, i) => (
-            <FAQItem key={item.q} q={item.q} a={item.a} defaultOpen={i === 0} />
-          ))}
+          <FaqItem
+            q="Hoeveel kost het?"
+            a="Op aanvraag. We werken op uitnodiging en stemmen prijs en scope af per organisatie. MigratieMaatjes is geen self-serve tool met tier-tabel; het is een dienst voor partners die structureel migraties uitvoeren."
+            defaultOpen
+          />
+          <FaqItem
+            q="Is mijn data veilig?"
+            a="Ja. Alleen 50 rijen sample-data verlaten je computer (afgeknipt in je browser vóór upload), versleuteld opgeslagen, en na 30 dagen automatisch verwijderd. Je volledige dataset zien we nooit. Lees de privacy-sectie voor het volledige overzicht."
+          />
+          <FaqItem
+            q="Werkt het ook voor SQL-databases of API-bronnen?"
+            a="In v1 is de input file-based: CSV en XLSX. Voor SQL-dumps werk je met een export naar CSV of XLSX. Native SQL- en API-koppelingen staan op de roadmap, maar zijn er nu nog niet."
+          />
+          <FaqItem
+            q="Wat als het script niet klopt op rij 5000?"
+            a="Dan start je een nieuwe run met een uitgebreidere intent of een sample die ook die edge case bevat. De agent past het script aan op basis van wat je teruggeeft. Een run kost je een paar minuten, geen weken."
+          />
+          <FaqItem
+            q="Heb ik developer-skills nodig?"
+            a="Voor het draaien van het script wel — Python lokaal installeren en een command in de terminal runnen. De handleiding in het Word-bestand begeleidt je daarbij. Het schrijven van scripts hoef je niet zelf te doen."
+          />
+          <FaqItem
+            q="Kan ik meerdere migraties doen?"
+            a="Ja. Elke run levert één script voor één migratie-scenario. Heb je later een tweede migratie of een tweede dochteronderneming, dan start je een nieuwe run. Het script blijft van jou."
+          />
+          <FaqItem
+            q="Wat gebeurt er met mijn 50 rijen na de run?"
+            a="Maximaal 30 dagen bewaard, daarna automatisch verwijderd. Je kunt 'm ook eerder via de app handmatig verwijderen."
+          />
         </div>
       </div>
     </section>

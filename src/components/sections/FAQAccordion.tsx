@@ -1,8 +1,9 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { BkEditable } from "@/lib/bk-node";
 
-interface FAQItem {
+interface FAQItem extends BkEditable {
   question: string;
   answer: string;
 }
@@ -32,12 +33,12 @@ export function FAQAccordion({ items, className, withPadding = true }: FAQAccord
         <Accordion.Item key={i} value={`faq-${i}`} className="glass-card overflow-hidden">
           <Accordion.Header>
             <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-4 text-left text-base font-semibold transition hover:text-primary">
-              {item.question}
+              <span data-bk-node={item._bk?.question}>{item.question}</span>
               <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
             </Accordion.Trigger>
           </Accordion.Header>
           <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-            <p className="px-6 pb-4 text-sm leading-relaxed text-muted-foreground">
+            <p className="px-6 pb-4 text-sm leading-relaxed text-muted-foreground" data-bk-node={item._bk?.answer}>
               {item.answer}
             </p>
           </Accordion.Content>

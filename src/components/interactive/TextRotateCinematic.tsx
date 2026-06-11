@@ -13,6 +13,8 @@ interface TextRotateCinematicProps {
   className?: string;
   /** Glow-kleur achter het actieve woord. Default primary. */
   glowColor?: string;
+  /** Companion node-ids per woord (CMS-wiring), parallel aan words. */
+  _bkWords?: string[];
 }
 
 export default function TextRotateCinematic({
@@ -20,6 +22,7 @@ export default function TextRotateCinematic({
   interval = 3500,
   className,
   glowColor = "hsl(var(--primary))",
+  _bkWords,
 }: TextRotateCinematicProps) {
   const [index, setIndex] = useState(0);
 
@@ -49,6 +52,7 @@ export default function TextRotateCinematic({
       <AnimatePresence mode="wait">
         <motion.span
           key={active}
+          data-bk-node={_bkWords?.[index]}
           className="absolute inset-0 inline-flex items-center justify-center"
           initial={{ rotateX: -90, opacity: 0, filter: "blur(12px)" }}
           animate={{ rotateX: 0, opacity: 1, filter: "blur(0px)" }}

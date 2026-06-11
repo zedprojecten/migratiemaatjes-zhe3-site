@@ -21,6 +21,7 @@ interface CTABannerProps {
   secondaryLabel?: string;
   secondaryHref?: string;
   className?: string;
+  _bk?: Record<string, string>;
 }
 
 const splitLines = (text: string): string[] => {
@@ -50,6 +51,7 @@ export function CTABanner({
   secondaryLabel = "Bekijk werk",
   secondaryHref = "#werk",
   className,
+  _bk,
 }: CTABannerProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingLines = splitLines(heading);
@@ -95,7 +97,7 @@ export function CTABanner({
           Aan de slag
         </motion.span>
 
-        <h2 className="mt-7 text-4xl font-bold leading-[1.05] tracking-tight text-background md:text-6xl">
+        <h2 data-bk-node={_bk?.heading} className="mt-7 text-4xl font-bold leading-[1.05] tracking-tight text-background md:text-6xl">
           {headingLines.map((line, i) => (
             <motion.span
               key={i}
@@ -122,6 +124,7 @@ export function CTABanner({
               ease: [0.16, 1, 0.3, 1],
             }}
             className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-background/70 md:text-lg"
+            data-bk-node={_bk?.subtext}
           >
             {subtext}
           </motion.p>
@@ -140,13 +143,13 @@ export function CTABanner({
         >
           <MagneticButton strength={0.4}>
             <CTAAnchor href={primaryHref} variant="primary">
-              {primaryLabel}
+              <span data-bk-node={_bk?.primaryLabel}>{primaryLabel}</span>
               <ArrowRight className="-mr-0.5 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </CTAAnchor>
           </MagneticButton>
           {secondaryLabel && (
             <CTAAnchor href={secondaryHref} variant="ghost">
-              {secondaryLabel}
+              <span data-bk-node={_bk?.secondaryLabel}>{secondaryLabel}</span>
             </CTAAnchor>
           )}
         </motion.div>

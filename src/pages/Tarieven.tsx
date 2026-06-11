@@ -65,12 +65,6 @@ const PRICING_PLANS = [
   },
 ];
 
-const TRUST_BULLETS = [
-  "Vaste prijs vooraf, geen verborgen uurtarieven",
-  "Dry-run op je sample voor de hoofdrun",
-  "Mappingscript eigendom van de klant",
-];
-
 const FAQ_ITEMS = [
   {
     question: "Wat is precies een 'dry-run'?",
@@ -148,13 +142,20 @@ export default function Tarieven() {
       {bkSectionVisible("tarieven:ScrollReveal.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:ScrollReveal.section.0"><ScrollReveal>
         <section className="border-b border-border/60 py-12 md:py-16">
           <div className="container mx-auto px-4 sm:px-6">
+            {/* Trust-bullets uitgeschreven (geen map) zodat de codemod ze inline labelt */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {TRUST_BULLETS.map((b) => (
-                <div key={b} className="flex items-start gap-3 font-mono text-sm">
-                  <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
-                  <span className="text-foreground/80">{b}</span>
-                </div>
-              ))}
+              <div className="flex items-start gap-3 font-mono text-sm">
+                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
+                <span className="text-foreground/80">Vaste prijs vooraf, geen verborgen uurtarieven</span>
+              </div>
+              <div className="flex items-start gap-3 font-mono text-sm">
+                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
+                <span className="text-foreground/80">Dry-run op je sample voor de hoofdrun</span>
+              </div>
+              <div className="flex items-start gap-3 font-mono text-sm">
+                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
+                <span className="text-foreground/80">Mappingscript eigendom van de klant</span>
+              </div>
             </div>
           </div>
         </section>
@@ -183,6 +184,8 @@ export default function Tarieven() {
         subtext="Stuur je sample en het doel-platform. Binnen 24 uur weet je het pakket en de planning."
         primaryLabel="Stuur je intake op"
         primaryHref="/contact"
+        secondaryLabel="Bekijk werk"
+        secondaryHref="#werk"
       /></div>)}
 
       {bkSectionVisible("tarieven:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("tarieven:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "tarieven:StickyMobileCTA.text" }} /></div>)}

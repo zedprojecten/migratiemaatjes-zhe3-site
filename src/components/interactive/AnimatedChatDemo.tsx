@@ -56,6 +56,8 @@ interface AnimatedChatDemoProps {
   windowTitle?: string;
   /** Online-label rechtsboven. Default "Online". */
   onlineLabel?: string;
+  /** CMS-wiring: node-ids per prop (windowTitle/onlineLabel). */
+  _bk?: Record<string, string>;
 }
 
 const DEFAULT_SCRIPT: ChatMessage[] = [
@@ -86,6 +88,7 @@ export default function AnimatedChatDemo({
   script,
   windowTitle = "AI Assistent",
   onlineLabel = "Online",
+  _bk,
 }: AnimatedChatDemoProps) {
   const chatScript = script ?? DEFAULT_SCRIPT;
 
@@ -197,14 +200,14 @@ export default function AnimatedChatDemo({
         </div>
         <div className="flex items-center gap-2 flex-1 justify-center -ml-12">
           <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} />
-          <span className="text-sm font-semibold">{windowTitle}</span>
+          <span className="text-sm font-semibold" data-bk-node={_bk?.windowTitle}>{windowTitle}</span>
         </div>
         <span className="flex items-center gap-1.5">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
           </span>
-          <span className="text-[10px] text-muted-foreground">{onlineLabel}</span>
+          <span className="text-[10px] text-muted-foreground" data-bk-node={_bk?.onlineLabel}>{onlineLabel}</span>
         </span>
       </div>
 

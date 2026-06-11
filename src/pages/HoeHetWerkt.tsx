@@ -9,9 +9,11 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 interface CodeSnippetCardProps {
   caption: string;
   children: React.ReactNode;
+  /** CMS-wiring: node-id voor de caption. */
+  _bk?: Record<string, string>;
 }
 
-function CodeSnippetCard({ caption, children }: CodeSnippetCardProps) {
+function CodeSnippetCard({ caption, children, _bk }: CodeSnippetCardProps) {
   return (
     <div className="rounded-xl border border-border bg-secondary/60 overflow-hidden shadow-[0_20px_60px_-30px_rgba(0,0,0,0.6)]">
       <div className="px-4 py-2 border-b border-border bg-background/40 font-mono text-xs text-muted-foreground flex items-center gap-2">
@@ -20,7 +22,7 @@ function CodeSnippetCard({ caption, children }: CodeSnippetCardProps) {
           <span className="h-2 w-2 rounded-full bg-foreground/15" />
           <span className="h-2 w-2 rounded-full bg-primary/40" />
         </span>
-        <span className="ml-2 uppercase tracking-wider">{caption}</span>
+        <span className="ml-2 uppercase tracking-wider" data-bk-node={_bk?.caption}>{caption}</span>
       </div>
       <pre className="px-4 py-4 font-mono text-xs leading-relaxed overflow-x-auto">
         {children}
@@ -44,18 +46,6 @@ const mappingRule = `map({
   transform: (v) => Number(v).toFixed(2),
   required: true,
 });`;
-
-const dryRunLines: { kind: "minus" | "plus" | "ok" | "warn" | "blank"; text: string }[] = [
-  { kind: "minus", text: `- { handle: "shirt-blue", price: "29,95", inventory: null }` },
-  { kind: "plus", text: `+ { handle: "shirt-blue", price: 29.95,  inventory: 12   }` },
-  { kind: "blank", text: "" },
-  { kind: "minus", text: `- { customer_email: "Anna@..." , tags: "vip, nl"        }` },
-  { kind: "plus", text: `+ { customer_email: "anna@..." , tags: ["vip", "nl"]    }` },
-  { kind: "blank", text: "" },
-  { kind: "ok", text: `OK    products: 2_412 / 2_412` },
-  { kind: "ok", text: `OK    customers: 8_104 / 8_104` },
-  { kind: "warn", text: `WARN  orders:    expected 14_201, got 14_198 (3 missing source_id)` },
-];
 
 const handoverTree = `/handover
   ├── output/
@@ -215,42 +205,32 @@ export default function HoeHetWerkt() {
               </p>
             </div>
             <CodeSnippetCard caption="// dry-run output (truncated)">
+              {/* Dry-run-regels uitgeschreven (geen map) zodat de codemod ze
+                  als tekst-expressies kan labelen; kleuren identiek */}
               <code>
-                {dryRunLines.map((line, i) => {
-                  if (line.kind === "blank") {
-                    return (
-                      <span key={i} className="block">
-                        {"\u00A0"}
-                      </span>
-                    );
-                  }
-                  if (line.kind === "minus") {
-                    return (
-                      <span key={i} className="block text-red-400/80">
-                        {line.text}
-                      </span>
-                    );
-                  }
-                  if (line.kind === "plus") {
-                    return (
-                      <span key={i} className="block text-cyan-300">
-                        {line.text}
-                      </span>
-                    );
-                  }
-                  if (line.kind === "ok") {
-                    return (
-                      <span key={i} className="block text-emerald-400/80">
-                        {line.text}
-                      </span>
-                    );
-                  }
-                  return (
-                    <span key={i} className="block text-amber-300/90">
-                      {line.text}
-                    </span>
-                  );
-                })}
+                <span className="block text-red-400/80">
+                  {"- { handle: \"shirt-blue\", price: \"29,95\", inventory: null }"}
+                </span>
+                <span className="block text-cyan-300">
+                  {"+ { handle: \"shirt-blue\", price: 29.95,  inventory: 12   }"}
+                </span>
+                <span className="block">{"\u00A0"}</span>
+                <span className="block text-red-400/80">
+                  {"- { customer_email: \"Anna@...\" , tags: \"vip, nl\"        }"}
+                </span>
+                <span className="block text-cyan-300">
+                  {"+ { customer_email: \"anna@...\" , tags: [\"vip\", \"nl\"]    }"}
+                </span>
+                <span className="block">{"\u00A0"}</span>
+                <span className="block text-emerald-400/80">
+                  {"OK    products: 2_412 / 2_412"}
+                </span>
+                <span className="block text-emerald-400/80">
+                  {"OK    customers: 8_104 / 8_104"}
+                </span>
+                <span className="block text-amber-300/90">
+                  {"WARN  orders:    expected 14_201, got 14_198 (3 missing source_id)"}
+                </span>
               </code>
             </CodeSnippetCard>
           </div>

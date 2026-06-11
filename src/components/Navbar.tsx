@@ -4,12 +4,13 @@ import { cn } from "@/lib/utils";
 
 const APP_URL = "https://migratie-maatjes.vercel.app";
 
-const links = [
-  { href: "#stappen", label: "Hoe het werkt" },
-  { href: "#voor-wie", label: "Voor wie" },
-  { href: "#privacy", label: "Privacy" },
-  { href: "#faq", label: "FAQ" },
-];
+// Nav-links uitgeschreven als statische JSX (in beide menu's hieronder) zodat
+// de CMS-codemod elke link inline kan labelen; identiek renderend aan de oude
+// links-map. De class-strings delen de styling tussen desktop en mobiel.
+const desktopLinkClass =
+  "px-3 py-2 text-sm rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-white/[0.04]";
+const mobileLinkClass =
+  "block px-3 py-3 text-sm rounded-md text-muted-foreground hover:text-foreground";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -47,16 +48,26 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden md:flex items-center gap-1">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="px-3 py-2 text-sm rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-white/[0.04]"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a href="#stappen" className={desktopLinkClass}>
+              Hoe het werkt
+            </a>
+          </li>
+          <li>
+            <a href="#voor-wie" className={desktopLinkClass}>
+              Voor wie
+            </a>
+          </li>
+          <li>
+            <a href="#privacy" className={desktopLinkClass}>
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a href="#faq" className={desktopLinkClass}>
+              FAQ
+            </a>
+          </li>
           <li className="ml-2">
             <a
               href={APP_URL}
@@ -83,17 +94,26 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-white/10 bg-background">
           <ul className="container mx-auto flex flex-col py-2 px-4">
-            {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="block px-3 py-3 text-sm rounded-md text-muted-foreground hover:text-foreground"
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a href="#stappen" onClick={() => setOpen(false)} className={mobileLinkClass}>
+                Hoe het werkt
+              </a>
+            </li>
+            <li>
+              <a href="#voor-wie" onClick={() => setOpen(false)} className={mobileLinkClass}>
+                Voor wie
+              </a>
+            </li>
+            <li>
+              <a href="#privacy" onClick={() => setOpen(false)} className={mobileLinkClass}>
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href="#faq" onClick={() => setOpen(false)} className={mobileLinkClass}>
+                FAQ
+              </a>
+            </li>
             <li className="py-2">
               <a
                 href={APP_URL}

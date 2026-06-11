@@ -12,8 +12,9 @@
 import { useRef, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import type { BkEditable } from "@/lib/bk-node";
 
-export interface CinematicStepItem {
+export interface CinematicStepItem extends BkEditable {
   title: string;
   description: string;
   icon?: ReactNode;
@@ -28,6 +29,7 @@ interface StepsVisualCinematicProps {
   heading?: string;
   /** Subheading onder heading. */
   subheading?: string;
+  _bk?: Record<string, string>;
 }
 
 function StepCard({
@@ -102,8 +104,8 @@ function StepCard({
           </div>
         )}
 
-        <h3 className="text-lg font-semibold mb-2 text-foreground">{step.title}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <h3 className="text-lg font-semibold mb-2 text-foreground" data-bk-node={step._bk?.title}>{step.title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed" data-bk-node={step._bk?.description}>
           {step.description}
         </p>
       </div>
@@ -124,6 +126,7 @@ export function StepsVisualCinematic({
   eyebrow,
   heading,
   subheading,
+  _bk,
 }: StepsVisualCinematicProps) {
   return (
     <section className={cn("relative py-16 md:py-24", className)}>
@@ -136,17 +139,17 @@ export function StepsVisualCinematic({
         {(eyebrow || heading || subheading) && (
           <div className="text-center mb-12 md:mb-16">
             {eyebrow && (
-              <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-widest rounded-full border border-primary/30 bg-primary/10 text-primary">
+              <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-widest rounded-full border border-primary/30 bg-primary/10 text-primary" data-bk-node={_bk?.eyebrow}>
                 {eyebrow}
               </span>
             )}
             {heading && (
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground" data-bk-node={_bk?.heading}>
                 {heading}
               </h2>
             )}
             {subheading && (
-              <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto" data-bk-node={_bk?.subheading}>
                 {subheading}
               </p>
             )}

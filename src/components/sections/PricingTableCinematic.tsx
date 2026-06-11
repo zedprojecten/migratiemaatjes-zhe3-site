@@ -11,14 +11,15 @@ import { motion, useInView } from "framer-motion";
 import { Check as CheckIcon, Zap } from "lucide-react";
 import MagneticButton from "../interactive/MagneticButton";
 import { cn } from "@/lib/utils";
+import type { BkEditable } from "@/lib/bk-node";
 
-export interface PricingFeature {
+export interface PricingFeature extends BkEditable {
   label: string;
   included: boolean;
   note?: string;
 }
 
-export interface PricingPlan {
+export interface PricingPlan extends BkEditable {
   name: string;
   price: string;
   period?: string;
@@ -38,6 +39,7 @@ export interface PricingTableProps {
   showDiscountBadge?: boolean;
   discountLabel?: string;
   className?: string;
+  _bk?: Record<string, string>;
 }
 
 const DEFAULT_PLANS: PricingPlan[] = [
@@ -243,7 +245,7 @@ function CinematicCard({
 
       <div className="relative flex flex-col flex-1">
         <div className="flex items-center justify-between mb-1">
-          <h3 className="font-heading text-xl font-semibold text-white">
+          <h3 className="font-heading text-xl font-semibold text-white" data-bk-node={plan._bk?.name}>
             {plan.name}
           </h3>
           {plan.recommended && (
@@ -258,12 +260,12 @@ function CinematicCard({
           )}
         </div>
         {plan.tagline && (
-          <p className="text-sm text-white/60 mb-6 min-h-[2.5rem] leading-relaxed">
+          <p className="text-sm text-white/60 mb-6 min-h-[2.5rem] leading-relaxed" data-bk-node={plan._bk?.tagline}>
             {plan.tagline}
           </p>
         )}
 
-        <div className="flex items-baseline gap-1 mb-8">
+        <div className="flex items-baseline gap-1 mb-8" data-bk-node={plan._bk?.price}>
           <span className={cn("text-2xl font-medium", accent.text)}>
             {"€"}
           </span>
@@ -280,7 +282,7 @@ function CinematicCard({
             />
           </span>
           {plan.period && (
-            <span className="text-sm text-white/60 ml-1">{plan.period}</span>
+            <span className="text-sm text-white/60 ml-1" data-bk-node={plan._bk?.period}>{plan.period}</span>
           )}
         </div>
 
@@ -293,7 +295,7 @@ function CinematicCard({
                   className={cn("h-4 w-4 shrink-0 mt-0.5", accent.text)}
                   aria-hidden="true"
                 />
-                <span className="text-white/85 leading-relaxed">
+                <span className="text-white/85 leading-relaxed" data-bk-node={feature._bk?.label}>
                   {feature.label}
                 </span>
               </li>
@@ -312,6 +314,7 @@ function CinematicCard({
                   )
                 : "bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur",
             )}
+            data-bk-node={plan._bk?.ctaLabel}
           >
             {plan.ctaLabel ?? "Kies " + plan.name}
           </a>
@@ -328,6 +331,7 @@ export function PricingTableCinematic({
   showDiscountBadge = true,
   discountLabel = "Live: 10% korting op jaarabonnementen",
   className,
+  _bk,
 }: PricingTableProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -401,6 +405,7 @@ export function PricingTableCinematic({
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-heading text-4xl md:text-5xl font-semibold mb-3 tracking-tight"
+            data-bk-node={_bk?.heading}
           >
             {heading}
           </motion.h2>
@@ -410,6 +415,7 @@ export function PricingTableCinematic({
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-white/70"
+              data-bk-node={_bk?.subheading}
             >
               {subheading}
             </motion.p>
