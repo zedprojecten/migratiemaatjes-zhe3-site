@@ -228,7 +228,7 @@ export function BlogGridMagazine({
                 </p>
                 <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1" data-bk-node="blog-grid-magazine:BlogGridMagazine.span.1:07dd1353">
                   Lees verder
-                  <ArrowUpRight className="h-4 w-4" />
+                  <ArrowUpRight className="h-4 w-4" data-bk-node="blog-grid-magazine:BlogGridMagazine.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="blog-grid-magazine:BlogGridMagazine.ArrowUpRight.icon.0:bc598874" data-bk-style-node="blog-grid-magazine:BlogGridMagazine.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </span>
               </div>
             </motion.a>

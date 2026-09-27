@@ -251,7 +251,7 @@ export function BookingFlowMinimal({
                   onBlur={() => setFocused(null)}
                   className={cn(fieldBase, "mt-2")}
                   placeholder="Jouw naam"
-                  autoComplete="name"
+                  autoComplete="name" data-bk-placeholder="booking-flow-minimal:BookingFlowMinimal.input.0@placeholder:af3a8c36"
                 />
                 {underline("name")}
               </div>
@@ -276,7 +276,7 @@ export function BookingFlowMinimal({
                   onBlur={() => setFocused(null)}
                   className={cn(fieldBase, "mt-2")}
                   placeholder="jij@email.nl"
-                  autoComplete="email"
+                  autoComplete="email" data-bk-placeholder="booking-flow-minimal:BookingFlowMinimal.input.1@placeholder:78c1e710"
                 />
                 {underline("email")}
               </div>
@@ -300,7 +300,7 @@ export function BookingFlowMinimal({
                   onBlur={() => setFocused(null)}
                   className={cn(fieldBase, "mt-2")}
                   placeholder="06 12 34 56 78"
-                  autoComplete="tel"
+                  autoComplete="tel" data-bk-placeholder="booking-flow-minimal:BookingFlowMinimal.input.2@placeholder:1022c1b8"
                 />
                 {underline("phone")}
               </div>
@@ -326,7 +326,7 @@ export function BookingFlowMinimal({
                     "mt-2 appearance-none cursor-pointer pr-8",
                   )}
                 >
-                  <option value="" disabled>
+                  <option value="" disabled data-bk-node="booking-flow-minimal:BookingFlowMinimal.option.0:3826c3d9">
                     Kies een behandeling
                   </option>
                   {serviceOptions.map((opt) => (
@@ -339,7 +339,7 @@ export function BookingFlowMinimal({
                   aria-hidden
                   className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-muted-foreground"
                 >
-                  <ArrowRight className="h-4 w-4 rotate-90" />
+                  <ArrowRight className="h-4 w-4 rotate-90" data-bk-node="booking-flow-minimal:BookingFlowMinimal.ArrowRight.icon.0:88a9106a" data-bk-icon-node="booking-flow-minimal:BookingFlowMinimal.ArrowRight.icon.0:88a9106a" data-bk-style-node="booking-flow-minimal:BookingFlowMinimal.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </span>
                 {underline("service")}
               </div>
@@ -383,7 +383,7 @@ export function BookingFlowMinimal({
                   onFocus={() => setFocused("note")}
                   onBlur={() => setFocused(null)}
                   className={cn(fieldBase, "mt-2 resize-none")}
-                  placeholder="Bijzonderheden of voorkeur tijdstip"
+                  placeholder="Bijzonderheden of voorkeur tijdstip" data-bk-placeholder="booking-flow-minimal:BookingFlowMinimal.textarea.0@placeholder:c7cac7d2"
                 />
                 {underline("note")}
               </div>
@@ -414,7 +414,7 @@ export function BookingFlowMinimal({
                   <span>{state === "submitting" ? "Bezig" : submitLabel}</span>
                   <ArrowRight
                     className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
-                    strokeWidth={2.25}
+                    strokeWidth={2.25} data-bk-node="booking-flow-minimal:BookingFlowMinimal.ArrowRight.icon.1:88a9106a" data-bk-icon-node="booking-flow-minimal:BookingFlowMinimal.ArrowRight.icon.1:88a9106a" data-bk-style-node="booking-flow-minimal:BookingFlowMinimal.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2.25}}"}
                   />
                 </button>
               </MagneticWrap>

@@ -262,7 +262,7 @@ function AnimatedSearchBar({
           transition: "border-color 300ms, box-shadow 300ms",
         }}
       >
-        <SearchIcon className="h-4 w-4 text-muted-foreground shrink-0" />
+        <SearchIcon className="h-4 w-4 text-muted-foreground shrink-0" data-bk-node="animated-stats-cards:AnimatedStatsCards.SearchIcon.icon.0:24193290" data-bk-icon-node="animated-stats-cards:AnimatedStatsCards.SearchIcon.icon.0:24193290" data-bk-style-node="animated-stats-cards:AnimatedStatsCards.SearchIcon.icon.0:24193290:style" data-bk-icon-name="search" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"search\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
         <span className="text-sm flex-1">
           {searchText}
           {searchText.length < searchTerm.length && (
@@ -281,7 +281,7 @@ function AnimatedSearchBar({
             style={{
               opacity: showResults ? 0 : 1,
               transition: "opacity 300ms",
-            }}
+            }} data-bk-node="animated-stats-cards:AnimatedStatsCards.Loader2.icon.0:3f27592f" data-bk-icon-node="animated-stats-cards:AnimatedStatsCards.Loader2.icon.0:3f27592f" data-bk-style-node="animated-stats-cards:AnimatedStatsCards.Loader2.icon.0:3f27592f:style" data-bk-icon-name="loader2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"loader2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
           />
         )}
       </div>

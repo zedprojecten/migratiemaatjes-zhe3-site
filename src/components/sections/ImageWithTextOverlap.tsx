@@ -125,7 +125,7 @@ function Row({ item, reverse }: RowProps) {
               className="group mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground"
             >
               {item.ctaLabel}
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" data-bk-node="image-with-text-overlap:ImageWithTextOverlap.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="image-with-text-overlap:ImageWithTextOverlap.ArrowUpRight.icon.0:bc598874" data-bk-style-node="image-with-text-overlap:ImageWithTextOverlap.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </a>
           )}
         </div>

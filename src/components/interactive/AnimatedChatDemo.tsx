@@ -199,7 +199,7 @@ export default function AnimatedChatDemo({
           <span className="w-3 h-3 rounded-full" style={{ background: "#28C840" }} />
         </div>
         <div className="flex items-center gap-2 flex-1 justify-center -ml-12">
-          <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} />
+          <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} data-bk-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.0:9d74932b" data-bk-icon-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.0:9d74932b" data-bk-style-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.0:9d74932b:style" data-bk-icon-name="bot" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"bot\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           <span className="text-sm font-semibold" data-bk-node={_bk?.windowTitle}>{windowTitle}</span>
         </div>
         <span className="flex items-center gap-1.5">
@@ -240,9 +240,9 @@ export default function AnimatedChatDemo({
                 }}
               >
                 {msg.role === "ai" ? (
-                  <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} />
+                  <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} data-bk-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.1:9d74932b" data-bk-icon-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.1:9d74932b" data-bk-style-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.1:9d74932b:style" data-bk-icon-name="bot" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"bot\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 ) : (
-                  <UserIcon className="h-4 w-4" style={{ color: "hsl(var(--foreground))" }} />
+                  <UserIcon className="h-4 w-4" style={{ color: "hsl(var(--foreground))" }} data-bk-node="animated-chat-demo:AnimatedChatDemo.UserIcon.icon.0:04f8996d" data-bk-icon-node="animated-chat-demo:AnimatedChatDemo.UserIcon.icon.0:04f8996d" data-bk-style-node="animated-chat-demo:AnimatedChatDemo.UserIcon.icon.0:04f8996d:style" data-bk-icon-name="user" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"user\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 )}
               </div>
               <div
@@ -278,7 +278,7 @@ export default function AnimatedChatDemo({
               className="flex items-center justify-center w-8 h-8 rounded-full shrink-0"
               style={{ background: "hsl(var(--primary) / 0.12)" }}
             >
-              <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} />
+              <Bot className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} data-bk-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.2:9d74932b" data-bk-icon-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.2:9d74932b" data-bk-style-node="animated-chat-demo:AnimatedChatDemo.Bot.icon.2:9d74932b:style" data-bk-icon-name="bot" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"bot\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </div>
             <div
               className="rounded-2xl px-4 py-3 flex items-center gap-1.5"

@@ -185,12 +185,12 @@ export function ComparisonClean({
                           {feature?.included ? (
                             <CheckIcon
                               className="h-5 w-5 text-green-600"
-                              aria-label="Inbegrepen"
+                              aria-label="Inbegrepen" data-bk-node="comparison-clean:ComparisonClean.CheckIcon.icon.0:20f65c28" data-bk-icon-node="comparison-clean:ComparisonClean.CheckIcon.icon.0:20f65c28" data-bk-style-node="comparison-clean:ComparisonClean.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                             />
                           ) : (
                             <MinusIcon
                               className="h-5 w-5 text-muted-foreground/50"
-                              aria-label="Niet inbegrepen"
+                              aria-label="Niet inbegrepen" data-bk-node="comparison-clean:ComparisonClean.MinusIcon.icon.0:129fa771" data-bk-icon-node="comparison-clean:ComparisonClean.MinusIcon.icon.0:129fa771" data-bk-style-node="comparison-clean:ComparisonClean.MinusIcon.icon.0:129fa771:style" data-bk-icon-name="minus" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"minus\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                             />
                           )}
                         </div>

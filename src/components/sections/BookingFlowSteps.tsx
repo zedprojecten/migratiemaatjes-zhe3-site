@@ -262,7 +262,7 @@ export function BookingFlowSteps({
                         "border-border bg-background text-muted-foreground",
                     )}
                   >
-                    {isDone ? <CheckIcon className="h-4 w-4" /> : i + 1}
+                    {isDone ? <CheckIcon className="h-4 w-4" data-bk-node="booking-flow-steps:BookingFlowSteps.CheckIcon.icon.0:20f65c28" data-bk-icon-node="booking-flow-steps:BookingFlowSteps.CheckIcon.icon.0:20f65c28" data-bk-style-node="booking-flow-steps:BookingFlowSteps.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} /> : i + 1}
                   </div>
                   <p
                     className={cn(
@@ -317,7 +317,7 @@ export function BookingFlowSteps({
                             {s.name}
                           </p>
                           <p className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-                            <Clock className="h-3 w-3" strokeWidth={2} />
+                            <Clock className="h-3 w-3" strokeWidth={2} data-bk-node="booking-flow-steps:BookingFlowSteps.Clock.icon.0:d8198efa" data-bk-icon-node="booking-flow-steps:BookingFlowSteps.Clock.icon.0:d8198efa" data-bk-style-node="booking-flow-steps:BookingFlowSteps.Clock.icon.0:d8198efa:style" data-bk-icon-name="clock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"clock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                             {s.duration}
                           </p>
                         </div>
@@ -540,7 +540,7 @@ export function BookingFlowSteps({
             disabled={step === 0}
             className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-foreground/40 disabled:opacity-40 disabled:cursor-not-allowed" data-bk-node="booking-flow-steps:BookingFlowSteps.button.0:ebf6cf71"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4" data-bk-node="booking-flow-steps:BookingFlowSteps.ArrowLeft.icon.0:d258363e" data-bk-icon-node="booking-flow-steps:BookingFlowSteps.ArrowLeft.icon.0:d258363e" data-bk-style-node="booking-flow-steps:BookingFlowSteps.ArrowLeft.icon.0:d258363e:style" data-bk-icon-name="arrow-left" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-left\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             Terug
           </button>
 
@@ -555,7 +555,7 @@ export function BookingFlowSteps({
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:shadow-lg disabled:opacity-40" data-bk-node="booking-flow-steps:BookingFlowSteps.button.1:b2a8da6b"
             >
               Volgende
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" data-bk-node="booking-flow-steps:BookingFlowSteps.ArrowRight.icon.0:88a9106a" data-bk-icon-node="booking-flow-steps:BookingFlowSteps.ArrowRight.icon.0:88a9106a" data-bk-style-node="booking-flow-steps:BookingFlowSteps.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </button>
           ) : (
             <MagneticWrap>
@@ -573,7 +573,7 @@ export function BookingFlowSteps({
                 className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:shadow-lg disabled:opacity-40"
               >
                 {state === "submitting" ? "Bezig" : "Bevestig boeking"}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" data-bk-node="booking-flow-steps:BookingFlowSteps.ArrowRight.icon.1:88a9106a" data-bk-icon-node="booking-flow-steps:BookingFlowSteps.ArrowRight.icon.1:88a9106a" data-bk-style-node="booking-flow-steps:BookingFlowSteps.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </button>
             </MagneticWrap>
           )}

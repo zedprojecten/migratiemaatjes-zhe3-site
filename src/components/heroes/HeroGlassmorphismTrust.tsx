@@ -78,7 +78,7 @@ export default function HeroGlassmorphismTrust() {
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-md transition-colors hover:bg-white/10">
                 <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-300 flex items-center gap-2" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.span.0:fd7983a5">
                   Award-Winning Design
-                  <StarIcon className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
+                  <StarIcon className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.StarIcon.icon.0:525eca1d" data-bk-icon-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.StarIcon.icon.0:525eca1d" data-bk-style-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.StarIcon.icon.0:525eca1d:style" data-bk-icon-name="star" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"star\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </span>
               </div>
             </div>
@@ -108,11 +108,11 @@ export default function HeroGlassmorphismTrust() {
             <div className="animate-fade-in delay-400 flex flex-col sm:flex-row gap-4">
               <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-zinc-950 transition-all hover:scale-[1.02] hover:bg-zinc-200 active:scale-[0.98]" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.button.0:f4c1cbbb">
                 View Portfolio
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.ArrowRight.icon.0:88a9106a" data-bk-icon-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.ArrowRight.icon.0:88a9106a" data-bk-style-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </button>
               
               <button className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.button.1:ae249972">
-                <PlayIcon className="w-4 h-4 fill-current" />
+                <PlayIcon className="w-4 h-4 fill-current" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.PlayIcon.icon.0:aba4cc9b" data-bk-icon-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.PlayIcon.icon.0:aba4cc9b" data-bk-style-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.PlayIcon.icon.0:aba4cc9b:style" data-bk-icon-name="play" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"play\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 Watch Showreel
               </button>
             </div>
@@ -129,7 +129,7 @@ export default function HeroGlassmorphismTrust() {
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
-                    <Target className="h-6 w-6 text-white" />
+                    <Target className="h-6 w-6 text-white" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.Target.icon.0:34a04005" data-bk-icon-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.Target.icon.0:34a04005" data-bk-style-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.Target.icon.0:34a04005:style" data-bk-icon-name="target" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"target\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </div>
                   <div>
                     <div className="text-3xl font-bold tracking-tight text-white" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.div.0:0ca4e093">150+</div>
@@ -169,7 +169,7 @@ export default function HeroGlassmorphismTrust() {
                     ACTIVE
                   </div>
                   <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.div.3:0afea7d7">
-                    <Crown className="w-3 h-3 text-yellow-500" />
+                    <Crown className="w-3 h-3 text-yellow-500" data-bk-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.Crown.icon.0:0dcfafab" data-bk-icon-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.Crown.icon.0:0dcfafab" data-bk-style-node="hero-glassmorphism-trust:HeroGlassmorphismTrust.Crown.icon.0:0dcfafab:style" data-bk-icon-name="crown" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"crown\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                     PREMIUM
                   </div>
                 </div>

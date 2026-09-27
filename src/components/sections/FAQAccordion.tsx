@@ -34,7 +34,7 @@ export function FAQAccordion({ items, className, withPadding = true }: FAQAccord
           <Accordion.Header>
             <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-4 text-left text-base font-semibold transition hover:text-primary">
               <span data-bk-node={item._bk?.question}>{item.question}</span>
-              <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
+              <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" data-bk-node="faqaccordion:FAQAccordion.ChevronDown.icon.0:307f680f" data-bk-icon-node="faqaccordion:FAQAccordion.ChevronDown.icon.0:307f680f" data-bk-style-node="faqaccordion:FAQAccordion.ChevronDown.icon.0:307f680f:style" data-bk-icon-name="chevron-down" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-down\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </Accordion.Trigger>
           </Accordion.Header>
           <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">

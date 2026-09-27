@@ -86,7 +86,7 @@ function Hero() {
               className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.6)] transition hover:brightness-110" data-bk-node="home:Home.a.0:edf49fc0"
             >
               Naar de app
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="home:Home.ArrowRight.icon.0:88a9106a" data-bk-icon-node="home:Home.ArrowRight.icon.0:88a9106a" data-bk-style-node="home:Home.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </a>
             <a
               href="#stappen"
@@ -168,7 +168,7 @@ function ProblemSection() {
           >
             <div className="relative z-10 flex h-full flex-col">
               <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                <Wrench className="h-5 w-5" />
+                <Wrench className="h-5 w-5" data-bk-node="home:Home.Wrench.icon.0:702b023f" data-bk-icon-node="home:Home.Wrench.icon.0:702b023f" data-bk-style-node="home:Home.Wrench.icon.0:702b023f:style" data-bk-icon-name="wrench" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"wrench\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.0:6ec19c5f">
                 Custom dev = duur en traag
@@ -185,7 +185,7 @@ function ProblemSection() {
           >
             <div className="relative z-10 flex h-full flex-col">
               <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                <Lock className="h-5 w-5" />
+                <Lock className="h-5 w-5" data-bk-node="home:Home.Lock.icon.0:0c030586" data-bk-icon-node="home:Home.Lock.icon.0:0c030586" data-bk-style-node="home:Home.Lock.icon.0:0c030586:style" data-bk-icon-name="lock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"lock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.1:3c9c436c">
                 ETL-tools = lock-in
@@ -202,7 +202,7 @@ function ProblemSection() {
           >
             <div className="relative z-10 flex h-full flex-col">
               <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                <Database className="h-5 w-5" />
+                <Database className="h-5 w-5" data-bk-node="home:Home.Database.icon.0:3549b002" data-bk-icon-node="home:Home.Database.icon.0:3549b002" data-bk-style-node="home:Home.Database.icon.0:3549b002:style" data-bk-icon-name="database" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"database\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <h3 className="text-lg font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.2:a6c71ffb">
                 Excel = breekt op edge cases
@@ -341,7 +341,7 @@ function StepsSection() {
                     01
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
-                    <FileSearch className="h-5 w-5" />
+                    <FileSearch className="h-5 w-5" data-bk-node="home:Home.FileSearch.icon.0:73fe7b32" data-bk-icon-node="home:Home.FileSearch.icon.0:73fe7b32" data-bk-style-node="home:Home.FileSearch.icon.0:73fe7b32:style" data-bk-icon-name="file-search" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"file-search\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </span>
                 </div>
                 <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.3:d5ed06e4">
@@ -374,7 +374,7 @@ function StepsSection() {
                     02
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
-                    <Upload className="h-5 w-5" />
+                    <Upload className="h-5 w-5" data-bk-node="home:Home.Upload.icon.0:ff4085ad" data-bk-icon-node="home:Home.Upload.icon.0:ff4085ad" data-bk-style-node="home:Home.Upload.icon.0:ff4085ad:style" data-bk-icon-name="upload" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"upload\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </span>
                 </div>
                 <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.4:63e26fdc">
@@ -407,7 +407,7 @@ function StepsSection() {
                     03
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
-                    <PencilLine className="h-5 w-5" />
+                    <PencilLine className="h-5 w-5" data-bk-node="home:Home.PencilLine.icon.0:10397f86" data-bk-icon-node="home:Home.PencilLine.icon.0:10397f86" data-bk-style-node="home:Home.PencilLine.icon.0:10397f86:style" data-bk-icon-name="pencil-line" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"pencil-line\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </span>
                 </div>
                 <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.5:b1772d03">
@@ -440,7 +440,7 @@ function StepsSection() {
                     04
                   </span>
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-foreground/85">
-                    <Wand2 className="h-5 w-5" />
+                    <Wand2 className="h-5 w-5" data-bk-node="home:Home.Wand2.icon.0:8b0237b8" data-bk-icon-node="home:Home.Wand2.icon.0:8b0237b8" data-bk-style-node="home:Home.Wand2.icon.0:8b0237b8:style" data-bk-icon-name="wand2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"wand2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </span>
                 </div>
                 <h3 className="mt-4 text-base font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.6:c10d53d6">
@@ -458,7 +458,7 @@ function StepsSection() {
           <div className="grid gap-10 lg:grid-cols-12 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-24">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary">
-                <Wand2 className="h-5 w-5" />
+                <Wand2 className="h-5 w-5" data-bk-node="home:Home.Wand2.icon.1:8b0237b8" data-bk-icon-node="home:Home.Wand2.icon.1:8b0237b8" data-bk-style-node="home:Home.Wand2.icon.1:8b0237b8:style" data-bk-icon-name="wand2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"wand2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <h3 className="mt-5 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.0:20466bcb">
                 En dan, de agent doet zijn werk
@@ -522,7 +522,7 @@ function DeliverablesSection() {
             <div className="relative z-10 flex h-full flex-col">
               <div className="flex items-center gap-3 mb-5">
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                  <Code2 className="h-5 w-5" />
+                  <Code2 className="h-5 w-5" data-bk-node="home:Home.Code2.icon.0:ebcf038f" data-bk-icon-node="home:Home.Code2.icon.0:ebcf038f" data-bk-style-node="home:Home.Code2.icon.0:ebcf038f:style" data-bk-icon-name="code2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"code2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </div>
                 <code className="font-mono text-sm text-foreground/85">
                   script.py
@@ -544,7 +544,7 @@ function DeliverablesSection() {
             <div className="relative z-10 flex h-full flex-col">
               <div className="flex items-center gap-3 mb-5">
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                  <FileText className="h-5 w-5" />
+                  <FileText className="h-5 w-5" data-bk-node="home:Home.FileText.icon.0:8d01191e" data-bk-icon-node="home:Home.FileText.icon.0:8d01191e" data-bk-style-node="home:Home.FileText.icon.0:8d01191e:style" data-bk-icon-name="file-text" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"file-text\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </div>
                 <code className="font-mono text-sm text-foreground/85">
                   handleiding.docx
@@ -566,7 +566,7 @@ function DeliverablesSection() {
             <div className="relative z-10 flex h-full flex-col">
               <div className="flex items-center gap-3 mb-5">
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-foreground/85">
-                  <FileSpreadsheet className="h-5 w-5" />
+                  <FileSpreadsheet className="h-5 w-5" data-bk-node="home:Home.FileSpreadsheet.icon.0:9a4770f7" data-bk-icon-node="home:Home.FileSpreadsheet.icon.0:9a4770f7" data-bk-style-node="home:Home.FileSpreadsheet.icon.0:9a4770f7:style" data-bk-icon-name="file-spreadsheet" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"file-spreadsheet\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </div>
                 <code className="font-mono text-sm text-foreground/85">
                   sample_output.xlsx
@@ -600,7 +600,7 @@ function PrivacySection() {
         <div className="rounded-2xl border border-primary/25 bg-gradient-to-b from-primary/[0.07] to-transparent p-8 md:p-12">
           <div className="max-w-3xl">
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary">
-              <Shield className="h-5 w-5" />
+              <Shield className="h-5 w-5" data-bk-node="home:Home.Shield.icon.0:072a626e" data-bk-icon-node="home:Home.Shield.icon.0:072a626e" data-bk-style-node="home:Home.Shield.icon.0:072a626e:style" data-bk-icon-name="shield" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"shield\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </div>
             <h2 className="mt-5 font-display text-3xl md:text-5xl font-semibold tracking-tight" data-bk-node="home:Home.h2.4:5591e233">
               Privacy is een feature, geen kleine letters
@@ -616,7 +616,7 @@ function PrivacySection() {
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
               <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
-                <Upload className="h-5 w-5" />
+                <Upload className="h-5 w-5" data-bk-node="home:Home.Upload.icon.1:ff4085ad" data-bk-icon-node="home:Home.Upload.icon.1:ff4085ad" data-bk-style-node="home:Home.Upload.icon.1:ff4085ad:style" data-bk-icon-name="upload" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"upload\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.11:744fe2c2">
@@ -629,7 +629,7 @@ function PrivacySection() {
             </div>
             <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
               <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
-                <Lock className="h-5 w-5" />
+                <Lock className="h-5 w-5" data-bk-node="home:Home.Lock.icon.1:0c030586" data-bk-icon-node="home:Home.Lock.icon.1:0c030586" data-bk-style-node="home:Home.Lock.icon.1:0c030586:style" data-bk-icon-name="lock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"lock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.12:3190349e">
@@ -642,7 +642,7 @@ function PrivacySection() {
             </div>
             <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
               <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
-                <Clock className="h-5 w-5" />
+                <Clock className="h-5 w-5" data-bk-node="home:Home.Clock.icon.0:d8198efa" data-bk-icon-node="home:Home.Clock.icon.0:d8198efa" data-bk-style-node="home:Home.Clock.icon.0:d8198efa:style" data-bk-icon-name="clock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"clock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.13:57bbae49">
@@ -655,7 +655,7 @@ function PrivacySection() {
             </div>
             <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
               <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
-                <Shield className="h-5 w-5" />
+                <Shield className="h-5 w-5" data-bk-node="home:Home.Shield.icon.1:072a626e" data-bk-icon-node="home:Home.Shield.icon.1:072a626e" data-bk-style-node="home:Home.Shield.icon.1:072a626e:style" data-bk-icon-name="shield" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"shield\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.14:eb626f73">
@@ -668,7 +668,7 @@ function PrivacySection() {
             </div>
             <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
               <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
-                <Building2 className="h-5 w-5" />
+                <Building2 className="h-5 w-5" data-bk-node="home:Home.Building2.icon.0:9ffe769c" data-bk-icon-node="home:Home.Building2.icon.0:9ffe769c" data-bk-style-node="home:Home.Building2.icon.0:9ffe769c:style" data-bk-icon-name="building2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"building2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.15:8aede61b">
@@ -681,7 +681,7 @@ function PrivacySection() {
             </div>
             <div className="flex items-start gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5">
               <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-primary">
-                <Wand2 className="h-5 w-5" />
+                <Wand2 className="h-5 w-5" data-bk-node="home:Home.Wand2.icon.2:8b0237b8" data-bk-icon-node="home:Home.Wand2.icon.2:8b0237b8" data-bk-style-node="home:Home.Wand2.icon.2:8b0237b8:style" data-bk-icon-name="wand2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"wand2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold tracking-tight text-foreground" data-bk-node="home:Home.h3.16:4e7750c9">
@@ -790,7 +790,7 @@ function FaqItem({ q, a, defaultOpen = false, _bk }: { q: string; a: string; def
       >
         <span className="text-base font-medium text-foreground" data-bk-node={_bk?.q}>{q}</span>
         <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-foreground/85">
-          {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
+          {open ? <Minus className="h-4 w-4" data-bk-node="home:Home.Minus.icon.0:129fa771" data-bk-icon-node="home:Home.Minus.icon.0:129fa771" data-bk-style-node="home:Home.Minus.icon.0:129fa771:style" data-bk-icon-name="minus" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"minus\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} /> : <Plus className="h-4 w-4" data-bk-node="home:Home.Plus.icon.0:383ef369" data-bk-icon-node="home:Home.Plus.icon.0:383ef369" data-bk-style-node="home:Home.Plus.icon.0:383ef369:style" data-bk-icon-name="plus" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"plus\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />}
         </span>
       </button>
       {open && (
@@ -883,7 +883,7 @@ function FinalCTA() {
                   className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.6)] transition hover:brightness-110" data-bk-node="home:Home.a.2:edf49fc0"
                 >
                   Naar de app
-                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" data-bk-node="home:Home.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="home:Home.ArrowUpRight.icon.0:bc598874" data-bk-style-node="home:Home.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </a>
                 <span className="font-mono text-xs text-muted-foreground/85" data-bk-node="home:Home.span.10:4f7ead8f">
                   geen creditcard · klant op uitnodiging · login via magic link
@@ -904,15 +904,15 @@ function FinalCTA() {
 export default function Home() {
   return (
     <div className="bg-background text-foreground">
-      {bkSectionVisible("home:Hero.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:Hero.section.0"><Hero /></div>)}
-      {bkSectionVisible("home:ProblemSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:ProblemSection.section.0"><ProblemSection /></div>)}
-      {bkSectionVisible("home:SolutionSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:SolutionSection.section.0"><SolutionSection /></div>)}
-      {bkSectionVisible("home:StepsSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:StepsSection.section.0"><StepsSection /></div>)}
-      {bkSectionVisible("home:DeliverablesSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:DeliverablesSection.section.0"><DeliverablesSection /></div>)}
-      {bkSectionVisible("home:PrivacySection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:PrivacySection.section.0"><PrivacySection /></div>)}
-      {bkSectionVisible("home:AudienceSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:AudienceSection.section.0"><AudienceSection /></div>)}
-      {bkSectionVisible("home:FAQSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:FAQSection.section.0"><FAQSection /></div>)}
-      {bkSectionVisible("home:FinalCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:FinalCTA.section.0"><FinalCTA /></div>)}
+      {bkSectionVisible("home:Hero.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:Hero.section.0" data-bk-section-translation-key="home:section:0"><Hero /></div>)}
+      {bkSectionVisible("home:ProblemSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:ProblemSection.section.0" data-bk-section-translation-key="home:section:1"><ProblemSection /></div>)}
+      {bkSectionVisible("home:SolutionSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:SolutionSection.section.0" data-bk-section-translation-key="home:section:2"><SolutionSection /></div>)}
+      {bkSectionVisible("home:StepsSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:StepsSection.section.0" data-bk-section-translation-key="home:section:3"><StepsSection /></div>)}
+      {bkSectionVisible("home:DeliverablesSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:DeliverablesSection.section.0" data-bk-section-translation-key="home:section:4"><DeliverablesSection /></div>)}
+      {bkSectionVisible("home:PrivacySection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:PrivacySection.section.0" data-bk-section-translation-key="home:section:5"><PrivacySection /></div>)}
+      {bkSectionVisible("home:AudienceSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:AudienceSection.section.0" data-bk-section-translation-key="home:section:6"><AudienceSection /></div>)}
+      {bkSectionVisible("home:FAQSection.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:FAQSection.section.0" data-bk-section-translation-key="home:section:7"><FAQSection /></div>)}
+      {bkSectionVisible("home:FinalCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="home:FinalCTA.section.0" data-bk-section-translation-key="home:section:8"><FinalCTA /></div>)}
     </div>
   );
 }

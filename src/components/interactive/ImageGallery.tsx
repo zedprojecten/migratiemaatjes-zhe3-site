@@ -55,14 +55,14 @@ export default function ImageGallery({ images, className }: ImageGalleryProps) {
         className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100 hover:bg-black/60"
         aria-label="Vorige"
       >
-        <ChevronLeft className="h-5 w-5" />
+        <ChevronLeft className="h-5 w-5" data-bk-node="image-gallery:ImageGallery.ChevronLeft.icon.0:bacfb6ed" data-bk-icon-node="image-gallery:ImageGallery.ChevronLeft.icon.0:bacfb6ed" data-bk-style-node="image-gallery:ImageGallery.ChevronLeft.icon.0:bacfb6ed:style" data-bk-icon-name="chevron-left" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-left\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
       </button>
       <button
         onClick={scrollNext}
         className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100 hover:bg-black/60"
         aria-label="Volgende"
       >
-        <ChevronRight className="h-5 w-5" />
+        <ChevronRight className="h-5 w-5" data-bk-node="image-gallery:ImageGallery.ChevronRight.icon.0:1cddde04" data-bk-icon-node="image-gallery:ImageGallery.ChevronRight.icon.0:1cddde04" data-bk-style-node="image-gallery:ImageGallery.ChevronRight.icon.0:1cddde04:style" data-bk-icon-name="chevron-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
       </button>
 
       <div className="mt-3 flex justify-center gap-1.5">

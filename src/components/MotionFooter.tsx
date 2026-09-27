@@ -1,3 +1,4 @@
+import { bkNode } from "@/lib/bk-node";
 /**
  * Bron: 21st.dev community registry
  * Author: easemize (https://21st.dev/community/easemize)
@@ -349,15 +350,12 @@ export function MotionFooter() {
 
               {/* Secondary Text Links */}
               <div className="flex flex-wrap justify-center gap-3 md:gap-6 w-full mt-2">
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
-                  Privacy Policy
-                </MagneticButton>
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
-                  Terms of Service
-                </MagneticButton>
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
-                  Support
-                </MagneticButton>
+                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground" data-bk-node="motion-footer:MotionFooter.magneticbutton.0:506ff394">
+                  {bkNode("motion-footer:MotionFooter.magneticbutton.0:506ff394", "Privacy Policy")}</MagneticButton>
+                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground" data-bk-node="motion-footer:MotionFooter.magneticbutton.1:4afa55bf">
+                  {bkNode("motion-footer:MotionFooter.magneticbutton.1:4afa55bf", "Terms of Service")}</MagneticButton>
+                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground" data-bk-node="motion-footer:MotionFooter.magneticbutton.2:be91940b">
+                  {bkNode("motion-footer:MotionFooter.magneticbutton.2:be91940b", "Support")}</MagneticButton>
               </div>
             </div>
           </div>

@@ -219,7 +219,7 @@ function PlanCard({
                   "shrink-0 mt-1 text-foreground/70",
                   large ? "h-4 w-4" : "h-3.5 w-3.5",
                 )}
-                aria-hidden="true"
+                aria-hidden="true" data-bk-node="pricing-table-editorial:PricingTableEditorial.CheckIcon.icon.0:20f65c28" data-bk-icon-node="pricing-table-editorial:PricingTableEditorial.CheckIcon.icon.0:20f65c28" data-bk-style-node="pricing-table-editorial:PricingTableEditorial.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
               />
               <span className="text-foreground/85 leading-relaxed">
                 {feature.label}
@@ -238,7 +238,7 @@ function PlanCard({
         )}
       >
         <span>{plan.ctaLabel ?? "Kies " + plan.name}</span>
-        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" data-bk-node="pricing-table-editorial:PricingTableEditorial.ArrowRight.icon.0:88a9106a" data-bk-icon-node="pricing-table-editorial:PricingTableEditorial.ArrowRight.icon.0:88a9106a" data-bk-style-node="pricing-table-editorial:PricingTableEditorial.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
       </a>
     </motion.div>
   );

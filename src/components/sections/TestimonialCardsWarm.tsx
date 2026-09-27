@@ -136,7 +136,7 @@ export function TestimonialCardsWarm({
             <HeartIcon
               className="h-3 w-3 text-amber-700"
               fill="currentColor"
-              strokeWidth={1.5}
+              strokeWidth={1.5} data-bk-node="testimonial-cards-warm:TestimonialCardsWarm.HeartIcon.icon.0:3cb968a9" data-bk-icon-node="testimonial-cards-warm:TestimonialCardsWarm.HeartIcon.icon.0:3cb968a9" data-bk-style-node="testimonial-cards-warm:TestimonialCardsWarm.HeartIcon.icon.0:3cb968a9:style" data-bk-icon-name="heart" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"heart\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":1.5}}"}
             />
             Klantverhalen
           </span>
@@ -189,7 +189,7 @@ export function TestimonialCardsWarm({
                 <HeartIcon
                   className="mt-2 h-4 w-4 text-amber-700/60"
                   fill="currentColor"
-                  strokeWidth={1.25}
+                  strokeWidth={1.25} data-bk-node="testimonial-cards-warm:TestimonialCardsWarm.HeartIcon.icon.1:3cb968a9" data-bk-icon-node="testimonial-cards-warm:TestimonialCardsWarm.HeartIcon.icon.1:3cb968a9" data-bk-style-node="testimonial-cards-warm:TestimonialCardsWarm.HeartIcon.icon.1:3cb968a9:style" data-bk-icon-name="heart" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"heart\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":1.25}}"}
                 />
               </div>
 

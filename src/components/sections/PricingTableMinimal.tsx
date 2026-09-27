@@ -255,7 +255,7 @@ export function PricingTableMinimal({
                         >
                           <CheckIcon
                             className="h-4 w-4 text-green-600 shrink-0 mt-0.5"
-                            aria-hidden="true"
+                            aria-hidden="true" data-bk-node="pricing-table-minimal:PricingTableMinimal.CheckIcon.icon.0:20f65c28" data-bk-icon-node="pricing-table-minimal:PricingTableMinimal.CheckIcon.icon.0:20f65c28" data-bk-style-node="pricing-table-minimal:PricingTableMinimal.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                           />
                           <span className="text-foreground/90 leading-relaxed">
                             {feature.label}

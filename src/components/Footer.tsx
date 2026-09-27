@@ -29,7 +29,7 @@ export default function Footer() {
               href="mailto:hello@mvdmanagement.nl"
               className="mt-5 inline-flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors" data-bk-node="footer:Footer.a.0:c9436f96" data-bk-href="footer:Footer.a.0@href:bf1ccdc0"
             >
-              <Mail className="h-4 w-4" />
+              <Mail className="h-4 w-4" data-bk-node="footer:Footer.Mail.icon.0:00d8d3f1" data-bk-icon-node="footer:Footer.Mail.icon.0:00d8d3f1" data-bk-style-node="footer:Footer.Mail.icon.0:00d8d3f1:style" data-bk-icon-name="mail" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"mail\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               hello@mvdmanagement.nl
             </a>
           </div>

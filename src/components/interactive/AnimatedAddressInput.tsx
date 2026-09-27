@@ -142,7 +142,7 @@ export default function AnimatedAddressInput({
         }}
       >
         <div className="flex items-center gap-3 px-4 py-3.5">
-          <MapPin className="h-5 w-5 shrink-0 text-muted-foreground" />
+          <MapPin className="h-5 w-5 shrink-0 text-muted-foreground" data-bk-node="animated-address-input:AnimatedAddressInput.MapPin.icon.0:95f6f624" data-bk-icon-node="animated-address-input:AnimatedAddressInput.MapPin.icon.0:95f6f624" data-bk-style-node="animated-address-input:AnimatedAddressInput.MapPin.icon.0:95f6f624:style" data-bk-icon-name="map-pin" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"map-pin\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           <div className="flex-1 relative">
             {showTyper && (
               <span className="absolute inset-0 flex items-center text-muted-foreground pointer-events-none">
@@ -165,7 +165,7 @@ export default function AnimatedAddressInput({
           </div>
           {confirmed ? (
             <span className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-green-500/15 text-green-600" data-bk-node="animated-address-input:AnimatedAddressInput.span.0:709a23b1">
-              <CheckIcon className="h-3.5 w-3.5" /> Geverifieerd
+              <CheckIcon className="h-3.5 w-3.5" data-bk-node="animated-address-input:AnimatedAddressInput.CheckIcon.icon.0:20f65c28" data-bk-icon-node="animated-address-input:AnimatedAddressInput.CheckIcon.icon.0:20f65c28" data-bk-style-node="animated-address-input:AnimatedAddressInput.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} /> Geverifieerd
             </span>
           ) : (
             <button
@@ -178,7 +178,7 @@ export default function AnimatedAddressInput({
               }}
             >
               {ctaLabel}
-              <ArrowRight className="h-3.5 w-3.5" />
+              <ArrowRight className="h-3.5 w-3.5" data-bk-node="animated-address-input:AnimatedAddressInput.ArrowRight.icon.0:88a9106a" data-bk-icon-node="animated-address-input:AnimatedAddressInput.ArrowRight.icon.0:88a9106a" data-bk-style-node="animated-address-input:AnimatedAddressInput.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </button>
           )}
         </div>
@@ -193,7 +193,7 @@ export default function AnimatedAddressInput({
           >
             {loading && (
               <div className="flex items-center gap-2 px-4 py-3 text-sm text-muted-foreground" data-bk-node="animated-address-input:AnimatedAddressInput.div.0:aff64dd9">
-                <Loader2 className="h-4 w-4 animate-spin" />
+                <Loader2 className="h-4 w-4 animate-spin" data-bk-node="animated-address-input:AnimatedAddressInput.Loader2.icon.0:3f27592f" data-bk-icon-node="animated-address-input:AnimatedAddressInput.Loader2.icon.0:3f27592f" data-bk-style-node="animated-address-input:AnimatedAddressInput.Loader2.icon.0:3f27592f:style" data-bk-icon-name="loader2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"loader2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 Adressen zoeken...
               </div>
             )}
@@ -208,7 +208,7 @@ export default function AnimatedAddressInput({
                   className="w-full text-left px-4 py-3 text-sm hover:bg-muted/50 transition flex items-center gap-2 border-b last:border-b-0"
                   style={{ borderColor: "hsl(var(--border))" }}
                 >
-                  <MapPin className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
+                  <MapPin className="h-3.5 w-3.5 text-muted-foreground shrink-0" data-bk-node="animated-address-input:AnimatedAddressInput.MapPin.icon.1:95f6f624" data-bk-icon-node="animated-address-input:AnimatedAddressInput.MapPin.icon.1:95f6f624" data-bk-style-node="animated-address-input:AnimatedAddressInput.MapPin.icon.1:95f6f624:style" data-bk-icon-name="map-pin" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"map-pin\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   <span className="text-foreground">{s}</span>
                 </button>
               ))}

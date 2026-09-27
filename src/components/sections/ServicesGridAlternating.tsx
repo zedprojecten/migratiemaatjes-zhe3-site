@@ -259,7 +259,7 @@ function AlternatingRow({
               <span className="border-b border-foreground/30 pb-0.5 transition-colors duration-300 group-hover/cta:border-foreground">
                 {service.ctaLabel ?? "Lees meer"}
               </span>
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1" data-bk-node="services-grid-alternating:ServicesGridAlternating.ArrowRight.icon.0:88a9106a" data-bk-icon-node="services-grid-alternating:ServicesGridAlternating.ArrowRight.icon.0:88a9106a" data-bk-style-node="services-grid-alternating:ServicesGridAlternating.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </motion.a>
           )}
         </div>

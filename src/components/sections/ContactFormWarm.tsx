@@ -228,7 +228,7 @@ export function ContactFormWarm({
             <HeartIcon
               className="h-3 w-3 text-amber-700"
               fill="currentColor"
-              strokeWidth={1.5}
+              strokeWidth={1.5} data-bk-node="contact-form-warm:ContactFormWarm.HeartIcon.icon.0:3cb968a9" data-bk-icon-node="contact-form-warm:ContactFormWarm.HeartIcon.icon.0:3cb968a9" data-bk-style-node="contact-form-warm:ContactFormWarm.HeartIcon.icon.0:3cb968a9:style" data-bk-icon-name="heart" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"heart\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":1.5}}"}
             />
             Hallo daar
           </span>
@@ -267,7 +267,7 @@ export function ContactFormWarm({
           {state === "success" ? (
             <div className="py-8 text-center">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-700/10 text-amber-800">
-                <HeartIcon className="h-5 w-5" fill="currentColor" />
+                <HeartIcon className="h-5 w-5" fill="currentColor" data-bk-node="contact-form-warm:ContactFormWarm.HeartIcon.icon.1:3cb968a9" data-bk-icon-node="contact-form-warm:ContactFormWarm.HeartIcon.icon.1:3cb968a9" data-bk-style-node="contact-form-warm:ContactFormWarm.HeartIcon.icon.1:3cb968a9:style" data-bk-icon-name="heart" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"heart\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </div>
               <p
                 className="mt-4 text-2xl text-stone-900"
@@ -296,7 +296,7 @@ export function ContactFormWarm({
                       onChange={(e) => setName(e.target.value)}
                       autoComplete="name"
                       className={fieldClass}
-                      placeholder="Jouw voornaam"
+                      placeholder="Jouw voornaam" data-bk-placeholder="contact-form-warm:ContactFormWarm.input.0@placeholder:a720bd85"
                     />
                   ),
                 },
@@ -314,7 +314,7 @@ export function ContactFormWarm({
                       onChange={(e) => setEmail(e.target.value)}
                       autoComplete="email"
                       className={fieldClass}
-                      placeholder="jij@bedrijf.nl"
+                      placeholder="jij@bedrijf.nl" data-bk-placeholder="contact-form-warm:ContactFormWarm.input.1@placeholder:129a39fa"
                     />
                   ),
                 },
@@ -330,7 +330,7 @@ export function ContactFormWarm({
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Geen formele toon nodig, schrijf gewoon zoals je bent."
-                      className={cn(fieldClass, "resize-none")}
+                      className={cn(fieldClass, "resize-none")} data-bk-placeholder="contact-form-warm:ContactFormWarm.textarea.0@placeholder:65dde798"
                     />
                   ),
                 },

@@ -197,7 +197,7 @@ export function ProductGridFilterable({
           className="mb-8 flex flex-wrap items-center gap-2"
         >
           <span className="mr-1 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground" data-bk-node="product-grid-filterable:ProductGridFilterable.span.0:638e249f">
-            <SlidersHorizontal className="h-3.5 w-3.5" />
+            <SlidersHorizontal className="h-3.5 w-3.5" data-bk-node="product-grid-filterable:ProductGridFilterable.SlidersHorizontal.icon.0:e6f2b01a" data-bk-icon-node="product-grid-filterable:ProductGridFilterable.SlidersHorizontal.icon.0:e6f2b01a" data-bk-style-node="product-grid-filterable:ProductGridFilterable.SlidersHorizontal.icon.0:e6f2b01a:style" data-bk-icon-name="sliders-horizontal" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"sliders-horizontal\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             Filter
           </span>
           {tabs.map((tab) => {
@@ -276,7 +276,7 @@ export function ProductGridFilterable({
                   {product.href && (
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary transition-transform duration-300 group-hover:translate-x-0.5">
                       {product.ctaLabel ?? "Bestellen"}
-                      <ArrowRight className="h-3.5 w-3.5" />
+                      <ArrowRight className="h-3.5 w-3.5" data-bk-node="product-grid-filterable:ProductGridFilterable.ArrowRight.icon.0:88a9106a" data-bk-icon-node="product-grid-filterable:ProductGridFilterable.ArrowRight.icon.0:88a9106a" data-bk-style-node="product-grid-filterable:ProductGridFilterable.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                     </span>
                   )}
                 </>

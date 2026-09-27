@@ -197,7 +197,7 @@ export function StoryIntroSplit({
                 className="group mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground"
               >
                 {ctaLabel}
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" data-bk-node="story-intro-split:StoryIntroSplit.ArrowRight.icon.0:88a9106a" data-bk-icon-node="story-intro-split:StoryIntroSplit.ArrowRight.icon.0:88a9106a" data-bk-style-node="story-intro-split:StoryIntroSplit.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </motion.a>
             )}
           </div>

@@ -63,7 +63,7 @@ const stepsItems = [
     title: bkNode("hoe-het-werkt:StepsVisualCinematic.d041e5.title", "Intake"),
     description:
       bkNode("hoe-het-werkt:StepsVisualCinematic.d041e5.description", "Sample plus doel-platform via het formulier. Binnen 24 uur op werkdagen het pakket en de planning bevestigd."),
-    icon: <ClipboardList className="h-6 w-6" />,
+    icon: <ClipboardList className="h-6 w-6" data-bk-node="hoe-het-werkt:HoeHetWerkt.ClipboardList.icon.0:d6b5e8fd" data-bk-icon-node="hoe-het-werkt:HoeHetWerkt.ClipboardList.icon.0:d6b5e8fd" data-bk-style-node="hoe-het-werkt:HoeHetWerkt.ClipboardList.icon.0:d6b5e8fd:style" data-bk-icon-name="clipboard-list" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"clipboard-list\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />,
       _bk: { title: "hoe-het-werkt:StepsVisualCinematic.d041e5.title", description: "hoe-het-werkt:StepsVisualCinematic.d041e5.description" },
       _bk_id: "d041e5"
 },
@@ -71,7 +71,7 @@ const stepsItems = [
     title: bkNode("hoe-het-werkt:StepsVisualCinematic.ed3805.title", "Mapping"),
     description:
       bkNode("hoe-het-werkt:StepsVisualCinematic.ed3805.description", "We analyseren het bron-schema en schrijven een custom mapping-script. Geen black-box; je krijgt het schema-document mee."),
-    icon: <GitBranch className="h-6 w-6" />,
+    icon: <GitBranch className="h-6 w-6" data-bk-node="hoe-het-werkt:HoeHetWerkt.GitBranch.icon.0:32902bf8" data-bk-icon-node="hoe-het-werkt:HoeHetWerkt.GitBranch.icon.0:32902bf8" data-bk-style-node="hoe-het-werkt:HoeHetWerkt.GitBranch.icon.0:32902bf8:style" data-bk-icon-name="git-branch" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"git-branch\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />,
       _bk: { title: "hoe-het-werkt:StepsVisualCinematic.ed3805.title", description: "hoe-het-werkt:StepsVisualCinematic.ed3805.description" },
       _bk_id: "ed3805"
 },
@@ -79,7 +79,7 @@ const stepsItems = [
     title: bkNode("hoe-het-werkt:StepsVisualCinematic.d483d6.title", "Dry-run"),
     description:
       bkNode("hoe-het-werkt:StepsVisualCinematic.d483d6.description", "Subset-run met diff-style preview. Jij valideert per veld; pas na akkoord draait de hoofdrun."),
-    icon: <FlaskConical className="h-6 w-6" />,
+    icon: <FlaskConical className="h-6 w-6" data-bk-node="hoe-het-werkt:HoeHetWerkt.FlaskConical.icon.0:94841b75" data-bk-icon-node="hoe-het-werkt:HoeHetWerkt.FlaskConical.icon.0:94841b75" data-bk-style-node="hoe-het-werkt:HoeHetWerkt.FlaskConical.icon.0:94841b75:style" data-bk-icon-name="flask-conical" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"flask-conical\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />,
       _bk: { title: "hoe-het-werkt:StepsVisualCinematic.d483d6.title", description: "hoe-het-werkt:StepsVisualCinematic.d483d6.description" },
       _bk_id: "d483d6"
 },
@@ -87,7 +87,7 @@ const stepsItems = [
     title: bkNode("hoe-het-werkt:StepsVisualCinematic.d45f4e.title", "Handover"),
     description:
       bkNode("hoe-het-werkt:StepsVisualCinematic.d45f4e.description", "Volledige conversie plus het herbruikbare mappingscript en schema-document. Het script is van jou."),
-    icon: <PackageCheck className="h-6 w-6" />,
+    icon: <PackageCheck className="h-6 w-6" data-bk-node="hoe-het-werkt:HoeHetWerkt.PackageCheck.icon.0:e3b0bd2c" data-bk-icon-node="hoe-het-werkt:HoeHetWerkt.PackageCheck.icon.0:e3b0bd2c" data-bk-style-node="hoe-het-werkt:HoeHetWerkt.PackageCheck.icon.0:e3b0bd2c:style" data-bk-icon-name="package-check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"package-check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />,
       _bk: { title: "hoe-het-werkt:StepsVisualCinematic.d45f4e.title", description: "hoe-het-werkt:StepsVisualCinematic.d45f4e.description" },
       _bk_id: "d45f4e"
 },
@@ -97,7 +97,7 @@ export default function HoeHetWerkt() {
   return (
     <main className="bg-background text-foreground">
       {/* Page hero */}
-      <section className="relative overflow-hidden border-b border-border/60">
+      {bkSectionVisible("hoe-het-werkt:SectionGeenFireAndForgetGeen.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:SectionGeenFireAndForgetGeen.section.0" data-bk-section-translation-key="hoe-het-werkt:section:0"><section className="relative overflow-hidden border-b border-border/60">
         <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28 relative">
           <div className="max-w-3xl">
             <span className="font-mono text-xs uppercase tracking-wider text-primary" data-bk-node="hoe-het-werkt:HoeHetWerkt.span.0:11d7c1b9">
@@ -122,20 +122,20 @@ export default function HoeHetWerkt() {
             </div>
           </div>
         </div>
-      </section>
+      </section></div>)}
 
       {/* Steps overview */}
-      <section className="border-b border-border/60">
+      {bkSectionVisible("hoe-het-werkt:SectionInhoud2.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:SectionInhoud2.section.0" data-bk-section-translation-key="hoe-het-werkt:section:1"><section className="border-b border-border/60">
         <StepsVisualCinematic
           eyebrow={bkNode("hoe-het-werkt:StepsVisualCinematic.eyebrow", "// proces")}
           heading={bkNode("hoe-het-werkt:StepsVisualCinematic.heading", "Vier stappen, geen verrassingen")}
           subheading={bkNode("hoe-het-werkt:StepsVisualCinematic.subheading", "Van intake tot handover. Je weet bij elke stap wat er gebeurt en wat je terugkrijgt.")}
           items={stepsItems} _bk={{ eyebrow: "hoe-het-werkt:StepsVisualCinematic.eyebrow", heading: "hoe-het-werkt:StepsVisualCinematic.heading", subheading: "hoe-het-werkt:StepsVisualCinematic.subheading" }}
         />
-      </section>
+      </section></div>)}
 
       {/* Step 1 — Intake (snippet rechts) */}
-      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.0"><ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.0" data-bk-section-translation-key="hoe-het-werkt:section:2"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28 bg-card/20">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div>
@@ -162,7 +162,7 @@ export default function HoeHetWerkt() {
       </ScrollReveal></div>)}
 
       {/* Step 2 — Mapping bouwen (snippet links) */}
-      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.1") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.1"><ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.1") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.1" data-bk-section-translation-key="hoe-het-werkt:section:3"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div className="lg:order-2">
@@ -192,7 +192,7 @@ export default function HoeHetWerkt() {
       </ScrollReveal></div>)}
 
       {/* Step 3 — Dry-run (snippet rechts) */}
-      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.2") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.2"><ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.2") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.2" data-bk-section-translation-key="hoe-het-werkt:section:4"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28 bg-card/20">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div>
@@ -246,7 +246,7 @@ export default function HoeHetWerkt() {
       </ScrollReveal></div>)}
 
       {/* Step 4 — Handover (snippet links) */}
-      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.3") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.3"><ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.3") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.3" data-bk-section-translation-key="hoe-het-werkt:section:5"><ScrollReveal>
         <section className="border-b border-border/60 py-12 sm:py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div className="lg:order-2">
@@ -277,7 +277,7 @@ export default function HoeHetWerkt() {
       </ScrollReveal></div>)}
 
       {/* USP block — Het mappingscript is van jou */}
-      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.4") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.4"><ScrollReveal>
+      {bkSectionVisible("hoe-het-werkt:ScrollReveal.section.4") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:ScrollReveal.section.4" data-bk-section-translation-key="hoe-het-werkt:section:6"><ScrollReveal>
         <section className="py-12 sm:py-20 md:py-28 border-b border-border/60 relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 relative">
             <div className="rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/5 to-transparent p-8 sm:p-10 md:p-14 max-w-4xl mx-auto">
@@ -313,7 +313,7 @@ export default function HoeHetWerkt() {
       </ScrollReveal></div>)}
 
       {/* Final CTA */}
-      {bkSectionVisible("hoe-het-werkt:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:CTABanner.section.0"><CTABanner
+      {bkSectionVisible("hoe-het-werkt:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:CTABanner.section.0" data-bk-section-translation-key="hoe-het-werkt:section:7"><CTABanner
         heading={bkNode("hoe-het-werkt:CTABanner.heading", "Klaar voor je migratie?")}
         subtext={bkNode("hoe-het-werkt:CTABanner.subtext", "Stuur je intake op of bekijk eerst de tarieven.")}
         primaryLabel={bkNode("hoe-het-werkt:CTABanner.primaryLabel", "Stuur je intake op")}
@@ -322,7 +322,7 @@ export default function HoeHetWerkt() {
         secondaryHref="/tarieven" _bk={{ heading: "hoe-het-werkt:CTABanner.heading", subtext: "hoe-het-werkt:CTABanner.subtext", primaryLabel: "hoe-het-werkt:CTABanner.primaryLabel", secondaryLabel: "hoe-het-werkt:CTABanner.secondaryLabel" }}
       /></div>)}
 
-      {bkSectionVisible("hoe-het-werkt:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("hoe-het-werkt:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "hoe-het-werkt:StickyMobileCTA.text" }} /></div>)}
+      {bkSectionVisible("hoe-het-werkt:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="hoe-het-werkt:StickyMobileCTA.section.0" data-bk-section-translation-key="hoe-het-werkt:section:8"><StickyMobileCTA text={bkNode("hoe-het-werkt:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "hoe-het-werkt:StickyMobileCTA.text" }} /></div>)}
     </main>
   );
 }

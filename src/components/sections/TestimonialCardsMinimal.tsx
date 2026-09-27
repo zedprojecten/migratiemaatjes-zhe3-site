@@ -144,7 +144,7 @@ export function TestimonialCardsMinimal({
                     <StarIcon
                       key={j}
                       className="h-4 w-4 fill-primary text-primary"
-                      strokeWidth={1}
+                      strokeWidth={1} data-bk-node="testimonial-cards-minimal:TestimonialCardsMinimal.StarIcon.icon.0:525eca1d" data-bk-icon-node="testimonial-cards-minimal:TestimonialCardsMinimal.StarIcon.icon.0:525eca1d" data-bk-style-node="testimonial-cards-minimal:TestimonialCardsMinimal.StarIcon.icon.0:525eca1d:style" data-bk-icon-name="star" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"star\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":1}}"}
                     />
                   ))}
                 </div>

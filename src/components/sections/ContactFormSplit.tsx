@@ -321,7 +321,7 @@ export function ContactFormSplit({
                 className="flex items-start gap-4"
               >
                 <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Clock className="h-4 w-4" strokeWidth={2} />
+                  <Clock className="h-4 w-4" strokeWidth={2} data-bk-node="contact-form-split:ContactFormSplit.Clock.icon.0:d8198efa" data-bk-icon-node="contact-form-split:ContactFormSplit.Clock.icon.0:d8198efa" data-bk-style-node="contact-form-split:ContactFormSplit.Clock.icon.0:d8198efa:style" data-bk-icon-name="clock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"clock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground" data-bk-node="contact-form-split:ContactFormSplit.p.1:a9b59303">
@@ -480,7 +480,7 @@ export function ContactFormSplit({
                       className={cn(
                         fieldClass,
                         "resize-none placeholder:text-muted-foreground/60",
-                      )}
+                      )} data-bk-placeholder="contact-form-split:ContactFormSplit.textarea.0@placeholder:1cd614e9"
                     />
                   </motion.div>
 
@@ -514,7 +514,7 @@ export function ContactFormSplit({
                         ) : (
                           <>
                             {submitLabel}
-                            <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                            <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" data-bk-node="contact-form-split:ContactFormSplit.Send.icon.0:27ce1d1b" data-bk-icon-node="contact-form-split:ContactFormSplit.Send.icon.0:27ce1d1b" data-bk-style-node="contact-form-split:ContactFormSplit.Send.icon.0:27ce1d1b:style" data-bk-icon-name="send" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"send\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                           </>
                         )}
                       </button>

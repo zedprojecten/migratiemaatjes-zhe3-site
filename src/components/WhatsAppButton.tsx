@@ -29,7 +29,7 @@ export default function WhatsAppButton({
       }}
       className="fixed right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 transition-transform hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366] sm:!bottom-6 md:!bottom-8 md:right-8"
     >
-      <MessageCircle className="h-7 w-7" strokeWidth={2.2} />
+      <MessageCircle className="h-7 w-7" strokeWidth={2.2} data-bk-node="whats-app-button:WhatsAppButton.MessageCircle.icon.0:dd066682" data-bk-icon-node="whats-app-button:WhatsAppButton.MessageCircle.icon.0:dd066682" data-bk-style-node="whats-app-button:WhatsAppButton.MessageCircle.icon.0:dd066682:style" data-bk-icon-name="message-circle" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"message-circle\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2.2}}"} />
       <span className="sr-only">{ariaLabel}</span>
     </a>
   );

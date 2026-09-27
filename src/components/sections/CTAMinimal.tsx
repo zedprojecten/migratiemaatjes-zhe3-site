@@ -144,7 +144,7 @@ export function CTAMinimal({
               className="group inline-flex h-11 items-center justify-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background transition-opacity hover:opacity-90"
             >
               {primaryLabel}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctaminimal:CTAMinimal.ArrowRight.icon.0:88a9106a" data-bk-icon-node="ctaminimal:CTAMinimal.ArrowRight.icon.0:88a9106a" data-bk-style-node="ctaminimal:CTAMinimal.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </a>
           </MagneticButton>
           {secondaryLabel && (
@@ -156,7 +156,7 @@ export function CTAMinimal({
                 {secondaryLabel}
                 <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-foreground/60 transition-transform duration-300 group-hover:scale-x-100" />
               </span>
-              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctaminimal:CTAMinimal.ArrowRight.icon.1:88a9106a" data-bk-icon-node="ctaminimal:CTAMinimal.ArrowRight.icon.1:88a9106a" data-bk-style-node="ctaminimal:CTAMinimal.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </a>
           )}
         </motion.div>

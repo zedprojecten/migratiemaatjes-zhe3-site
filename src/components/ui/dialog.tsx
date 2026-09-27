@@ -48,7 +48,7 @@ const DialogContent = React.forwardRef<
     >
       {children}
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
-        <X className="h-4 w-4" />
+        <X className="h-4 w-4" data-bk-node="dialog:dialog.X.icon.0:2d711642" data-bk-icon-node="dialog:dialog.X.icon.0:2d711642" data-bk-style-node="dialog:dialog.X.icon.0:2d711642:style" data-bk-icon-name="x" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"x\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
         <span className="sr-only" data-bk-node="dialog:dialog.span.0:5a468430">Sluiten</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>

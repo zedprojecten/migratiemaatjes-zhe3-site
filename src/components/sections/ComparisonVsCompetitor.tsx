@@ -152,12 +152,12 @@ export function ComparisonVsCompetitor({
                   {row.us ? (
                     <CheckIcon
                       className="h-5 w-5 text-green-600"
-                      aria-label="Wel bij ons"
+                      aria-label="Wel bij ons" data-bk-node="comparison-vs-competitor:ComparisonVsCompetitor.CheckIcon.icon.0:20f65c28" data-bk-icon-node="comparison-vs-competitor:ComparisonVsCompetitor.CheckIcon.icon.0:20f65c28" data-bk-style-node="comparison-vs-competitor:ComparisonVsCompetitor.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                     />
                   ) : (
                     <X
                       className="h-5 w-5 text-red-500"
-                      aria-label="Niet bij ons"
+                      aria-label="Niet bij ons" data-bk-node="comparison-vs-competitor:ComparisonVsCompetitor.X.icon.0:2d711642" data-bk-icon-node="comparison-vs-competitor:ComparisonVsCompetitor.X.icon.0:2d711642" data-bk-style-node="comparison-vs-competitor:ComparisonVsCompetitor.X.icon.0:2d711642:style" data-bk-icon-name="x" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"x\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                     />
                   )}
                 </div>
@@ -165,12 +165,12 @@ export function ComparisonVsCompetitor({
                   {row.them ? (
                     <CheckIcon
                       className="h-5 w-5 text-green-600"
-                      aria-label="Wel bij andere bureaus"
+                      aria-label="Wel bij andere bureaus" data-bk-node="comparison-vs-competitor:ComparisonVsCompetitor.CheckIcon.icon.1:20f65c28" data-bk-icon-node="comparison-vs-competitor:ComparisonVsCompetitor.CheckIcon.icon.1:20f65c28" data-bk-style-node="comparison-vs-competitor:ComparisonVsCompetitor.CheckIcon.icon.1:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                     />
                   ) : (
                     <X
                       className="h-5 w-5 text-red-500"
-                      aria-label="Niet bij andere bureaus"
+                      aria-label="Niet bij andere bureaus" data-bk-node="comparison-vs-competitor:ComparisonVsCompetitor.X.icon.1:2d711642" data-bk-icon-node="comparison-vs-competitor:ComparisonVsCompetitor.X.icon.1:2d711642" data-bk-style-node="comparison-vs-competitor:ComparisonVsCompetitor.X.icon.1:2d711642:style" data-bk-icon-name="x" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"x\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                     />
                   )}
                 </div>

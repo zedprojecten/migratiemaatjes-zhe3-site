@@ -177,7 +177,7 @@ export function BlogGridCards({
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-transform hover:translate-x-1" data-bk-node="blog-grid-cards:BlogGridCards.a.0:e2e4f468" data-bk-href="blog-grid-cards:BlogGridCards.a.0@href:334359b9"
           >
             Alle artikelen
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4" data-bk-node="blog-grid-cards:BlogGridCards.ArrowRight.icon.0:88a9106a" data-bk-icon-node="blog-grid-cards:BlogGridCards.ArrowRight.icon.0:88a9106a" data-bk-style-node="blog-grid-cards:BlogGridCards.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           </a>
         </motion.div>
 
@@ -210,7 +210,7 @@ export function BlogGridCards({
                     aria-label="Bewaren"
                     className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-background/40 bg-background/85 text-foreground backdrop-blur transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 hover:bg-background"
                   >
-                    <Bookmark className="h-4 w-4" />
+                    <Bookmark className="h-4 w-4" data-bk-node="blog-grid-cards:BlogGridCards.Bookmark.icon.0:ffe7fcd2" data-bk-icon-node="blog-grid-cards:BlogGridCards.Bookmark.icon.0:ffe7fcd2" data-bk-style-node="blog-grid-cards:BlogGridCards.Bookmark.icon.0:ffe7fcd2:style" data-bk-icon-name="bookmark" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"bookmark\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </button>
                 </div>
                 <div className="flex flex-col gap-3 p-6">
@@ -236,7 +236,7 @@ export function BlogGridCards({
                     <span>{post.author ?? "Redactie"}</span>
                     <span className="inline-flex items-center gap-1 font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1" data-bk-node="blog-grid-cards:BlogGridCards.span.1:07dd1353">
                       Lees verder
-                      <ArrowRight className="h-3.5 w-3.5" />
+                      <ArrowRight className="h-3.5 w-3.5" data-bk-node="blog-grid-cards:BlogGridCards.ArrowRight.icon.1:88a9106a" data-bk-icon-node="blog-grid-cards:BlogGridCards.ArrowRight.icon.1:88a9106a" data-bk-style-node="blog-grid-cards:BlogGridCards.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                     </span>
                   </div>
                 </div>

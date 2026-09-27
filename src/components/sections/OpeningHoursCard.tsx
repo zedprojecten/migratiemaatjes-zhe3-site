@@ -180,7 +180,7 @@ export function OpeningHoursCard({
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Clock className="h-4 w-4" strokeWidth={2} />
+                    <Clock className="h-4 w-4" strokeWidth={2} data-bk-node="opening-hours-card:OpeningHoursCard.Clock.icon.0:d8198efa" data-bk-icon-node="opening-hours-card:OpeningHoursCard.Clock.icon.0:d8198efa" data-bk-style-node="opening-hours-card:OpeningHoursCard.Clock.icon.0:d8198efa:style" data-bk-icon-name="clock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"clock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </div>
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.1:a9b59303">
@@ -291,7 +291,7 @@ export function OpeningHoursCard({
                   <div className="flex items-start gap-2">
                     <MapPin
                       className="mt-0.5 h-4 w-4 shrink-0 text-background"
-                      strokeWidth={2}
+                      strokeWidth={2} data-bk-node="opening-hours-card:OpeningHoursCard.MapPin.icon.0:95f6f624" data-bk-icon-node="opening-hours-card:OpeningHoursCard.MapPin.icon.0:95f6f624" data-bk-style-node="opening-hours-card:OpeningHoursCard.MapPin.icon.0:95f6f624:style" data-bk-icon-name="map-pin" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"map-pin\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                     />
                     <div className="text-background">
                       <p className="text-sm font-semibold leading-tight">
@@ -313,7 +313,7 @@ export function OpeningHoursCard({
               href={`tel:${phone.replace(/\s/g, "")}`}
               className="group flex items-center gap-3 px-6 py-4 transition-colors hover:bg-muted/40"
             >
-              <Phone className="h-4 w-4 text-primary" strokeWidth={2} />
+              <Phone className="h-4 w-4 text-primary" strokeWidth={2} data-bk-node="opening-hours-card:OpeningHoursCard.Phone.icon.0:45569da5" data-bk-icon-node="opening-hours-card:OpeningHoursCard.Phone.icon.0:45569da5" data-bk-style-node="opening-hours-card:OpeningHoursCard.Phone.icon.0:45569da5:style" data-bk-icon-name="phone" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"phone\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               <div className="min-w-0">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.3:835424da">
                   Bel ons
@@ -327,7 +327,7 @@ export function OpeningHoursCard({
               href={`mailto:${email}`}
               className="group flex items-center gap-3 px-6 py-4 transition-colors hover:bg-muted/40"
             >
-              <Mail className="h-4 w-4 text-primary" strokeWidth={2} />
+              <Mail className="h-4 w-4 text-primary" strokeWidth={2} data-bk-node="opening-hours-card:OpeningHoursCard.Mail.icon.0:00d8d3f1" data-bk-icon-node="opening-hours-card:OpeningHoursCard.Mail.icon.0:00d8d3f1" data-bk-style-node="opening-hours-card:OpeningHoursCard.Mail.icon.0:00d8d3f1:style" data-bk-icon-name="mail" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"mail\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               <div className="min-w-0">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground" data-bk-node="opening-hours-card:OpeningHoursCard.p.4:a9236ec5">
                   Mail ons

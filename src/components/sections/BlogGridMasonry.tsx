@@ -179,7 +179,7 @@ export function BlogGridMasonry({
                         )}
                         <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-foreground transition-transform duration-300 group-hover:translate-x-1" data-bk-node="blog-grid-masonry:BlogGridMasonry.span.1:07dd1353">
                           Lees verder
-                          <ArrowUpRight className="h-3.5 w-3.5" />
+                          <ArrowUpRight className="h-3.5 w-3.5" data-bk-node="blog-grid-masonry:BlogGridMasonry.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="blog-grid-masonry:BlogGridMasonry.ArrowUpRight.icon.0:bc598874" data-bk-style-node="blog-grid-masonry:BlogGridMasonry.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                         </span>
                       </div>
                     </div>

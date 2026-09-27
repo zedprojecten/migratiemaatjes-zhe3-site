@@ -215,7 +215,7 @@ export function ContactFormGlass({
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/40 px-3 py-1 text-xs font-medium text-foreground backdrop-blur dark:border-white/10 dark:bg-white/5" data-bk-node="contact-form-glass:ContactFormGlass.div.0:9aa984a6"
               >
-                <Sparkles className="h-3 w-3" />
+                <Sparkles className="h-3 w-3" data-bk-node="contact-form-glass:ContactFormGlass.Sparkles.icon.0:dd368cc7" data-bk-icon-node="contact-form-glass:ContactFormGlass.Sparkles.icon.0:dd368cc7" data-bk-style-node="contact-form-glass:ContactFormGlass.Sparkles.icon.0:dd368cc7:style" data-bk-icon-name="sparkles" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"sparkles\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 Direct contact
               </motion.div>
 
@@ -245,7 +245,7 @@ export function ContactFormGlass({
                   className="mt-8 rounded-2xl border border-white/40 bg-white/40 px-6 py-8 text-center backdrop-blur dark:border-white/10 dark:bg-white/5"
                 >
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 text-white shadow-lg shadow-fuchsia-500/30">
-                    <Mail className="h-5 w-5" />
+                    <Mail className="h-5 w-5" data-bk-node="contact-form-glass:ContactFormGlass.Mail.icon.0:00d8d3f1" data-bk-icon-node="contact-form-glass:ContactFormGlass.Mail.icon.0:00d8d3f1" data-bk-style-node="contact-form-glass:ContactFormGlass.Mail.icon.0:00d8d3f1:style" data-bk-icon-name="mail" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"mail\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </div>
                   <p className="mt-4 text-base font-medium text-foreground" data-bk-node="contact-form-glass:ContactFormGlass.p.0:35491bf3">
                     Je bericht is binnen.
@@ -269,7 +269,7 @@ export function ContactFormGlass({
                           onChange={(e) => setName(e.target.value)}
                           placeholder="Naam"
                           autoComplete="name"
-                          className={fieldClass}
+                          className={fieldClass} data-bk-placeholder="contact-form-glass:ContactFormGlass.input.0@placeholder:eca46fca"
                         />
                       ),
                     },
@@ -286,7 +286,7 @@ export function ContactFormGlass({
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="Email"
                           autoComplete="email"
-                          className={fieldClass}
+                          className={fieldClass} data-bk-placeholder="contact-form-glass:ContactFormGlass.input.1@placeholder:969ccbd3"
                         />
                       ),
                     },
@@ -301,7 +301,7 @@ export function ContactFormGlass({
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                           placeholder="Vertel ons over je project"
-                          className={cn(fieldClass, "resize-none")}
+                          className={cn(fieldClass, "resize-none")} data-bk-placeholder="contact-form-glass:ContactFormGlass.textarea.0@placeholder:d46140ba"
                         />
                       ),
                     },
@@ -350,7 +350,7 @@ export function ContactFormGlass({
                           {state === "submitting" ? "Bezig..." : submitLabel}
                         </span>
                         {state !== "submitting" && (
-                          <Send className="relative h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-rotate-12" />
+                          <Send className="relative h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-rotate-12" data-bk-node="contact-form-glass:ContactFormGlass.Send.icon.0:27ce1d1b" data-bk-icon-node="contact-form-glass:ContactFormGlass.Send.icon.0:27ce1d1b" data-bk-style-node="contact-form-glass:ContactFormGlass.Send.icon.0:27ce1d1b:style" data-bk-icon-name="send" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"send\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                         )}
                       </button>
                     </MagneticWrap>

@@ -276,7 +276,7 @@ export default function OrbitalTimeline({
                   <div className="mt-3 border-t border-white/10 pt-3">
                     <div className="mb-1 flex items-center justify-between text-xs text-white/80">
                       <span className="flex items-center gap-1" data-bk-node="orbital-timeline:OrbitalTimeline.span.0:4e3bd99c">
-                        <Zap size={10} />
+                        <Zap size={10} data-bk-node="orbital-timeline:OrbitalTimeline.Zap.icon.0:b4c5ae2a" data-bk-icon-node="orbital-timeline:OrbitalTimeline.Zap.icon.0:b4c5ae2a" data-bk-style-node="orbital-timeline:OrbitalTimeline.Zap.icon.0:b4c5ae2a:style" data-bk-icon-name="zap" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"zap\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"size\":10,\"strokeWidth\":2}}"} />
                         Voortgang
                       </span>
                       <span className="font-mono" data-bk-node="orbital-timeline:OrbitalTimeline.span.1:bbf3f11c">{item.energy}%</span>
@@ -292,7 +292,7 @@ export default function OrbitalTimeline({
                   {item.relatedIds.length > 0 && (
                     <div className="mt-3 border-t border-white/10 pt-3">
                       <div className="mb-2 flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-white/70" data-bk-node="orbital-timeline:OrbitalTimeline.div.0:d92709a1">
-                        <Link2 size={10} />
+                        <Link2 size={10} data-bk-node="orbital-timeline:OrbitalTimeline.Link2.icon.0:4437e55d" data-bk-icon-node="orbital-timeline:OrbitalTimeline.Link2.icon.0:4437e55d" data-bk-style-node="orbital-timeline:OrbitalTimeline.Link2.icon.0:4437e55d:style" data-bk-icon-name="link2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"link2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"size\":10,\"strokeWidth\":2}}"} />
                         Verbonden met
                       </div>
                       <div className="flex flex-wrap gap-1">
@@ -309,7 +309,7 @@ export default function OrbitalTimeline({
                               className="flex items-center gap-1 rounded border border-cyan-300/30 bg-transparent px-2 py-1 text-[10px] text-white/80 hover:bg-cyan-300/10 hover:text-white transition"
                             >
                               {rel.title}
-                              <ArrowRight size={8} className="text-cyan-300/70" />
+                              <ArrowRight size={8} className="text-cyan-300/70" data-bk-node="orbital-timeline:OrbitalTimeline.ArrowRight.icon.0:88a9106a" data-bk-icon-node="orbital-timeline:OrbitalTimeline.ArrowRight.icon.0:88a9106a" data-bk-style-node="orbital-timeline:OrbitalTimeline.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"size\":8,\"strokeWidth\":2}}"} />
                             </button>
                           );
                         })}
