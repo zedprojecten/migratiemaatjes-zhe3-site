@@ -132,7 +132,7 @@ export function IframeWidget({
             className="inline-flex items-center gap-1 text-foreground underline underline-offset-4 transition-colors hover:text-primary hover:no-underline" data-bk-node="iframe-widget:IframeWidget.a.0:0e7e234d"
           >
             Open in nieuw tabblad
-            <ExternalLink className="h-3.5 w-3.5" strokeWidth={2} />
+            <ExternalLink className="h-3.5 w-3.5" strokeWidth={2} data-bk-node="iframe-widget:IframeWidget.ExternalLink.icon.0:e9ebfdc3" data-bk-icon-node="iframe-widget:IframeWidget.ExternalLink.icon.0:e9ebfdc3" data-bk-style-node="iframe-widget:IframeWidget.ExternalLink.icon.0:e9ebfdc3:style" data-bk-icon-name="external-link" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"external-link\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           </a>
         </motion.p>
       </div>

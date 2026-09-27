@@ -144,7 +144,7 @@ export function CTABanner({
           <MagneticButton strength={0.4}>
             <CTAAnchor href={primaryHref} variant="primary">
               <span data-bk-node={_bk?.primaryLabel}>{primaryLabel}</span>
-              <ArrowRight className="-mr-0.5 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="-mr-0.5 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctabanner:CTABanner.ArrowRight.icon.0:88a9106a" data-bk-icon-node="ctabanner:CTABanner.ArrowRight.icon.0:88a9106a" data-bk-style-node="ctabanner:CTABanner.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </CTAAnchor>
           </MagneticButton>
           {secondaryLabel && (
@@ -272,7 +272,7 @@ function CTAAnchor({ href, variant, children }: CTAAnchorProps) {
       className="group inline-flex h-12 items-center justify-center gap-2 rounded-full border border-background/25 bg-transparent px-6 text-sm font-medium text-background/85 backdrop-blur-sm transition-colors hover:border-background/50 hover:text-background"
     >
       {children}
-      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctabanner:CTABanner.ArrowRight.icon.1:88a9106a" data-bk-icon-node="ctabanner:CTABanner.ArrowRight.icon.1:88a9106a" data-bk-style-node="ctabanner:CTABanner.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
     </a>
   );
 }

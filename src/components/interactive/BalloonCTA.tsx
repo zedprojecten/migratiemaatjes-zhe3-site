@@ -60,7 +60,7 @@ export default function BalloonCTA({
       {children ?? (
         <>
           Klik voor festiviteit
-          {size === "lg" && !hideArrow && <ArrowRight className="w-4 h-4" />}
+          {size === "lg" && !hideArrow && <ArrowRight className="w-4 h-4" data-bk-node="balloon-cta:BalloonCTA.ArrowRight.icon.0:88a9106a" data-bk-icon-node="balloon-cta:BalloonCTA.ArrowRight.icon.0:88a9106a" data-bk-style-node="balloon-cta:BalloonCTA.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />}
         </>
       )}
     </button>

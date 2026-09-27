@@ -139,7 +139,7 @@ export function NewsletterCard({
                 aria-hidden
                 className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/15"
               />
-              <Mail className="relative h-5 w-5 text-foreground" />
+              <Mail className="relative h-5 w-5 text-foreground" data-bk-node="newsletter-card:NewsletterCard.Mail.icon.0:00d8d3f1" data-bk-icon-node="newsletter-card:NewsletterCard.Mail.icon.0:00d8d3f1" data-bk-style-node="newsletter-card:NewsletterCard.Mail.icon.0:00d8d3f1:style" data-bk-icon-name="mail" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"mail\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </div>
 
             <h3 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-[1.7rem]">

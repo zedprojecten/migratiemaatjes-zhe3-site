@@ -171,7 +171,7 @@ export function EventListEditorial({
                 transition={{ duration: 0.5, delay: 0.18 }}
                 className="mt-4 inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground"
               >
-                <MapPin className="h-3 w-3" strokeWidth={2} />
+                <MapPin className="h-3 w-3" strokeWidth={2} data-bk-node="event-list-editorial:EventListEditorial.MapPin.icon.0:95f6f624" data-bk-icon-node="event-list-editorial:EventListEditorial.MapPin.icon.0:95f6f624" data-bk-style-node="event-list-editorial:EventListEditorial.MapPin.icon.0:95f6f624:style" data-bk-icon-name="map-pin" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"map-pin\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 {featured.location}
               </motion.p>
             )}
@@ -224,7 +224,7 @@ export function EventListEditorial({
                 {featured.ctaLabel ?? "Lees meer"}
                 <ArrowRight
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  strokeWidth={2}
+                  strokeWidth={2} data-bk-node="event-list-editorial:EventListEditorial.ArrowRight.icon.0:88a9106a" data-bk-icon-node="event-list-editorial:EventListEditorial.ArrowRight.icon.0:88a9106a" data-bk-style-node="event-list-editorial:EventListEditorial.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                 />
               </motion.a>
             )}
@@ -308,7 +308,7 @@ export function EventListEditorial({
                         {event.href && (
                           <ArrowRight
                             className="h-4 w-4 flex-shrink-0 -translate-x-1 text-muted-foreground opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
-                            strokeWidth={2}
+                            strokeWidth={2} data-bk-node="event-list-editorial:EventListEditorial.ArrowRight.icon.1:88a9106a" data-bk-icon-node="event-list-editorial:EventListEditorial.ArrowRight.icon.1:88a9106a" data-bk-style-node="event-list-editorial:EventListEditorial.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                           />
                         )}
                       </Wrapper>

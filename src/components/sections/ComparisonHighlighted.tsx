@@ -192,7 +192,7 @@ export function ComparisonHighlighted({
                 {isRecommended && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
                     <Badge variant="default" size="sm" className="gap-1">
-                      <Sparkles className="h-3 w-3" />
+                      <Sparkles className="h-3 w-3" data-bk-node="comparison-highlighted:ComparisonHighlighted.Sparkles.icon.0:dd368cc7" data-bk-icon-node="comparison-highlighted:ComparisonHighlighted.Sparkles.icon.0:dd368cc7" data-bk-style-node="comparison-highlighted:ComparisonHighlighted.Sparkles.icon.0:dd368cc7:style" data-bk-icon-name="sparkles" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"sparkles\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                       Aanbevolen
                     </Badge>
                   </div>
@@ -226,9 +226,9 @@ export function ComparisonHighlighted({
                         className="flex items-start gap-2.5 text-sm"
                       >
                         {feature.included ? (
-                          <CheckIcon className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                          <CheckIcon className="h-4 w-4 text-green-600 shrink-0 mt-0.5" data-bk-node="comparison-highlighted:ComparisonHighlighted.CheckIcon.icon.0:20f65c28" data-bk-icon-node="comparison-highlighted:ComparisonHighlighted.CheckIcon.icon.0:20f65c28" data-bk-style-node="comparison-highlighted:ComparisonHighlighted.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                         ) : (
-                          <MinusIcon className="h-4 w-4 text-muted-foreground/50 shrink-0 mt-0.5" />
+                          <MinusIcon className="h-4 w-4 text-muted-foreground/50 shrink-0 mt-0.5" data-bk-node="comparison-highlighted:ComparisonHighlighted.MinusIcon.icon.0:129fa771" data-bk-icon-node="comparison-highlighted:ComparisonHighlighted.MinusIcon.icon.0:129fa771" data-bk-style-node="comparison-highlighted:ComparisonHighlighted.MinusIcon.icon.0:129fa771:style" data-bk-icon-name="minus" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"minus\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                         )}
                         <span
                           className={

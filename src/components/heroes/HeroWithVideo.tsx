@@ -104,7 +104,7 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
         className="bg-muted hover:bg-border flex-shrink-0 p-2.5 rounded-full transition-colors"
         aria-label="Toggle theme"
       >
-        {theme === "light" ? <Moon className="h-5 w-5 text-foreground" /> : <Sun className="h-5 w-5 text-foreground" />}
+        {theme === "light" ? <Moon className="h-5 w-5 text-foreground" data-bk-node="hero-with-video:HeroWithVideo.Moon.icon.0:9e78b43e" data-bk-icon-node="hero-with-video:HeroWithVideo.Moon.icon.0:9e78b43e" data-bk-style-node="hero-with-video:HeroWithVideo.Moon.icon.0:9e78b43e:style" data-bk-icon-name="moon" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"moon\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} /> : <Sun className="h-5 w-5 text-foreground" data-bk-node="hero-with-video:HeroWithVideo.Sun.icon.0:27756f05" data-bk-icon-node="hero-with-video:HeroWithVideo.Sun.icon.0:27756f05" data-bk-style-node="hero-with-video:HeroWithVideo.Sun.icon.0:27756f05:style" data-bk-icon-name="sun" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"sun\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />}
       </button>
     );
   };
@@ -123,7 +123,7 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
                 <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.0:4efca0d1" data-bk-href="hero-with-video:HeroWithVideo.a.0@href:334359b9">About</a></li>
                 <li className="relative">
                   <button onClick={() => toggleDropdown('desktop-resources')} className="flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.0:e89b30aa">
-                    Resources<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-resources' ? 'rotate-180' : ''}`} />
+                    Resources<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-resources' ? 'rotate-180' : ''}`} data-bk-node="hero-with-video:HeroWithVideo.ChevronDown.icon.0:307f680f" data-bk-icon-node="hero-with-video:HeroWithVideo.ChevronDown.icon.0:307f680f" data-bk-style-node="hero-with-video:HeroWithVideo.ChevronDown.icon.0:307f680f:style" data-bk-icon-name="chevron-down" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-down\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </button>
                   {openDropdown === 'desktop-resources' && (
                     <ul className="absolute top-full left-0 mt-2 p-2 bg-card border border-border shadow-lg rounded-xl z-20 w-48">
@@ -135,7 +135,7 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
                 <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.3:8c6bc099" data-bk-href="hero-with-video:HeroWithVideo.a.3@href:334359b9">Blog</a></li>
                 <li className="relative">
                   <button onClick={() => toggleDropdown('desktop-pricing')} className="flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.1:76fce029">
-                    Plans & Pricing<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-pricing' ? 'rotate-180' : ''}`} />
+                    Plans & Pricing<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-pricing' ? 'rotate-180' : ''}`} data-bk-node="hero-with-video:HeroWithVideo.ChevronDown.icon.1:307f680f" data-bk-icon-node="hero-with-video:HeroWithVideo.ChevronDown.icon.1:307f680f" data-bk-style-node="hero-with-video:HeroWithVideo.ChevronDown.icon.1:307f680f:style" data-bk-icon-name="chevron-down" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-down\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </button>
                   {openDropdown === 'desktop-pricing' && (
                     <ul className="absolute top-full left-0 mt-2 p-2 bg-card border border-border shadow-lg rounded-xl z-20 w-48">
@@ -152,19 +152,19 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
             <div className="hidden lg:flex items-center gap-3">
               <a href="#" className="text-foreground hover:text-muted-foreground cursor-pointer py-2 px-4 text-sm capitalize font-medium transition-colors rounded-xl" data-bk-node="hero-with-video:HeroWithVideo.a.6:9d6322c1" data-bk-href="hero-with-video:HeroWithVideo.a.6@href:334359b9">Login</a>
               <button className="bg-foreground hover:bg-muted-foreground text-background py-2.5 px-5 text-sm rounded-xl capitalize font-medium transition-colors flex items-center gap-2" data-bk-node="hero-with-video:HeroWithVideo.button.2:983f3110">
-                Get Started<ArrowRight className="h-4 w-4" />
+                Get Started<ArrowRight className="h-4 w-4" data-bk-node="hero-with-video:HeroWithVideo.ArrowRight.icon.0:88a9106a" data-bk-icon-node="hero-with-video:HeroWithVideo.ArrowRight.icon.0:88a9106a" data-bk-style-node="hero-with-video:HeroWithVideo.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </button>
             </div>
             <ThemeToggleButton />
             <div className="lg:hidden relative">
               <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="bg-transparent hover:bg-muted border-none p-2 rounded-xl transition-colors">
-                <MenuIcon className="h-6 w-6" />
+                <MenuIcon className="h-6 w-6" data-bk-node="hero-with-video:HeroWithVideo.MenuIcon.icon.0:39899100" data-bk-icon-node="hero-with-video:HeroWithVideo.MenuIcon.icon.0:39899100" data-bk-style-node="hero-with-video:HeroWithVideo.MenuIcon.icon.0:39899100:style" data-bk-icon-name="menu" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"menu\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </button>
               {isMobileMenuOpen && (
                 <ul className="absolute top-full right-0 mt-2 p-2 shadow-lg bg-card border border-border rounded-xl w-56 z-30">
                   <li><a href="#" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.7:4efca0d1" data-bk-href="hero-with-video:HeroWithVideo.a.7@href:334359b9">About</a></li>
                   <li><button onClick={() => toggleDropdown('mobile-resources')} className="w-full flex items-center justify-between px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.3:e89b30aa">
-                      Resources<ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'mobile-resources' ? 'rotate-180' : ''}`} />
+                      Resources<ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'mobile-resources' ? 'rotate-180' : ''}`} data-bk-node="hero-with-video:HeroWithVideo.ChevronDown.icon.2:307f680f" data-bk-icon-node="hero-with-video:HeroWithVideo.ChevronDown.icon.2:307f680f" data-bk-style-node="hero-with-video:HeroWithVideo.ChevronDown.icon.2:307f680f:style" data-bk-icon-name="chevron-down" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-down\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </button>
                   {openDropdown === 'mobile-resources' && (<ul className="ml-4 mt-1 border-l border-border pl-3">
                       <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.8:5f39fa9e" data-bk-href="hero-with-video:HeroWithVideo.a.8@href:334359b9">Submenu 1</a></li>
@@ -172,7 +172,7 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
                   </ul>)}</li>
                   <li><a href="#" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.10:8c6bc099" data-bk-href="hero-with-video:HeroWithVideo.a.10@href:334359b9">Blog</a></li>
                   <li><button onClick={() => toggleDropdown('mobile-pricing')} className="w-full flex items-center justify-between px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.button.4:76fce029">
-                      Plans & Pricing<ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'mobile-pricing' ? 'rotate-180' : ''}`} />
+                      Plans & Pricing<ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'mobile-pricing' ? 'rotate-180' : ''}`} data-bk-node="hero-with-video:HeroWithVideo.ChevronDown.icon.3:307f680f" data-bk-icon-node="hero-with-video:HeroWithVideo.ChevronDown.icon.3:307f680f" data-bk-style-node="hero-with-video:HeroWithVideo.ChevronDown.icon.3:307f680f:style" data-bk-icon-name="chevron-down" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-down\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </button>
                   {openDropdown === 'mobile-pricing' && (<ul className="ml-4 mt-1 border-l border-border pl-3">
                       <li><a href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.11:ed5327f5" data-bk-href="hero-with-video:HeroWithVideo.a.11@href:334359b9">Plan A</a></li>
@@ -181,7 +181,7 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
                   <li className="border-t border-border mt-2 pt-2 space-y-2">
                     <a href="#" className="block w-full text-center px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg" data-bk-node="hero-with-video:HeroWithVideo.a.13:9d6322c1" data-bk-href="hero-with-video:HeroWithVideo.a.13@href:334359b9">Login</a>
                     <button className="w-full bg-foreground text-background hover:bg-muted-foreground px-3 py-2.5 text-sm rounded-lg flex items-center justify-center gap-2 font-medium" data-bk-node="hero-with-video:HeroWithVideo.button.5:983f3110">
-                      Get Started<ArrowRight className="h-4 w-4" />
+                      Get Started<ArrowRight className="h-4 w-4" data-bk-node="hero-with-video:HeroWithVideo.ArrowRight.icon.1:88a9106a" data-bk-icon-node="hero-with-video:HeroWithVideo.ArrowRight.icon.1:88a9106a" data-bk-style-node="hero-with-video:HeroWithVideo.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                     </button>
                   </li>
                 </ul>
@@ -197,11 +197,11 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
             <p className="mt-6 text-lg text-muted-foreground">{heroDescription}</p>
             <div className="mt-8 flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
               <div className="relative">
-                <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" />
+                <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" data-bk-node="hero-with-video:HeroWithVideo.Mail.icon.0:00d8d3f1" data-bk-icon-node="hero-with-video:HeroWithVideo.Mail.icon.0:00d8d3f1" data-bk-style-node="hero-with-video:HeroWithVideo.Mail.icon.0:00d8d3f1:style" data-bk-icon-name="mail" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"mail\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 <input type="email" placeholder={emailPlaceholder} value={email} onChange={(e) => setEmail(e.target.value)} className="w-full max-w-xs bg-muted border-border text-foreground placeholder-muted-foreground font-medium pl-10 pr-4 py-2 text-sm sm:pl-11 sm:py-3 sm:text-base rounded-full focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
               <button onClick={handleEmailSubmit} className="bg-foreground hover:bg-muted-foreground text-background px-5 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded-full normal-case font-medium transition-colors flex items-center gap-2" data-bk-node="hero-with-video:HeroWithVideo.button.6:f377380f">
-                Join Now<ArrowRight className="h-4 w-4" />
+                Join Now<ArrowRight className="h-4 w-4" data-bk-node="hero-with-video:HeroWithVideo.ArrowRight.icon.2:88a9106a" data-bk-icon-node="hero-with-video:HeroWithVideo.ArrowRight.icon.2:88a9106a" data-bk-style-node="hero-with-video:HeroWithVideo.ArrowRight.icon.2:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </button>
             </div>
           </div>
@@ -214,11 +214,11 @@ const HeroWithVideo: React.FC<NavbarHeroProps> = ({
           <div className="absolute bottom-5 right-5 z-10">
             {!isVideoPlaying ? (
               <button onClick={handlePlayVideo} className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-200 shadow-lg">
-                <PlayIcon className="h-7 w-7 text-white fill-white ml-1" />
+                <PlayIcon className="h-7 w-7 text-white fill-white ml-1" data-bk-node="hero-with-video:HeroWithVideo.PlayIcon.icon.0:aba4cc9b" data-bk-icon-node="hero-with-video:HeroWithVideo.PlayIcon.icon.0:aba4cc9b" data-bk-style-node="hero-with-video:HeroWithVideo.PlayIcon.icon.0:aba4cc9b:style" data-bk-icon-name="play" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"play\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </button>
             ) : (
               <button onClick={isVideoPaused ? handleResumeVideo : handlePauseVideo} className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-200 shadow-lg">
-                {isVideoPaused ? <PlayIcon className="h-7 w-7 text-white fill-white ml-1" /> : <PauseIcon className="h-7 w-7 text-white fill-white" />}
+                {isVideoPaused ? <PlayIcon className="h-7 w-7 text-white fill-white ml-1" data-bk-node="hero-with-video:HeroWithVideo.PlayIcon.icon.1:aba4cc9b" data-bk-icon-node="hero-with-video:HeroWithVideo.PlayIcon.icon.1:aba4cc9b" data-bk-style-node="hero-with-video:HeroWithVideo.PlayIcon.icon.1:aba4cc9b:style" data-bk-icon-name="play" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"play\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} /> : <PauseIcon className="h-7 w-7 text-white fill-white" data-bk-node="hero-with-video:HeroWithVideo.PauseIcon.icon.0:6210c0bf" data-bk-icon-node="hero-with-video:HeroWithVideo.PauseIcon.icon.0:6210c0bf" data-bk-style-node="hero-with-video:HeroWithVideo.PauseIcon.icon.0:6210c0bf:style" data-bk-icon-name="pause" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"pause\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />}
               </button>
             )}
           </div>

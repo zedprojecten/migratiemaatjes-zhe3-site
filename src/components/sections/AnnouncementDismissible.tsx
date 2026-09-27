@@ -80,7 +80,7 @@ export function AnnouncementDismissible({
                   className="group inline-flex items-center gap-1 text-xs font-semibold text-primary underline-offset-4 transition hover:underline"
                 >
                   <span>{ctaLabel}</span>
-                  <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
+                  <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="announcement-dismissible:AnnouncementDismissible.ArrowRight.icon.0:88a9106a" data-bk-icon-node="announcement-dismissible:AnnouncementDismissible.ArrowRight.icon.0:88a9106a" data-bk-style-node="announcement-dismissible:AnnouncementDismissible.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </a>
               )}
               <button
@@ -89,7 +89,7 @@ export function AnnouncementDismissible({
                 aria-label="Sluit melding"
                 className="rounded-full p-1 text-muted-foreground transition hover:bg-foreground/5 hover:text-foreground"
               >
-                <X className="h-3.5 w-3.5" />
+                <X className="h-3.5 w-3.5" data-bk-node="announcement-dismissible:AnnouncementDismissible.X.icon.0:2d711642" data-bk-icon-node="announcement-dismissible:AnnouncementDismissible.X.icon.0:2d711642" data-bk-style-node="announcement-dismissible:AnnouncementDismissible.X.icon.0:2d711642:style" data-bk-icon-name="x" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"x\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </button>
             </div>
           </div>

@@ -116,7 +116,7 @@ function Block({ item, isActive, onActivate, index }: BlockProps) {
           className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground"
         >
           {item.ctaLabel}
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" data-bk-node="image-with-text-sticky:ImageWithTextSticky.ArrowRight.icon.0:88a9106a" data-bk-icon-node="image-with-text-sticky:ImageWithTextSticky.ArrowRight.icon.0:88a9106a" data-bk-style-node="image-with-text-sticky:ImageWithTextSticky.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
         </a>
       )}
     </div>

@@ -201,7 +201,7 @@ export function EventListMinimal({
                               {event.ctaLabel}
                               <ArrowUpRight
                                 className="h-3.5 w-3.5 -translate-x-1 transition-transform duration-300 group-hover:translate-x-0"
-                                strokeWidth={2}
+                                strokeWidth={2} data-bk-node="event-list-minimal:EventListMinimal.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="event-list-minimal:EventListMinimal.ArrowUpRight.icon.0:bc598874" data-bk-style-node="event-list-minimal:EventListMinimal.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                               />
                             </span>
                           )}
@@ -209,7 +209,7 @@ export function EventListMinimal({
                         {event.href && !event.ctaLabel && (
                           <ArrowUpRight
                             className="h-4 w-4 flex-shrink-0 -translate-x-2 text-muted-foreground opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
-                            strokeWidth={2}
+                            strokeWidth={2} data-bk-node="event-list-minimal:EventListMinimal.ArrowUpRight.icon.1:bc598874" data-bk-icon-node="event-list-minimal:EventListMinimal.ArrowUpRight.icon.1:bc598874" data-bk-style-node="event-list-minimal:EventListMinimal.ArrowUpRight.icon.1:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                           />
                         )}
                       </div>

@@ -88,9 +88,11 @@ const PRICING_PLANS: TarievenPlan[] = [
     ctaLabel: bkNode("tarieven:PricingTableCinematic.60f581.ctaLabel", "Stuur je intake op"),
     ctaHref: "/contact",
     recommended: true,
-    badge: "Meest gekozen",
+    badge: bkNode("tarieven:PricingTableCinematic.60f581.badge", "Meest gekozen"),
     accentColor: "purple" as const,
-      _bk: { name: "tarieven:PricingTableCinematic.60f581.name", price: "tarieven:PricingTableCinematic.60f581.price", period: "tarieven:PricingTableCinematic.60f581.period", tagline: "tarieven:PricingTableCinematic.60f581.tagline", ctaLabel: "tarieven:PricingTableCinematic.60f581.ctaLabel" },
+      _bk: { name: "tarieven:PricingTableCinematic.60f581.name", price: "tarieven:PricingTableCinematic.60f581.price", period: "tarieven:PricingTableCinematic.60f581.period", tagline: "tarieven:PricingTableCinematic.60f581.tagline", ctaLabel: "tarieven:PricingTableCinematic.60f581.ctaLabel",
+          badge: "tarieven:PricingTableCinematic.60f581.badge"
+    },
       _bk_id: "60f581"
 },
   {
@@ -199,7 +201,7 @@ export default function Tarieven() {
   return (
     <>
       {/* Page-hero */}
-      <section className="relative overflow-hidden border-b border-border/60">
+      {bkSectionVisible("tarieven:SectionVastePrijsVooraf.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:SectionVastePrijsVooraf.section.0" data-bk-section-translation-key="tarieven:section:0"><section className="relative overflow-hidden border-b border-border/60">
         <div className="absolute inset-0 bg-cyan-spotlight pointer-events-none" />
         <div className="absolute inset-0 bg-dot-grid opacity-40 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 py-20 md:py-28 relative">
@@ -215,10 +217,10 @@ export default function Tarieven() {
             </p>
           </div>
         </div>
-      </section>
+      </section></div>)}
 
       {/* Pricing */}
-      {bkSectionVisible("tarieven:PricingTableCinematic.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:PricingTableCinematic.section.0"><PricingTableCinematic
+      {bkSectionVisible("tarieven:PricingTableCinematic.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:PricingTableCinematic.section.0" data-bk-section-translation-key="tarieven:section:1"><PricingTableCinematic
         heading={bkNode("tarieven:PricingTableCinematic.heading", "Drie pakketten, vaste prijs")}
         subheading={bkNode("tarieven:PricingTableCinematic.subheading", "Quick voor harde deadlines, Standard voor migraties met behoud van relaties, Complex voor legacy ERPs en multi-platform splits.")}
         plans={PRICING_PLANS}
@@ -226,21 +228,21 @@ export default function Tarieven() {
       /></div>)}
 
       {/* Trust-bullets-strip */}
-      {bkSectionVisible("tarieven:ScrollReveal.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:ScrollReveal.section.0"><ScrollReveal>
+      {bkSectionVisible("tarieven:ScrollReveal.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:ScrollReveal.section.0" data-bk-section-translation-key="tarieven:section:2"><ScrollReveal>
         <section className="border-b border-border/60 py-12 md:py-16">
           <div className="container mx-auto px-4 sm:px-6">
             {/* Trust-bullets uitgeschreven (geen map) zodat de codemod ze inline labelt */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <div className="flex items-start gap-3 font-mono text-sm">
-                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
+                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" data-bk-node="tarieven:Tarieven.CheckIcon.icon.0:20f65c28" data-bk-icon-node="tarieven:Tarieven.CheckIcon.icon.0:20f65c28" data-bk-style-node="tarieven:Tarieven.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 <span className="text-foreground/80" data-bk-node="tarieven:Tarieven.span.1:d22c6577">Vaste prijs vooraf, geen verborgen uurtarieven</span>
               </div>
               <div className="flex items-start gap-3 font-mono text-sm">
-                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
+                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" data-bk-node="tarieven:Tarieven.CheckIcon.icon.1:20f65c28" data-bk-icon-node="tarieven:Tarieven.CheckIcon.icon.1:20f65c28" data-bk-style-node="tarieven:Tarieven.CheckIcon.icon.1:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 <span className="text-foreground/80" data-bk-node="tarieven:Tarieven.span.2:1acb0306">Dry-run op je sample voor de hoofdrun</span>
               </div>
               <div className="flex items-start gap-3 font-mono text-sm">
-                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" />
+                <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-none" data-bk-node="tarieven:Tarieven.CheckIcon.icon.2:20f65c28" data-bk-icon-node="tarieven:Tarieven.CheckIcon.icon.2:20f65c28" data-bk-style-node="tarieven:Tarieven.CheckIcon.icon.2:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 <span className="text-foreground/80" data-bk-node="tarieven:Tarieven.span.3:f1d604af">Mappingscript eigendom van de klant</span>
               </div>
             </div>
@@ -249,7 +251,7 @@ export default function Tarieven() {
       </ScrollReveal></div>)}
 
       {/* FAQ */}
-      {bkSectionVisible("tarieven:ScrollReveal.section.1") && (<div style={{ display: "contents" }} data-bk-section="tarieven:ScrollReveal.section.1"><ScrollReveal>
+      {bkSectionVisible("tarieven:ScrollReveal.section.1") && (<div style={{ display: "contents" }} data-bk-section="tarieven:ScrollReveal.section.1" data-bk-section-translation-key="tarieven:section:3"><ScrollReveal>
         <section className="border-b border-border/60 pt-16 md:pt-20">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mx-auto text-center">
@@ -266,7 +268,7 @@ export default function Tarieven() {
       </ScrollReveal></div>)}
 
       {/* Final CTA */}
-      {bkSectionVisible("tarieven:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:CTABanner.section.0"><CTABanner
+      {bkSectionVisible("tarieven:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:CTABanner.section.0" data-bk-section-translation-key="tarieven:section:4"><CTABanner
         heading={bkNode("tarieven:CTABanner.heading", "Klaar voor je migratie?")}
         subtext={bkNode("tarieven:CTABanner.subtext", "Stuur je sample en het doel-platform. Binnen 24 uur weet je het pakket en de planning.")}
         primaryLabel={bkNode("tarieven:CTABanner.primaryLabel", "Stuur je intake op")}
@@ -275,7 +277,7 @@ export default function Tarieven() {
         secondaryHref="#werk" _bk={{ heading: "tarieven:CTABanner.heading", subtext: "tarieven:CTABanner.subtext", primaryLabel: "tarieven:CTABanner.primaryLabel", secondaryLabel: "tarieven:CTABanner.secondaryLabel" }}
       /></div>)}
 
-      {bkSectionVisible("tarieven:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("tarieven:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "tarieven:StickyMobileCTA.text" }} /></div>)}
+      {bkSectionVisible("tarieven:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="tarieven:StickyMobileCTA.section.0" data-bk-section-translation-key="tarieven:section:5"><StickyMobileCTA text={bkNode("tarieven:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "tarieven:StickyMobileCTA.text" }} /></div>)}
     </>
   );
 }

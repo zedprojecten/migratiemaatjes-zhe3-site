@@ -61,7 +61,7 @@ export function AnnouncementStrip({
             className="group inline-flex shrink-0 items-center gap-1 rounded-full border border-white/30 px-3 py-1 text-xs font-semibold text-white/95 backdrop-blur-sm transition hover:bg-white/10"
           >
             <span>{ctaLabel}</span>
-            <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="announcement-strip:AnnouncementStrip.ArrowRight.icon.0:88a9106a" data-bk-icon-node="announcement-strip:AnnouncementStrip.ArrowRight.icon.0:88a9106a" data-bk-style-node="announcement-strip:AnnouncementStrip.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           </a>
         )}
       </div>

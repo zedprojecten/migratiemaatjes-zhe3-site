@@ -178,7 +178,7 @@ export default function AnimatedReportCard({
               <span className="w-3 h-3 rounded-full" style={{ background: "#28C840" }} />
             </div>
             <div className="flex items-center gap-2 flex-1 justify-center -ml-12">
-              <TrendingUp className="h-4 w-4" style={{ color: "hsl(214, 67%, 56%)" }} />
+              <TrendingUp className="h-4 w-4" style={{ color: "hsl(214, 67%, 56%)" }} data-bk-node="animated-report-card:AnimatedReportCard.TrendingUp.icon.0:0f06175a" data-bk-icon-node="animated-report-card:AnimatedReportCard.TrendingUp.icon.0:0f06175a" data-bk-style-node="animated-report-card:AnimatedReportCard.TrendingUp.icon.0:0f06175a:style" data-bk-icon-name="trending-up" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"trending-up\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               <span className="text-sm font-semibold">{windowTitle}</span>
             </div>
           </div>
@@ -340,7 +340,7 @@ export default function AnimatedReportCard({
                     <div className="flex items-center gap-2 flex-1 min-w-0">
                       <CheckIcon
                         className="h-4 w-4 shrink-0"
-                        style={{ color: group.color }}
+                        style={{ color: group.color }} data-bk-node="animated-report-card:AnimatedReportCard.CheckIcon.icon.0:20f65c28" data-bk-icon-node="animated-report-card:AnimatedReportCard.CheckIcon.icon.0:20f65c28" data-bk-style-node="animated-report-card:AnimatedReportCard.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                       />
                       <span className="truncate">{item.label}</span>
                     </div>
@@ -385,13 +385,13 @@ export default function AnimatedReportCard({
                       border: "1px dashed var(--glass-border)",
                     }}
                   >
-                    <Lock className="h-3.5 w-3.5" />
+                    <Lock className="h-3.5 w-3.5" data-bk-node="animated-report-card:AnimatedReportCard.Lock.icon.0:0c030586" data-bk-icon-node="animated-report-card:AnimatedReportCard.Lock.icon.0:0c030586" data-bk-style-node="animated-report-card:AnimatedReportCard.Lock.icon.0:0c030586:style" data-bk-icon-name="lock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"lock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                     <span data-bk-node="animated-report-card:AnimatedReportCard.span.1:c1da569b">
                       +{group.lockedItems}{" "}
                       {group.lockedItems > 1 ? suggestionsLabel : suggestionLabel} ·{" "}
                       {loginCta}
                     </span>
-                    <ChevronRight className="h-3.5 w-3.5" />
+                    <ChevronRight className="h-3.5 w-3.5" data-bk-node="animated-report-card:AnimatedReportCard.ChevronRight.icon.0:1cddde04" data-bk-icon-node="animated-report-card:AnimatedReportCard.ChevronRight.icon.0:1cddde04" data-bk-style-node="animated-report-card:AnimatedReportCard.ChevronRight.icon.0:1cddde04:style" data-bk-icon-name="chevron-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"chevron-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </div>
                 )}
               </div>

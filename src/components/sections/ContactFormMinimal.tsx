@@ -252,7 +252,7 @@ export function ContactFormMinimal({
                   onBlur={() => setFocused(null)}
                   className={cn(fieldBaseClass, "mt-2")}
                   placeholder="Jouw naam"
-                  autoComplete="name"
+                  autoComplete="name" data-bk-placeholder="contact-form-minimal:ContactFormMinimal.input.0@placeholder:af3a8c36"
                 />
                 {underline("name")}
               </div>
@@ -277,7 +277,7 @@ export function ContactFormMinimal({
                   onBlur={() => setFocused(null)}
                   className={cn(fieldBaseClass, "mt-2")}
                   placeholder="jij@bedrijf.nl"
-                  autoComplete="email"
+                  autoComplete="email" data-bk-placeholder="contact-form-minimal:ContactFormMinimal.input.1@placeholder:129a39fa"
                 />
                 {underline("email")}
               </div>
@@ -300,7 +300,7 @@ export function ContactFormMinimal({
                   onFocus={() => setFocused("message")}
                   onBlur={() => setFocused(null)}
                   className={cn(fieldBaseClass, "mt-2 resize-none")}
-                  placeholder="Waar kunnen we je mee helpen?"
+                  placeholder="Waar kunnen we je mee helpen?" data-bk-placeholder="contact-form-minimal:ContactFormMinimal.textarea.0@placeholder:5ce35196"
                 />
                 {underline("message")}
               </div>
@@ -335,7 +335,7 @@ export function ContactFormMinimal({
                   >
                     <ArrowRight
                       className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
-                      strokeWidth={2.25}
+                      strokeWidth={2.25} data-bk-node="contact-form-minimal:ContactFormMinimal.ArrowRight.icon.0:88a9106a" data-bk-icon-node="contact-form-minimal:ContactFormMinimal.ArrowRight.icon.0:88a9106a" data-bk-style-node="contact-form-minimal:ContactFormMinimal.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2.25}}"}
                     />
                   </span>
                 </button>

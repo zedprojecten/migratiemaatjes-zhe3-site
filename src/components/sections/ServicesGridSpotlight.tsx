@@ -186,7 +186,7 @@ export function ServicesGridSpotlight({
                         className="group/cta mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-medium text-zinc-700 transition-colors duration-200 hover:text-zinc-950 dark:text-white/85 dark:hover:text-white"
                       >
                         {service.ctaLabel ?? "Bekijk dienst"}
-                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:-translate-y-0.5 group-hover/cta:translate-x-0.5" />
+                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:-translate-y-0.5 group-hover/cta:translate-x-0.5" data-bk-node="services-grid-spotlight:ServicesGridSpotlight.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="services-grid-spotlight:ServicesGridSpotlight.ArrowUpRight.icon.0:bc598874" data-bk-style-node="services-grid-spotlight:ServicesGridSpotlight.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                       </a>
                     )}
                   </div>

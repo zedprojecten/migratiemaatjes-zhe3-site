@@ -217,7 +217,7 @@ export function CTABackground({
               />
               <span className="relative z-10 flex items-center gap-2">
                 {primaryLabel}
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctabackground:CTABackground.ArrowRight.icon.0:88a9106a" data-bk-icon-node="ctabackground:CTABackground.ArrowRight.icon.0:88a9106a" data-bk-style-node="ctabackground:CTABackground.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               </span>
             </a>
           </MagneticButton>
@@ -231,7 +231,7 @@ export function CTABackground({
                 {secondaryLabel}
                 <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white transition-transform duration-300 group-hover:scale-x-100" />
               </span>
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctabackground:CTABackground.ArrowRight.icon.1:88a9106a" data-bk-icon-node="ctabackground:CTABackground.ArrowRight.icon.1:88a9106a" data-bk-style-node="ctabackground:CTABackground.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </a>
           )}
         </motion.div>

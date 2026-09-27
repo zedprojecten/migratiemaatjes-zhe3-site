@@ -153,7 +153,7 @@ export function PricingToggle({
                   <ul className="space-y-3 flex-1 mb-6">
                     {plan.features.map((feature, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm">
-                        <CheckIcon className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <CheckIcon className="h-4 w-4 text-primary shrink-0 mt-0.5" data-bk-node="pricing-toggle:PricingToggle.CheckIcon.icon.0:20f65c28" data-bk-icon-node="pricing-toggle:PricingToggle.CheckIcon.icon.0:20f65c28" data-bk-style-node="pricing-toggle:PricingToggle.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                         <span>{feature}</span>
                       </li>
                     ))}

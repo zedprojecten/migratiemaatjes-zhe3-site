@@ -293,7 +293,7 @@ function CinematicCard({
               <li key={j} className="flex items-start gap-2.5 text-sm">
                 <CheckIcon
                   className={cn("h-4 w-4 shrink-0 mt-0.5", accent.text)}
-                  aria-hidden="true"
+                  aria-hidden="true" data-bk-node="pricing-table-cinematic:PricingTableCinematic.CheckIcon.icon.0:20f65c28" data-bk-icon-node="pricing-table-cinematic:PricingTableCinematic.CheckIcon.icon.0:20f65c28" data-bk-style-node="pricing-table-cinematic:PricingTableCinematic.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                 />
                 <span className="text-white/85 leading-relaxed" data-bk-node={feature._bk?.label}>
                   {feature.label}
@@ -394,7 +394,7 @@ export function PricingTableCinematic({
               className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur mb-6 overflow-hidden"
             >
               <div className="pricing-cinematic-shimmer absolute inset-0 pointer-events-none" />
-              <Zap className="h-3.5 w-3.5 text-orange-400 relative" />
+              <Zap className="h-3.5 w-3.5 text-orange-400 relative" data-bk-node="pricing-table-cinematic:PricingTableCinematic.Zap.icon.0:b4c5ae2a" data-bk-icon-node="pricing-table-cinematic:PricingTableCinematic.Zap.icon.0:b4c5ae2a" data-bk-style-node="pricing-table-cinematic:PricingTableCinematic.Zap.icon.0:b4c5ae2a:style" data-bk-icon-name="zap" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"zap\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               <span className="text-xs font-medium text-white/85 relative">
                 {discountLabel}
               </span>

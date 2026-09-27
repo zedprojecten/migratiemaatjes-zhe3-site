@@ -187,7 +187,7 @@ export function ProductGridMinimal({
                 {product.href && (
                   <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary transition-transform duration-300 group-hover:translate-x-0.5 md:text-sm">
                     {product.ctaLabel ?? "Bekijk"}
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-3.5 w-3.5" data-bk-node="product-grid-minimal:ProductGridMinimal.ArrowRight.icon.0:88a9106a" data-bk-icon-node="product-grid-minimal:ProductGridMinimal.ArrowRight.icon.0:88a9106a" data-bk-style-node="product-grid-minimal:ProductGridMinimal.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </span>
                 )}
               </>

@@ -149,7 +149,7 @@ function IntakeForm() {
               onChange={(e) => update("bronFormaat", e.target.value)}
               className={inputClass}
             >
-              <option value="" className="bg-background text-foreground">Selecteer...</option>
+              <option value="" className="bg-background text-foreground" data-bk-node="contact:Contact.option.0:5c38f0bb">Selecteer...</option>
               {SOURCE_FORMATS.map((opt) => (
                 <option key={opt} value={opt} className="bg-background text-foreground">
                   {opt}
@@ -168,7 +168,7 @@ function IntakeForm() {
               value={form.bronPlatform}
               onChange={(e) => update("bronPlatform", e.target.value)}
               placeholder="bv. Magento 2.4 / WooCommerce 7 / eigen MySQL"
-              className={inputClass}
+              className={inputClass} data-bk-placeholder="contact:Contact.input.1@placeholder:dfda87e3"
             />
           </div>
         </div>
@@ -186,7 +186,7 @@ function IntakeForm() {
               onChange={(e) => update("doelFormaat", e.target.value)}
               className={inputClass}
             >
-              <option value="" className="bg-background text-foreground">Selecteer...</option>
+              <option value="" className="bg-background text-foreground" data-bk-node="contact:Contact.option.1:5c38f0bb">Selecteer...</option>
               {TARGET_FORMATS.map((opt) => (
                 <option key={opt} value={opt} className="bg-background text-foreground">
                   {opt}
@@ -205,7 +205,7 @@ function IntakeForm() {
               value={form.doelPlatform}
               onChange={(e) => update("doelPlatform", e.target.value)}
               placeholder="bv. Shopify / HubSpot / Airtable"
-              className={inputClass}
+              className={inputClass} data-bk-placeholder="contact:Contact.input.2@placeholder:d5f27246"
             />
           </div>
         </div>
@@ -224,7 +224,7 @@ function IntakeForm() {
               value={form.records}
               onChange={(e) => update("records", e.target.value)}
               placeholder="bv. 25000"
-              className={inputClass}
+              className={inputClass} data-bk-placeholder="contact:Contact.input.3@placeholder:f7a62332"
             />
           </div>
           <div>
@@ -238,7 +238,7 @@ function IntakeForm() {
               value={form.deadline}
               onChange={(e) => update("deadline", e.target.value)}
               placeholder="bv. 1 juni of 'flexibel'"
-              className={inputClass}
+              className={inputClass} data-bk-placeholder="contact:Contact.input.4@placeholder:934b2300"
             />
           </div>
         </div>
@@ -256,7 +256,7 @@ function IntakeForm() {
             value={form.scenario}
             onChange={(e) => update("scenario", e.target.value)}
             placeholder="Korte beschrijving: wat moet er mee, wat is de deadline, eventuele bijzonderheden"
-            className={inputClass + " resize-y"}
+            className={inputClass + " resize-y"} data-bk-placeholder="contact:Contact.textarea.0@placeholder:49eedade"
           />
         </div>
 
@@ -275,7 +275,7 @@ function IntakeForm() {
               value={form.naam}
               onChange={(e) => update("naam", e.target.value)}
               placeholder="Jouw naam"
-              className={inputClass}
+              className={inputClass} data-bk-placeholder="contact:Contact.input.5@placeholder:af3a8c36"
             />
           </div>
           <div>
@@ -291,7 +291,7 @@ function IntakeForm() {
               value={form.email}
               onChange={(e) => update("email", e.target.value)}
               placeholder="jij@bedrijf.nl"
-              className={inputClass}
+              className={inputClass} data-bk-placeholder="contact:Contact.input.6@placeholder:129a39fa"
             />
           </div>
         </div>
@@ -310,7 +310,7 @@ function IntakeForm() {
           >
             {submitting ? (
               <>
-                <Loader2 className="w-4 h-4 animate-spin" />
+                <Loader2 className="w-4 h-4 animate-spin" data-bk-node="contact:Contact.Loader2.icon.0:3f27592f" data-bk-icon-node="contact:Contact.Loader2.icon.0:3f27592f" data-bk-style-node="contact:Contact.Loader2.icon.0:3f27592f:style" data-bk-icon-name="loader2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"loader2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 Versturen...
               </>
             ) : (
@@ -335,7 +335,7 @@ function InfoCard() {
       <ul className="space-y-5">
         <li className="flex items-start gap-3">
           <span className="flex-none rounded-md border border-border bg-background/40 p-2">
-            <Clock className="w-4 h-4 text-primary" aria-hidden="true" />
+            <Clock className="w-4 h-4 text-primary" aria-hidden="true" data-bk-node="contact:Contact.Clock.icon.0:d8198efa" data-bk-icon-node="contact:Contact.Clock.icon.0:d8198efa" data-bk-style-node="contact:Contact.Clock.icon.0:d8198efa:style" data-bk-icon-name="clock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"clock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           </span>
           <div>
             <h3 className="font-display text-sm font-semibold text-foreground" data-bk-node="contact:Contact.h3.0:1e665de2">
@@ -348,7 +348,7 @@ function InfoCard() {
         </li>
         <li className="flex items-start gap-3">
           <span className="flex-none rounded-md border border-border bg-background/40 p-2">
-            <Mail className="w-4 h-4 text-primary" aria-hidden="true" />
+            <Mail className="w-4 h-4 text-primary" aria-hidden="true" data-bk-node="contact:Contact.Mail.icon.0:00d8d3f1" data-bk-icon-node="contact:Contact.Mail.icon.0:00d8d3f1" data-bk-style-node="contact:Contact.Mail.icon.0:00d8d3f1:style" data-bk-icon-name="mail" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"mail\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           </span>
           <div>
             <h3 className="font-display text-sm font-semibold text-foreground" data-bk-node="contact:Contact.h3.1:969ccbd3">
@@ -366,7 +366,7 @@ function InfoCard() {
         </li>
         <li className="flex items-start gap-3">
           <span className="flex-none rounded-md border border-border bg-background/40 p-2">
-            <Code className="w-4 h-4 text-primary" aria-hidden="true" />
+            <Code className="w-4 h-4 text-primary" aria-hidden="true" data-bk-node="contact:Contact.Code.icon.0:5694d08a" data-bk-icon-node="contact:Contact.Code.icon.0:5694d08a" data-bk-style-node="contact:Contact.Code.icon.0:5694d08a:style" data-bk-icon-name="code" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"code\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           </span>
           <div>
             <h3 className="font-display text-sm font-semibold text-foreground" data-bk-node="contact:Contact.h3.2:464e4f16">

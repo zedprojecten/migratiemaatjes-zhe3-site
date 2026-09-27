@@ -233,7 +233,7 @@ export function OpeningHoursMinimal({
               transition={{ duration: 0.55, delay: 0.3 }}
               className="flex items-center gap-3 border-b border-border pb-3"
             >
-              <Clock className="h-4 w-4 text-primary" strokeWidth={2} />
+              <Clock className="h-4 w-4 text-primary" strokeWidth={2} data-bk-node="opening-hours-minimal:OpeningHoursMinimal.Clock.icon.0:d8198efa" data-bk-icon-node="opening-hours-minimal:OpeningHoursMinimal.Clock.icon.0:d8198efa" data-bk-style-node="opening-hours-minimal:OpeningHoursMinimal.Clock.icon.0:d8198efa:style" data-bk-icon-name="clock" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"clock\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground" data-bk-node="opening-hours-minimal:OpeningHoursMinimal.span.0:a9b59303">
                 Openingstijden
               </span>

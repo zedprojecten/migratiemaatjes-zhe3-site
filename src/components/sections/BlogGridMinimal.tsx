@@ -157,7 +157,7 @@ export function BlogGridMinimal({
                     {post.title}
                   </h3>
                   <ArrowUpRight
-                    className="h-4 w-4 flex-shrink-0 -translate-x-2 text-muted-foreground opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                    className="h-4 w-4 flex-shrink-0 -translate-x-2 text-muted-foreground opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" data-bk-node="blog-grid-minimal:BlogGridMinimal.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="blog-grid-minimal:BlogGridMinimal.ArrowUpRight.icon.0:bc598874" data-bk-style-node="blog-grid-minimal:BlogGridMinimal.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                   />
                 </div>
               </motion.a>

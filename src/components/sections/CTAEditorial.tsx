@@ -149,7 +149,7 @@ export function CTAEditorial({
               <span className="absolute -bottom-1 left-0 h-px w-full origin-left bg-foreground/40 transition-transform duration-500 group-hover:scale-x-110" />
             </span>
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-foreground/30 transition-all duration-300 group-hover:border-foreground/70 group-hover:bg-foreground/[0.04]">
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctaeditorial:CTAEditorial.ArrowRight.icon.0:88a9106a" data-bk-icon-node="ctaeditorial:CTAEditorial.ArrowRight.icon.0:88a9106a" data-bk-style-node="ctaeditorial:CTAEditorial.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </span>
           </a>
           {secondaryLabel && (
@@ -161,7 +161,7 @@ export function CTAEditorial({
                 {secondaryLabel}
                 <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-foreground/60 transition-transform duration-500 group-hover:scale-x-100" />
               </span>
-              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="ctaeditorial:CTAEditorial.ArrowRight.icon.1:88a9106a" data-bk-icon-node="ctaeditorial:CTAEditorial.ArrowRight.icon.1:88a9106a" data-bk-style-node="ctaeditorial:CTAEditorial.ArrowRight.icon.1:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             </a>
           )}
         </motion.div>

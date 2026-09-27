@@ -53,7 +53,7 @@ export default function HeroGlassVideo({
           }
           className="absolute top-4 right-4 z-20 p-2.5 rounded-[10px] backdrop-blur-xl border border-white/15 bg-black/30 text-foreground hover:bg-black/50 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
-          {fullBleed ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+          {fullBleed ? <Minimize2 size={16} data-bk-node="hero-glass-video:HeroGlassVideo.Minimize2.icon.0:935b386d" data-bk-icon-node="hero-glass-video:HeroGlassVideo.Minimize2.icon.0:935b386d" data-bk-style-node="hero-glass-video:HeroGlassVideo.Minimize2.icon.0:935b386d:style" data-bk-icon-name="minimize2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"minimize2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"size\":16,\"strokeWidth\":2}}"} /> : <Maximize2 size={16} data-bk-node="hero-glass-video:HeroGlassVideo.Maximize2.icon.0:1772fdac" data-bk-icon-node="hero-glass-video:HeroGlassVideo.Maximize2.icon.0:1772fdac" data-bk-style-node="hero-glass-video:HeroGlassVideo.Maximize2.icon.0:1772fdac:style" data-bk-icon-name="maximize2" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"maximize2\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"size\":16,\"strokeWidth\":2}}"} />}
         </button>
       )}
 

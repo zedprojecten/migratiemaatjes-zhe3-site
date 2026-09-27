@@ -240,7 +240,7 @@ function ServiceTiltCard({
             className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-all duration-300 group-hover:gap-2.5"
           >
             {service.ctaLabel ?? "Lees meer"}
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" data-bk-node="services-grid-icons:ServicesGridIcons.ArrowRight.icon.0:88a9106a" data-bk-icon-node="services-grid-icons:ServicesGridIcons.ArrowRight.icon.0:88a9106a" data-bk-style-node="services-grid-icons:ServicesGridIcons.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
           </a>
         )}
       </div>

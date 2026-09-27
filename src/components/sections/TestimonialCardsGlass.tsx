@@ -150,7 +150,7 @@ function GlassCard({
         <div className="relative flex h-full flex-col">
           <Quote
             className="h-9 w-9 text-foreground/30"
-            strokeWidth={1.25}
+            strokeWidth={1.25} data-bk-node="testimonial-cards-glass:TestimonialCardsGlass.Quote.icon.0:6327245c" data-bk-icon-node="testimonial-cards-glass:TestimonialCardsGlass.Quote.icon.0:6327245c" data-bk-style-node="testimonial-cards-glass:TestimonialCardsGlass.Quote.icon.0:6327245c:style" data-bk-icon-name="quote" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"quote\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":1.25}}"}
           />
 
           <p

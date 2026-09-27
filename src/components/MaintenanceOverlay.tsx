@@ -25,10 +25,10 @@ export function MaintenanceOverlay() {
       }}
     >
       <div style={{ maxWidth: 420 }}>
-        <h1 style={{ fontSize: "1.5rem", marginBottom: "0.75rem" }}>
+        <h1 style={{ fontSize: "1.5rem", marginBottom: "0.75rem" }} data-bk-node="maintenance-overlay:MaintenanceOverlay.h1.0:557d2840">
           Even onderhoud
         </h1>
-        <p style={{ opacity: 0.8, lineHeight: 1.6 }}>
+        <p style={{ opacity: 0.8, lineHeight: 1.6 }} data-bk-node="maintenance-overlay:MaintenanceOverlay.p.0:7bd6026d">
           {business} is zo terug. We voeren kort onderhoud uit; probeer het over
           een paar minuten opnieuw.
         </p>

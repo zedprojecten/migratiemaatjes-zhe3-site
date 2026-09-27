@@ -1,3 +1,4 @@
+import { bkNode } from "@/lib/bk-node";
 /**
  * AIPromptBox, uitgebreide chat-input met text/voice, attachments, action-buttons.
  *
@@ -115,7 +116,7 @@ const DialogContent = React.forwardRef<
     >
       {children}
       <DialogPrimitive.Close className="absolute right-4 top-4 z-10 rounded-full bg-[#2E3033]/80 p-2 hover:bg-[#2E3033] transition-all">
-        <X className="h-5 w-5 text-gray-200 hover:text-white" />
+        <X className="h-5 w-5 text-gray-200 hover:text-white" data-bk-node="aiprompt-box:AIPromptBox.X.icon.0:2d711642" data-bk-icon-node="aiprompt-box:AIPromptBox.X.icon.0:2d711642" data-bk-style-node="aiprompt-box:AIPromptBox.X.icon.0:2d711642:style" data-bk-icon-name="x" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"x\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
         <span className="sr-only" data-bk-node="aiprompt-box:AIPromptBox.span.0:7d9eb7ac">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
@@ -246,7 +247,7 @@ const ImageViewDialog: React.FC<ImageViewDialogProps> = ({ imageUrl, onClose }) 
   return (
     <Dialog open={!!imageUrl} onOpenChange={onClose}>
       <DialogContent className="p-0 border-none bg-transparent shadow-none max-w-[90vw] md:max-w-[800px]">
-        <DialogTitle className="sr-only">Image Preview</DialogTitle>
+        <DialogTitle className="sr-only" data-bk-node="aiprompt-box:AIPromptBox.dialogtitle.0:eec6294a">{bkNode("aiprompt-box:AIPromptBox.dialogtitle.0:eec6294a", "Image Preview")}</DialogTitle>
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -603,7 +604,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                       }}
                       className="absolute top-1 right-1 rounded-full bg-black/70 p-0.5 opacity-100 transition-opacity"
                     >
-                      <X className="h-3 w-3 text-white" />
+                      <X className="h-3 w-3 text-white" data-bk-node="aiprompt-box:AIPromptBox.X.icon.1:2d711642" data-bk-icon-node="aiprompt-box:AIPromptBox.X.icon.1:2d711642" data-bk-style-node="aiprompt-box:AIPromptBox.X.icon.1:2d711642:style" data-bk-icon-name="x" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"x\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                     </button>
                   </div>
                 )}
@@ -653,7 +654,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                 className="flex h-8 w-8 text-[#9CA3AF] cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-gray-600/30 hover:text-[#D1D5DB]"
                 disabled={isRecording}
               >
-                <Paperclip className="h-5 w-5 transition-colors" />
+                <Paperclip className="h-5 w-5 transition-colors" data-bk-node="aiprompt-box:AIPromptBox.Paperclip.icon.0:670d47cc" data-bk-icon-node="aiprompt-box:AIPromptBox.Paperclip.icon.0:670d47cc" data-bk-style-node="aiprompt-box:AIPromptBox.Paperclip.icon.0:670d47cc:style" data-bk-icon-name="paperclip" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"paperclip\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 <input
                   ref={uploadInputRef}
                   type="file"
@@ -684,7 +685,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                     whileHover={{ rotate: showSearch ? 360 : 15, scale: 1.1, transition: { type: "spring", stiffness: 300, damping: 10 } }}
                     transition={{ type: "spring", stiffness: 260, damping: 25 }}
                   >
-                    <Globe className={cn("w-4 h-4", showSearch ? "text-[#1EAEDB]" : "text-inherit")} />
+                    <Globe className={cn("w-4 h-4", showSearch ? "text-[#1EAEDB]" : "text-inherit")} data-bk-node="aiprompt-box:AIPromptBox.Globe.icon.0:d2a1fc04" data-bk-icon-node="aiprompt-box:AIPromptBox.Globe.icon.0:d2a1fc04" data-bk-style-node="aiprompt-box:AIPromptBox.Globe.icon.0:d2a1fc04:style" data-bk-icon-name="globe" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"globe\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </motion.div>
                 </div>
                 <AnimatePresence>
@@ -720,7 +721,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                     whileHover={{ rotate: showThink ? 360 : 15, scale: 1.1, transition: { type: "spring", stiffness: 300, damping: 10 } }}
                     transition={{ type: "spring", stiffness: 260, damping: 25 }}
                   >
-                    <BrainCog className={cn("w-4 h-4", showThink ? "text-[#8B5CF6]" : "text-inherit")} />
+                    <BrainCog className={cn("w-4 h-4", showThink ? "text-[#8B5CF6]" : "text-inherit")} data-bk-node="aiprompt-box:AIPromptBox.BrainCog.icon.0:004b4ed2" data-bk-icon-node="aiprompt-box:AIPromptBox.BrainCog.icon.0:004b4ed2" data-bk-style-node="aiprompt-box:AIPromptBox.BrainCog.icon.0:004b4ed2:style" data-bk-icon-name="brain-cog" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"brain-cog\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </motion.div>
                 </div>
                 <AnimatePresence>
@@ -756,7 +757,7 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                     whileHover={{ rotate: showCanvas ? 360 : 15, scale: 1.1, transition: { type: "spring", stiffness: 300, damping: 10 } }}
                     transition={{ type: "spring", stiffness: 260, damping: 25 }}
                   >
-                    <FolderCode className={cn("w-4 h-4", showCanvas ? "text-[#F97316]" : "text-inherit")} />
+                    <FolderCode className={cn("w-4 h-4", showCanvas ? "text-[#F97316]" : "text-inherit")} data-bk-node="aiprompt-box:AIPromptBox.FolderCode.icon.0:d4da0c21" data-bk-icon-node="aiprompt-box:AIPromptBox.FolderCode.icon.0:d4da0c21" data-bk-style-node="aiprompt-box:AIPromptBox.FolderCode.icon.0:d4da0c21:style" data-bk-icon-name="folder-code" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"folder-code\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                   </motion.div>
                 </div>
                 <AnimatePresence>
@@ -806,13 +807,13 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
               disabled={isLoading && !hasContent}
             >
               {isLoading ? (
-                <Square className="h-4 w-4 fill-[#1F2023] animate-pulse" />
+                <Square className="h-4 w-4 fill-[#1F2023] animate-pulse" data-bk-node="aiprompt-box:AIPromptBox.Square.icon.0:4ba3e8e3" data-bk-icon-node="aiprompt-box:AIPromptBox.Square.icon.0:4ba3e8e3" data-bk-style-node="aiprompt-box:AIPromptBox.Square.icon.0:4ba3e8e3:style" data-bk-icon-name="square" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"square\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               ) : isRecording ? (
-                <StopCircle className="h-5 w-5 text-red-500" />
+                <StopCircle className="h-5 w-5 text-red-500" data-bk-node="aiprompt-box:AIPromptBox.StopCircle.icon.0:61acc9e1" data-bk-icon-node="aiprompt-box:AIPromptBox.StopCircle.icon.0:61acc9e1" data-bk-style-node="aiprompt-box:AIPromptBox.StopCircle.icon.0:61acc9e1:style" data-bk-icon-name="stop-circle" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"stop-circle\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               ) : hasContent ? (
-                <ArrowUp className="h-4 w-4 text-[#1F2023]" />
+                <ArrowUp className="h-4 w-4 text-[#1F2023]" data-bk-node="aiprompt-box:AIPromptBox.ArrowUp.icon.0:bc4efe0c" data-bk-icon-node="aiprompt-box:AIPromptBox.ArrowUp.icon.0:bc4efe0c" data-bk-style-node="aiprompt-box:AIPromptBox.ArrowUp.icon.0:bc4efe0c:style" data-bk-icon-name="arrow-up" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               ) : (
-                <Mic className="h-5 w-5 text-[#1F2023] transition-colors" />
+                <Mic className="h-5 w-5 text-[#1F2023] transition-colors" data-bk-node="aiprompt-box:AIPromptBox.Mic.icon.0:224948ca" data-bk-icon-node="aiprompt-box:AIPromptBox.Mic.icon.0:224948ca" data-bk-style-node="aiprompt-box:AIPromptBox.Mic.icon.0:224948ca:style" data-bk-icon-name="mic" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"mic\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
               )}
             </Button>
           </PromptInputAction>

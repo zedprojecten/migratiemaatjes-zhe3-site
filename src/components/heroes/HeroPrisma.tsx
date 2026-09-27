@@ -225,7 +225,7 @@ export default function HeroPrisma({
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
                   <ArrowRight
                     className="h-4 w-4"
-                    style={{ color: "#E1E0CC" }}
+                    style={{ color: "#E1E0CC" }} data-bk-node="hero-prisma:HeroPrisma.ArrowRight.icon.0:88a9106a" data-bk-icon-node="hero-prisma:HeroPrisma.ArrowRight.icon.0:88a9106a" data-bk-style-node="hero-prisma:HeroPrisma.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                   />
                 </span>
               </motion.a>

@@ -87,7 +87,7 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-white/15 text-foreground hover:bg-white/[0.04]"
         >
-          {open ? <X className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
+          {open ? <X className="h-5 w-5" data-bk-node="navbar:Navbar.X.icon.0:2d711642" data-bk-icon-node="navbar:Navbar.X.icon.0:2d711642" data-bk-style-node="navbar:Navbar.X.icon.0:2d711642:style" data-bk-icon-name="x" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"x\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} /> : <MenuIcon className="h-5 w-5" data-bk-node="navbar:Navbar.MenuIcon.icon.0:39899100" data-bk-icon-node="navbar:Navbar.MenuIcon.icon.0:39899100" data-bk-style-node="navbar:Navbar.MenuIcon.icon.0:39899100:style" data-bk-icon-name="menu" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"menu\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />}
         </button>
       </nav>
 

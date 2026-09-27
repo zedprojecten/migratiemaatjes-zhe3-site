@@ -181,7 +181,7 @@ export function ProductGridEditorial({
                 )}
                 <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.16em] text-foreground transition-transform duration-300 group-hover:translate-x-1">
                   {featured.ctaLabel ?? "Lees verder"}
-                  <ArrowUpRight className="h-4 w-4" />
+                  <ArrowUpRight className="h-4 w-4" data-bk-node="product-grid-editorial:ProductGridEditorial.ArrowUpRight.icon.0:bc598874" data-bk-icon-node="product-grid-editorial:ProductGridEditorial.ArrowUpRight.icon.0:bc598874" data-bk-style-node="product-grid-editorial:ProductGridEditorial.ArrowUpRight.icon.0:bc598874:style" data-bk-icon-name="arrow-up-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-up-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 </span>
               </div>
             </a>

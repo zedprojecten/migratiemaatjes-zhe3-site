@@ -210,7 +210,7 @@ function GlassCard({
       {plan.recommended && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
           <Badge variant="default" size="sm" className="gap-1">
-            <Sparkles className="h-3 w-3" />
+            <Sparkles className="h-3 w-3" data-bk-node="pricing-table-glass:PricingTableGlass.Sparkles.icon.0:dd368cc7" data-bk-icon-node="pricing-table-glass:PricingTableGlass.Sparkles.icon.0:dd368cc7" data-bk-style-node="pricing-table-glass:PricingTableGlass.Sparkles.icon.0:dd368cc7:style" data-bk-icon-name="sparkles" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"sparkles\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
             Aanbevolen
           </Badge>
         </div>
@@ -274,7 +274,7 @@ function GlassCard({
                 <li key={j} className="flex items-start gap-2.5 text-sm">
                   <CheckIcon
                     className="h-4 w-4 text-primary shrink-0 mt-0.5"
-                    aria-hidden="true"
+                    aria-hidden="true" data-bk-node="pricing-table-glass:PricingTableGlass.CheckIcon.icon.0:20f65c28" data-bk-icon-node="pricing-table-glass:PricingTableGlass.CheckIcon.icon.0:20f65c28" data-bk-style-node="pricing-table-glass:PricingTableGlass.CheckIcon.icon.0:20f65c28:style" data-bk-icon-name="check" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"check\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                   />
                   <span className="text-foreground/90 leading-relaxed">
                     {feature.label}

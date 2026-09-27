@@ -394,7 +394,7 @@ export function ContactFormEditorial({
                         autoComplete="name"
                         className="mt-2 w-full bg-transparent pb-3 text-xl text-foreground outline-none placeholder:text-muted-foreground/40"
                         placeholder="Jouw naam"
-                        style={{ fontFamily: "Georgia, serif" }}
+                        style={{ fontFamily: "Georgia, serif" }} data-bk-placeholder="contact-form-editorial:ContactFormEditorial.input.0@placeholder:af3a8c36"
                       />
                     ),
                   },
@@ -415,7 +415,7 @@ export function ContactFormEditorial({
                         autoComplete="email"
                         className="mt-2 w-full bg-transparent pb-3 text-xl text-foreground outline-none placeholder:text-muted-foreground/40"
                         placeholder="jij@bedrijf.nl"
-                        style={{ fontFamily: "Georgia, serif" }}
+                        style={{ fontFamily: "Georgia, serif" }} data-bk-placeholder="contact-form-editorial:ContactFormEditorial.input.1@placeholder:129a39fa"
                       />
                     ),
                   },
@@ -434,7 +434,7 @@ export function ContactFormEditorial({
                         onBlur={() => setFocused(null)}
                         placeholder="Schrijf hier je bericht."
                         className="mt-2 w-full resize-none bg-transparent pb-3 text-lg leading-relaxed text-foreground outline-none placeholder:text-muted-foreground/40"
-                        style={{ fontFamily: "Georgia, serif" }}
+                        style={{ fontFamily: "Georgia, serif" }} data-bk-placeholder="contact-form-editorial:ContactFormEditorial.textarea.0@placeholder:7fd88e13"
                       />
                     ),
                   },
@@ -499,7 +499,7 @@ export function ContactFormEditorial({
                       </span>
                       <ArrowRight
                         className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                        strokeWidth={2.25}
+                        strokeWidth={2.25} data-bk-node="contact-form-editorial:ContactFormEditorial.ArrowRight.icon.0:88a9106a" data-bk-icon-node="contact-form-editorial:ContactFormEditorial.ArrowRight.icon.0:88a9106a" data-bk-style-node="contact-form-editorial:ContactFormEditorial.ArrowRight.icon.0:88a9106a:style" data-bk-icon-name="arrow-right" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"arrow-right\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2.25}}"}
                       />
                     </button>
                   </MagneticWrap>

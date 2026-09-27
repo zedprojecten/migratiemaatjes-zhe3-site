@@ -183,7 +183,7 @@ export default function UseCases() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative overflow-hidden border-b border-border/60">
+      {bkSectionVisible("use-cases:SectionNietElkeMigratieIsHetzelfde.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:SectionNietElkeMigratieIsHetzelfde.section.0" data-bk-section-translation-key="use-cases:section:0"><section className="relative overflow-hidden border-b border-border/60">
         <div className="absolute inset-0 bg-cyan-spotlight pointer-events-none" />
         <div className="absolute inset-0 bg-dot-grid opacity-40 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 py-20 md:py-28 relative">
@@ -199,14 +199,14 @@ export default function UseCases() {
             </p>
           </div>
         </div>
-      </section>
+      </section></div>)}
 
       {/* Zes use-case-secties via UseCaseRows (allowlisted array-prop-component,
           identieke markup als de oude inline map) */}
-      {bkSectionVisible("use-cases:UseCaseRows.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:UseCaseRows.section.0"><UseCaseRows items={cases} /></div>)}
+      {bkSectionVisible("use-cases:UseCaseRows.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:UseCaseRows.section.0" data-bk-section-translation-key="use-cases:section:1"><UseCaseRows items={cases} /></div>)}
 
       {/* Final CTA */}
-      {bkSectionVisible("use-cases:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:CTABanner.section.0"><CTABanner
+      {bkSectionVisible("use-cases:CTABanner.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:CTABanner.section.0" data-bk-section-translation-key="use-cases:section:2"><CTABanner
         heading={bkNode("use-cases:CTABanner.heading", "Staat jouw scenario er niet bij?")}
         subtext={bkNode("use-cases:CTABanner.subtext", "We bouwen mapping-scripts ook voor exotische combinaties. Stuur je sample en we kijken wat er nodig is.")}
         primaryLabel={bkNode("use-cases:CTABanner.primaryLabel", "Stuur je intake op")}
@@ -216,7 +216,7 @@ export default function UseCases() {
       /></div>)}
 
       {/* Sticky mobile CTA */}
-      {bkSectionVisible("use-cases:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:StickyMobileCTA.section.0"><StickyMobileCTA text={bkNode("use-cases:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "use-cases:StickyMobileCTA.text" }} /></div>)}
+      {bkSectionVisible("use-cases:StickyMobileCTA.section.0") && (<div style={{ display: "contents" }} data-bk-section="use-cases:StickyMobileCTA.section.0" data-bk-section-translation-key="use-cases:section:3"><StickyMobileCTA text={bkNode("use-cases:StickyMobileCTA.text", "Stuur je intake op")} href="/contact" _bk={{ text: "use-cases:StickyMobileCTA.text" }} /></div>)}
     </>
   );
 }

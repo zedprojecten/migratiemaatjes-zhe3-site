@@ -43,7 +43,7 @@ export function TestimonialCards({
           {items.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.12}>
               <div className="glass-card p-7 h-full flex flex-col">
-                <Quote className="h-6 w-6 text-primary/40 mb-4 shrink-0" />
+                <Quote className="h-6 w-6 text-primary/40 mb-4 shrink-0" data-bk-node="testimonial-cards:TestimonialCards.Quote.icon.0:6327245c" data-bk-icon-node="testimonial-cards:TestimonialCards.Quote.icon.0:6327245c" data-bk-style-node="testimonial-cards:TestimonialCards.Quote.icon.0:6327245c:style" data-bk-icon-name="quote" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"quote\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"} />
                 <p className="text-sm leading-relaxed text-foreground/80 flex-1 italic" data-bk-node="testimonial-cards:TestimonialCards.p.0:0d3e7558">
                   &ldquo;{item.quote}&rdquo;
                 </p>
@@ -63,7 +63,7 @@ export function TestimonialCards({
                         {Array.from({ length: item.rating }).map((_, j) => (
                           <StarIcon
                             key={j}
-                            className="h-3 w-3 fill-primary text-primary"
+                            className="h-3 w-3 fill-primary text-primary" data-bk-node="testimonial-cards:TestimonialCards.StarIcon.icon.0:525eca1d" data-bk-icon-node="testimonial-cards:TestimonialCards.StarIcon.icon.0:525eca1d" data-bk-style-node="testimonial-cards:TestimonialCards.StarIcon.icon.0:525eca1d:style" data-bk-icon-name="star" data-bk-icon-value={"{\"icon\":{\"source\":\"lucide\",\"name\":\"star\",\"renderMode\":\"stroke\",\"accessibility\":\"decorative\"},\"appearance\":{\"strokeWidth\":2}}"}
                           />
                         ))}
                       </div>
