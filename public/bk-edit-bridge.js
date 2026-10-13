@@ -22,6 +22,15 @@
  *     { type:'bk:apply-optimistic', nodeId, kind, value }   kind ALTIJD meegestuurd
  *       (1.6.0: kind 'link' -> href via [data-bk-href], kind 'alt' -> alt via [data-bk-alt])
  *       (1.7.0: kind 'section-visible' -> display van de [data-bk-section]-wrapper)
+ *   Feedbackmodus (3.9.0):
+ *     portal -> site: bk:enter-feedback-session, bk:exit-feedback-session,
+ *       bk:feedback-place { aan }, bk:feedback-anchors { anchors:[{id,nodeId,sectionId}] },
+ *       bk:feedback-scroll-to { nodeId | sectionId, strict?, requestId?, pagePath?, relY?, zichtbaarTot? }
+ *       Rapporten: anchors[].strict=true met relX/relY, anchors-verzoek met requestId.
+ *       Antwoord: requestId + anchorStatus[id] met gevonden/soort of gevonden:false/reden.
+ *     site -> portal: bk:feedback-picked { pagePath, sectionId, nodeId, kind,
+ *       currentValue, rect, relX, relY, heleSite, viewportWidth },
+ *       bk:feedback-place-cancelled, bk:feedback-anchor-rects { pagePath, rects, viewportWidth, viewportHeight }
  */
 (function () {
   "use strict";
@@ -50,13 +59,49 @@
   // klikbaar. Een weggehaald accentwoord wordt meteen geweigerd.
   // 3.8.1: font-preview "" zet de gepubliceerde laag weer uit (voorvertoning
   // van de oorspronkelijke vormgeving); 3.8.0 liet hem ten onrechte staan.
-  var BRIDGE_VERSION = "3.8.1";
+  // 3.9.0: feedbackmodus voor de feedbackronde (bk:enter-feedback-session).
+  // Raakt de editor niet: geen edit-mode, geen contenteditable, geen
+  // highlights. In de plaatsstand wijst de klant een element aan; de bridge
+  // meldt pagina, sectie, node, soort, huidige waarde en de klikpositie, en
+  // houdt de portal op de hoogte van de positie van de spelden.
+  // 3.9.1: ankerposities alleen bij een echte verschuiving (sites met
+  // doorlopende animaties), zichtbare tekst via innerText.
+  // 3.9.2: huidige tekst zonder sr-only-kopie en verborgen elementen.
+  // 3.9.3: "hele site" alleen voor menu, footer en vaste balken
+  // (header/footer/nav); een pagina zonder sectie-wrappers (privacy) is
+  // gewoon die pagina (proef 10-10-2026).
+  // 3.9.4: een tik op een foto onder een doorzichtige laag (tekst- of
+  // verloopoverlay) vindt de foto-node via elementsFromPoint (proef F2).
+  // 3.10.0: een opmerking draagt de hele stapel lagen onder de tik mee
+  // (rol, box, tekst of beeld, overlay ja/nee, node, bron) en de bronlocatie
+  // (data-bk-src van de bk-bron-plugin). De server kiest daaruit het juiste
+  // element, ook zonder node en op elk ontwerp.
+  // 3.11.0: tabbladmodus voor apps. De feedbackwidget draait in hetzelfde
+  // venster en laadt de bridge met data-bk-modus="tabblad"; berichten gaan via
+  // window.postMessage met bkVan, en de widget zelf is nooit een doel.
+  // 3.12.0: losse tekst blijft tekst. Spelden zonder bewerkbare node volgen
+  // een uniek DOM-id, bronanker of inhoudsanker bij scrollen en rotatie.
+  // Een verdwenen of dubbelzinnig doel krijgt geen misleidende sectiespeld.
+  // 3.13.0: ankerposities dragen de iframe-afmetingen, zodat de portal na
+  // wisselen van computer naar telefoon geen oude posities kan hergebruiken.
+  // 3.13.1: strikte rapportankers met identiteit, zichtbaarheid en aanvraagbinding.
+  // 3.13.2: strikte rapportpunten controleren ook de hitlaag op de oorspronkelijke klikplek.
+  var BRIDGE_VERSION = "3.13.3";
   var NODE_ATTR = "data-bk-node";
   var STYLE_ID = "bk-edit-bridge-styles";
   var DEBOUNCE_MS = 500;
 
-  // Guard: alleen actief in een iframe.
-  if (window.parent === window) return;
+  // Tabbladmodus (3.11, apps): de feedbackwidget draait in hetzelfde venster en
+  // laadt de bridge zelf met data-bk-modus="tabblad". Berichten gaan dan via
+  // window.postMessage naar dit venster, met bkVan om afzender te scheiden.
+  var TABBLAD = false;
+  try {
+    var eigenScript = document.currentScript;
+    TABBLAD = !!(eigenScript && eigenScript.getAttribute("data-bk-modus") === "tabblad");
+  } catch (e) { /* geen currentScript */ }
+
+  // Guard: alleen actief in een iframe, of in het tabblad als de widget erom vraagt.
+  if (window.parent === window && !TABBLAD) return;
 
   var editModeActive = false;
   var highlightsEnabled = false;
@@ -96,6 +141,15 @@
   }
 
   function post(msg) {
+    if (TABBLAD) {
+      try {
+        var uit = {};
+        for (var k in msg) if (Object.prototype.hasOwnProperty.call(msg, k)) uit[k] = msg[k];
+        uit.bkVan = "bridge";
+        window.postMessage(uit, window.location.origin);
+      } catch (e) { /* venster weg */ }
+      return;
+    }
     try {
       // Sandboxed/local audit parents can have the opaque origin "null";
       // postMessage does not accept that string as targetOrigin.
@@ -493,6 +547,10 @@
     if (now !== lastPagePath) {
       lastPagePath = now;
       post({ type: "bk:page-changed", pagePath: now });
+      if (feedbackActive) {
+        announceSectionManifest();
+        feedbackScheduleRects();
+      }
       if (editModeActive) {
         setHighlight(highlightsEnabled);
         announceScanned();
@@ -1713,13 +1771,479 @@
     delete ephemeralIconPreviews[msg.composerId];
   }
 
+  // ---- feedbackmodus (3.9.0) ----
+  var feedbackActive = false;
+  var feedbackPlacing = false;
+  var feedbackAnchors = [];
+  var feedbackAnchorRequestId = null;
+  var feedbackHoverBox = null;
+  var feedbackRectsQueued = false;
+  var feedbackTimer = 0;
+  var feedbackObserver = null;
+  var feedbackLastRects = "";
+
+  function feedbackRectOf(el) {
+    if (!el || !el.getBoundingClientRect) return null;
+    var r = el.getBoundingClientRect();
+    // Sectie-wrappers zijn display:contents en hebben zelf geen box: neem de
+    // omhullende van de kinderen.
+    if (!r.width && !r.height && el.children && el.children.length) {
+      var top = Infinity, left = Infinity, bottom = -Infinity, right = -Infinity;
+      for (var i = 0; i < el.children.length; i++) {
+        var c = feedbackRectOf(el.children[i]);
+        if (!c) continue;
+        top = Math.min(top, c.top); left = Math.min(left, c.left);
+        bottom = Math.max(bottom, c.top + c.height); right = Math.max(right, c.left + c.width);
+      }
+      if (top === Infinity) return null;
+      return { top: top, left: left, width: right - left, height: bottom - top };
+    }
+    if (!r.width && !r.height) return null;
+    return { top: r.top, left: r.left, width: r.width, height: r.height };
+  }
+
+  function feedbackIsButton(a) {
+    if (!a) return false;
+    var tag = a.tagName ? a.tagName.toLowerCase() : "";
+    if (tag === "button" || (a.getAttribute && a.getAttribute("role") === "button")) return true;
+    // Een link met een eigen vlak of rand oogt als knop (CTA's zijn vaak <a>).
+    try {
+      var cs = window.getComputedStyle(a);
+      var bg = cs.backgroundColor || "";
+      var vlak = bg && bg !== "transparent" && !/rgba\([^)]*,\s*0\)$/.test(bg);
+      var rand = parseFloat(cs.borderTopWidth || "0") > 0 && cs.borderTopStyle !== "none";
+      return !!(vlak || rand);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function feedbackKindOf(nodeEl, target) {
+    var drager = (nodeEl || target);
+    var link = drager && drager.closest ? drager.closest("a, button, [role=button]") : null;
+    if (nodeEl) {
+      var k = kindOf(nodeEl);
+      if (k === "text" && link) return feedbackIsButton(link) ? "button" : "link";
+      if (k === "placeholder" || k === "contact-widget") return "other";
+      return k;
+    }
+    if (target && target.closest && target.closest("img, picture, video")) return "image";
+    if (link) return feedbackIsButton(link) ? "button" : "link";
+    if (target && /^(input|textarea|select)$/i.test(target.tagName || "")) return "other";
+    if (target && feedbackRol(target) === "tekst") return "text";
+    return "section";
+  }
+
+  function feedbackCurrentValue(el, kind) {
+    if (!el) return null;
+    if (kind === "image" || kind === "video") return getImageSrc(el);
+    if (kind === "icon" || kind === "embed" || kind === "section" || kind === "other") return null;
+    // Alleen wat de klant ziet: een kopie zonder schermlezer-tekst (sr-only,
+    // f132 zet de kop zo dubbel in de DOM) en verborgen elementen; <br> telt
+    // als spatie.
+    var kopie = el.cloneNode(true);
+    var weg = kopie.querySelectorAll ? kopie.querySelectorAll(".sr-only, .visually-hidden, [hidden], script, style") : [];
+    for (var i = 0; i < weg.length; i++) weg[i].parentNode.removeChild(weg[i]);
+    var brs = kopie.querySelectorAll ? kopie.querySelectorAll("br") : [];
+    for (var j = 0; j < brs.length; j++) brs[j].parentNode.replaceChild(document.createTextNode(" "), brs[j]);
+    var t = (kopie.textContent || "").replace(/\s+/g, " ").trim();
+    return t ? t.slice(0, 300) : null;
+  }
+
+  function feedbackClamp(v) {
+    return Math.max(0, Math.min(1, Math.round(v * 1000) / 1000));
+  }
+
+  // Wat de klant aanwees: het dichtstbijzijnde data-bk-node-element, anders de
+  // sectie. Menu, footer en vaste balken (buiten elke sectie) gelden voor de
+  // hele site.
+  function feedbackRol(el) {
+    var tag = el.tagName ? el.tagName.toLowerCase() : "";
+    if (tag === "img" || tag === "picture" || tag === "svg" || tag === "video" || tag === "canvas") return tag === "svg" ? "icoon" : "beeld";
+    if (tag === "a") return feedbackIsButton(el) ? "knop" : "link";
+    if (tag === "button" || (el.getAttribute && el.getAttribute("role") === "button")) return "knop";
+    try {
+      var bg = window.getComputedStyle(el).backgroundImage || "";
+      if (/url\(/.test(bg)) return "beeld";
+    } catch (e) { /* geen stijl */ }
+    var eigenTekst = "";
+    for (var i = 0; i < el.childNodes.length; i++) if (el.childNodes[i].nodeType === 3) eigenTekst += el.childNodes[i].nodeValue;
+    return eigenTekst.trim() ? "tekst" : "blok";
+  }
+
+  function feedbackOverlay(el) {
+    try {
+      var cs = window.getComputedStyle(el);
+      if (cs.pointerEvents === "none") return true;
+      var heeftInhoud = el.children.length > 0 || (el.textContent || "").trim().length > 0;
+      var bg = cs.backgroundImage || "";
+      return !heeftInhoud && (/gradient\(/.test(bg) || parseFloat(cs.opacity) < 0.5);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Alle lagen onder het klikpunt, van boven naar beneden, compact (max 12).
+  function feedbackLagen(x, y) {
+    if (!document.elementsFromPoint) return [];
+    var uit = [];
+    var lagen = document.elementsFromPoint(x, y);
+    for (var i = 0; i < lagen.length && uit.length < 12; i++) {
+      var el = lagen[i];
+      var tag = el.tagName ? el.tagName.toLowerCase() : "";
+      if (tag === "html" || tag === "body" || el.id === "bk-feedback-hover" || inWidget(el)) continue;
+      var r = el.getBoundingClientRect();
+      var rol = feedbackRol(el);
+      var tekst = rol === "tekst" || rol === "knop" || rol === "link" ? (el.innerText || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 120) : null;
+      var bgUrl = null;
+      try { var m = /url\(["']?([^"')]+)/.exec(window.getComputedStyle(el).backgroundImage || ""); bgUrl = m ? m[1] : null; } catch (e) { /* */ }
+      uit.push({
+        tag: tag,
+        id: el.id || null,
+        rol: rol,
+        rect: { top: Math.round(r.top), left: Math.round(r.left), width: Math.round(r.width), height: Math.round(r.height) },
+        tekst: tekst,
+        src: rol === "beeld" ? (getImageSrc(el) || bgUrl) : null,
+        overlay: feedbackOverlay(el),
+        node: el.getAttribute ? el.getAttribute(NODE_ATTR) : null,
+        bron: el.getAttribute ? el.getAttribute("data-bk-src") : null,
+        sectie: (function () { var s0 = el.closest ? el.closest("[data-bk-section]") : null; return s0 ? s0.getAttribute("data-bk-section") : null; })(),
+      });
+    }
+    return uit;
+  }
+
+  function feedbackPick(target, clientX, clientY) {
+    var nodeEl = target && target.closest ? target.closest("[" + NODE_ATTR + "]") : null;
+    // Geen node onder de tik: ligt er een overlay over een foto of tekst?
+    // Kijk door de lagen op dat punt, binnen dezelfde sectie.
+    if (!nodeEl && document.elementsFromPoint) {
+      var sectie0 = target && target.closest ? target.closest("[data-bk-section]") : null;
+      var lagen = document.elementsFromPoint(clientX, clientY);
+      for (var i = 0; i < lagen.length; i++) {
+        var kandidaat = lagen[i].closest ? lagen[i].closest("[" + NODE_ATTR + "]") : null;
+        if (!kandidaat) continue;
+        if (sectie0 && !sectie0.contains(kandidaat)) continue;
+        nodeEl = kandidaat;
+        target = lagen[i];
+        break;
+      }
+    }
+    var sectionEl = target && target.closest ? target.closest("[data-bk-section]") : null;
+    var kind = feedbackKindOf(nodeEl, target);
+    var anker = nodeEl || (kind === "section" ? sectionEl : target) || sectionEl || target;
+    var rect = feedbackRectOf(anker) || feedbackRectOf(sectionEl);
+    return {
+      type: "bk:feedback-picked",
+      pagePath: currentPagePath(),
+      sectionId: sectionEl ? sectionEl.getAttribute("data-bk-section") : null,
+      nodeId: nodeEl ? nodeEl.getAttribute(NODE_ATTR) : null,
+      kind: kind,
+      currentValue: feedbackCurrentValue(nodeEl || anker, kind),
+      rect: rect,
+      relX: rect && rect.width ? feedbackClamp((clientX - rect.left) / rect.width) : 0.5,
+      relY: rect && rect.height ? feedbackClamp((clientY - rect.top) / rect.height) : 0.5,
+      heleSite: !sectionEl && !!(target && target.closest && target.closest("header, footer, nav, [role=banner], [role=contentinfo], [role=navigation]")),
+      viewportWidth: window.innerWidth || null,
+      // De ruwe waarheid onder de tik; de server kiest daaruit (resolver).
+      lagen: feedbackLagen(clientX, clientY),
+      bron: (function () { var b = (nodeEl || target) && (nodeEl || target).closest ? (nodeEl || target).closest("[data-bk-src]") : null; return b ? b.getAttribute("data-bk-src") : null; })(),
+      klik: { x: Math.round(clientX), y: Math.round(clientY) },
+    };
+  }
+
+  function feedbackFindAnchor(a) {
+    if (!a) return null;
+    if (a.nodeId) {
+      var all = document.querySelectorAll("[" + NODE_ATTR + '="' + cssEsc(a.nodeId) + '"]');
+      for (var i = 0; i < all.length; i++) {
+        if (feedbackRectOf(all[i])) return all[i];
+      }
+      return null;
+    }
+    var lagen = Array.isArray(a.lagen) ? a.lagen : [];
+    var inhoud = null;
+    for (var j = 0; j < lagen.length; j++) {
+      if (lagen[j] && !lagen[j].overlay && (lagen[j].rol !== "blok" || lagen[j].id || lagen[j].bron)) { inhoud = lagen[j]; break; }
+    }
+    if (inhoud && typeof inhoud.id === "string" && inhoud.id) {
+      var metIds = Array.prototype.filter.call(document.querySelectorAll("[id]"), function (el) {
+        return el.id === inhoud.id && el.tagName.toLowerCase() === inhoud.tag && !inWidget(el) && feedbackRectOf(el);
+      });
+      if (metIds.length === 1) return metIds[0];
+      if (metIds.length > 1) return null;
+    }
+    var bron = inhoud && inhoud.bron || a.bron;
+    if (typeof bron === "string" && bron) {
+      var bronnen = Array.prototype.filter.call(document.querySelectorAll("[data-bk-src]"), function (el) {
+        return el.getAttribute("data-bk-src") === bron && (!inhoud || el.tagName.toLowerCase() === inhoud.tag) && !inWidget(el) && feedbackRectOf(el);
+      });
+      if (bronnen.length === 1) return bronnen[0];
+    }
+    if (inhoud && typeof inhoud.tag === "string" && /^[a-z][a-z0-9-]*$/.test(inhoud.tag) && (inhoud.tekst || inhoud.src)) {
+      var inhoudsAnkers = Array.prototype.filter.call(document.querySelectorAll(inhoud.tag), function (el) {
+        if (inWidget(el) || !feedbackRectOf(el)) return false;
+        if (inhoud.tekst) return (el.innerText || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 120) === inhoud.tekst;
+        return getImageSrc(el) === inhoud.src;
+      });
+      if (inhoudsAnkers.length === 1) return inhoudsAnkers[0];
+    }
+    if (inhoud && inhoud.rol !== "blok") return null;
+    if (a.sectionId) {
+      return document.querySelector('[data-bk-section="' + cssEsc(a.sectionId) + '"]');
+    }
+    return null;
+  }
+
+  // Rapporten mogen een verdwenen onderdeel nooit verwarren met zijn sectie.
+  // Identiteit wordt zonder zichtbaarheidsfilter bepaald: verborgen is geen verdwenen.
+  function feedbackStrictAnchor(a) {
+    function kies(els, soort) {
+      els = Array.prototype.filter.call(els, function (el) { return !inWidget(el); });
+      return els.length === 1 ? { el: els[0], soort: soort } : { reden: els.length ? "niet_eenduidig" : "niet_gevonden" };
+    }
+    if (a.nodeId) return kies(document.querySelectorAll("[" + NODE_ATTR + '="' + cssEsc(a.nodeId) + '"]'), "node");
+    var lagen = Array.isArray(a.lagen) ? a.lagen : [];
+    var inhoud = null;
+    for (var j = 0; j < lagen.length; j++) {
+      if (lagen[j] && !lagen[j].overlay && (lagen[j].rol !== "blok" || lagen[j].id || lagen[j].bron)) { inhoud = lagen[j]; break; }
+    }
+    if (inhoud && typeof inhoud.id === "string" && inhoud.id) {
+      return kies(Array.prototype.filter.call(document.querySelectorAll("[id]"), function (el) {
+        return el.id === inhoud.id && el.tagName.toLowerCase() === inhoud.tag;
+      }), "id");
+    }
+    var bron = inhoud && inhoud.bron || a.bron;
+    if (typeof bron === "string" && bron) {
+      return kies(Array.prototype.filter.call(document.querySelectorAll("[data-bk-src]"), function (el) {
+        return el.getAttribute("data-bk-src") === bron && (!inhoud || el.tagName.toLowerCase() === inhoud.tag);
+      }), "bron");
+    }
+    if (inhoud && typeof inhoud.tag === "string" && /^[a-z][a-z0-9-]*$/.test(inhoud.tag) && (inhoud.tekst || inhoud.src)) {
+      return kies(Array.prototype.filter.call(document.querySelectorAll(inhoud.tag), function (el) {
+        return inhoud.tekst ? (el.innerText || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 120) === inhoud.tekst : getImageSrc(el) === inhoud.src;
+      }), "inhoud");
+    }
+    if (inhoud) return { reden: "niet_gevonden" };
+    if (a.sectionId) return kies(document.querySelectorAll('[data-bk-section="' + cssEsc(a.sectionId) + '"]'), "sectie");
+    return { reden: "niet_gevonden" };
+  }
+
+  function feedbackStrictRectOf(el) {
+    if (!el) return null;
+    for (var ouder = el; ouder; ouder = ouder.parentElement) {
+      var stijl = window.getComputedStyle(ouder);
+      if (stijl.display === "none" || stijl.visibility === "hidden" || stijl.visibility === "collapse" || stijl.contentVisibility === "hidden" || parseFloat(stijl.opacity) === 0) return null;
+    }
+    var r = el.getBoundingClientRect();
+    if (r.width > 0 && r.height > 0) return { top: r.top, left: r.left, width: r.width, height: r.height };
+    if (window.getComputedStyle(el).display !== "contents") return null;
+    var top = Infinity, left = Infinity, bottom = -Infinity, right = -Infinity;
+    for (var i = 0; i < el.children.length; i++) {
+      var c = feedbackStrictRectOf(el.children[i]);
+      if (!c) continue;
+      top = Math.min(top, c.top); left = Math.min(left, c.left);
+      bottom = Math.max(bottom, c.top + c.height); right = Math.max(right, c.left + c.width);
+    }
+    return top === Infinity ? null : { top: top, left: left, width: right - left, height: bottom - top };
+  }
+
+  function feedbackStrictPointZichtbaar(el, r, a) {
+    var relX = typeof a.relX === "number" && Number.isFinite(a.relX) ? Math.max(0, Math.min(1, a.relX)) : 0.5;
+    var relY = typeof a.relY === "number" && Number.isFinite(a.relY) ? Math.max(0, Math.min(1, a.relY)) : 0.5;
+    var x = r.left + r.width * relX, y = r.top + r.height * relY;
+    // Buiten beeld blijft de geometrie bruikbaar om er eerst naartoe te scrollen.
+    if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) return true;
+    // Hit-testing is geen pixelbewijs: pointer-events:none-lagen ontbreken in deze
+    // browserlijst. Een niet-hitbaar doel valt conservatief terug. Geen DOM-stijlen
+    // tijdelijk wijzigen; eigen widget/pinnen worden alleen uit de lijst gefilterd.
+    var lagen = document.elementsFromPoint ? document.elementsFromPoint(x, y) : [document.elementFromPoint(x, y)];
+    for (var i = 0; i < lagen.length; i++) {
+      var hit = lagen[i];
+      if (!hit || inWidget(hit)) continue;
+      return hit === el || el.contains(hit);
+    }
+    return false;
+  }
+
+  // Alleen sturen als er iets veranderde: sites met doorlopende animaties
+  // (marquee, number-ticker) wijzigen de DOM elk frame.
+  function feedbackReportRects(altijd) {
+    feedbackRectsQueued = false;
+    if (!feedbackActive) return;
+    var rects = {}, anchorStatus = {};
+    feedbackAnchors.forEach(function (a) {
+      var match = a.strict === true ? feedbackStrictAnchor(a) : null;
+      var r = match ? feedbackStrictRectOf(match.el) : feedbackRectOf(feedbackFindAnchor(a));
+      if (match && r && !feedbackStrictPointZichtbaar(match.el, r, a)) r = null;
+      if (match) anchorStatus[a.id] = r ? { gevonden: true, soort: match.soort } : { gevonden: false, reden: match.reden || "niet_zichtbaar" };
+      rects[a.id] = r ? { top: Math.round(r.top), left: Math.round(r.left), width: Math.round(r.width), height: Math.round(r.height) } : null;
+    });
+    var breedte = window.innerWidth;
+    var hoogte = window.innerHeight;
+    var json = currentPagePath() + ":" + breedte + "x" + hoogte + JSON.stringify(rects) + JSON.stringify(anchorStatus) + feedbackAnchorRequestId;
+    if (!altijd && json === feedbackLastRects) return;
+    feedbackLastRects = json;
+    post({ type: "bk:feedback-anchor-rects", pagePath: currentPagePath(), rects: rects, anchorStatus: anchorStatus, requestId: feedbackAnchorRequestId, viewportWidth: breedte, viewportHeight: hoogte });
+  }
+
+  function feedbackScheduleRects() {
+    if (!feedbackActive || feedbackRectsQueued || !feedbackAnchors.length) return;
+    feedbackRectsQueued = true;
+    // Niet direct doorgeven: rAF geeft een tijdstempel mee als eerste argument.
+    requestAnimationFrame(function () { feedbackReportRects(false); });
+  }
+
+  function feedbackHover(el) {
+    if (!feedbackHoverBox) {
+      feedbackHoverBox = document.createElement("div");
+      feedbackHoverBox.id = "bk-feedback-hover";
+      feedbackHoverBox.style.cssText = "position:fixed;z-index:2147483646;pointer-events:none;border:2px solid rgba(17,24,39,0.85);background:rgba(17,24,39,0.06);border-radius:10px;box-shadow:0 0 0 4px rgba(255,255,255,0.6);transition:all 90ms ease-out;display:none;";
+      (document.body || document.documentElement).appendChild(feedbackHoverBox);
+    }
+    var r = feedbackRectOf(el);
+    if (!r || !feedbackPlacing) { feedbackHoverBox.style.display = "none"; return; }
+    feedbackHoverBox.style.display = "block";
+    feedbackHoverBox.style.top = (r.top - 4) + "px";
+    feedbackHoverBox.style.left = (r.left - 4) + "px";
+    feedbackHoverBox.style.width = (r.width + 8) + "px";
+    feedbackHoverBox.style.height = (r.height + 8) + "px";
+  }
+
+  function feedbackHoverTarget(target) {
+    if (!target || !target.closest) return null;
+    return target.closest("[" + NODE_ATTR + "]") || target.closest("img, picture, video, a, button") ||
+      target.closest("[data-bk-section]") || target;
+  }
+
+  // Tabbladmodus: de widget zelf (shadow host met data-bk-widget) is nooit een doel.
+  function inWidget(el) {
+    return !!(TABBLAD && el && el.closest && el.closest("[data-bk-widget]"));
+  }
+
+  function onFeedbackPointerMove(e) {
+    if (!feedbackPlacing) return;
+    if (inWidget(e.target)) { feedbackHover(null); return; }
+    feedbackHover(feedbackHoverTarget(e.target));
+  }
+
+  function onFeedbackClick(e) {
+    if (!feedbackPlacing) return;
+    if (inWidget(e.target)) return;
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+    feedbackPlacing = false;
+    feedbackHover(null);
+    post(feedbackPick(e.target, e.clientX, e.clientY));
+  }
+
+  // Tijdens het plaatsen mag niets navigeren of een formulier versturen.
+  function onFeedbackBlock(e) {
+    if (!feedbackPlacing || inWidget(e.target)) return;
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  function onFeedbackKey(e) {
+    if (feedbackPlacing && (e.key === "Escape" || e.key === "Esc")) {
+      feedbackPlacing = false;
+      feedbackHover(null);
+      post({ type: "bk:feedback-place-cancelled" });
+    }
+  }
+
+  function feedbackInVastBlok(el) {
+    for (var n = el; n && n !== document.body && n !== document.documentElement; n = n.parentElement) {
+      try { if (getComputedStyle(n).position === "fixed") return true; } catch (e) { return false; }
+    }
+    return false;
+  }
+
+  function feedbackScrollTo(msg) {
+    if (msg.strict === true && ((msg.requestId !== undefined && msg.requestId !== feedbackAnchorRequestId) || (msg.pagePath !== undefined && msg.pagePath !== currentPagePath()))) return;
+    // Een uniek, nog verborgen doel mag scrollreveal activeren; de rect blijft null tot zichtbaar.
+    var el = msg.strict === true ? feedbackStrictAnchor(msg).el : feedbackFindAnchor(msg);
+    if (!el) return;
+    // Een display:contents-wrapper scrollt niet zelf: neem het eerste kind.
+    var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+    var doel = r && (r.width || r.height) ? el : (el.firstElementChild || el);
+    // Een vast gepositioneerd blok (onthul-footer) scrollt niet mee: het wordt pas
+    // zichtbaar onderaan de pagina. Scroll dan naar het einde (13-10-2026, Lola F7).
+    if (feedbackInVastBlok(el)) {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: msg.strict === true ? "instant" : "smooth" });
+      return;
+    }
+    if (msg.strict === true && typeof msg.relY === "number" && Number.isFinite(msg.relY) && typeof msg.zichtbaarTot === "number" && Number.isFinite(msg.zichtbaarTot)) {
+      var vrijeHoogte = Math.max(0, Math.min(window.innerHeight, msg.zichtbaarTot));
+      if (!vrijeHoogte) return;
+      // Eerst native scrollcontainers bereiken, daarna het oorspronkelijke klikpunt
+      // boven de rapportkaart zetten. Lees de rect opnieuw na de directe scroll.
+      if (doel.scrollIntoView) doel.scrollIntoView({ block: "center", behavior: "instant" });
+      var ankerRect = feedbackRectOf(el);
+      if (ankerRect) {
+        var klikY = ankerRect.top + ankerRect.height * Math.max(0, Math.min(1, msg.relY));
+        var verschil = klikY - vrijeHoogte / 2;
+        if (Number.isFinite(verschil)) window.scrollBy({ top: verschil, behavior: "smooth" });
+      }
+      return;
+    }
+    if (doel.scrollIntoView) doel.scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+
+  function enterFeedbackSession() {
+    if (feedbackActive) { feedbackScheduleRects(); return; }
+    feedbackActive = true;
+    window.addEventListener("click", onFeedbackClick, true);
+    window.addEventListener("submit", onFeedbackBlock, true);
+    window.addEventListener("pointermove", onFeedbackPointerMove, true);
+    window.addEventListener("keydown", onFeedbackKey, true);
+    window.addEventListener("scroll", feedbackScheduleRects, true);
+    window.addEventListener("resize", feedbackScheduleRects, true);
+    // SPA-navigatie zonder popstate (react-router pushState) en verschuivingen
+    // door laden of animaties: elke DOM-wijziging en elke seconde opnieuw meten.
+    feedbackObserver = new MutationObserver(function () {
+      maybeAnnouncePageChange();
+      feedbackScheduleRects();
+    });
+    feedbackObserver.observe(document.documentElement, { childList: true, subtree: true });
+    feedbackTimer = setInterval(function () {
+      maybeAnnouncePageChange();
+      feedbackScheduleRects();
+    }, 1000);
+    announceSectionManifest();
+  }
+
+  function exitFeedbackSession() {
+    feedbackActive = false;
+    feedbackPlacing = false;
+    feedbackAnchors = [];
+    feedbackAnchorRequestId = null;
+    feedbackLastRects = "";
+    feedbackHover(null);
+    window.removeEventListener("click", onFeedbackClick, true);
+    window.removeEventListener("submit", onFeedbackBlock, true);
+    window.removeEventListener("pointermove", onFeedbackPointerMove, true);
+    window.removeEventListener("keydown", onFeedbackKey, true);
+    window.removeEventListener("scroll", feedbackScheduleRects, true);
+    window.removeEventListener("resize", feedbackScheduleRects, true);
+    if (feedbackObserver) { feedbackObserver.disconnect(); feedbackObserver = null; }
+    if (feedbackTimer) { clearInterval(feedbackTimer); feedbackTimer = 0; }
+  }
+  // ---- einde feedbackmodus ----
+
   window.addEventListener("message", function (event) {
     var msg = event.data;
-    if (event.source !== window.parent) return;
+    if (TABBLAD) {
+      // Alleen de widget in dit venster; nooit de bewerkstand.
+      if (event.source !== window || event.origin !== window.location.origin) return;
+      if (!msg || typeof msg !== "object" || msg.bkVan !== "widget") return;
+      if (typeof msg.type !== "string" || msg.type.indexOf("bk:feedback") !== 0 && msg.type !== "bk:enter-feedback-session" && msg.type !== "bk:exit-feedback-session") return;
+    } else if (event.source !== window.parent) return;
     if (!msg || typeof msg !== "object" || typeof msg.type !== "string") return;
     if (msg.type.indexOf("bk:") !== 0) return;
-    if (trustedPortalOrigin && event.origin !== trustedPortalOrigin) return;
-    if (!trustedPortalOrigin && msg.type === "bk:enter-editor-session") {
+    if (!TABBLAD && trustedPortalOrigin && event.origin !== trustedPortalOrigin) return;
+    if (!trustedPortalOrigin && (msg.type === "bk:enter-editor-session" || msg.type === "bk:enter-feedback-session")) {
       trustedPortalOrigin = event.origin;
     }
     switch (msg.type) {
@@ -1741,6 +2265,29 @@
         ephemeralContactWidgetPreviews = {};
         sectionOrderSnapshot = null;
         trustedPortalOrigin = null;
+        break;
+      case "bk:enter-feedback-session":
+        enterFeedbackSession();
+        break;
+      case "bk:exit-feedback-session":
+        exitFeedbackSession();
+        if (!editorSessionId) trustedPortalOrigin = null;
+        break;
+      case "bk:feedback-place":
+        if (!feedbackActive) break;
+        feedbackPlacing = !!msg.aan;
+        if (!feedbackPlacing) feedbackHover(null);
+        break;
+      case "bk:feedback-anchors":
+        if (!feedbackActive) break;
+        feedbackAnchorRequestId = typeof msg.requestId === "string" && msg.requestId.length <= 200 ? msg.requestId : null;
+        feedbackAnchors = Array.isArray(msg.anchors) ? msg.anchors.filter(function (a) {
+          return a && typeof a.id === "string" && (typeof a.nodeId === "string" || typeof a.sectionId === "string" || typeof a.bron === "string" || Array.isArray(a.lagen));
+        }).slice(0, 200) : [];
+        feedbackReportRects(true);
+        break;
+      case "bk:feedback-scroll-to":
+        if (feedbackActive) feedbackScrollTo(msg);
         break;
       case "bk:highlight-nodes":
         setHighlight(!!msg.enabled);
@@ -1894,6 +2441,10 @@
         multiselect: true,
         computedStyle: true,
         styleTargets: true,
+        feedbackMode: 1,
+        feedbackViewportRects: true,
+        feedbackStrictAnchors: true,
+        feedbackStrictPointVisibility: true,
       },
     });
     announceSectionManifest();
